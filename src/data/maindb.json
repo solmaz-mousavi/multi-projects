@@ -1,0 +1,8 @@
+{
+	"viewData": [
+		{"view": "desktop", "viewWidth": "100%", "iconName": ""},
+		{"view": "laptop", "viewWidth": "992px", "iconName": ""},
+		{"view": "tablet", "viewWidth": "768px", "iconName": ""},
+		{"view": "phone", "viewWidth": "412px", "iconName": ""}
+	]
+}
