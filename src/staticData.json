@@ -1,0 +1,128 @@
+{
+  "breakPoint": [
+    {
+      "display": "desktop",
+      "width": "100%",
+      "iconName": "FaDesktop"
+    },
+    {
+      "display": "laptop",
+      "width": "992px",
+      "iconName": "FaLaptop"
+    },
+    {
+      "display": "tablet",
+      "width": "768px",
+      "iconName": "FaTabletScreenButton"
+    },
+    {
+      "display": "mobile",
+      "width": "412px",
+      "iconName": "FaMobileScreenButton"
+    }
+  ],
+  "social": [
+    {
+      "socialName": "Facebook",
+      "iconName": "FaFacebookF"
+    },
+    {
+      "socialName": "Twitter",
+      "iconName": "FaTwitter"
+    },
+    {
+      "socialName": "Instagram",
+      "iconName": "FaInstagram"
+    },
+    {
+      "socialName": "Behance",
+      "iconName": "FaBehance"
+    },
+    {
+      "socialName": "Dribbble",
+      "iconName": "FaDribbble"
+    }
+  ],
+  "products": [
+    {
+      "name": "green plants",
+      "type": "landing page",
+
+      "scrollData": {
+        "scrollStyles": [
+          { "txtColor": "fff", "iconColor": "39B44C" },
+          { "txtColor": "fff", "iconColor": "000" },
+          { "txtColor": "000", "iconColor": "39B44C" }
+        ],
+        "scrollBreakpoints": [
+          { "id": "Home", "styleIndex": "0" },
+          { "id": "About", "styleIndex": "1" },
+          { "id": "Services", "styleIndex": "2" },
+					{ "id": "Works", "styleIndex": "2" },
+					{ "id": "Clients", "styleIndex": "2" },
+					{ "id": "Contacts", "styleIndex": "0" }
+        ]
+      },
+      "status": [
+        {
+          "name": "Awards Received",
+          "count": "127"
+        },
+        {
+          "name": "Cups of Coffee",
+          "count": "1505"
+        },
+        {
+          "name": "Projects Completed",
+          "count": "109"
+        },
+        {
+          "name": "Happy Clients",
+          "count": "102"
+        }
+      ],
+      "services": [
+        {
+          "iconName": "FaPaintRoller",
+          "title": "Brand Identity",
+          "desc": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint."
+        },
+        {
+          "iconName": "FaObjectGroup",
+          "title": "Illustration",
+          "desc": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint."
+        },
+        {
+          "iconName": "FaRegBookmark",
+          "title": "Marketing",
+          "desc": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint."
+        },
+        {
+          "iconName": "FaEarthAsia",
+          "title": "Web Design",
+          "desc": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint."
+        },
+        {
+          "iconName": "FaCube",
+          "title": "Packaging Design",
+          "desc": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint."
+        },
+        {
+          "iconName": "FaDev",
+          "title": "Web Development",
+          "desc": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint."
+        }
+      ],
+			"works": [
+				{"title": "Shutterbug", "category": "Branding", "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!", "image": "/src/assets/images/works/lady-shutterbug.jpg.webp" },
+				{"title": "Woodcraft", "category": "Web Design", "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!", "image": "/src/assets/images/works/woodcraft.jpg.webp" },
+				{"title": "The Beetle", "category": "Web Development", "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!", "image": "/src/assets/images/works/the-beetle.jpg.webp" },
+				{"title": "Grow Green", "category": "Branding", "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!", "image": "/src/assets/images/works/grow-green.jpg.webp" },
+				{"title": "Guitarist", "category": "Web Design", "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!", "image": "/src/assets/images/works/guitarist.jpg.webp" },
+				{"title": "Palmeira", "category": "Web Design", "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!", "image": "/src/assets/images/works/palmeira.jpg.webp" }
+			]
+    },
+    {},
+    {}
+  ]
+}

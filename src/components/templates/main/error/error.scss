@@ -1,0 +1,30 @@
+.error-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #da4646d8;
+
+  .error-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    .error-icon {
+      font-size: 5rem;
+    }
+
+    .error-title {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+    }
+  }
+
+  .error-txt {
+    color: #ffffff90;
+  }
+}

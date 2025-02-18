@@ -1,0 +1,24 @@
+{
+  "breakPoints": [
+    {
+      "display": "desktop",
+      "width": "100%",
+      "iconName": "FaDesktop"
+    },
+    {
+      "display": "laptop",
+      "width": "992px",
+      "iconName": "FaLaptop"
+    },
+    {
+      "display": "tablet",
+      "width": "768px",
+      "iconName": "FaTabletScreenButton"
+    },
+    {
+      "display": "mobile",
+      "width": "412px",
+      "iconName": "FaMobileScreenButton"
+    }
+  ]
+}

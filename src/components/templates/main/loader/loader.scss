@@ -1,0 +1,17 @@
+.loader-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .loader-txt {
+    color: #3ca391;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1.2rem;
+		
+  }
+}
