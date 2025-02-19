@@ -20,5 +20,10 @@
       "width": "412px",
       "iconName": "FaMobileScreenButton"
     }
-  ]
+  ],
+	"projects":[
+		{"title": "glint", "image": "/assets/images/main/glint.png", "route": "/"},
+		{"title": "kakura", "image": "/assets/images/main/kakura.jpeg", "route": "/kakura"},
+		{"title": "dashboard", "image": "/assets/images/main/kakura.jpeg", "route": "/dashboard"}
+	]
 }

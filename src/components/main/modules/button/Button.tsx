@@ -8,19 +8,21 @@ type ButtonTypes = {
   text?: string;
   title?: any;
   tooltip?: string;
-  tooltipType?: string;
+  tooltipType?: "left" | "right" | "bottom" | "top";
   tooltipColor?: string;
+	className?: string;
 };
 
 function Button({
   type,
   color,
   iconName,
-  tooltip,
   text,
   title,
+  tooltip,
   tooltipType,
   tooltipColor,
+	className,
 }: ButtonTypes) {
   let Icon;
   if (iconName) {
@@ -29,7 +31,7 @@ function Button({
 
   return (
     <>
-      <div className={`btn-container ${type} ${color}`}>
+      <div className={`btn-container ${type} ${color} ${className}`}>
         <button className="btn" title={title}>
           {Icon && <Icon className="icon" />}
           {text && <span className="txt">{text}</span>}
