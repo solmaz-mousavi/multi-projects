@@ -1,10 +1,11 @@
-import { ProjectType } from "../../../../dataTypes/mainDataType";
+import { ProjectType } from "../../../../dataTypes/main/mainDataType";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./navbar.scss";
+import useFetch from "../../../../hooks/useFetch";
 
 type NavbarPropsType = {
   closeNavbarHandler: () => void;
@@ -12,6 +13,7 @@ type NavbarPropsType = {
 };
 
 function Navbar({ closeNavbarHandler, projects }: NavbarPropsType) {
+
   return (
     <>
       {projects && (

@@ -8,6 +8,6 @@ function GuidBox() {
       </div>
     </div>
   );
-}
+};
 
 export default GuidBox;

@@ -1,44 +1,38 @@
-import { useState } from "react";
-import { useRoutes } from "react-router-dom";
-import router from "./routes";
-import useFetch from "./hooks/useFetch";
-import { DisplayType } from "./dataTypes/mainDataType";
-import GuidBox from "./components/main/templates/guidBox/GuidBox";
-import Error from "./components/main/templates/error/Error";
-import Loader from "./components/main/templates/loader/Loader";
-import Header from "./components/main/templates/header/Header";
-import "./App.css";
-import { StyledWrapper } from "./components/styled-components/StyledWrapper";
+import { useRoutes } from 'react-router-dom';
+import './App.css';
+import { useState } from 'react';
+import router from './routes';
+import { DisplayType } from './dataTypes/main/mainDataType';
+import useFetch from './hooks/useFetch';
+import { StyledWrapper } from './components/styled-components/StyledWrapper';
+import Error from './components/main/templates/error/Error';
+import Loader from './components/main/templates/loader/Loader';
+import Header from './components/main/templates/header/Header';
 
 function App() {
   const routes = useRoutes(router);
-  const { data, pending, error } = useFetch("/data/maindb.json");
+  const { mainData, pending, error } = useFetch({url:"/data/maindb.json", project:"main"});
   const [display, setDisplay] = useState<DisplayType>({} as DisplayType);
   const [showGuidBox, setShowGuidBox] = useState<boolean>(true);
 
   return (
-    <>
+    <div className="app-container">
       {error && <Error error={error} fullScreen={true} />}
       {pending && <Loader type="data" fullScreen={true} />}
-      {data && (
+      {mainData && (
         <>
-          {showGuidBox && (
+          {/* {showGuidBox && (
             <div onClick={() => setShowGuidBox(false)}>
               <GuidBox />
             </div>
-          )}
-          <Header data={data} setDisplay={setDisplay} />
+          )} */}
+          <Header data={mainData} setDisplay={setDisplay} />
           <main id="main-wrapper">
-            <StyledWrapper displayWidth={display.width}>
-              likshvliksdzvklfdiug
-            </StyledWrapper>
-            {routes}
+            <StyledWrapper displayWidth={display.width}>{routes}</StyledWrapper>
           </main>
-
-          <footer>footer</footer>
         </>
       )}
-    </>
+    </div>
   );
 }
 

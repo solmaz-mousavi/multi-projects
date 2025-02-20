@@ -1,5 +1,7 @@
 import "./button.scss";
-import { Fa6Icons, Fa6IconType } from "../../../../dataTypes/iconType";
+import { Fa6Icons, Fa6IconType } from "../../../../dataTypes/main/iconType";
+import { JsxElement } from "typescript";
+import { IconType } from "react-icons";
 
 type ButtonTypes = {
   type: "iconBtn" | "";
@@ -27,6 +29,7 @@ function Button({
   let Icon;
   if (iconName) {
     Icon = Fa6Icons[iconName];
+		console.log(Icon);
   }
 
   return (

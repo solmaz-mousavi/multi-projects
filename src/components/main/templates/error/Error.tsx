@@ -1,3 +1,4 @@
+// import { MdOutlineReportGmailerrorred } from "react-icons/md";
 import { MdOutlineReportGmailerrorred } from "react-icons/md";
 import "./error.scss";
 type ErrorPropsType = {
@@ -10,7 +11,7 @@ function Error({ error, fullScreen }: ErrorPropsType) {
     <div className={`error-container ${fullScreen && "fullScreen"}`}>
 			<div className="error-top">
 
-      <MdOutlineReportGmailerrorred className="error-icon" />
+      {/* <MdOutlineReportGmailerrorred className="error-icon" /> */}
       <span className="error-title">An error accured:</span>
 			</div>
       <p className="error-txt">{error}</p>
