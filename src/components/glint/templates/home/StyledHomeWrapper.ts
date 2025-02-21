@@ -1,7 +1,7 @@
 import styled from "styled-components";
 type StyledHomeWrapperPropsType = {
-	scrollPosition: number;
+	scrollPosition: string;
 }
 export const StyledHomeWrapper = styled.div<StyledHomeWrapperPropsType>`
-backgroundPosition: ${props => props.scrollPosition} ;
+background-position: ${props => (props.scrollPosition)};
 `

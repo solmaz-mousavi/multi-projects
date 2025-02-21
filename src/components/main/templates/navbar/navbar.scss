@@ -2,8 +2,9 @@
 	background-color: #444;
 	padding: 0px 50px;
 	transition: all ease-out 400ms;
-	position: absolute;
+	position:fixed;
 	width: 100%;
+	z-index: 1000 !important;
 
 	.navbar-thumbnail{
 		background-color: #222;

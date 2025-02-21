@@ -1,13 +1,13 @@
-import { useRoutes } from 'react-router-dom';
-import './App.css';
 import { useState } from 'react';
+import { useRoutes } from 'react-router-dom';
 import router from './routes';
-import { DisplayType } from './dataTypes/main/mainDataType';
 import useFetch from './hooks/useFetch';
+import { DisplayType } from './dataTypes/main/mainDataType';
 import { StyledWrapper } from './components/styled-components/StyledWrapper';
 import Error from './components/main/templates/error/Error';
 import Loader from './components/main/templates/loader/Loader';
 import Header from './components/main/templates/header/Header';
+import './App.css';
 
 function App() {
   const routes = useRoutes(router);

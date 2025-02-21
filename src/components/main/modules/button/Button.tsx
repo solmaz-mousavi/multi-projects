@@ -1,7 +1,5 @@
-import "./button.scss";
 import { Fa6Icons, Fa6IconType } from "../../../../dataTypes/main/iconType";
-import { JsxElement } from "typescript";
-import { IconType } from "react-icons";
+import "./button.scss";
 
 type ButtonTypes = {
   type: "iconBtn" | "";
@@ -12,7 +10,7 @@ type ButtonTypes = {
   tooltip?: string;
   tooltipType?: "left" | "right" | "bottom" | "top";
   tooltipColor?: string;
-	className?: string;
+  className?: string;
 };
 
 function Button({
@@ -24,12 +22,11 @@ function Button({
   tooltip,
   tooltipType,
   tooltipColor,
-	className,
+  className,
 }: ButtonTypes) {
   let Icon;
   if (iconName) {
     Icon = Fa6Icons[iconName];
-		console.log(Icon);
   }
 
   return (
@@ -41,7 +38,10 @@ function Button({
         </button>
       </div>
       {tooltip && (
-        <span className={`btn-tooltip ${tooltipType} ${tooltipColor}`}>
+        <span
+          className={`btn-tooltip ${tooltipType}`}
+          style={{ color: `${tooltipColor}` }}
+        >
           {tooltip}
         </span>
       )}
