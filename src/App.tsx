@@ -7,7 +7,6 @@ import { StyledWrapper } from './components/styled-components/StyledWrapper';
 import Error from './components/main/templates/error/Error';
 import Loader from './components/main/templates/loader/Loader';
 import Header from './components/main/templates/header/Header';
-import './App.css';
 
 function App() {
   const routes = useRoutes(router);

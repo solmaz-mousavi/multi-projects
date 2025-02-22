@@ -1,0 +1,25 @@
+@font-face {				
+  font-family: "Inter";
+	src:
+		local("inter"),
+		url("../../public/assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf") format("ttf");
+}
+@font-face {				
+  font-family: "Roboto";
+	src:
+		local("roboto"),
+		url("../../public/assets/fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf") format("ttf");
+}
+:root {
+	--main-color-gray-dark: #222;
+	--main-color-gray: #444;
+	--main-color-gray-light: #999;
+
+	--glint-color-green: #39B44C;
+}
+body {			
+  background-color : var(--white-50);
+}
+*, body, html {		
+	font-family: Inter, Roboto, Tahoma, sans-serif;
+}

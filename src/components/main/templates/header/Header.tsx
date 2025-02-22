@@ -10,6 +10,7 @@ type HeaderPropsType = {
 };
 
 function Header({ data, setDisplay }: HeaderPropsType) {
+	const[showContactInfo, setShowContactInfo] = useState<boolean>(false);
   const [showNavbar, setShowNavbar] = useState<boolean>(false);
 
   const showNavbarHandler = () => {
@@ -51,14 +52,14 @@ function Header({ data, setDisplay }: HeaderPropsType) {
               ))}
             </div>
           </div>
+        </header>
+      )}
           <nav className={`navbar-wrapper ${showNavbar && "show"}`}>
             <Navbar
               closeNavbarHandler={closeNavbarHandler}
               projects={data.projects}
             />
           </nav>
-        </header>
-      )}
     </>
   );
 }

@@ -11,15 +11,17 @@ export type DisplayType = {
     | "FaMobileScreenButton";
 };
 
-export type BreakpointType = DisplayType[];
+// export type BreakpointType = DisplayType;
 
 export type ProjectType = {
 	title: "glint" | "kakura" | "dashboard";
 	image: string;
 	route: string;
-}[];
+};
+export type PackageType = "reactJS" | "typescript" | "sass" | "next" | "tailwind" | "flexbox" | "grid";
 
 export type MainDataType = {
-  breakPoints: BreakpointType;
-	projects: ProjectType;
+  breakPoints: DisplayType[];
+	projects: ProjectType[];
+	packages: PackageType[];
 };

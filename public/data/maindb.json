@@ -21,8 +21,18 @@
       "iconName": "FaMobileScreenButton"
     }
   ],
-	"projects":[
-		{"title": "glint", "image": "/assets/images/main/glint.png", "route": "/"},
-		{"title": "dashboard", "image": "/assets/images/main/kakura.jpeg", "route": "/dashboard"}
-	]
+  "projects": [
+    {
+      "title": "glint",
+      "image": "/assets/images/main/glint.png",
+      "route": "/",
+      "packages": ["reactJS", "typescript", "sass", "flexbox", "grid"]
+    },
+    {
+      "title": "dashboard",
+      "image": "/assets/images/main/kakura.jpeg",
+      "route": "/dashboard",
+      "packages": ["reactJS", "typescript"]
+    }
+  ]
 }

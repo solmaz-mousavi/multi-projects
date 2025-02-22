@@ -1,6 +1,5 @@
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-	--glint-color-green: #39B44C;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -15,10 +14,35 @@ body {
   margin: 0;
   min-width: 320px;
 	background-color: #727272 ;
+	line-height: 1.5;
 }
 
-*{
+*,
+*::before,
+*::after{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+#root {
+  isolation: isolate;
+}
+
+a{
+	text-decoration: none;
+}
+
+button{
+	border: none;
+	outline: none;
+}
+
+li {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
