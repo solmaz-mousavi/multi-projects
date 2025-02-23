@@ -14,12 +14,13 @@ type NavbarPropsType = {
 };
 
 function Navbar({ closeNavbarHandler, data }: NavbarPropsType) {
+  console.log(window.innerWidth);
   return (
     <>
       {data.projects && (
         <section className="navbar-container">
           <Swiper
-            slidesPerView={3}
+            slidesPerView="auto"
             spaceBetween={10}
             navigation={true}
             keyboard={true}
@@ -46,20 +47,25 @@ function Navbar({ closeNavbarHandler, data }: NavbarPropsType) {
                     </p>
 
                     {item.packages.map((pack, index) => (
-										<a className="navbar-thumbnail_package" href={data.packages.find((i) => i.name === pack)?.link}>
-											<Button
+                      <a
                         key={index}
-                        color="transparent"
-                        iconName={
-                          data.packages.find((i) => i.name === pack)?.iconName
-                        }
-                        iconColor={
-													data.packages.find((i) => i.name === pack)?.color
-													}
-													text={data.packages.find((i) => i.name === pack)?.name}
-													/>
-												</a>
-													))}
+                        className="navbar-thumbnail_package"
+                        href={data.packages.find((i) => i.name === pack)?.link}
+                      >
+                        <Button
+                          color="transparent"
+                          iconName={
+                            data.packages.find((i) => i.name === pack)?.iconName
+                          }
+                          iconColor={
+                            data.packages.find((i) => i.name === pack)?.color
+                          }
+                          text={
+                            data.packages.find((i) => i.name === pack)?.name
+                          }
+                        />
+                      </a>
+                    ))}
                   </div>
                 </Link>
               </SwiperSlide>
