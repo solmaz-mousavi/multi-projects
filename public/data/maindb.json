@@ -1,32 +1,22 @@
 {
-  "breakPoints": [
-    {
-      "display": "desktop",
-      "width": "100%",
-      "iconName": "FaDesktop"
-    },
-    {
-      "display": "laptop",
-      "width": "992px",
-      "iconName": "FaLaptop"
-    },
-    {
-      "display": "tablet",
-      "width": "768px",
-      "iconName": "FaTabletScreenButton"
-    },
-    {
-      "display": "mobile",
-      "width": "412px",
-      "iconName": "FaMobileScreenButton"
-    }
-  ],
+	"packages":[
+		{"name": "javascript", "iconNAme": "FaJs"},
+		{"name": "reactJS", "iconNAme": "FaReact"},
+		{"name": "typescript", "iconNAme": "TbBrandTypescript"},
+		{"name": "sass", "iconNAme": "FaSass"}
+	],
   "projects": [
     {
       "title": "glint",
       "image": "/assets/images/main/glint.png",
       "route": "/",
-      "packages": ["reactJS", "typescript", "sass", "flexbox", "grid"]
+      "packages": ["javascript", "reactJS", "typescript", "sass"]
+    },
+		{
+      "title": "kakura",
+      "image": "/assets/images/main/kakura.jpeg",
+      "route": "/dashboard",
+      "packages": ["javascript", "reactJS", "typescript", "sass"]
     },
     {
       "title": "dashboard",

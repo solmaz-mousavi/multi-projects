@@ -6,31 +6,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0px 40px;
   background-color: #333;
-  color: #9b9b9b;
   border: 1px solid #444;
   z-index: 2;
-
-  .header-left button {
-    text-transform: uppercase;
-    border: none;
-    background-color: transparent;
-    color: #9b9b9b;
-    margin-left: 30px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    &:hover {
-      color: #fff;
-    }
-  }
-  .header-right {
-    display: flex;
-  }
 }
 
 .navbar-wrapper {
   position: relative;
-  top: -60px;
+  top: -40px;
   height: 0;
   opacity: 0;
   transition: all ease-out 400ms;
@@ -43,38 +27,18 @@
   z-index: 0;
 }
 
-.navbar-btn {
-  width: 60px;
-  height: 58px;
-  border-left: 1px solid #444;
-  .icon {
-    font-size: 1.5rem;
-  };
-};
+// @media screen and (max-width: 992px) {
 
-@media screen and (max-width: 992px) {
-  .header-right .desktop {
-    display: none;
-  };
-	.header-container .header-left button {
-    font-size: 1rem;
-	};
-};
+// };
 
 @media screen and (max-width: 768px) {
-  .header-right .laptop {
-    display: none;
-  };
-	.header-container .header-left button {
-    font-size: 0.8rem;
-	};
-};
+  .header-container {
+    height: 50px;
+  }
+}
 
 @media screen and (max-width: 412px) {
-  .header-right *{
-    display: none;
-  };
-	.header-container .header-left button {
-    margin-left: 20px;
-	};
-};
+  .header-container {
+    height: 40px;
+  }
+}

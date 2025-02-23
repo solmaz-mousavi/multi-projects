@@ -1,4 +1,4 @@
-import { ProjectType } from "../../../../dataTypes/main/mainDataType";
+import { ProjectType } from "../../../../dataTypes/mainDataType";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, Navigation } from "swiper/modules";
@@ -9,7 +9,7 @@ import useFetch from "../../../../hooks/useFetch";
 
 type NavbarPropsType = {
   closeNavbarHandler: () => void;
-  projects: ProjectType;
+  projects: ProjectType[];
 };
 
 function Navbar({ closeNavbarHandler, projects }: NavbarPropsType) {
@@ -26,7 +26,7 @@ function Navbar({ closeNavbarHandler, projects }: NavbarPropsType) {
             modules={[Navigation, Keyboard]}
             className="mySwiper"
           >
-            {projects.map((item) => (
+            {/* {projects.map((item) => (
               <SwiperSlide key={item.title}>
                 <Link to={item.route}>
                   <div
@@ -42,7 +42,7 @@ function Navbar({ closeNavbarHandler, projects }: NavbarPropsType) {
                   </div>
                 </Link>
               </SwiperSlide>
-            ))}
+            ))} */}
             <SwiperSlide>coming soon</SwiperSlide>
             <SwiperSlide>coming soon</SwiperSlide>
             <SwiperSlide>coming soon</SwiperSlide>

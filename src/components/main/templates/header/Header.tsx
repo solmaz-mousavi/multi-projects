@@ -1,16 +1,15 @@
 import { useState } from "react";
-import { DisplayType, MainDataType } from "../../../../dataTypes/main/mainDataType";
+import { MainDataType } from "../../../../dataTypes/mainDataType";
 import Button from "../../modules/button/Button";
 import Navbar from "../navbar/Navbar";
 import "./header.scss";
 
 type HeaderPropsType = {
   data: MainDataType;
-  setDisplay: (display: DisplayType) => void;
 };
 
-function Header({ data, setDisplay }: HeaderPropsType) {
-	const[showContactInfo, setShowContactInfo] = useState<boolean>(false);
+function Header({ data }: HeaderPropsType) {
+  const [showContactInfo, setShowContactInfo] = useState<boolean>(false);
   const [showNavbar, setShowNavbar] = useState<boolean>(false);
 
   const showNavbarHandler = () => {
@@ -28,38 +27,28 @@ function Header({ data, setDisplay }: HeaderPropsType) {
 
   return (
     <>
-      {data?.breakPoints && (
-        <header className="header-wrapper">
-          <div className="header-container">
-            <div className="header-left">
-              <button onClick={showNavbarHandler}>Select Prject</button>
-            </div>
-            <div className="header-right">
-              {data.breakPoints.map((item) => (
-                <div
-                  key={item.display}
-                  className={item.display}
-                  onClick={() => setDisplay(item)}
-                >
-                  <Button
-                    iconName={item.iconName}
-                    type="iconBtn"
-                    color="dark"
-                    title={String(item.display)}
-                    className="navbar-btn"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </header>
-      )}
-          <nav className={`navbar-wrapper ${showNavbar && "show"}`}>
-            <Navbar
-              closeNavbarHandler={closeNavbarHandler}
-              projects={data.projects}
-            />
-          </nav>
+      <header className="header-container">
+        <div className="header-btn" onClick={showNavbarHandler}>
+          <Button
+            color="transparent"
+            iconName="FaChevronDown"
+            text="Select Project"
+          />
+        </div>
+        <div className="header-btn">
+          <Button
+            color="transparent"
+            iconName="FaChevronDown"
+            text="Contact Info"
+          />
+        </div>
+      </header>
+      <nav className={`navbar-wrapper ${showNavbar && "show"}`}>
+        <Navbar
+          closeNavbarHandler={closeNavbarHandler}
+          projects={data.projects}
+        />
+      </nav>
     </>
   );
 }

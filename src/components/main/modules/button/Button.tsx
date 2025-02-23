@@ -1,10 +1,10 @@
-import { Fa6Icons, Fa6IconType } from "../../../../dataTypes/main/iconType";
+import GetIcon from "../icon/iconGetter";
 import "./button.scss";
 
 type ButtonTypes = {
-  type: "iconBtn" | "";
   color: "dark" | "transparent" | "";
-  iconName?: Fa6IconType;
+  iconName?: string;
+	iconColor?: string;
   text?: string;
   title?: any;
   tooltip?: string;
@@ -14,9 +14,9 @@ type ButtonTypes = {
 };
 
 function Button({
-  type,
   color,
   iconName,
+	iconColor,
   text,
   title,
   tooltip,
@@ -24,16 +24,16 @@ function Button({
   tooltipColor,
   className,
 }: ButtonTypes) {
-  let Icon;
-  if (iconName) {
-    Icon = Fa6Icons[iconName];
+	let Icon;
+	if (iconName) {
+		Icon = GetIcon(iconName);
   }
 
   return (
     <>
-      <div className={`btn-container ${type} ${color} ${className}`}>
+      <div className={`btn-container ${color} ${className}`}>
         <button className="btn" title={title}>
-          {Icon && <Icon className="icon" />}
+          {Icon && <Icon className="icon" style={{color: `${iconColor}`}}/>}
           {text && <span className="txt">{text}</span>}
         </button>
       </div>

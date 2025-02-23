@@ -1,8 +1,8 @@
-import { Fa6IconType } from "../main/iconType";
+// import { Fa6IconType } from "../main/iconType";
 
 export type SocialDataType = {
 	socialName: string;
-	iconName: Fa6IconType;
+	iconName: string;
 };
 
 export type ScrollStyleType = { txtColor: string; iconColor: string };
@@ -18,7 +18,7 @@ export type StatusDataType = {
 }
 
 export type ServicesDataType = {
-	iconName: Fa6IconType;
+	iconName: string;
 	title: string;
 	desc: string;
 }

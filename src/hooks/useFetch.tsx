@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { MainDataType } from "../dataTypes/main/mainDataType";
-import { GlintDataType } from "../dataTypes/glint/glintDataType";
+import { MainDataType } from "../dataTypes/mainDataType";
+import { GlintDataType } from "../dataTypes/glintDataType";
 
 type PropsType = {
 	url: string;

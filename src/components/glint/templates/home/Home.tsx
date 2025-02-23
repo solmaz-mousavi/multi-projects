@@ -1,4 +1,4 @@
-import { SocialDataType } from "../../../../dataTypes/glint/glintDataType";
+import { SocialDataType } from "../../../../dataTypes/glintDataType";
 import { StyledHomeWrapper } from "./StyledHomeWrapper";
 import Button from "../../../main/modules/button/Button";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -43,7 +43,7 @@ function Home({ scrollPosition, data }: HomePropsType) {
               <div className="home-social__link" key={index}>
 
                 <Button
-                  type="iconBtn"
+       
                   color="transparent"
                   iconName={item.iconName}
                   tooltip={item.socialName}
