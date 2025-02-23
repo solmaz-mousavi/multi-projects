@@ -74,7 +74,7 @@
   }
 }
 
-@container (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .home-container {
     min-height: 480px;
     padding: 80px 0px;
@@ -97,7 +97,7 @@
   }
 }
 
-@container (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .home-container {
     min-height: 400px;
     padding: 60px 0px;
@@ -107,7 +107,7 @@
   }
 }
 
-@container (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .home-container {
     min-height: 520px;
     padding: 100px 20px;

@@ -1,8 +1,6 @@
 import { SocialDataType } from "../../../../dataTypes/glintDataType";
 import { StyledHomeWrapper } from "./StyledHomeWrapper";
 import Button from "../../../main/modules/button/Button";
-import ScrollAnimation from "react-animate-on-scroll";
-
 import "./home.scss";
 
 type HomePropsType = {
@@ -11,18 +9,14 @@ type HomePropsType = {
 };
 
 function Home({ scrollPosition, data }: HomePropsType) {
-
   return (
     <>
-
-		
       <StyledHomeWrapper
         scrollPosition={`100% ${(scrollPosition / 8) * -1}px`}
-        className="section-container home-container">
+        className="section-container home-container"
+      >
         <div className="home-txt-container">
-		<ScrollAnimation animateIn="fadeIn" animateOnce={true}>
           <p className="top-title home-txt__welcome">Welcome to Glint</p>
-					</ScrollAnimation>
           <p className="main-title home-txt__description">
             We are a creative group of people who design influential brands and
             digital experiences.
@@ -41,9 +35,7 @@ function Home({ scrollPosition, data }: HomePropsType) {
           {data &&
             data.map((item, index) => (
               <div className="home-social__link" key={index}>
-
                 <Button
-       
                   color="transparent"
                   iconName={item.iconName}
                   tooltip={item.socialName}

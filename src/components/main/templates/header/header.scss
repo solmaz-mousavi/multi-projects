@@ -29,18 +29,16 @@
 	pointer-events:all;
 }
 
-// @media screen and (max-width: 992px) {
-
-// };
-
 @media screen and (max-width: 768px) {
   .header-container {
     height: 50px;
+		padding: 0px 30px;
   }
 }
 
 @media screen and (max-width: 412px) {
   .header-container {
     height: 40px;
+		padding: 0px 20px;
   }
 }

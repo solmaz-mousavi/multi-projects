@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useRoutes } from 'react-router-dom';
 import router from './routes';
 import useFetch from './hooks/useFetch';
-import { StyledWrapper } from './components/styled-components/StyledWrapper';
 import Error from './components/main/templates/error/Error';
 import Loader from './components/main/templates/loader/Loader';
 import Header from './components/main/templates/header/Header';
@@ -13,7 +12,7 @@ function App() {
   const [showGuidBox, setShowGuidBox] = useState<boolean>(true);
 
   return (
-    <div className="app-container">
+    <>
       {error && <Error error={error} fullScreen={true} />}
       {pending && <Loader type="data" fullScreen={true} />}
       {mainData && (
@@ -25,11 +24,11 @@ function App() {
           )} */}
           <Header data={mainData} />
           <main id="main-wrapper">
-            {/* <StyledWrapper displayWidth={display.width}>{routes}</StyledWrapper> */}
+						{routes}
           </main>
         </>
       )}
-    </div>
+    </>
   );
 }
 
