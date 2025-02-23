@@ -1,27 +1,30 @@
 {
 	"packages":[
-		{"name": "javascript", "iconNAme": "FaJs"},
-		{"name": "reactJS", "iconNAme": "FaReact"},
-		{"name": "typescript", "iconNAme": "TbBrandTypescript"},
-		{"name": "sass", "iconNAme": "FaSass"}
+		{"name": "javascript", "iconName": "FaJs", "color": "#E8D44D"},
+		{"name": "reactJS", "iconName": "FaReact", "color": "#5ED3F3"},
+		{"name": "typescript", "iconName": "TbBrandTypescript", "color": "#0076C6"},
+		{"name": "sass", "iconName": "FaSass", "color": "#C76395"}
 	],
   "projects": [
     {
       "title": "glint",
       "image": "/assets/images/main/glint.png",
       "route": "/",
+			"description":"a landingPage created by 50lm@2",
       "packages": ["javascript", "reactJS", "typescript", "sass"]
     },
 		{
       "title": "kakura",
       "image": "/assets/images/main/kakura.jpeg",
       "route": "/dashboard",
+			"description":"a landingPage created by 50lm@2",
       "packages": ["javascript", "reactJS", "typescript", "sass"]
     },
     {
       "title": "dashboard",
       "image": "/assets/images/main/kakura.jpeg",
       "route": "/dashboard",
+			"description":"a landingPage created by 50lm@2",
       "packages": ["reactJS", "typescript"]
     }
   ]

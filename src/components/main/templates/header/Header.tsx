@@ -3,6 +3,7 @@ import { MainDataType } from "../../../../dataTypes/mainDataType";
 import Button from "../../modules/button/Button";
 import Navbar from "../navbar/Navbar";
 import "./header.scss";
+import ContactInfo from "../contactInfo/ContactInfo";
 
 type HeaderPropsType = {
   data: MainDataType;
@@ -14,6 +15,7 @@ function Header({ data }: HeaderPropsType) {
 
   const showNavbarHandler = () => {
     setShowNavbar(true);
+		setShowContactInfo(false);
     document
       .getElementById("main-wrapper")
       ?.addEventListener("click", closeNavbarHandler);
@@ -25,6 +27,20 @@ function Header({ data }: HeaderPropsType) {
       ?.removeEventListener("click", closeNavbarHandler);
   };
 
+	const showContactInfoHandler = () => {
+    setShowContactInfo(true);
+		setShowNavbar(false);
+    document
+      .getElementById("main-wrapper")
+      ?.addEventListener("click", closeContactInfoHandler);
+  };
+  const closeContactInfoHandler = () => {
+    setShowContactInfo(false);
+    document
+      .getElementById("main-wrapper")
+      ?.removeEventListener("click", closeContactInfoHandler);
+  };
+
   return (
     <>
       <header className="header-container">
@@ -33,22 +49,27 @@ function Header({ data }: HeaderPropsType) {
             color="transparent"
             iconName="FaChevronDown"
             text="Select Project"
+						hover={true}
           />
         </div>
-        <div className="header-btn">
+        <div className="header-btn" onClick={showContactInfoHandler}>
           <Button
             color="transparent"
             iconName="FaChevronDown"
             text="Contact Info"
+						hover={true}
           />
         </div>
       </header>
       <nav className={`navbar-wrapper ${showNavbar && "show"}`}>
         <Navbar
           closeNavbarHandler={closeNavbarHandler}
-          projects={data.projects}
+          data={data}
         />
       </nav>
+			<section className={`contactInfo-wrapper ${showContactInfo && "show"}`}>
+				<ContactInfo data={data.packages}/>
+			</section>
     </>
   );
 }

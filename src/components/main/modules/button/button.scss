@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   transition: all ease-out 400ms;
-  cursor: pointer;
+	margin: 2px;
   &:hover + .btn-tooltip {
     opacity: 1;
   }
@@ -11,13 +11,20 @@
     border: none;
     background-color: transparent;
     .icon, .txt {
-      cursor: pointer;
 			font-size: 1rem;
     }
     .txt {
 			padding: 0px 5px;
     }
   }
+}
+
+.btn-container.hover{
+	.btn{
+		.icon, .txt{
+			cursor: pointer;
+		}
+	}
 }
 
 .btn-tooltip {
@@ -41,13 +48,14 @@
   .txt {
     color: #9b9b9b;
   }
-  &:hover {
+
+}
+.btn-container.dark.hover :hover{
     background-color: #222;
     .icon,
     .txt {
       color: #fff;
     }
-  }
 }
 
 .btn-container.transparent {
@@ -56,12 +64,12 @@
   .txt {
     color: #9b9b9b;
   }
-  &:hover {
-    .icon,
-    .txt {
-      color: #fff;
-    }
-  }
+}
+.btn-container.transparent.hover:hover{
+	.icon,
+	.txt {
+		color: #fff;
+	}
 }
 
 @media screen and (max-width: 768px) {

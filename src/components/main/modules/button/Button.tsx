@@ -11,6 +11,7 @@ type ButtonTypes = {
   tooltipType?: "left" | "right" | "bottom" | "top";
   tooltipColor?: string;
   className?: string;
+	hover?:boolean;
 };
 
 function Button({
@@ -23,6 +24,7 @@ function Button({
   tooltipType,
   tooltipColor,
   className,
+	hover,
 }: ButtonTypes) {
 	let Icon;
 	if (iconName) {
@@ -31,15 +33,15 @@ function Button({
 
   return (
     <>
-      <div className={`btn-container ${color} ${className}`}>
+      <div className={`btn-container ${color} ${className || ""} ${hover ? "hover" : ""}`}>
         <button className="btn" title={title}>
-          {Icon && <Icon className="icon" style={{color: `${iconColor}`}}/>}
+          {Icon && <Icon className="icon" style={{color: `${iconColor || ""}`}}/>}
           {text && <span className="txt">{text}</span>}
         </button>
       </div>
       {tooltip && (
         <span
-          className={`btn-tooltip ${tooltipType}`}
+          className={`btn-tooltip ${tooltipType} ${hover && "hover"}`}
           style={{ color: `${tooltipColor}` }}
         >
           {tooltip}
