@@ -43,7 +43,7 @@ function Header({ data }: HeaderPropsType) {
 
   return (
     <>
-      <header className="header-container">
+      <header id="Header" className="header-container">
         <div className="header-btn" onClick={showNavbarHandler}>
           <Button
             color="transparent"

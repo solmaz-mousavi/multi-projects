@@ -12,8 +12,15 @@
 }
 :root {
 	--main-color-gray-dark: #222;
+	--main-color-gray-semi-dark: #333;
 	--main-color-gray: #444;
 	--main-color-gray-light: #999;
+
+	--main-color-white: #fff;
+	--main-color-semi-white: #ffffff50;
+
+	--main-color-black: #000;
+	--main-color-semi-black: #00000050;
 
 	--glint-color-green: #39B44C;
 }

@@ -21,6 +21,7 @@
       "iconName": "FaDribbble"
     }
   ],
+	"menu":["Home", "About", "Services", "Works", "Clients", "Contacts"],
   "scrollData": {
     "scrollStyles": [
       { "txtColor": "fff", "iconColor": "39B44C" },
@@ -28,10 +29,12 @@
       { "txtColor": "000", "iconColor": "39B44C" }
     ],
     "scrollBreakpoints": [
+      { "id": "Header", "styleIndex": "0" },
       { "id": "Home", "styleIndex": "0" },
       { "id": "About", "styleIndex": "1" },
       { "id": "Services", "styleIndex": "2" },
-      { "id": "Works", "styleIndex": "2" },
+      { "id": "WorksTop", "styleIndex": "0" },
+      { "id": "WorksBottom", "styleIndex": "2" },
       { "id": "Clients", "styleIndex": "2" },
       { "id": "Contacts", "styleIndex": "0" }
     ]

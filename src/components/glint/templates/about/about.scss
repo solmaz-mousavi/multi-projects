@@ -1,0 +1,115 @@
+.about-container {
+  background-color: var(--glint-color-green);
+  flex-direction: column;
+  text-align: center;
+  .about-header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--main-color-semi-white);
+    margin: 0 auto;
+    .about-header__top {
+      color: var(--main-color-black);
+    }
+    .about-header__title {
+      color: var(--main-color-white);
+    }
+  }
+  .about-description {
+    padding: 20px 10%;
+    font-size: 1.7rem;
+  }
+  .about-status-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 50px 0px;
+    .about-status {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .about-status__count {
+        font-size: 5rem;
+        line-height: 5rem;
+        color: var(--main-color-white);
+        font-weight: 700;
+      }
+      .about-status__des {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-top: 10px;
+      }
+    }
+    .animated:not(:last-child) .about-status {
+      border-right: 1px solid var(--main-color-semi-white);
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .about-container .about-status-container .about-status {
+    width: 200px;
+    .about-status__count {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+    .about-status__des {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .about-container {
+    .about-description {
+      font-size: 1.2rem;
+    }
+    .about-status-container {
+      flex-wrap: wrap;
+      width: 500px;
+      .about-status {
+        margin: 10px;
+        .about-status__count {
+          font-size: 4rem;
+          line-height: 3rem;
+        }
+      }
+      .animated:not(:last-child) .about-status {
+        border: none;
+      }
+      .animated:nth-child(odd) .about-status {
+        border-right: 1px solid var(--main-color-semi-white);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .about-container {
+    .about-description {
+      font-size: 1rem;
+    }
+    .about-status-container {
+      width: 250px;
+      padding: 0;
+      .about-status {
+        margin: 0px;
+        padding: 20px;
+        .about-status__count {
+          font-size: 3rem;
+          line-height: 2rem;
+        }
+        .about-status__des {
+          font-size: 1rem;
+        }
+      }
+      .animated:nth-child(odd) .about-status {
+        border: none;
+      }
+      .animated:not(:last-child) .about-status {
+        border-bottom: 1px solid var(--main-color-semi-white);
+      }
+    }
+  }
+}

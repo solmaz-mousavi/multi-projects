@@ -31,8 +31,9 @@ export type WorksDataType = {
 }
 
 export type GlintDataType = {
+	menu: string[];
 	social: SocialDataType[];
-	scrollData: ScrollDataType[];
+	scrollData: ScrollDataType;
 	status: StatusDataType[];
 	services: ServicesDataType[];
 	works: WorksDataType[];

@@ -43,18 +43,18 @@
 }
 
 .btn-container.dark {
-  background-color: #333;
+  background-color: var(--main-color-gray-semi-dark);
   .icon,
   .txt {
-    color: #9b9b9b;
+    color: var(--main-color-gray-light);
   }
 
 }
 .btn-container.dark.hover :hover{
-    background-color: #222;
+    background-color: var(--main-color-gray-dark);
     .icon,
     .txt {
-      color: #fff;
+      color: var(--main-color-white);
     }
 }
 
@@ -62,13 +62,13 @@
   background-color: transparent;
   .icon,
   .txt {
-    color: #9b9b9b;
+    color: var(--main-color-gray-light);
   }
 }
 .btn-container.transparent.hover:hover{
 	.icon,
 	.txt {
-		color: #fff;
+		color: var(--main-color-white);
 	}
 }
 

@@ -1,12 +1,11 @@
 .navbar-container {
-  background-color: #444;
+  background-color: var(--main-color-gray);
   transition: all ease-out 400ms;
   position: fixed;
   width: 100%;
-  z-index: 10;
 
   .navbar-thumbnail {
-    background-color: #222;
+    background-color: var(--main-color-gray-dark); 
     width: 225px;
 		height: 140px;
     margin: 0 auto;
@@ -14,11 +13,12 @@
     border-radius: 5px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 
+
     .navbar-thumbnail_top {
       display: flex;
       justify-content: stretch;
       align-items: center;
-      border-bottom: 1px solid #444;
+      border-bottom: 1px solid var(--main-color-gray);
 
       .navbar-thumbnail_image {
         width: 100px;
@@ -27,19 +27,19 @@
       }
       .navbar-thumbnail_title {
         text-align: center;
-        color: #fff;
+        color: var(--main-color-white);
       }
     }
     .navbar-thumbnail_description {
       text-align: left;
-      color: #999;
+      color: var(--main-color-gray-light);
       font-size: 0.7rem;
 			padding: 5px 0px;
-			border-bottom: 1px solid #444;
+			border-bottom: 1px solid var(--main-color-gray);
     }
     .navbar-thumbnail_package {
       .btn {
-				border: 1px solid #333;
+				border: 1px solid var(--main-color-gray-semi-dark);
         .txt,
         .icon {
           font-size: 0.6rem;
@@ -51,11 +51,11 @@
 
 .mySwiper {
   padding: 20px 50px;
-	background-color: #444;
+	background-color: var(--main-color-gray);
 }
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  color: #fff;
+  color: var(--main-color-white);
 }
 
 .swiper-slide {

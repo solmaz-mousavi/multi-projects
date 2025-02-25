@@ -1,6 +1,7 @@
 #glint{
 	overflow-y: auto;
 	height:calc(100vh - 60px);
+	scroll-behavior: smooth;
 }
 
 .fullWidth{
@@ -44,6 +45,9 @@
 }
 
 @media screen and (max-width: 768px) {
+	#glint{
+		height:calc(100vh - 50px);
+	}
   .top-title {
     font-size: 0.8rem;
   }
@@ -60,4 +64,10 @@
   .main-title {
     font-size: 2rem;
   }
+}
+
+@media screen and (max-width: 412px) {
+	#glint{
+		height:calc(100vh - 40px);
+	}
 }

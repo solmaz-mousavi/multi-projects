@@ -2,6 +2,7 @@ import { SocialDataType } from "../../../../dataTypes/glintDataType";
 import { StyledHomeWrapper } from "./StyledHomeWrapper";
 import Button from "../../../main/modules/button/Button";
 import "./home.scss";
+import Aos from "../../../main/modules/aos/Aos";
 
 type HomePropsType = {
   scrollPosition: number;
@@ -13,9 +14,11 @@ function Home({ scrollPosition, data }: HomePropsType) {
     <>
       <StyledHomeWrapper
         scrollPosition={`100% ${(scrollPosition / 8) * -1}px`}
-        className="section-container home-container"
+        className="section-container home-container" id="Home"
       >
-        <div className="home-txt-container">
+        <div className="home-txt-container" >
+					<Aos aosStyle="fadeInUp" once={true}>
+
           <p className="top-title home-txt__welcome">Welcome to Glint</p>
           <p className="main-title home-txt__description">
             We are a creative group of people who design influential brands and
@@ -29,6 +32,7 @@ function Home({ scrollPosition, data }: HomePropsType) {
               <a href="#About">more about us</a>
             </div>
           </div>
+					</Aos>
         </div>
 
         <div className="home-social-container">
@@ -42,6 +46,7 @@ function Home({ scrollPosition, data }: HomePropsType) {
                   tooltipType="left"
                   tooltipColor="var(--glint-color-green)"
                   className="social-link"
+									hover={true}
                 ></Button>
               </div>
             ))}

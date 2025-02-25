@@ -1,7 +1,7 @@
 .home-container {
 	height: calc(100vh - 60px);
-  background-color: #000;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background-color: var(--main-color-black);
+  background-image: linear-gradient(var(--main-color-semi-black), var(--main-color-semi-black)),
     url("../../../../../public/assets/images/glint/hero-bg.webp");
   background-size: cover;
   background-attachment: fixed;
@@ -15,10 +15,10 @@
     height: 100%;
     padding: 0px 0px 0px 20%;
     .home-txt__welcome {
-      color: rgba(255, 255, 255, 0.5);
+      color: var(--main-color-semi-white);
     }
     .home-txt__description {
-      color: #fff;
+      color: var(--main-color-white);
     }
     .home-txt__btn-container {
       margin-top: 80px;
@@ -28,7 +28,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 2px solid #fff;
+        border: 2px solid var(--main-color-white);
         width: 215px;
         height: 54px;
         background-color: transparent;
@@ -40,13 +40,13 @@
           font-size: 0.75rem;
           letter-spacing: 0.2rem;
           text-decoration: none;
-          color: #fff;
+          color: var(--main-color-white);
           &:hover {
-            color: #000;
+            color: var(--main-color-black);
           }
         }
         &:hover {
-          background-color: #fff;
+          background-color: var(--main-color-white);
         }
       }
     }
@@ -67,7 +67,7 @@
 				width: 32px;
 				height: 32px;
 				font-size: 2rem;
-				border: 1px solid #9b9b9b;
+				border: 1px solid var(--main-color-gray-light);
 				border-radius: 100%;
 			}
     }
