@@ -1,7 +1,11 @@
 .services-container {
+	display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--main-color-white);
   flex-direction: column;
   text-align: center;
+	padding: 50px 0px;
 
   .services-header {
     padding: 0px 10%;
@@ -21,10 +25,12 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 20px 0px;
+		& > div{
+      width: 45%;
+		}
     .service-item-thumbnail {
 			display: flex;
 			align-items: flex-start;
-      width: 45%;
 			padding: 10px;
 
 			.service-item-icon .icon{
@@ -33,8 +39,8 @@
 
       .service-item__desc {
         padding-left: 10px;
-				height: 14vh;
-				overflow: hidden;
+				// height: 14vh;
+				// overflow: hidden;
         h5 {
           font-size: 1.7rem;
           text-align: left;

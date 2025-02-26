@@ -5,7 +5,7 @@ import "./services.scss";
 
 function Services({ data }: { data: ServicesDataType[] }) {
   return (
-    <section id="Services" className="section-container services-container">
+    <section id="Services" className="services-container">
       <Aos aosStyle="fadeInUp" once={true}>
         <div className="services-header">
           <p className="top-title services-header__top">What We Do</p>
@@ -18,19 +18,22 @@ function Services({ data }: { data: ServicesDataType[] }) {
         <div className="service-item-container">
           {data &&
             data.map((item, index) => (
-              <div key={index} className="service-item-thumbnail">
+							<Aos aosStyle="fadeInUp" once={true} key={index} >
+								<div className="service-item-thumbnail">
+
                 <Button
                   className="service-item-icon"
                   color="transparent"
                   hover={false}
                   iconName={item.iconName}
                   iconColor="var(--glint-color-green)"
-                />
+									/>
                 <div className="service-item__desc">
                   <h5>{item.title}</h5>
                   <p>{item.desc}</p>
                 </div>
-              </div>
+									</div>
+									</Aos>
             ))}
         </div>
       </Aos>

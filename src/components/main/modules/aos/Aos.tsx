@@ -1,6 +1,7 @@
+import { useState } from "react";
 import ReactVisibilitySensor from "react-visibility-sensor";
 import "animate.css";
-import { useState } from "react";
+import "./aos.scss";
 type AosPropsType = {
   children?: React.ReactNode;
   aosStyle: string;
@@ -19,16 +20,20 @@ function Aos({ children, aosStyle, once = false, className }: AosPropsType) {
     <ReactVisibilitySensor>
       {({ isVisible }: { isVisible: boolean }) => (
         <div className={className}>
-          {isVisible && repeat ? (
-            <div
-              className={`animate__animated animate__${aosStyle}`}
-              onAnimationEnd={repeatHandler}
-            >
-              {children}
-            </div>
-          ) : (
-            <>{children}</>
-          )}
+          <div
+            className={`${
+              !repeat
+                ? ""
+                : `${
+                    isVisible
+                      ? `animate__animated animate__${aosStyle}`
+                      : "hidden"
+                  }`
+            }`}
+            onAnimationEnd={repeatHandler}
+          >
+            {children}
+          </div>
         </div>
       )}
     </ReactVisibilitySensor>
