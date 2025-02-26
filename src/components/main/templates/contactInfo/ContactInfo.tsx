@@ -5,7 +5,6 @@ type ContactInfoPropsType = {
   data: PackageType[];
 };
 function ContactInfo({ data }: ContactInfoPropsType) {
-  console.log(data);
   return (
     <>
       <div className="contactInfo-container">

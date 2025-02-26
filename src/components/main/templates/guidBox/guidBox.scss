@@ -1,49 +1,134 @@
 .guidbox-wrapper {
-  position: fixed;
-  top: 60px;
-  width: 100vw;
-  height: calc(100vh - 60px);
-  background-color: rgba(0, 0, 0, 0.8);
-  transition: all ease-out 400ms;
-  z-index: 10;
-  .guidbox-container {
-    position: relative;
-    width: 300px;
-    background-color: #ccc;
-    border-radius: 10px;
-    margin: 30px;
-    padding: 20px;
-    z-index: 11;
-    &::after {
-      content: "";
-      position: absolute;
-      top: -50px;
-      left: 30px;
-      width: 0;
-      height: 0;
-      border-right: 15px solid transparent;
-      border-left: 15px solid transparent;
-      border-bottom: 50px solid #ccc;
-      z-index: 11;
+  position: relative;
+  z-index: 20;
+  .guidbox {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+		transition: all ease-out 400ms;
+    .guidbox-arrow-top {
+      position: relative;
+      top: 0px;
+      left: 0px;
+      width: 170px;
+      height: 60px;
+      border-radius: 10px;
+      border: 2px dashed #fff;
     }
-  }
-}
-
-@media screen and (max-width: 412px) {
-  .guidbox-wrapper {
-    .guidbox-container {
-      width: 200px;
-      border-radius: 5px;
-      margin: 10px;
-      padding: 10px;
-      font-size: 0.8rem;
-      &::after {
-        top: -30px;
-        left: 20px;
-        border-right: 5px solid transparent;
-        border-left: 5px solid transparent;
-        border-bottom: 30px solid #ccc;
+    .guidbox-arrow-bottom {
+      position: relative;
+      top: 0px;
+      width: 120px;
+      height: 30px;
+      border-bottom: 2px dashed #fff;
+    }
+    .guidbox-message {
+      position: relative;
+      top: -15px;
+      text-wrap: nowrap;
+      overflow: visible;
+      color: #fff;
+    }
+    .guidbox-btn {
+      position: relative;
+      top: -10px;
+			color: rgba(255, 255, 0, 0.5);
+      font-size: 1.1rem;
+      font-weight: 500;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      &:hover {
+        color: yellow;
       }
     }
   }
+	.guidbox-1 {
+    border-left: 20px solid rgba(0, 0, 0, 0.7);
+    border-right: calc(100vw - 190px) solid rgba(0, 0, 0, 0.7);
+    border-bottom: calc(100vh - 60px) solid rgba(0, 0, 0, 0.7);
+    .guidbox1-arrow-bottom {
+      left: 50px;
+      border-radius: 0px 0px 0px 10px;
+      border-left: 2px dashed #fff;
+    }
+    .guidbox1-message {
+      left: 180px;
+    }
+    .guidbox1-btn {
+      left: 360px;
+    }
+  }
+	.guidbox-2 {
+    border-left: calc(100vw - 190px) solid rgba(0, 0, 0, 0.7);
+    border-right: 20px solid rgba(0, 0, 0, 0.7);
+    border-bottom: calc(100vh - 60px) solid rgba(0, 0, 0, 0.7);
+    .guidbox2-arrow-bottom {
+      right: 0px;
+      border-radius: 0px 0px 10px 0px;
+      border-right: 2px dashed #fff;
+    }
+    .guidbox2-message {
+      right: 230px;
+    }
+    .guidbox2-btn {
+      right: 230px;
+    }
+  }
+	.hidden {
+		opacity: 0;
+		display: none;
+	}
+
+  // position: fixed;
+  // top: 60px;
+  // width: 100vw;
+  // height: calc(100vh - 60px);
+  // background-color: rgba(0, 0, 0, 0.8);
+  // transition: all ease-out 400ms;
+  // z-index: 10;
+  // .guidbox-container {
+  //   position: relative;
+  //   width: 300px;
+  //   background-color: #ccc;
+  //   border-radius: 10px;
+  //   margin: 30px;
+  //   padding: 20px;
+  //   z-index: 11;
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     top: -50px;
+  //     left: 30px;
+  //     width: 0;
+  //     height: 0;
+  //     border-right: 15px solid transparent;
+  //     border-left: 15px solid transparent;
+  //     border-bottom: 50px solid #ccc;
+  //     z-index: 11;
+  //   }
+  // }
 }
+
+
+
+// @media screen and (max-width: 412px) {
+//   .guidbox-wrapper {
+//     .guidbox-container {
+//       width: 200px;
+//       border-radius: 5px;
+//       margin: 10px;
+//       padding: 10px;
+//       font-size: 0.8rem;
+//       &::after {
+//         top: -30px;
+//         left: 20px;
+//         border-right: 5px solid transparent;
+//         border-left: 5px solid transparent;
+//         border-bottom: 30px solid #ccc;
+//       }
+//     }
+//   }
+// }

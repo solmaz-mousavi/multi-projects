@@ -1,42 +1,37 @@
-import { useState } from "react";
-import ReactVisibilitySensor from "react-visibility-sensor";
-import "animate.css";
+import { useEffect, useRef, useState } from "react";
 import "./aos.scss";
 type AosPropsType = {
   children?: React.ReactNode;
-  aosStyle: string;
-  once: boolean;
+  aosStyle?: "fadeUp" | "fadeDown";
   className?: string;
 };
 
-function Aos({ children, aosStyle, once = false, className }: AosPropsType) {
-  const [repeat, setRepeat] = useState<boolean>(true);
-  const repeatHandler = () => {
-    if (once) {
-      setRepeat(false);
+function Aos({ children, aosStyle, className }: AosPropsType) {
+  const ref = useRef<HTMLDivElement>(null);
+let 	elementBottomHeight :  any;
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (elementBottomHeight && elementBottomHeight-5 <= window.innerHeight) {
+      setIsVisible(true);
     }
-  };
+  }, [elementBottomHeight]);
+
+	useEffect(() => {
+		elementBottomHeight = ref.current?.getBoundingClientRect().bottom;
+    if (elementBottomHeight && elementBottomHeight-200 <= window.innerHeight) {
+      setIsVisible(true);
+    }
+		console.log(elementBottomHeight);
+  }, []);
+
   return (
-    <ReactVisibilitySensor>
-      {({ isVisible }: { isVisible: boolean }) => (
-        <div className={className}>
-          <div
-            className={`${
-              !repeat
-                ? ""
-                : `${
-                    isVisible
-                      ? `animate__animated animate__${aosStyle}`
-                      : "hidden"
-                  }`
-            }`}
-            onAnimationEnd={repeatHandler}
-          >
-            {children}
-          </div>
-        </div>
-      )}
-    </ReactVisibilitySensor>
+    <div
+      className={`${className} ${isVisible ? `${aosStyle}` : "hidden"}`}
+      ref={ref}
+    >
+      {children}
+    </div>
   );
 }
 

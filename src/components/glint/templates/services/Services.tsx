@@ -6,7 +6,7 @@ import "./services.scss";
 function Services({ data }: { data: ServicesDataType[] }) {
   return (
     <section id="Services" className="services-container">
-      <Aos aosStyle="fadeInUp" once={true}>
+      <Aos aosStyle="fadeUp">
         <div className="services-header">
           <p className="top-title services-header__top">What We Do</p>
           <p className="main-title services-header__title">
@@ -14,11 +14,11 @@ function Services({ data }: { data: ServicesDataType[] }) {
           </p>
         </div>
       </Aos>
-      <Aos aosStyle="fadeInUp" once={true}>
+      <Aos aosStyle="fadeUp">
         <div className="service-item-container">
           {data &&
             data.map((item, index) => (
-							<Aos aosStyle="fadeInUp" once={true} key={index} >
+							<Aos aosStyle="fadeUp" key={index} >
 								<div className="service-item-thumbnail">
 
                 <Button

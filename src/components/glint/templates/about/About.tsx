@@ -6,14 +6,14 @@ import "./about.scss";
 function About({ data }: { data: StatusDataType[] }) {
   return (
     <section id="About" className="section-container about-container">
-      <Aos aosStyle="fadeInUp" once={true}>
-        <div className="about-header">
+      <Aos aosStyle="fadeUp" className="about-header">
+        <div>
           <p className="top-title about-header__top">Hello There</p>
           <p className="main-title about-header__title">We Are Glint</p>
         </div>
 				</Aos>
-				<Aos aosStyle="fadeInUp" once={true}>
-        <div className="about-description">
+				<Aos aosStyle="fadeUp" className="about-description">
+        <div >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -25,14 +25,14 @@ function About({ data }: { data: StatusDataType[] }) {
           </p>
         </div>
       </Aos>
-      <Aos aosStyle="fadeInUp" once={true}>
+      <Aos aosStyle="fadeUp">
         <div className="about-status-container">
           {data &&
             data.map((item, index) => (
               <div key={index} className="about-status">
-                <p className="about-status__count">
+                <div className="about-status__count">
                   <CounterUp end={Number(item.count)} once={true} />
-                </p>
+                </div>
                 <p className="about-status__des">{item.name}</p>
               </div>
             ))}

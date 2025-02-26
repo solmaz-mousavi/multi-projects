@@ -3,7 +3,6 @@ import { StyledHomeWrapper } from "./StyledHomeWrapper";
 import Button from "../../../main/modules/button/Button";
 import "./home.scss";
 import Aos from "../../../main/modules/aos/Aos";
-
 type HomePropsType = {
   scrollPosition: number;
   data: SocialDataType[];
@@ -13,11 +12,11 @@ function Home({ scrollPosition, data }: HomePropsType) {
   return (
     <>
       <StyledHomeWrapper
-        scrollPosition={`100% ${(scrollPosition / 8) * -1}px`}
+        $scrollposition={`100% ${scrollPosition / -8}px`}
         className="section-container home-container" id="Home"
       >
         <div className="home-txt-container" >
-					<Aos aosStyle="fadeInUp" once={true}>
+					<Aos aosStyle="fadeUp">
 
           <p className="top-title home-txt__welcome">Welcome to Glint</p>
           <p className="main-title home-txt__description">

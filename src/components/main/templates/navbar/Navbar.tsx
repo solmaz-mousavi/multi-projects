@@ -1,11 +1,10 @@
-import { MainDataType, ProjectType } from "../../../../dataTypes/mainDataType";
+import { MainDataType } from "../../../../dataTypes/mainDataType";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./navbar.scss";
-import useFetch from "../../../../hooks/useFetch";
 import Button from "../../modules/button/Button";
 
 type NavbarPropsType = {
@@ -14,7 +13,6 @@ type NavbarPropsType = {
 };
 
 function Navbar({ closeNavbarHandler, data }: NavbarPropsType) {
-  console.log(window.innerWidth);
   return (
     <>
       {data.projects && (
@@ -29,7 +27,6 @@ function Navbar({ closeNavbarHandler, data }: NavbarPropsType) {
           >
             {data.projects.map((item) => (
               <SwiperSlide key={item.title}>
-                <Link to={item.route}>
                   <div
                     className="navbar-thumbnail"
                     onClick={closeNavbarHandler}
@@ -40,7 +37,7 @@ function Navbar({ closeNavbarHandler, data }: NavbarPropsType) {
                         src={item.image}
                         alt={item.title}
                       />
-                      <h5 className="navbar-thumbnail_title">{item.title}</h5>
+                      <Link to={item.route} className="navbar-thumbnail_title">{item.title}</Link>
                     </div>
                     <p className="navbar-thumbnail_description">
                       {item.description}
@@ -67,7 +64,6 @@ function Navbar({ closeNavbarHandler, data }: NavbarPropsType) {
                       </a>
                     ))}
                   </div>
-                </Link>
               </SwiperSlide>
             ))}
             <SwiperSlide>coming soon</SwiperSlide>
