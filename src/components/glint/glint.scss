@@ -10,10 +10,11 @@
 }
 
 .section-container {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+	padding: 50px 0px;
+	min-height: 100vh;
 }
 .top-title {
   text-transform: uppercase;
@@ -70,4 +71,7 @@
 	#glint{
 		height:calc(100vh - 40px);
 	}
+	.main-title {
+    font-size: 1.5rem;
+  }
 }

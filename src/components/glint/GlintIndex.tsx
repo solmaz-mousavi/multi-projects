@@ -10,7 +10,8 @@ import About from "./templates/about/About";
 import Services from "./templates/services/Services";
 import "./glint.scss";
 import Logo from "./templates/logo/Logo";
-import Aos2 from "../main/modules/aos/Aos";
+import Works from "./templates/works/Works";
+import Clients from "./templates/clients/Clients";
 
 function GlintIndex() {
   const { glintData, pending, error } = useFetch({
@@ -37,15 +38,12 @@ function GlintIndex() {
 					<Scroll scrollPosition={scrollPosition} data={glintData.scrollData}/>
 					
 					<Home scrollPosition={scrollPosition} data={glintData.social}/>
-					<Aos2 >
-						<p>soli moli goli</p>
-					</Aos2>
 					<About data={glintData.status} />
 					<Services data={glintData.services}/>
+					<Works data={glintData.works}/>
+					<Clients data={glintData.clients}/>
 
-          <h1 id="WorksTop">srthbyhjt</h1>
-          <h1 id="WorksBottom">srthbyhjt</h1>
-          <h1 id="Clients">srthbyhjt</h1>
+          <h1 >srthbyhjt</h1>
           <h1 id="Contacts">srthbyhjt</h1>
           <h1>srthbyhjt</h1>
           <h1>srthbyhjt</h1>

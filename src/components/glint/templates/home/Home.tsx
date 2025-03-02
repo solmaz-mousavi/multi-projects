@@ -7,7 +7,6 @@ type HomePropsType = {
   scrollPosition: number;
   data: SocialDataType[];
 };
-
 function Home({ scrollPosition, data }: HomePropsType) {
   return (
     <>
@@ -16,7 +15,8 @@ function Home({ scrollPosition, data }: HomePropsType) {
         className="section-container home-container" id="Home"
       >
         <div className="home-txt-container" >
-					<Aos aosStyle="fadeUp">
+					<Aos aosStyle="fadeInUp" once={true}>
+
 
           <p className="top-title home-txt__welcome">Welcome to Glint</p>
           <p className="main-title home-txt__description">

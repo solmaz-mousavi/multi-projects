@@ -1,8 +1,6 @@
-// import { Fa6IconType } from "../main/iconType";
-
 export type SocialDataType = {
-	socialName: string;
-	iconName: string;
+  socialName: string;
+  iconName: string;
 };
 
 export type ScrollStyleType = { txtColor: string; iconColor: string };
@@ -13,28 +11,34 @@ export type ScrollDataType = {
 };
 
 export type StatusDataType = {
-	name : string;
-	count : string;
-}
+  name: string;
+  count: string;
+};
 
 export type ServicesDataType = {
-	iconName: string;
-	title: string;
-	desc: string;
-}
+  iconName: string;
+  title: string;
+  desc: string;
+};
 
 export type WorksDataType = {
-	title: string;
-	category: string;
-	des: string;
-	image: string;
-}
+  title: string;
+  category: string;
+  des: string;
+  image: string;
+};
+
+export type ClientsDataType = {
+  name: string;
+  iconName: string;
+};
 
 export type GlintDataType = {
-	menu: string[];
-	social: SocialDataType[];
-	scrollData: ScrollDataType;
-	status: StatusDataType[];
-	services: ServicesDataType[];
-	works: WorksDataType[];
+  menu: string[];
+  social: SocialDataType[];
+  scrollData: ScrollDataType;
+  status: StatusDataType[];
+  services: ServicesDataType[];
+  works: WorksDataType[];
+	clients: ClientsDataType[];
 };

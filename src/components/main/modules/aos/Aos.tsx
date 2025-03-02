@@ -1,37 +1,50 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import ReactVisibilitySensor from "react-visibility-sensor";
+import "animate.css";
 import "./aos.scss";
 type AosPropsType = {
   children?: React.ReactNode;
-  aosStyle?: "fadeUp" | "fadeDown";
+  aosStyle: string;
+  once?: boolean;
   className?: string;
 };
 
-function Aos({ children, aosStyle, className }: AosPropsType) {
+function Aos({ children, aosStyle, once = false, className }: AosPropsType) {
   const ref = useRef<HTMLDivElement>(null);
-let 	elementBottomHeight :  any;
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (elementBottomHeight && elementBottomHeight-5 <= window.innerHeight) {
-      setIsVisible(true);
+  const [repeat, setRepeat] = useState<boolean>(true);
+  const repeatHandler = () => {
+    if (once) {
+      setTimeout(function () {
+        setRepeat(false);
+      }, 1000);
     }
-  }, [elementBottomHeight]);
-
-	useEffect(() => {
-		elementBottomHeight = ref.current?.getBoundingClientRect().bottom;
-    if (elementBottomHeight && elementBottomHeight-200 <= window.innerHeight) {
-      setIsVisible(true);
-    }
-		console.log(elementBottomHeight);
-  }, []);
-
+  };
   return (
-    <div
-      className={`${className} ${isVisible ? `${aosStyle}` : "hidden"}`}
+    <ReactVisibilitySensor
       ref={ref}
+      partialVisibility={true}
+      offset={{ top: 10 }}
+      active={true}
     >
-      {children}
-    </div>
+      {({ isVisible }: { isVisible: boolean }) => (
+        <div className={className}>
+          <div
+            className={`${
+              !repeat
+                ? ""
+                : `${
+                    isVisible
+                      ? `animate__animated animate__${aosStyle}`
+                      : "hidden"
+                  }`
+            }`}
+            onAnimationEnd={repeatHandler}
+          >
+            {children}
+          </div>
+        </div>
+      )}
+    </ReactVisibilitySensor>
   );
 }
 

@@ -49,22 +49,22 @@
   }
 }
 
-.mySwiper {
+.navbar-container .mySwiper {
   padding: 20px 50px;
 	background-color: var(--main-color-gray);
 }
-.swiper-button-prev::after,
-.swiper-button-next::after {
+.navbar-container .swiper-button-prev::after,
+.navbar-container .swiper-button-next::after {
   color: var(--main-color-white);
 }
 
-.swiper-slide {
+.navbar-container .swiper-slide {
 	width: auto!important;
 }
 
 @media screen and (max-width: 412px) {
-  .swiper-button-prev::after,
-  .swiper-button-next::after {
+  .navbar-container .swiper-button-prev::after,
+  .navbar-container .swiper-button-next::after {
     display: none;
   }
 }

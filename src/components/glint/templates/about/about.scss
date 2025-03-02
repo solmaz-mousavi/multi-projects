@@ -41,7 +41,7 @@
         margin-top: 10px;
       }
     }
-    .animated:not(:last-child) .about-status {
+    .about-status:not(:last-child){
       border-right: 1px solid var(--main-color-semi-white);
     }
   }
@@ -51,8 +51,8 @@
   .about-container .about-status-container .about-status {
     width: 200px;
     .about-status__count {
-      font-size: 4rem;
-      line-height: 4rem;
+      font-size: 2.8rem;
+      line-height: 2.8rem;
     }
     .about-status__des {
       font-size: 1.1rem;
@@ -71,14 +71,14 @@
       .about-status {
         margin: 10px;
         .about-status__count {
-          font-size: 4rem;
-          line-height: 3rem;
+          font-size: 2.5rem;
+          line-height: 2.5rem;
         }
       }
-      .animated:not(:last-child) .about-status {
+      .about-status:not(:last-child) {
         border: none;
       }
-      .animated:nth-child(odd) .about-status {
+      .about-status:nth-child(odd) {
         border-right: 1px solid var(--main-color-semi-white);
       }
     }
@@ -96,18 +96,14 @@
       .about-status {
         margin: 0px;
         padding: 20px;
-        .about-status__count {
-          font-size: 3rem;
-          line-height: 2rem;
-        }
         .about-status__des {
           font-size: 1rem;
         }
       }
-      .animated:nth-child(odd) .about-status {
+      .about-status:nth-child(odd) {
         border: none;
       }
-      .animated:not(:last-child) .about-status {
+      .about-status:not(:last-child) {
         border-bottom: 1px solid var(--main-color-semi-white);
       }
     }

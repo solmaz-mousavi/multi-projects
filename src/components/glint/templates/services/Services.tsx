@@ -5,8 +5,8 @@ import "./services.scss";
 
 function Services({ data }: { data: ServicesDataType[] }) {
   return (
-    <section id="Services" className="services-container">
-      <Aos aosStyle="fadeUp">
+    <section id="Services" className="section-container services-container">
+      <Aos aosStyle="fadeInUp" once={true}>
         <div className="services-header">
           <p className="top-title services-header__top">What We Do</p>
           <p className="main-title services-header__title">
@@ -14,26 +14,25 @@ function Services({ data }: { data: ServicesDataType[] }) {
           </p>
         </div>
       </Aos>
-      <Aos aosStyle="fadeUp">
+      <Aos aosStyle="fadeInUp" once={true}>
         <div className="service-item-container">
           {data &&
             data.map((item, index) => (
-							<Aos aosStyle="fadeUp" key={index} >
-								<div className="service-item-thumbnail">
-
-                <Button
-                  className="service-item-icon"
-                  color="transparent"
-                  hover={false}
-                  iconName={item.iconName}
-                  iconColor="var(--glint-color-green)"
-									/>
-                <div className="service-item__desc">
-                  <h5>{item.title}</h5>
-                  <p>{item.desc}</p>
+              <Aos aosStyle="fadeInUp" key={index} once={true}>
+                <div className="service-item-thumbnail">
+                  <Button
+                    className="service-item-icon"
+                    color="transparent"
+                    hover={false}
+                    iconName={item.iconName}
+                    iconColor="var(--glint-color-green)"
+                  />
+                  <div className="service-item__desc">
+                    <h5>{item.title}</h5>
+                    <p>{item.desc}</p>
+                  </div>
                 </div>
-									</div>
-									</Aos>
+              </Aos>
             ))}
         </div>
       </Aos>

@@ -94,37 +94,47 @@
       "title": "Shutterbug",
       "category": "Branding",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
-      "image": "/src/assets/images/works/lady-shutterbug.jpg.webp"
+      "image": "/assets/images/main/works/lady-shutterbug.webp"
     },
     {
       "title": "Woodcraft",
       "category": "Web Design",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
-      "image": "/src/assets/images/works/woodcraft.jpg.webp"
+      "image": "/assets/images/main/works/woodcraft.webp"
     },
     {
       "title": "The Beetle",
       "category": "Web Development",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
-      "image": "/src/assets/images/works/the-beetle.jpg.webp"
+      "image": "/assets/images/main/works/the-beetle.webp"
     },
     {
       "title": "Grow Green",
       "category": "Branding",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
-      "image": "/src/assets/images/works/grow-green.jpg.webp"
+      "image": "/assets/images/main/works/grow-green.webp"
     },
     {
       "title": "Guitarist",
       "category": "Web Design",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
-      "image": "/src/assets/images/works/guitarist.jpg.webp"
+      "image": "/assets/images/main/works/guitarist.webp"
     },
     {
       "title": "Palmeira",
       "category": "Web Design",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
-      "image": "/src/assets/images/works/palmeira.jpg.webp"
+      "image": "/assets/images/main/works/palmeira.webp"
     }
-  ]
+  ],
+	"clients": [
+		{"name":"Chrome", "iconName":"TbBrandChrome"},
+		{"name":"Apple", "iconName":"TbBrandApple"},
+		{"name":"Dropbox", "iconName":"FaDropbox"},
+		{"name":"Blackberry", "iconName":"TbBrandBlackberry"},
+		{"name":"Deezer", "iconName":"TbBrandDeezer"},
+		{"name":"Badoo", "iconName":"TbBrandBadoo"},
+		{"name":"Bluesky", "iconName":"TbBrandBluesky"},
+		{"name":"Bunpo", "iconName":"TbBrandBunpo"}
+	]
 }
