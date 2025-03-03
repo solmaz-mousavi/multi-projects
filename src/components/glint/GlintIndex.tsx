@@ -41,9 +41,8 @@ function GlintIndex() {
 					<About data={glintData.status} />
 					<Services data={glintData.services}/>
 					<Works data={glintData.works}/>
-					<Clients data={glintData.clients}/>
+					<Clients clientsData={glintData.clients} teamMembersData = {glintData.teamMembers}/>
 
-          <h1 >srthbyhjt</h1>
           <h1 id="Contacts">srthbyhjt</h1>
           <h1>srthbyhjt</h1>
           <h1>srthbyhjt</h1>

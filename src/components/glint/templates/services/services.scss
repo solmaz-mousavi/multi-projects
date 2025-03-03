@@ -14,7 +14,6 @@
     }
     .services-header__title {
       padding-bottom: 20px;
-      border-bottom: 1px solid var(--main-color-semi-black);
     }
   }
 
@@ -39,8 +38,6 @@
 
       .service-item__desc {
         padding-left: 10px;
-				// height: 14vh;
-				// overflow: hidden;
         h5 {
           font-size: 1.7rem;
           text-align: left;
@@ -55,16 +52,18 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 764px) {
   .services-container {
     .service-item-container {
 			padding: 20px;
+			& > div{
+				width: 100%;
+
+			}
 			.service-item-thumbnail {
 				width: 100%;
 				.service-item__desc {
 					padding-left: 10px;
-					height: 8vh;
-					overflow: hidden;
 					h5 {
 						font-size: 1.1rem;
 					}

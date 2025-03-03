@@ -12,6 +12,7 @@ function About({ data }: { data: StatusDataType[] }) {
           <p className="main-title about-header__title">We Are Glint</p>
         </div>
 				</Aos>
+				<div className="devider"></div>
 				<Aos aosStyle="fadeInUp" className="about-description" once={true}>
         <div >
           <p>

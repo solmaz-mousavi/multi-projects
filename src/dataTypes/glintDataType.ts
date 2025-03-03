@@ -33,6 +33,13 @@ export type ClientsDataType = {
   iconName: string;
 };
 
+export type TeamMembersDataType = {
+  name: string;
+	job: string;
+	image: string;
+	desc: string;
+};
+
 export type GlintDataType = {
   menu: string[];
   social: SocialDataType[];
@@ -41,4 +48,5 @@ export type GlintDataType = {
   services: ServicesDataType[];
   works: WorksDataType[];
 	clients: ClientsDataType[];
+	teamMembers: TeamMembersDataType[];
 };

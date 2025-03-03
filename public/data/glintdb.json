@@ -94,37 +94,37 @@
       "title": "Shutterbug",
       "category": "Branding",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
-      "image": "/assets/images/main/works/lady-shutterbug.webp"
+      "image": "/assets/images/glint/works/lady-shutterbug.webp"
     },
     {
       "title": "Woodcraft",
       "category": "Web Design",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
-      "image": "/assets/images/main/works/woodcraft.webp"
+      "image": "/assets/images/glint/works/woodcraft.webp"
     },
     {
       "title": "The Beetle",
       "category": "Web Development",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
-      "image": "/assets/images/main/works/the-beetle.webp"
+      "image": "/assets/images/glint/works/the-beetle.webp"
     },
     {
       "title": "Grow Green",
       "category": "Branding",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
-      "image": "/assets/images/main/works/grow-green.webp"
+      "image": "/assets/images/glint/works/grow-green.webp"
     },
     {
       "title": "Guitarist",
       "category": "Web Design",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
-      "image": "/assets/images/main/works/guitarist.webp"
+      "image": "/assets/images/glint/works/guitarist.webp"
     },
     {
       "title": "Palmeira",
       "category": "Web Design",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
-      "image": "/assets/images/main/works/palmeira.webp"
+      "image": "/assets/images/glint/works/palmeira.webp"
     }
   ],
 	"clients": [
@@ -136,5 +136,13 @@
 		{"name":"Badoo", "iconName":"TbBrandBadoo"},
 		{"name":"Bluesky", "iconName":"TbBrandBluesky"},
 		{"name":"Bunpo", "iconName":"TbBrandBunpo"}
+	],
+	"teamMembers":[
+		{"name":"Tom Cook", "job":"ceo", "image":"/assets/images/glint/team/user01.webp", "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."},
+		{"name":"Sara Blackwood", "job":"backend", "image":"/assets/images/glint/team/user02.webp", "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."},
+		{"name":"Satya Nadella", "job":"ui developer", "image":"/assets/images/glint/team/user03.jpg", "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."},
+		{"name":"Kate Morgan", "job":"ui developer", "image":"/assets/images/glint/team/user04.jpg", "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."},
+		{"name":"Chain Lock", "job":"backend", "image":"/assets/images/glint/team/user05.png", "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."},
+		{"name":"Mahsa Sharifi", "job":"backend", "image":"/assets/images/glint/team/user06.jpg", "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."}
 	]
 }

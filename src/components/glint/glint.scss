@@ -34,6 +34,16 @@
 	position: relative;
 	z-index: 0 !important;
 }
+.devider{
+	height: 0px;
+	border-bottom: 1px solid var(--main-color-semi-white);
+	width: 60%;
+	max-width: 400px;
+	margin: 30px;
+}
+.devider.dark{
+	border-bottom: 1px solid var(--main-color-semi-black);
+}
 
 @media screen and (max-width: 992px) {
   .top-title {
@@ -60,7 +70,6 @@
 @media screen and (max-width: 600px) {
   .top-title {
     font-size: 0.6rem;
-    width: 100%;
   }
   .main-title {
     font-size: 2rem;

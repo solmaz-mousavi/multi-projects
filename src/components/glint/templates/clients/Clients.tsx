@@ -1,4 +1,4 @@
-import { ClientsDataType } from "../../../../dataTypes/glintDataType";
+import { ClientsDataType, TeamMembersDataType } from "../../../../dataTypes/glintDataType";
 import Aos from "../../../main/modules/aos/Aos";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Pagination } from "swiper/modules";
@@ -6,8 +6,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Button from "../../../main/modules/button/Button";
 import "./clients.scss";
+type ClientsPropsType = {
+	clientsData: ClientsDataType[];
+teamMembersData: TeamMembersDataType[];
+}
 
-function Clients({ data }: { data: ClientsDataType[] }) {
+function Clients({ clientsData,	teamMembersData }: ClientsDataType) {
   return (
     <section id="Clients" className="section-container clients-container">
       <Aos aosStyle="fadeInUp" once={true}>
@@ -26,8 +30,8 @@ function Clients({ data }: { data: ClientsDataType[] }) {
               slidesPerView="auto"
               loop={true}
             >
-              {data &&
-                data.map((item, index) => (
+              {clientsData &&
+                clientsData.map((item, index) => (
                   <SwiperSlide key={index}>
                     <Button
                       className="clients-item-icon"
@@ -42,6 +46,7 @@ function Clients({ data }: { data: ClientsDataType[] }) {
           </div>
         </div>
       </Aos>
+			<div className="devider dark"></div>
 
 
 

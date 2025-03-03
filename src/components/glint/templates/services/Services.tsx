@@ -14,6 +14,7 @@ function Services({ data }: { data: ServicesDataType[] }) {
           </p>
         </div>
       </Aos>
+			<div className="devider dark"></div>
       <Aos aosStyle="fadeInUp" once={true}>
         <div className="service-item-container">
           {data &&
