@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import Button from "../../../main/modules/button/Button";
 import "./sidebar.scss";
+import Icon from "../../../main/modules/icon/Icon";
 type SidebarPropsType = {
 	data: string[];
 	showSidebar: boolean;
@@ -33,7 +33,7 @@ function Sidebar({data,
         >
           <div className="sidebar-container">
             <div onClick={() => setShowSidebar(false)} >
-							<Button color="transparent" iconName="MdClose" iconColor="#fff" hover={true} tooltip="close" className="sidebar-closeBtn"/>
+							<Icon name="MdClose" color="#fff" title="close" className="sidebar-closeBtn"/>
             </div>
 
             <h3 className="sidebar-title">navigation</h3>

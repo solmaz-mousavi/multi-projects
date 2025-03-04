@@ -1,5 +1,6 @@
 import { PackageType } from "../../../../dataTypes/mainDataType";
 import Button from "../../modules/button/Button";
+import Icon from "../../modules/icon/Icon";
 import "./contactInfo.scss";
 type ContactInfoPropsType = {
   data: PackageType[];
@@ -15,19 +16,19 @@ function ContactInfo({ data }: ContactInfoPropsType) {
           <div className="contactInfo-info">
             <div className="contactInfo-name">
               <p>Solmaz Mousavi</p>
-              <Button color="transparent" iconName="MdOutlineLocationOn" iconColor="#fff" />
+              <Icon name="MdOutlineLocationOn" color="#fff" />
               <span>UI, Tehran, Iran</span>
             </div>
             <div className="contactInfo-contact">
               <div className="contactInfo-phone">
-                <Button color="transparent" iconName="MdOutlinePhoneEnabled" iconColor="#fff" />
-                <Button color="transparent" iconName="MdOutlineWhatsapp" iconColor="#fff" />
-                <Button color="transparent" iconName="TbBrandTelegram" iconColor="#fff" />
-                <span>+989123456789</span>
+                <Icon  name="MdOutlinePhoneEnabled" color="#fff" />
+                <Icon  name="MdOutlineWhatsapp" color="#fff" />
+                <Icon  name="TbBrandTelegram" color="#fff" />
+                <a href="#">+989123456789</a>
               </div>
               <div className="contactInfo-email">
-                <Button color="transparent" iconName="MdOutlineMailOutline" iconColor="#fff" />
-                <span>solmaz@gmail.com</span>
+                <Icon name="MdOutlineMailOutline" color="#fff" />
+                <a href="#">solmaz@gmail.com</a>
               </div>
             </div>
           </div>

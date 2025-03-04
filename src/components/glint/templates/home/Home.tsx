@@ -45,7 +45,6 @@ function Home({ scrollPosition, data }: HomePropsType) {
                   tooltipType="left"
                   tooltipColor="var(--glint-color-green)"
                   className="social-link"
-									hover={true}
                 ></Button>
               </div>
             ))}

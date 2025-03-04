@@ -49,7 +49,6 @@ function Header({ data }: HeaderPropsType) {
             color="transparent"
             iconName="FaChevronDown"
             text="Select Project"
-						hover={true}
           />
         </div>
         <div className="header-btn" onClick={showContactInfoHandler}>
@@ -57,7 +56,6 @@ function Header({ data }: HeaderPropsType) {
             color="transparent"
             iconName="FaChevronDown"
             text="Contact Info"
-						hover={true}
           />
         </div>
       </header>

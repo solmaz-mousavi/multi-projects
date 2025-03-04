@@ -1,17 +1,21 @@
-import { ClientsDataType, TeamMembersDataType } from "../../../../dataTypes/glintDataType";
+import {
+  ClientsDataType,
+  TeamMembersDataType,
+} from "../../../../dataTypes/glintDataType";
 import Aos from "../../../main/modules/aos/Aos";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import Button from "../../../main/modules/button/Button";
+// import Button from "../../../main/modules/button/Button";
 import "./clients.scss";
+import Icon from "../../../main/modules/icon/Icon";
 type ClientsPropsType = {
-	clientsData: ClientsDataType[];
-teamMembersData: TeamMembersDataType[];
-}
+  clientsData: ClientsDataType[];
+  teamMembersData: TeamMembersDataType[];
+};
 
-function Clients({ clientsData,	teamMembersData }: ClientsDataType) {
+function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
   return (
     <section id="Clients" className="section-container clients-container">
       <Aos aosStyle="fadeInUp" once={true}>
@@ -33,12 +37,10 @@ function Clients({ clientsData,	teamMembersData }: ClientsDataType) {
               {clientsData &&
                 clientsData.map((item, index) => (
                   <SwiperSlide key={index}>
-                    <Button
+                    <Icon
                       className="clients-item-icon"
-                      color="transparent"
-                      hover={true}
-                      iconName={item.iconName}
-                      iconColor="#eee"
+                      name={item.iconName}
+                      color="#eee"
                     />
                   </SwiperSlide>
                 ))}
@@ -46,36 +48,39 @@ function Clients({ clientsData,	teamMembersData }: ClientsDataType) {
           </div>
         </div>
       </Aos>
-			<div className="devider dark"></div>
-
-
-
-
-
-      <Aos aosStyle="fadeInUp" className="clients-description" once={true}>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt.
-          </p>
-        </div>
-      </Aos>
+      <div className="devider dark"></div>
       <Aos aosStyle="fadeInUp" once={true}>
-        <div className="clients-status-container">
-          {data &&
-            data.map((item, index) => (
-              <div key={index} className="clients-status">
-                <div className="clients-status__count"></div>
-                <p className="clients-status__des">{item.name}</p>
-              </div>
-            ))}
+        <div className="clients-team">
+          <div className="team-slider">
+            <Swiper
+							navigation={{ nextEl: ".arrow-left", prevEl: ".arrow-right" }}
+							slidesPerView={1}
+              modules={[Navigation]}
+							loop={true}
+              className="mySwiper"
+            >
+              {teamMembersData &&
+                teamMembersData.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="team-thumbnail">
+                      <p className="team-desc">{item.desc}</p>
+                      <img
+                        className="team-image"
+                        src={item.image}
+                        alt={item.name}
+                      />
+                      <p className="team-name">{item.name}</p>
+                      <p className="team-job">{item.job}</p>
+                    </div>
+                  </SwiperSlide>
+                ))}
+            </Swiper>
+				<Icon className="arrow arrow-left" name="TbArrowRight" color="#555"/>
+				<Icon className="arrow arrow-right" name="TbArrowLeft" color="#555"/>
+          </div>
         </div>
       </Aos>
+			<div className="decoration"></div>
     </section>
   );
 }

@@ -22,6 +22,9 @@
 	--main-color-black: #000;
 	--main-color-semi-black: #00000050;
 
+	--main-transition: all 400ms ease-out;
+	--swiper-theme-color: #000;
+
 	--glint-color-green: #39B44C;
 }
 

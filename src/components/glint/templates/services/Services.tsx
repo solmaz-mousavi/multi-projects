@@ -1,6 +1,6 @@
 import { ServicesDataType } from "../../../../dataTypes/glintDataType";
 import Aos from "../../../main/modules/aos/Aos";
-import Button from "../../../main/modules/button/Button";
+import Icon from "../../../main/modules/icon/Icon";
 import "./services.scss";
 
 function Services({ data }: { data: ServicesDataType[] }) {
@@ -21,12 +21,10 @@ function Services({ data }: { data: ServicesDataType[] }) {
             data.map((item, index) => (
               <Aos aosStyle="fadeInUp" key={index} once={true}>
                 <div className="service-item-thumbnail">
-                  <Button
+                  <Icon
                     className="service-item-icon"
-                    color="transparent"
-                    hover={false}
-                    iconName={item.iconName}
-                    iconColor="var(--glint-color-green)"
+                    name={item.iconName}
+                    color="var(--glint-color-green)"
                   />
                   <div className="service-item__desc">
                     <h5>{item.title}</h5>

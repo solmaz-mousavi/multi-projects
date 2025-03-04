@@ -12,6 +12,7 @@ import "./glint.scss";
 import Logo from "./templates/logo/Logo";
 import Works from "./templates/works/Works";
 import Clients from "./templates/clients/Clients";
+import Contact from "./templates/contact/Contact";
 
 function GlintIndex() {
   const { glintData, pending, error } = useFetch({
@@ -42,8 +43,8 @@ function GlintIndex() {
 					<Services data={glintData.services}/>
 					<Works data={glintData.works}/>
 					<Clients clientsData={glintData.clients} teamMembersData = {glintData.teamMembers}/>
-
-          <h1 id="Contacts">srthbyhjt</h1>
+					<Contact data={glintData.social}/>
+          <h1>srthbyhjt</h1>
           <h1>srthbyhjt</h1>
           <h1>srthbyhjt</h1>
           <h1>srthbyhjt</h1>

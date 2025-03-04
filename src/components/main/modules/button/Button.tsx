@@ -1,47 +1,61 @@
-import GetIcon from "../icon/iconGetter";
+import Icon from "../icon/Icon";
 import "./button.scss";
 
 type ButtonTypes = {
-  color: "dark" | "transparent" | "";
-  iconName?: string;
-	iconColor?: string;
+	type?: "button" | "submit" | "reset";
   text?: string;
   title?: any;
+	// hover?:{bgColor: string, color:string, };
+	onClickHandler?: ()=>void;
+
+	// iconData?:{name:string, color:string, size:string, hoverColor: string};
+
+
+
+
+	iconName?: string;
+	iconColor?: string;
+	iconClassName?: string;
+
   tooltip?: string;
-  tooltipType?: "left" | "right" | "bottom" | "top";
   tooltipColor?: string;
+  tooltipType?: "left" | "right" | "bottom" | "top";
+	tooltipClassName?: string;
+
+  color: "dark" | "transparent" | "";
   className?: string;
-	hover?:boolean;
+
 };
 
 function Button({
-  color,
-  iconName,
+	iconName,
 	iconColor,
+	iconClassName,
+  
+	tooltip,
+  tooltipColor,
+  tooltipType,
+
+	type = "button",
+  color = "transparent",
   text,
   title,
-  tooltip,
-  tooltipType,
-  tooltipColor,
   className,
-	hover,
+
+	onClickHandler,
 }: ButtonTypes) {
-	let Icon;
-	if (iconName) {
-		Icon = GetIcon(iconName);
-  }
 
   return (
     <>
-      <div className={`btn-container ${color} ${className || ""} ${hover ? "hover" : ""}`}>
-        <button className="btn" title={title}>
-          {Icon && <Icon className="icon" style={{color: `${iconColor || ""}`}}/>}
+      <div className={`btn-container ${color} ${className || ""}`}>
+        <button type={type} className="btn" title={title}>
+          {iconName && <Icon name={iconName} color={iconColor} className={iconClassName}/>}
           {text && <span className="txt">{text}</span>}
         </button>
       </div>
       {tooltip && (
         <span
-          className={`btn-tooltip ${tooltipType} ${hover && "hover"}`}
+          className={`btn-tooltip ${tooltipType}`}
           style={{ color: `${tooltipColor}` }}
         >
           {tooltip}
