@@ -15,6 +15,7 @@ type ButtonTypes = {
 
 	iconName?: string;
 	iconColor?: string;
+	iconHoverColor?:string;
 	iconClassName?: string;
 
   tooltip?: string;
@@ -30,6 +31,7 @@ type ButtonTypes = {
 function Button({
 	iconName,
 	iconColor,
+	iconHoverColor,
 	iconClassName,
   
 	tooltip,
@@ -49,7 +51,7 @@ function Button({
     <>
       <div className={`btn-container ${color} ${className || ""}`}>
         <button type={type} className="btn" title={title}>
-          {iconName && <Icon name={iconName} color={iconColor} className={iconClassName}/>}
+          {iconName && <Icon name={iconName} color={iconColor} hoverColor={iconHoverColor} className={iconClassName}/>}
           {text && <span className="txt">{text}</span>}
         </button>
       </div>

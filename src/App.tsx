@@ -6,7 +6,6 @@ import Error from "./components/main/templates/error/Error";
 import Loader from "./components/main/templates/loader/Loader";
 import Header from "./components/main/templates/header/Header";
 import GuidBox from "./components/main/templates/guidBox/GuidBox";
-import Aos2 from "./components/main/modules/aos/Aos";
 
 function App() {
   const routes = useRoutes(router);
@@ -27,7 +26,6 @@ function App() {
       {mainData && (
         <>
           <Header data={mainData} />
-					
           <main id="main-wrapper">{routes}</main>
         </>
       )}

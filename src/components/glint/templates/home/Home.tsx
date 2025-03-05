@@ -41,6 +41,7 @@ function Home({ scrollPosition, data }: HomePropsType) {
                 <Button
                   color="transparent"
                   iconName={item.iconName}
+									iconHoverColor="#fff"
                   tooltip={item.socialName}
                   tooltipType="left"
                   tooltipColor="var(--glint-color-green)"
