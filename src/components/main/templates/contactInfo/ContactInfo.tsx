@@ -16,32 +16,37 @@ function ContactInfo({ data }: ContactInfoPropsType) {
           <div className="contactInfo-info">
             <div className="contactInfo-name">
               <p>Solmaz Mousavi</p>
-              <Icon name="MdOutlineLocationOn" color="#fff" />
+              <Icon name="MdOutlineLocationOn" />
               <span>UI, Tehran, Iran</span>
             </div>
             <div className="contactInfo-contact">
               <div className="contactInfo-phone">
-                <Icon  name="MdOutlinePhoneEnabled" color="#fff" />
-                <Icon  name="MdOutlineWhatsapp" color="#fff" />
-                <Icon  name="TbBrandTelegram" color="#fff" />
-                <a href="#">+989123456789</a>
+                <Icon name="MdOutlinePhoneEnabled" />
+                <Icon name="MdOutlineWhatsapp" />
+                <Icon name="TbBrandTelegram" />
+                <a href="tel:+989144005634">+989144005634</a>
               </div>
               <div className="contactInfo-email">
-                <Icon name="MdOutlineMailOutline" color="#fff" />
-                <a href="#">solmaz@gmail.com</a>
+                <Icon name="MdOutlineMailOutline" />
+                <a href="mailto:solmaz@gmail.com">solmaz@gmail.com</a>
               </div>
             </div>
           </div>
           <div className="contactInfo-package">
-						<p>skills:</p>
+            <p>skills:</p>
             {data &&
               data.map((item, index) => (
                 <Button
                   key={index}
-                  color="transparent"
-                  iconName={item.iconName}
-                  iconColor={item.color}
-                  text={item.name}
+                  type="link"
+                  variant="grey"
+                  text={`${item.name}`}
+                  icon={{
+                    name: `${item.iconName}`,
+                  }}
+                  className="skills-thumbnail"
+                  transparent={true}
+                  border={false}
                 />
               ))}
           </div>

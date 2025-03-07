@@ -33,7 +33,7 @@ function Sidebar({data,
         >
           <div className="sidebar-container">
             <div onClick={() => setShowSidebar(false)} >
-							<Icon name="MdClose" color="#fff" title="close" className="sidebar-closeBtn"/>
+							<Icon name="MdClose" className="sidebar-closeBtn"/>
             </div>
 
             <h3 className="sidebar-title">navigation</h3>

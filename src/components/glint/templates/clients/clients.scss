@@ -26,12 +26,9 @@
     }
     .clients-item-icon {
       display: inline-block;
-      svg {
-        font-size: 6rem;
-
-        color: #555 !important;
-        transition: all 400ms ease-out;
-        &:hover {
+      .icon {
+				font-size: 6rem;
+        &:hover *{
           color: #111 !important;
         }
       }
@@ -70,9 +67,7 @@
       position: absolute;
       top: 50%;
       z-index: 10;
-      .icon {
-        cursor: pointer;
-      }
+			cursor: pointer !important;
     }
     .arrow-left {
       right: 20px;

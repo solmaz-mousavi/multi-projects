@@ -12,42 +12,52 @@ function Home({ scrollPosition, data }: HomePropsType) {
     <>
       <StyledHomeWrapper
         $scrollposition={`100% ${scrollPosition / -8}px`}
-        className="section-container home-container" id="Home"
+        className="section-container home-container"
+        id="Home"
       >
-        <div className="home-txt-container" >
-					<Aos aosStyle="fadeInUp" once={true}>
-
-
-          <p className="top-title home-txt__welcome">Welcome to Glint</p>
-          <p className="main-title home-txt__description">
-            We are a creative group of people who design influential brands and
-            digital experiences.
-          </p>
-          <div className="home-txt__btn-container">
-            <div className="home-txt__btn">
-              <a href="#Contacts">start a project</a>
+        <div className="home-txt-container">
+          <Aos aosStyle="fadeInUp" once={true}>
+            <p className="top-title home-txt__welcome">Welcome to Glint</p>
+            <p className="main-title home-txt__description">
+              We are a creative group of people who design influential brands
+              and digital experiences.
+            </p>
+            <div className="home-txt__btn-container">
+              <Button
+                type="link"
+                text="start a project"
+                to="#Contacts"
+                variant="light"
+                transparent={true}
+                className="home-txt__btn"
+              />
+              <Button
+                type="link"
+                text="more about us"
+                to="#About00"
+                variant="light"
+                transparent={true}
+                className="home-txt__btn"
+              />
             </div>
-            <div className="home-txt__btn">
-              <a href="#About">more about us</a>
-            </div>
-          </div>
-					</Aos>
+          </Aos>
         </div>
 
         <div className="home-social-container">
           {data &&
             data.map((item, index) => (
-              <div className="home-social__link" key={index}>
-                <Button
-                  color="transparent"
-                  iconName={item.iconName}
-									iconHoverColor="#fff"
-                  tooltip={item.socialName}
-                  tooltipType="left"
-                  tooltipColor="var(--glint-color-green)"
-                  className="social-link"
-                ></Button>
-              </div>
+              <Button
+							key={index}
+                variant="light"
+                icon={{ name: `${item.iconName}` }}
+                className="social-link"
+                round={true}
+                tooltip={{
+                  content: `${item.socialName}`,
+                  color: "var(--glint-color-green)",
+                  position: "left",
+                }}
+              ></Button>
             ))}
         </div>
       </StyledHomeWrapper>

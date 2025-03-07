@@ -27,43 +27,40 @@ function Navbar({ closeNavbarHandler, data }: NavbarPropsType) {
           >
             {data.projects.map((item) => (
               <SwiperSlide key={item.title}>
-                  <div
-                    className="navbar-thumbnail"
-                    onClick={closeNavbarHandler}
-                  >
-                    <div className="navbar-thumbnail_top">
-                      <img
-                        className="navbar-thumbnail_image"
-                        src={item.image}
-                        alt={item.title}
-                      />
-                      <Link to={item.route} className="navbar-thumbnail_title">{item.title}</Link>
-                    </div>
-                    <p className="navbar-thumbnail_description">
-                      {item.description}
-                    </p>
-
-                    {item.packages.map((pack, index) => (
-                      <a
-                        key={index}
-                        className="navbar-thumbnail_package"
-                        href={data.packages.find((i) => i.name === pack)?.link}
-                      >
-                        <Button
-                          color="transparent"
-                          iconName={
-                            data.packages.find((i) => i.name === pack)?.iconName
-                          }
-                          iconColor={
-                            data.packages.find((i) => i.name === pack)?.color
-                          }
-                          text={
-                            data.packages.find((i) => i.name === pack)?.name
-                          }
-                        />
-                      </a>
-                    ))}
+                <div className="navbar-thumbnail" onClick={closeNavbarHandler}>
+                  <div className="navbar-thumbnail_top">
+                    <img
+                      className="navbar-thumbnail_image"
+                      src={item.image}
+                      alt={item.title}
+                    />
+                    <Link to={item.route} className="navbar-thumbnail_title">
+                      {item.title}
+                    </Link>
                   </div>
+                  <p className="navbar-thumbnail_description">
+                    {item.description}
+                  </p>
+
+                  {item.packages.map((pack, index) => (
+                    <Button
+                      key={index}
+                      type="link"
+                      variant="grey"
+                      text={`${
+                        data.packages.find((i) => i.name === pack)?.name
+                      }`}
+                      icon={{
+                        name: `${
+                          data.packages.find((i) => i.name === pack)?.iconName
+                        }`,
+                      }}
+                      className="navbar-thumbnail_package"
+                      transparent={true}
+                      border={false}
+                    />
+                  ))}
+                </div>
               </SwiperSlide>
             ))}
             <SwiperSlide>coming soon</SwiperSlide>

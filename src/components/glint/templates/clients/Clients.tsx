@@ -7,9 +7,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-// import Button from "../../../main/modules/button/Button";
 import "./clients.scss";
 import Icon from "../../../main/modules/icon/Icon";
+import Button from "../../../main/modules/button/Button";
 type ClientsPropsType = {
   clientsData: ClientsDataType[];
   teamMembersData: TeamMembersDataType[];
@@ -37,10 +37,12 @@ function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
               {clientsData &&
                 clientsData.map((item, index) => (
                   <SwiperSlide key={index}>
-                    <Icon
+                    <Button
+                      variant="grey"
+                      icon={{ name: `${item.iconName}` }}
+                      transparent={true}
+                      border={false}
                       className="clients-item-icon"
-                      name={item.iconName}
-                      color="#eee"
                     />
                   </SwiperSlide>
                 ))}
@@ -53,10 +55,10 @@ function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
         <div className="clients-team">
           <div className="team-slider">
             <Swiper
-							navigation={{ nextEl: ".arrow-left", prevEl: ".arrow-right" }}
-							slidesPerView={1}
+              navigation={{ nextEl: ".arrow-left", prevEl: ".arrow-right" }}
+              slidesPerView={1}
               modules={[Navigation]}
-							loop={true}
+              loop={true}
               className="mySwiper"
             >
               {teamMembersData &&
@@ -75,12 +77,12 @@ function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
                   </SwiperSlide>
                 ))}
             </Swiper>
-				<Icon className="arrow arrow-left" name="TbArrowRight" color="#555"/>
-				<Icon className="arrow arrow-right" name="TbArrowLeft" color="#555"/>
+            <Icon className="arrow arrow-left" name="TbArrowRight" />
+            <Icon className="arrow arrow-right" name="TbArrowLeft" />
           </div>
         </div>
       </Aos>
-			<div className="decoration"></div>
+      <div className="decoration"></div>
     </section>
   );
 }

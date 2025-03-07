@@ -1,67 +1,74 @@
-import Icon from "../icon/Icon";
+import { ButtonStyleType } from "../../../../dataTypes/mainDataType";
+import Icon, { IconPropsType } from "../icon/Icon";
 import "./button.scss";
 
 type ButtonTypes = {
-	type?: "button" | "submit" | "reset";
+  type?: "button" | "submit" | "link";
   text?: string;
-  title?: any;
-	// hover?:{bgColor: string, color:string, };
-	onClickHandler?: ()=>void;
-
-	// iconData?:{name:string, color:string, size:string, hoverColor: string};
-
-
-
-
-	iconName?: string;
-	iconColor?: string;
-	iconHoverColor?:string;
-	iconClassName?: string;
-
-  tooltip?: string;
-  tooltipColor?: string;
-  tooltipType?: "left" | "right" | "bottom" | "top";
-	tooltipClassName?: string;
-
-  color: "dark" | "transparent" | "";
+  title?: string;
   className?: string;
-
+  clickHandler?: () => void;
+  variant?: keyof ButtonStyleType;
+  icon?: IconPropsType;
+  tooltip?: {
+    content: string;
+    color: string;
+    position: "left" | "right" | "top" | "bottom";
+  };
+  to?: string;
+  fullWidth?: boolean;
+  transparent?: boolean;
+  border?: boolean;
+	round?:boolean;
 };
 
 function Button({
-	iconName,
-	iconColor,
-	iconHoverColor,
-	iconClassName,
-  
-	tooltip,
-  tooltipColor,
-  tooltipType,
-
-	type = "button",
-  color = "transparent",
+  type = "button",
   text,
   title,
   className,
+  clickHandler,
 
-	onClickHandler,
+  variant = "dark",
+  icon,
+  tooltip,
+  to = "#",
+  fullWidth = false,
+  transparent,
+  border = true,
+	round=false,
 }: ButtonTypes) {
-
   return (
     <>
-      <div className={`btn-container ${color} ${className || ""}`}>
-        <button type={type} className="btn" title={title}>
-          {iconName && <Icon name={iconName} color={iconColor} hoverColor={iconHoverColor} className={iconClassName}/>}
-          {text && <span className="txt">{text}</span>}
-        </button>
-      </div>
-      {tooltip && (
-        <span
-          className={`btn-tooltip ${tooltipType}`}
-          style={{ color: `${tooltipColor}` }}
+      {type === "link" ? (
+        <a
+          href={to}
+          className={`btn ${variant} ${fullWidth ? "fullWidth" : ""} ${
+            transparent ? "transparent" : ""
+          } ${border ? "border" : ""} ${round ? "round"  : ""} ${className || ""}`}
         >
-          {tooltip}
-        </span>
+					{icon && <Icon name={icon.name} className={icon.className} />}
+          {text && <span className="text">{text}</span>}
+        </a>
+      ) : (
+        <>
+          <button
+            type={type}
+            title={title}
+            className={`btn ${variant} ${fullWidth ? "fullWidth" : ""} ${
+              transparent ? "transparent" : ""
+            } ${border ? "border" : ""} ${round ? "round"  : ""} ${className || ""}`}
+            onClick={clickHandler}
+          >
+            {icon && <Icon name={icon.name} className={icon.className} />}
+            {text && <span className="text">{text}</span>}
+          {tooltip && (
+						<span className={`tooltip ${tooltip.position}`} style={{color: `${tooltip.color}`}}>
+              {tooltip.content}
+            </span>
+          )}
+					</button>
+        </>
       )}
     </>
   );

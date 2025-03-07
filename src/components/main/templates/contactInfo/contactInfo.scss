@@ -25,6 +25,7 @@
       padding-bottom: 20px;
       text-align: center;
       color: var(--main-color-gray-light);
+
     }
   }
 
@@ -37,7 +38,23 @@
       color: var(--main-color-white);
 			margin-right: 5px;
     }
+		.skills-thumbnail{
+			padding: 0 5px;
+			*{
+				font-size: 0.8rem;
+			}
+		}
   }
+}
+.contactInfo-phone, .contactInfo-email, .contactInfo-name{
+.icon{
+	color: #fff;
+	margin: 0px 2px;
+}
+	a{
+		text-decoration: none;
+		color: #777 !important;
+	}
 }
 
 @media screen and (max-width: 768px) {

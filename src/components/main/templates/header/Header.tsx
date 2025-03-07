@@ -15,7 +15,7 @@ function Header({ data }: HeaderPropsType) {
 
   const showNavbarHandler = () => {
     setShowNavbar(true);
-		setShowContactInfo(false);
+    setShowContactInfo(false);
     document
       .getElementById("main-wrapper")
       ?.addEventListener("click", closeNavbarHandler);
@@ -27,9 +27,9 @@ function Header({ data }: HeaderPropsType) {
       ?.removeEventListener("click", closeNavbarHandler);
   };
 
-	const showContactInfoHandler = () => {
+  const showContactInfoHandler = () => {
     setShowContactInfo(true);
-		setShowNavbar(false);
+    setShowNavbar(false);
     document
       .getElementById("main-wrapper")
       ?.addEventListener("click", closeContactInfoHandler);
@@ -46,28 +46,29 @@ function Header({ data }: HeaderPropsType) {
       <header id="Header" className="header-container">
         <div className="header-btn" onClick={showNavbarHandler}>
           <Button
-            color="transparent"
-            iconName="FaChevronDown"
             text="Select Project"
+            icon={{ name: "FaChevronDown" }}
+            variant="grey"
+            transparent={true}
+            border={false}
           />
         </div>
         <div className="header-btn" onClick={showContactInfoHandler}>
           <Button
-            color="transparent"
-            iconName="FaChevronDown"
             text="Contact Info"
+            icon={{ name: "FaChevronDown" }}
+            variant="grey"
+            transparent={true}
+            border={false}
           />
         </div>
       </header>
       <nav className={`navbar-wrapper ${showNavbar && "show"}`}>
-        <Navbar
-          closeNavbarHandler={closeNavbarHandler}
-          data={data}
-        />
+        <Navbar closeNavbarHandler={closeNavbarHandler} data={data} />
       </nav>
-			<section className={`contactInfo-wrapper ${showContactInfo && "show"}`}>
-				<ContactInfo data={data.packages}/>
-			</section>
+      <section className={`contactInfo-wrapper ${showContactInfo && "show"}`}>
+        <ContactInfo data={data.packages} />
+      </section>
     </>
   );
 }

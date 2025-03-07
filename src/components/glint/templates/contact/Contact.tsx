@@ -1,5 +1,6 @@
 import { SocialDataType } from "../../../../dataTypes/glintDataType";
 import Aos from "../../../main/modules/aos/Aos";
+import Button from "../../../main/modules/button/Button";
 import Icon from "../../../main/modules/icon/Icon";
 import Input from "../../../main/modules/input/Input";
 import "./contact.scss";
@@ -33,8 +34,15 @@ function Contact({ data }: { data: SocialDataType[] }) {
         <h5 className="info-title">Call Us At</h5>
         <p className="info-desc">Phone: (+63) 555 1212 Mobile: (+63) 555 0100 Fax: (+63) 555 0101</p>
 				<div className="social-container">
-					{data && data.map(item=> (
-						<Icon color="#ccc" name={item.iconName} className="contacts-info-social"/>
+					{data && data.map((item, index)=> (
+						<Button
+						icon={{name:`${item.iconName}`}}
+						variant="light"
+						transparent={true}
+						border={false}
+						className="contacts-info-social"
+						tooltip={{content:`${item.socialName}`, color:"#fff", position:"bottom"}}
+						/>
 					))}
 				</div>
 			</div>

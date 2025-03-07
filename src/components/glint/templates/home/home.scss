@@ -1,7 +1,7 @@
 .home-container {
 	height: calc(100vh - 60px);
   background-color: var(--main-color-black);
-  background-image: linear-gradient(var(--main-color-semi-black), var(--main-color-semi-black)),
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
     url("../../../../../public/assets/images/glint/hero-bg.webp");
   background-size: cover;
   background-attachment: fixed;
@@ -25,29 +25,17 @@
       display: flex;
       flex-wrap: wrap;
       .home-txt__btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid var(--main-color-white);
         width: 215px;
         height: 54px;
-        background-color: transparent;
         margin-right: 20px;
-        cursor: pointer;
-        transition: all ease-out 400ms;
-        a {
-          text-transform: uppercase;
-          font-size: 0.75rem;
-          letter-spacing: 0.2rem;
-          text-decoration: none;
-          color: var(--main-color-white);
-          &:hover {
-            color: var(--main-color-black);
-          }
-        }
-        &:hover {
-          background-color: var(--main-color-white);
-        }
+				text-transform: uppercase;
+				*{
+					font-size: 0.85rem !important;
+					letter-spacing: 0.15rem;
+				}
+				&:hover{
+					background-color: #fff;
+				}
       }
     }
   }
@@ -59,16 +47,16 @@
     align-items: flex-end;
     gap: 20px;
     .home-social__link {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: row-reverse;
+			// display: flex;
+			// justify-content: center;
+			// align-items: center;
+			// flex-direction: row-reverse;
 			.social-link{
-				width: 32px;
-				height: 32px;
-				font-size: 2rem;
-				border: 1px solid var(--main-color-gray-light);
-				border-radius: 100%;
+				// width: 32px;
+				// height: 32px;
+				// font-size: 2rem;
+				// border: 1px solid var(--main-color-gray-light);
+				// border-radius: 100%;
 			}
     }
   }

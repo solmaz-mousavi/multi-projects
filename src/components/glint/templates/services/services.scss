@@ -10,7 +10,7 @@
   .services-header {
     padding: 0px 10%;
     .services-header__top {
-      color: var(--color-green);
+      color: var(--glint-color-green);
     }
     .services-header__title {
       padding-bottom: 20px;
@@ -24,16 +24,17 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 20px 0px;
-		& > div{
-      width: 45%;
-		}
+		
     .service-item-thumbnail {
 			display: flex;
 			align-items: flex-start;
 			padding: 10px;
+			width: 45%;
 
-			.service-item-icon .icon{
-				font-size: 2rem;
+			.service-item-icon{
+				font-size: 2.2rem;
+				margin-top: 10px;
+				color: var(--glint-color-green);
 			}
 
       .service-item__desc {

@@ -14,26 +14,24 @@ function Services({ data }: { data: ServicesDataType[] }) {
           </p>
         </div>
       </Aos>
-			<div className="devider dark"></div>
+      <div className="devider dark"></div>
       <Aos aosStyle="fadeInUp" once={true}>
-        <div className="service-item-container">
-          {data &&
-            data.map((item, index) => (
-              <Aos aosStyle="fadeInUp" key={index} once={true}>
-                <div className="service-item-thumbnail">
-                  <Icon
-                    className="service-item-icon"
-                    name={item.iconName}
-                    color="var(--glint-color-green)"
-                  />
+        <Aos aosStyle="fadeInUp" once={true}>
+          <div className="service-item-container">
+            {data &&
+              data.map((item, index) => (
+                <div key={index} className="service-item-thumbnail">
+                  <div>
+                    <Icon className="service-item-icon" name={item.iconName} />
+                  </div>
                   <div className="service-item__desc">
                     <h5>{item.title}</h5>
                     <p>{item.desc}</p>
                   </div>
                 </div>
-              </Aos>
-            ))}
-        </div>
+              ))}
+          </div>
+        </Aos>
       </Aos>
     </section>
   );
