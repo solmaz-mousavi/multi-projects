@@ -15,17 +15,14 @@ export type StatusDataType = {
   count: string;
 };
 
+type ServicesKeyType = "iconName"|"title"|"desc";
 export type ServicesDataType = {
-  iconName: string;
-  title: string;
-  desc: string;
+	[index in ServicesKeyType]: string;
 };
 
+type WorksKeyType = "title"|"category"|"des"|"image";
 export type WorksDataType = {
-  title: string;
-  category: string;
-  des: string;
-  image: string;
+	[index in WorksKeyType]: string;
 };
 
 export type ClientsDataType = {
@@ -33,11 +30,9 @@ export type ClientsDataType = {
   iconName: string;
 };
 
+type TeamMembersKeyType = "name"|"job"|"image"|"desc";
 export type TeamMembersDataType = {
-  name: string;
-	job: string;
-	image: string;
-	desc: string;
+	[index in TeamMembersKeyType]: string;
 };
 
 export type GlintDataType = {

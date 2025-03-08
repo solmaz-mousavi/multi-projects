@@ -1,20 +1,20 @@
-#glint{
-	overflow-y: auto;
-	height:calc(100vh - 60px);
-	scroll-behavior: smooth;
+@import "/src/styles/base";
+
+#glint {
+  overflow-y: auto;
+  height: calc(100vh - 60px);
+  scroll-behavior: smooth;
 }
 
-.fullWidth{
-	display: block;
-	width: 100% !important;
+.fullWidth {
+  display: block;
+  width: 100% !important;
 }
 
 .section-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-	padding: 50px 0px;
-	min-height: 100vh;
+  @include flex-center();
+  padding: 50px 0px;
+  min-height: 100vh;
 }
 .top-title {
   text-transform: uppercase;
@@ -29,19 +29,20 @@
   font-weight: 500;
   line-height: 1.3;
 }
-.animate__animated, .animate__fadeInUp{
-	position: relative;
-	z-index: 0 !important;
+.animate__animated,
+.animate__fadeInUp {
+  position: relative;
+  z-index: 0 !important;
 }
-.devider{
-	height: 0px;
-	border-bottom: 1px solid var(--main-color-semi-white);
-	width: 60%;
-	max-width: 400px;
-	margin: 30px;
+.devider {
+  height: 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  width: 60%;
+  max-width: 400px;
+  margin: 30px;
 }
-.devider.dark{
-	border-bottom: 1px solid var(--main-color-semi-black);
+.devider.dark {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 992px) {
@@ -55,9 +56,9 @@
 }
 
 @media screen and (max-width: 768px) {
-	#glint{
-		height:calc(100vh - 50px);
-	}
+  #glint {
+    height: calc(100vh - 50px);
+  }
   .top-title {
     font-size: 0.8rem;
   }
@@ -76,10 +77,10 @@
 }
 
 @media screen and (max-width: 412px) {
-	#glint{
-		height:calc(100vh - 40px);
-	}
-	.main-title {
+  #glint {
+    height: calc(100vh - 40px);
+  }
+  .main-title {
     font-size: 1.5rem;
   }
 }

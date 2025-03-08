@@ -1,3 +1,5 @@
+@import "/src/styles/variables";
+
 .clients-container {
   background-color: #ddd;
   flex-direction: column;
@@ -7,10 +9,10 @@
     padding-bottom: 0px;
     margin: 0 auto;
     .clients-header__top {
-      color: var(--glint-color-green);
+      color: $glint-color-green;
     }
     .clients-header__title {
-      color: var(--main-color-black);
+      color: #000;
     }
   }
   .clients-slider {
@@ -79,7 +81,7 @@
 	.decoration{
 		height: 80px;
 		width: 1px;
-		border: 1px solid var(--glint-color-green);
+		border: 1px solid $glint-color-green;
 		position: absolute;
 		bottom: 0;
 		left: 50%;

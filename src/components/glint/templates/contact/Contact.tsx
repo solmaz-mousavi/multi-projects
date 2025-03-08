@@ -41,7 +41,7 @@ function Contact({ data }: { data: SocialDataType[] }) {
 						transparent={true}
 						border={false}
 						className="contacts-info-social"
-						tooltip={{content:`${item.socialName}`, color:"#fff", position:"bottom"}}
+						// tooltip={{content:`${item.socialName}`, color:"#fff", position:"bottom"}}
 						/>
 					))}
 				</div>

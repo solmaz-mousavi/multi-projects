@@ -1,6 +1,8 @@
+@import "/src/styles/variables";
+
 .contacts-container {
   height: calc(100vh - 60px);
-  background-color: var(--main-color-black);
+  background-color: #000;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../../../../../public/assets/images/glint/contact-bg.jpg");
   background-size: cover;
@@ -12,7 +14,7 @@
   .decoration {
     height: 80px;
     width: 1px;
-    border: 1px solid var(--glint-color-green);
+    border: 1px solid $glint-color-green;
     position: absolute;
     top: 0;
     left: 50%;
@@ -24,7 +26,7 @@
       color: #fff;
     }
     .contacts-header__top {
-      color: var(--glint-color-green);
+      color: $glint-color-green;
     }
   }
   .contacts-bottom-wrapper {
@@ -49,7 +51,7 @@
         font-size: 0.9rem;
       }
       .info-title {
-        color: var(--glint-color-green);
+        color: $glint-color-green;
         padding-bottom: 10px;
         font-size: 1.1rem;
       }
@@ -65,10 +67,10 @@
     .contacts-info-social {
       margin-right: 10px;
       &:hover * {
-        color: var(--glint-color-green);
+        color: $glint-color-green;
       }
       .tooltip {
-        color: #777 !important;
+        color: rgba(255, 255, 255, .5) !important;
         font-size: 0.7rem;
       }
     }

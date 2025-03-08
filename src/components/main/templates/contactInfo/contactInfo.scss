@@ -1,12 +1,14 @@
+@import "/src/styles/variables";
+@import "/src/styles/base";
+
 .contactInfo-container {
-  display: flex;
+	@include fullWidth();
+	@include flex-center();
   justify-content: flex-start;
-  align-items: center;
-  background-color: var(--main-color-gray);
+  background-color: $main-color-gray;
+  transition: $main-transition;
   padding: 10px 50px;
-  transition: all ease-out 400ms;
   position: fixed;
-  width: 100%;
 	
   .contactInfo-image img {
     width: 100px;
@@ -14,18 +16,16 @@
     border-radius: 100%;
   }
   .contactInfo-info {
-    display: flex;
+		@include flex-center();
     justify-content: stretch;
-    align-items: center;
-    padding-left: 30px;
     gap: 50px;
+    padding-left: 30px;
 
     .contactInfo-name,
     .contactInfo-contact {
       padding-bottom: 20px;
       text-align: center;
-      color: var(--main-color-gray-light);
-
+      color: $main-color-gray-light;
     }
   }
 
@@ -35,7 +35,7 @@
 		display: flex;
 		flex-wrap: wrap;
     p {
-      color: var(--main-color-white);
+      color: #fff;
 			margin-right: 5px;
     }
 		.skills-thumbnail{
@@ -53,7 +53,7 @@
 }
 	a{
 		text-decoration: none;
-		color: #777 !important;
+		color: $main-color-gray-semi-light !important;
 	}
 }
 

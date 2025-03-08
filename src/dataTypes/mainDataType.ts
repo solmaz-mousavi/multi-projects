@@ -1,8 +1,6 @@
+type PackageKeyType = "name"|"iconName"|"color"|"link";
 export type PackageType = {
-  name: string;
-  iconName: string;
-  color: string;
-	link: string;
+	[index in PackageKeyType] : string;
 };
 export type ProjectType = {
   title: "glint" | "kakura" | "dashboard";
@@ -12,18 +10,14 @@ export type ProjectType = {
   packages: string[];
 };
 
+type ColorKeyType = "text"|"bg"|"border"|"hoverText"|"hoverBg";
 export type StyleType = "success" | "info" | "warning" | "error" | "light" | "dark" | "grey" | "transparent";
 export type ColorType = {
-	text: string;
-	bg:string;
-	border:string;
-	hoverText:string;
-	hoverBg:string;
+	[index in ColorKeyType] : string;
 };
 export type ButtonStyleType = {
 	[index in StyleType] : ColorType ;
 }
-
 
 export type MainDataType = {
   projects: ProjectType[];

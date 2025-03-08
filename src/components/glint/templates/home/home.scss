@@ -1,24 +1,26 @@
+@import "/src/styles/variables";
+@import "/src/styles/base";
+
 .home-container {
-	height: calc(100vh - 60px);
-  background-color: var(--main-color-black);
-  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+  height: calc(100vh - 60px);
+  background-color: #000;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../../../../../public/assets/images/glint/hero-bg.webp");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
 
   .home-txt-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex-center();
     align-items: start;
+    flex-direction: column;
     height: 100%;
     padding: 0px 0px 0px 20%;
     .home-txt__welcome {
-      color: var(--main-color-semi-white);
+      color: rgba(255, 255, 255, 0.5);
     }
     .home-txt__description {
-      color: var(--main-color-white);
+      color: #fff;
     }
     .home-txt__btn-container {
       margin-top: 80px;
@@ -28,37 +30,23 @@
         width: 215px;
         height: 54px;
         margin-right: 20px;
-				text-transform: uppercase;
-				*{
-					font-size: 0.85rem !important;
-					letter-spacing: 0.15rem;
-				}
-				&:hover{
-					background-color: #fff;
-				}
+        text-transform: uppercase;
+        * {
+          font-size: 0.85rem !important;
+          letter-spacing: 0.15rem;
+        }
+        &:hover {
+          background-color: #fff;
+        }
       }
     }
   }
   .home-social-container {
-    margin: 0px 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex-center();
     align-items: flex-end;
+    flex-direction: column;
     gap: 20px;
-    .home-social__link {
-			// display: flex;
-			// justify-content: center;
-			// align-items: center;
-			// flex-direction: row-reverse;
-			.social-link{
-				// width: 32px;
-				// height: 32px;
-				// font-size: 2rem;
-				// border: 1px solid var(--main-color-gray-light);
-				// border-radius: 100%;
-			}
-    }
+    margin: 0px 50px;
   }
 }
 
@@ -118,7 +106,7 @@
       flex-direction: row;
       .home-social__link {
         .btn-tooltip {
-					display: none;
+          display: none;
         }
       }
     }

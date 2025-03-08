@@ -1,21 +1,24 @@
+@import "/src/styles/variables";
+@import "/src/styles/base";
+
 .works-container {
+  @include fullWidth();
   align-items: flex-start !important;
-  background-color: var(--main-color-white);
   flex-direction: column;
+  background-color: #fff;
   height: auto !important;
-  width: 100%;
   padding: 0 !important;
   .works-header {
+    @include fullWidth();
     text-align: center;
-    width: 100%;
     padding: 200px;
     padding-top: 100px;
     background-color: #111;
     .works-header__top {
-      color: var(--glint-color-green);
+      color: $glint-color-green;
     }
     .works-header__title {
-      color: var(--main-color-white);
+      color: #fff;
     }
   }
   .work-items-wrapper {
@@ -32,19 +35,19 @@
         overflow: hidden;
         position: relative;
         cursor: pointer;
-        transition: all ease-out 400ms;
+        transition: $main-transition;
         .work-item-title,
         .work-item-cat,
         .work-item-icon,
         .work-item-link {
-          transition: all ease-out 400ms;
+          transition: $main-transition;
           z-index: 20;
           opacity: 0;
         }
         .work-item-image {
           object-fit: cover;
           object-position: bottom;
-          transition: all ease-out 400ms;
+          transition: $main-transition;
         }
         .work-item-title {
           position: absolute;
@@ -68,12 +71,10 @@
           font-size: 1.2rem;
         }
         .work-item-link {
+          @include flex-center();
           position: absolute;
           top: 0px;
           left: 20px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
           width: 50px;
           height: 50px;
           color: #fff;
@@ -96,13 +97,12 @@
         }
 
         &::after {
+          @include full();
           content: "";
           position: absolute;
+          background-color: rgba(0, 0, 0, 0.8);
           top: 0;
           left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: #000000cc;
           z-index: 10;
           opacity: 0;
         }
@@ -192,20 +192,16 @@
 @media screen and (max-width: 764px) {
   .works-container {
     .work-items-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-center();
       .work-items-container {
+        @include flex-center();
+        flex-direction: column;
         width: 80%;
         height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         .work-item {
           .work-item-image {
+            @include fullWidth();
             object-position: center;
-            width: 100%;
             aspect-ratio: 1/1;
           }
         }

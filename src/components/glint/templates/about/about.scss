@@ -1,16 +1,18 @@
+@import "/src/styles/variables";
+@import "/src/styles/base";
+
 .about-container {
-  background-color: var(--glint-color-green);
+  background-color: $glint-color-green;
   flex-direction: column;
   text-align: center;
   .about-header {
     padding-bottom: 20px;
-    // border-bottom: 1px solid var(--main-color-semi-white);
     margin: 0 auto;
     .about-header__top {
-      color: var(--main-color-black);
+      color: #000;
     }
     .about-header__title {
-      color: var(--main-color-white);
+      color: #fff;
     }
   }
   .about-description {
@@ -18,21 +20,18 @@
     font-size: 1.7rem;
   }
   .about-status-container {
+    @include flex-center();
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: nowrap;
     padding: 50px 0px;
     .about-status {
-      width: 300px;
-      display: flex;
+      @include flex-center();
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      width: 300px;
       .about-status__count {
         font-size: 3rem;
         line-height: 3rem;
-        color: var(--main-color-white);
+        color: #fff;
         font-weight: 700;
       }
       .about-status__des {
@@ -41,8 +40,8 @@
         margin-top: 10px;
       }
     }
-    .about-status:not(:last-child){
-      border-right: 1px solid var(--main-color-semi-white);
+    .about-status:not(:last-child) {
+      border-right: 1px solid rgba(255, 255, 255, 0.5);
     }
   }
 }
@@ -79,7 +78,7 @@
         border: none;
       }
       .about-status:nth-child(odd) {
-        border-right: 1px solid var(--main-color-semi-white);
+        border-right: 1px solid rgba(255, 255, 255, 0.5);
       }
     }
   }
@@ -104,7 +103,7 @@
         border: none;
       }
       .about-status:not(:last-child) {
-        border-bottom: 1px solid var(--main-color-semi-white);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
       }
     }
   }

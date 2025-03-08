@@ -1,11 +1,14 @@
+@import "/src/styles/variables";
+@import "/src/styles/base";
+
 .navbar-container {
-  background-color: var(--main-color-gray);
-  transition: all ease-out 400ms;
+	@include fullWidth();
+  background-color: $main-color-gray;
+  transition: $main-transition;
   position: fixed;
-  width: 100%;
 
   .navbar-thumbnail {
-    background-color: var(--main-color-gray-dark); 
+    background-color: $main-color-gray-dark;
     width: 230px;
 		height: 170px;
     margin: 0 auto;
@@ -13,13 +16,10 @@
     border-radius: 5px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 
-
     .navbar-thumbnail_top {
-
-      display: flex;
+			@include flex-center();
       justify-content: stretch;
-      align-items: center;
-      border-bottom: 1px solid var(--main-color-gray);
+      border-bottom: 1px solid $main-color-gray;
 
       .navbar-thumbnail_image {
         width: 100px;
@@ -27,17 +27,17 @@
         border-radius: 5px;
       }
       .navbar-thumbnail_title {
-				width: 100%;
+				@include fullWidth();
         text-align: center;
-        color: var(--main-color-white);
+        color: #fff;
       }
     }
     .navbar-thumbnail_description {
       text-align: left;
-      color: var(--main-color-gray-light);
+      color: $main-color-gray-light;
       font-size: 0.8rem;
 			padding: 5px 0px;
-			border-bottom: 1px solid var(--main-color-gray);
+			border-bottom: 1px solid $main-color-gray;
     }
     .navbar-thumbnail_package {
 			padding: 0 5px;
@@ -50,11 +50,11 @@
 
 .navbar-container .mySwiper {
   padding: 20px 50px;
-	background-color: var(--main-color-gray);
+	background-color: $main-color-gray;
 }
 .navbar-container .swiper-button-prev::after,
 .navbar-container .swiper-button-next::after {
-  color: var(--main-color-white);
+  color: #fff;
 }
 
 .navbar-container .swiper-slide {
