@@ -1,24 +1,55 @@
-.input-container{
-
-
-	.input{
-border: none;
-outline: none;
-padding: 15px 0;
-color: #fff;
-transition: all 400ms ease-out;
-border-bottom: 1px solid #555;
-&:focus{
-	border-bottom: 1px solid var(--glint-color-green);
+@import "/src/styles/variables";
+@import "/src/styles/base";
+@mixin inputColor($color) {
+  background-color: transparentize($color, 0.9);
+  &.border:focus {
+		border-color: $color;
+  }
 }
 
-	}
-	.transparent{
-		background-color: transparent;
+.input {
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  transition: $main-transition;
+	color: #fff
+}
 
-	}
-	.full{
-		width: 100%;
-	}
+.input.light {
+  @include inputColor(#e6e6e6);
+}
 
+.input.dark {
+  @include inputColor(#2b2b2b);
+}
+
+.input.success {
+  @include inputColor(#1d793a);
+}
+
+.input.info{
+	@include inputColor(#1b5579);
+}
+.input.error{
+  @include inputColor(#6e1414);
+}
+.input.warning{
+  @include inputColor(#6c4d16);
+}
+
+.input.grey {
+  @include inputColor(#8d8d8d);
+}
+
+.input.border {
+	border: 1px solid #777;
+}
+
+.input.transparent {
+  background-color: transparent;
+}
+
+.input.fullWidth {
+  width: 100%;
 }

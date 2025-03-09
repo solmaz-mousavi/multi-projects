@@ -63,50 +63,50 @@
 }
 
 // ----------------------------------
-.light {
+.btn.light {
   @include buttonColor(#e6e6e6);
 }
 
-.dark {
+.btn.dark {
   @include buttonColor(#343030);
 }
 
-.success {
+.btn.success {
   @include buttonColor(#7de39d);
 }
 
-.info{
+.btn.info{
 	@include buttonColor(#7abbe6);
 }
-.error{
+.btn.error{
   @include buttonColor(#da7171);
 }
-.warning{
+.btn.warning{
   @include buttonColor(#e9b555);
 }
 
-.grey {
+.btn.grey {
   @include buttonColor(#777);
 }
 
 // ----------------------------------
 
-.transparent {
+.btn.transparent {
   background-color: transparent;
   &:hover {
     background-color: transparent;
   }
 }
 
-.fullWidth {
+.btn.fullWidth {
   width: 100%;
 }
 
-.border {
+.btn.border {
   border-width: 1px;
   border-style: solid;
 }
-.round {
+.btn.round {
   border-radius: 50%;
   aspect-ratio: 1/1;
 }

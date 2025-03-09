@@ -1,26 +1,7 @@
-import { ButtonStyleType } from "../../../../dataTypes/mainDataType";
+import { ButtonType } from "../../../../dataTypes/buttonDataType";
 import Icon, { IconPropsType } from "../icon/Icon";
 import "./button.scss";
 
-type ButtonTypes = {
-  type?: "button" | "submit" | "link";
-  text?: string;
-  title?: string;
-  className?: string;
-  clickHandler?: () => void;
-  variant?: keyof ButtonStyleType;
-  icon?: IconPropsType;
-  tooltip?: {
-    content: string;
-    color: string;
-    position: "left" | "right" | "top" | "bottom";
-  };
-  to?: string;
-  fullWidth?: boolean;
-  transparent?: boolean;
-  border?: boolean;
-	round?:boolean;
-};
 
 function Button({
   type = "button",
@@ -37,7 +18,7 @@ function Button({
   transparent,
   border = true,
 	round=false,
-}: ButtonTypes) {
+}: ButtonType) {
   return (
     <>
       {type === "link" ? (

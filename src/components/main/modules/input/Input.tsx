@@ -1,38 +1,54 @@
-import { useState } from "react";
+import { InputType } from "../../../../dataTypes/inputDataType";
 import "./input.scss";
-type InputPropsType = {
-  type?: "text" | "email" | "textarea" | "password";
-  color?: "transparent" | "";
-  placeholder?: string;
-  label?: string;
-  width?: "full" | "";
-};
 
 function Input({
+  tag = "input",
   type = "text",
-  color = "transparent",
-  placeholder = "",
+  placeholder,
+  className,
+  variant="dark",
   label,
-  width,
-}: InputPropsType) {
-  const [value, setValue] = useState<string>("");
+  fullWidth=false,
+  transparent=false,
+  border=true,
+
+  id,
+  name,
+  value,
+  onChange,
+  onBlur,
+}: InputType) {
   return (
     <div className="input-container">
-      {label && <label>{label}</label>}
-			{
-				type==="textarea" ? (
-					<textarea/>
-				) : (
-					<input
-						type={type}
-						placeholder={placeholder}
-						className={`input ${color} ${width}`}
-						onChange={(e) => setValue(e.target.value)}
-						value={value}
-					/>
-
-				)
-			}
+      {label && (
+        <label style={{ color: `${label.color}` }}>{label.content}</label>
+      )}
+      {tag === "textarea" ? (
+        <textarea
+				id={id}
+				name={name}
+				placeholder={placeholder}
+				className={`input ${variant} ${fullWidth ? "fullWidth" : ""} ${
+					transparent ? "transparent" : ""
+				} ${border ? "border" : ""} ${className || ""}`}
+				value={value}
+				onChange={onChange}
+				onBlur={onBlur}
+				 />
+      ) : (
+        <input
+          type={type}
+          id={id}
+          name={name}
+          placeholder={placeholder}
+          className={`input ${variant} ${fullWidth ? "fullWidth" : ""} ${
+            transparent ? "transparent" : ""
+          } ${border ? "border" : ""} ${className || ""}`}
+          value={value}
+          onChange={onChange}
+          onBlur={onBlur}
+        />
+      )}
     </div>
   );
 }

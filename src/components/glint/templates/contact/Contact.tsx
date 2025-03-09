@@ -19,9 +19,9 @@ function Contact({ data }: { data: SocialDataType[] }) {
 
       <div className="form-container">
         <form action="#">
-					<Input type="text" color="transparent" placeholder="Your Name" width="full"/>
+					{/* <Input type="text" color="transparent" placeholder="Your Name" width="full"/>
 					<Input type="email" color="transparent" placeholder="Your Email" width="full"/>
-					<Input type="text" color="transparent" placeholder="Subject" width="full"/>
+					<Input type="text" color="transparent" placeholder="Subject" width="full"/> */}
           <button className="fullWidth" type="submit">submit</button>
         </form>
       </div>
