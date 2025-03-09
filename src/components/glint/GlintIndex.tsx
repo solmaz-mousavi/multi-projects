@@ -13,6 +13,7 @@ import Works from "./templates/works/Works";
 import Clients from "./templates/clients/Clients";
 import Contact from "./templates/contact/Contact";
 import "./glint.scss";
+import Footer from "./templates/footer/Footer";
 
 function GlintIndex() {
   const { glintData, pending, error } = useFetch({
@@ -50,6 +51,7 @@ function GlintIndex() {
             teamMembersData={glintData.teamMembers}
           />
           <Contact data={glintData.social} />
+					<Footer/>
         </div>
       )}
     </>
