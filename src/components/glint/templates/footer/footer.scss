@@ -6,8 +6,10 @@
   color: #777;
   padding: 100px 20px;
   margin: 0 auto;
+	border-top: 1px solid #333;
   .footer-top {
     @include flex-center();
+		align-items: start;
     gap: 20px;
     padding-bottom: 50px;
     .footer-top__left {
@@ -25,16 +27,7 @@
         color: #fff;
         padding-bottom: 20px;
       }
-      .subscribe-container {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 50px;
-        width: 100%;
-        input {
-          width: 100%;
-          padding: 12px 100px 12px 50px;
-        }
-      }
+
     }
   }
   .footer-bottom {
@@ -42,6 +35,28 @@
     gap: 20px;
     font-size: 0.9rem;
   }
+	.form-wrapper{
+		padding: 20px 0px !important;
+		max-width: 300px;
+	}
+  .input-container {
+    position: relative;
+  }
+  .footer-label {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    * {
+      font-size: 1.8rem;
+    }
+  }
+  .footer-input {
+    padding-left: 45px;
+		border-radius: 5px 5px 0 0;
+  }
+	.glint-form-button{
+		border-radius: 0 0 5px 5px;
+	}
 }
 
 @media screen and (max-width: 764px) {

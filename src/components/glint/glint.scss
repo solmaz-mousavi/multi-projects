@@ -45,16 +45,13 @@
 .devider.dark {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
-.submit-btn{
-	@include flex-center();
-	background-color: $glint-color-green;
-	padding: 10px 30px;
-	color: #fff;
+.glint-form-button{
+	background-color: $glint-color-green !important;
+	padding: 10px 0px !important;
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
-	font-size: 0.8rem;
-	cursor: pointer;
-	
+	font-size: 0.75rem;
+	border: none !important;
 }
 
 @media screen and (max-width: 992px) {

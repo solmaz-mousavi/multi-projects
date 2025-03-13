@@ -21,7 +21,7 @@ function Input({
   return (
     <div className="input-container">
       {label && (
-        <label style={{ color: `${label.color}` }}>{label.content}</label>
+        <label style={{ color: `${label.color}` }} className={label.className}>{label.content}</label>
       )}
       {tag === "textarea" ? (
         <textarea

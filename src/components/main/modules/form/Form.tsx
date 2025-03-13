@@ -1,5 +1,4 @@
-import { InputType } from "../../../../dataTypes/inputDataType";
-import { ErrorsType, ValuesType } from "../../../../dataTypes/formDataType";
+import { ErrorsType, IFormInputType, ValuesType } from "../../../../dataTypes/formDataType";
 import { ButtonType } from "../../../../dataTypes/buttonDataType";
 import { useFormik } from "formik";
 import Input from "../input/Input";
@@ -8,10 +7,10 @@ import validatorMethod from "../../../../validators/validatorMethod";
 import "./form.scss";
 
 type FormPropsType = {
-  inputs: InputType[];
+  inputs: IFormInputType[];
   buttons: ButtonType[];
   submitHandler: (values: ValuesType) => void;
-  className: string;
+  className?: string;
 };
 
 export default function Form({
@@ -37,7 +36,7 @@ export default function Form({
       let errors: ErrorsType = {};
 
       inputs.forEach((input) => {
-        const { tag, name, validators } = input;
+        const { name, validators } = input;
         errors[name] = validatorMethod(values[name], validators);
         errors[name] === "" && delete errors[name];
       });
@@ -55,7 +54,13 @@ export default function Form({
 
         return (
           <div key={name} className={`input-container ${name}`}>
-            <Input {...input} />
+            <Input
+              {...input}
+							id={name}
+              value={formik.values[name]}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
             {formik.errors[name] && formik.touched[name] && (
               <span className="inputError">{formik.errors[name]}</span>
             )}
