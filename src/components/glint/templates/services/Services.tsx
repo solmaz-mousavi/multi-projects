@@ -1,4 +1,4 @@
-import { ServicesDataType } from "../../../../dataTypes/glintDataType";
+import { ServicesDataType } from "../../../../dataTypes/glintData.type";
 import Aos from "../../../main/modules/aos/Aos";
 import Icon from "../../../main/modules/icon/Icon";
 import "./services.scss";

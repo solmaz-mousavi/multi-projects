@@ -1,4 +1,4 @@
-import { StatusDataType } from "../../../../dataTypes/glintDataType";
+import { StatusDataType } from "../../../../dataTypes/glintData.type";
 import Aos from "../../../main/modules/aos/Aos";
 import CounterUp from "../../../main/modules/countUp/CounterUp";
 import "./about.scss";

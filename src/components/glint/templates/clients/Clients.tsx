@@ -1,7 +1,7 @@
 import {
   ClientsDataType,
   TeamMembersDataType,
-} from "../../../../dataTypes/glintDataType";
+} from "../../../../dataTypes/glintData.type";
 import Aos from "../../../main/modules/aos/Aos";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";

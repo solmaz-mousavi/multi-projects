@@ -1,4 +1,4 @@
-import { ButtonStyleType } from "./buttonDataType";
+import { ButtonStyleType } from "./buttonData.type";
 
 type PackageKeyType = "name"|"iconName"|"color"|"link";
 export type PackageType = {

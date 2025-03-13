@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { ButtonStyleType } from "./buttonDataType";
+import { ButtonStyleType } from "./buttonData.type";
 
 export type RulesType = "REQUIRED_STRING" | "EMAIL_VALUE" | "PHONE_VALUE";
 export type RuleObjectType = () => { type: RulesType };

@@ -1,4 +1,4 @@
-import { InputType } from "../../../../dataTypes/inputDataType";
+import { InputType } from "../../../../dataTypes/inputData.type";
 import "./input.scss";
 
 function Input({

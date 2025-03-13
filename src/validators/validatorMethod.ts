@@ -1,6 +1,6 @@
 import { requiredString, emailValue, phoneValue } from "./rules";
 import { phonePattern, emailPattern } from "./regex";
-import { RuleObjectType } from "../dataTypes/formDataType";
+import { RuleObjectType } from "../dataTypes/formData.type";
 
 export default function validatorMethod(
   inputValue: string | number | boolean,

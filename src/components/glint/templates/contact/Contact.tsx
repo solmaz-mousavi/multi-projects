@@ -1,6 +1,6 @@
-import { ButtonType } from "../../../../dataTypes/buttonDataType";
-import { IFormInputType, ValuesType } from "../../../../dataTypes/formDataType";
-import { SocialDataType } from "../../../../dataTypes/glintDataType";
+import { ButtonType } from "../../../../dataTypes/buttonData.type";
+import { IFormInputType, ValuesType } from "../../../../dataTypes/formData.type";
+import { SocialDataType } from "../../../../dataTypes/glintData.type";
 import {
   emailValidator,
   phoneValidator,

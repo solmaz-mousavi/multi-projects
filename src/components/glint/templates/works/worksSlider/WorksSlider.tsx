@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import "./worksSlider.scss";
-import { WorksDataType } from "../../../../../dataTypes/glintDataType";
+import { WorksDataType } from "../../../../../dataTypes/glintData.type";
 type WorksSliderPropsType = {
   data: WorksDataType[];
   slideNumber: number;

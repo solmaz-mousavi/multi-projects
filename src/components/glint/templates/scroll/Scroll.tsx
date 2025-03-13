@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaAngleDown, FaAnglesUp } from "react-icons/fa6";
-import { ScrollDataType } from "../../../../dataTypes/glintDataType";
+import { ScrollDataType } from "../../../../dataTypes/glintData.type";
 import "./scroll.scss";
 type ScrollPropsType = {
 	scrollPosition: number;

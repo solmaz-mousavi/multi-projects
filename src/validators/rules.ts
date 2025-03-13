@@ -1,4 +1,4 @@
-import { RulesType, RuleObjectType } from "../dataTypes/formDataType";
+import { RulesType, RuleObjectType } from "../dataTypes/formData.type";
 
 export const requiredString: RulesType = "REQUIRED_STRING";
 export const emailValue: RulesType = "EMAIL_VALUE";

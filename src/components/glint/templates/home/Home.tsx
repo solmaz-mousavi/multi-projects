@@ -1,4 +1,4 @@
-import { SocialDataType } from "../../../../dataTypes/glintDataType";
+import { SocialDataType } from "../../../../dataTypes/glintData.type";
 import { StyledHomeWrapper } from "./StyledHomeWrapper";
 import Button from "../../../main/modules/button/Button";
 import "./home.scss";

@@ -1,5 +1,5 @@
-import { ErrorsType, IFormInputType, ValuesType } from "../../../../dataTypes/formDataType";
-import { ButtonType } from "../../../../dataTypes/buttonDataType";
+import { ErrorsType, IFormInputType, ValuesType } from "../../../../dataTypes/formData.type";
+import { ButtonType } from "../../../../dataTypes/buttonData.type";
 import { useFormik } from "formik";
 import Input from "../input/Input";
 import Button from "../button/Button";

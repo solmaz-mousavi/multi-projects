@@ -1,5 +1,5 @@
-import { ButtonType } from "../../../../dataTypes/buttonDataType";
-import { IFormInputType, ValuesType } from "../../../../dataTypes/formDataType";
+import { ButtonType } from "../../../../dataTypes/buttonData.type";
+import { IFormInputType, ValuesType } from "../../../../dataTypes/formData.type";
 import {
   emailValidator,
   requiredStringValidator,

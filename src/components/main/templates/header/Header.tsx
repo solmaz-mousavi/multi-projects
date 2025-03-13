@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MainDataType } from "../../../../dataTypes/mainDataType";
+import { MainDataType } from "../../../../dataTypes/mainData.type";
 import Button from "../../modules/button/Button";
 import Navbar from "../navbar/Navbar";
 import "./header.scss";

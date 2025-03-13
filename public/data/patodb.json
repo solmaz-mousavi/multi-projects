@@ -1,0 +1,10 @@
+{
+	"route":[
+		{"path": "", "element": "PatoHome()" },
+		{"path": "about", "element": "PatoAbout()" },
+		{"path": "blog", "element": "PatoBlog()" },
+		{"path": "contact", "element": "PatoContact()" },
+		{}
+	],
+	"b":[]
+}

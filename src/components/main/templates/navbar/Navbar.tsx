@@ -1,4 +1,4 @@
-import { MainDataType } from "../../../../dataTypes/mainDataType";
+import { MainDataType } from "../../../../dataTypes/mainData.type";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, Navigation } from "swiper/modules";

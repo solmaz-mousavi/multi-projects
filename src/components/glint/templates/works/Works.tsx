@@ -1,7 +1,7 @@
 import "./works.scss";
 import { FaLink, FaPlus } from "react-icons/fa6";
 import WorksSlider from "./worksSlider/WorksSlider";
-import { WorksDataType } from "../../../../dataTypes/glintDataType";
+import { WorksDataType } from "../../../../dataTypes/glintData.type";
 import Aos from "../../../main/modules/aos/Aos";
 import { useState } from "react";
 

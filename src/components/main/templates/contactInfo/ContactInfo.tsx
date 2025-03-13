@@ -1,4 +1,4 @@
-import { PackageType } from "../../../../dataTypes/mainDataType";
+import { PackageType } from "../../../../dataTypes/mainData.type";
 import Button from "../../modules/button/Button";
 import Icon from "../../modules/icon/Icon";
 import "./contactInfo.scss";
