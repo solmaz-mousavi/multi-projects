@@ -1,7 +1,7 @@
 @import "/src/styles/variables";
 @import "/src/styles/base";
 
-.works-container {
+.glint-works-container {
   @include fullWidth();
   align-items: flex-start !important;
   flex-direction: column;
@@ -143,7 +143,7 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .works-container {
+  .glint-works-container {
     .works-header {
       padding: 180px;
       padding-top: 80px;
@@ -174,7 +174,7 @@
 }
 
 @media screen and (max-width: 992px) {
-  .works-container {
+  .glint-works-container {
     .works-header {
       padding: 140px;
       padding-top: 60px;
@@ -190,7 +190,7 @@
 }
 
 @media screen and (max-width: 764px) {
-  .works-container {
+  .glint-works-container {
     .work-items-wrapper {
       @include flex-center();
       .work-items-container {
@@ -211,7 +211,7 @@
 }
 
 @media screen and (max-width: 764px) {
-  .works-container {
+  .glint-works-container {
     .works-header {
       padding: 40px;
       padding-top: 20px;

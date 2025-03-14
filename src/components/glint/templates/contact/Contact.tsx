@@ -1,6 +1,6 @@
 import { ButtonType } from "../../../../dataTypes/buttonData.type";
 import { IFormInputType, ValuesType } from "../../../../dataTypes/formData.type";
-import { SocialDataType } from "../../../../dataTypes/glintData.type";
+import { SocialDataType } from "../../../../dataTypes/mainData.type";
 import {
   emailValidator,
   phoneValidator,
@@ -105,12 +105,12 @@ function Contact({ data }: { data: SocialDataType[] }) {
   };
 
   return (
-    <section id="Contacts" className="section-container contacts-container">
+    <section id="Contacts" className="glint-section-container glint-contacts-container">
       <div className="decoration"></div>
       <Aos aosStyle="fadeInUp" className="contacts-header" once={true}>
         <div>
-          <p className="top-title contacts-header__top">Contact Us</p>
-          <p className="main-title contacts-header__title">
+          <p className="glint-top-title contacts-header__top">Contact Us</p>
+          <p className="glint-main-title contacts-header__title">
             Reach out for a new project or just say hello
           </p>
         </div>

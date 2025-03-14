@@ -14,7 +14,7 @@ const closeGuidboxHandler = () => {
 	localStorage.setItem('showGuidBox', "false");
 }
   return (
-    <div className="guidbox-wrapper">
+    <div className="main-guidbox-wrapper">
       <div className={`guidbox guidbox-1 ${showGuidBox1 ? "" : "hidden"}`}>
 				<div className="guidbox-arrow-top"></div>
 				<div className="guidbox-arrow-bottom guidbox1-arrow-bottom"></div>

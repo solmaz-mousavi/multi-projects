@@ -8,7 +8,7 @@ type LoaderPropsType = {
 
 function Loader({ type, fullScreen }: LoaderPropsType) {
   return (
-    <div className={`loader-container ${fullScreen && "fullScreen"}`}>
+    <div className={`main-loader-container ${fullScreen && "fullScreen"}`}>
       {type == "data" && (
         <>
           <ScaleLoader color="#3ca391" height={35} radius={4} width={6} />

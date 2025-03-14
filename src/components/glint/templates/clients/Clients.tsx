@@ -17,11 +17,11 @@ type ClientsPropsType = {
 
 function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
   return (
-    <section id="Clients" className="section-container clients-container">
+    <section id="Clients" className="glint-section-container glint-clients-container">
       <Aos aosStyle="fadeInUp" once={true}>
-        <div className="clients-header">
-          <p className="top-title clients-header__top">Our Clients</p>
-          <p className="main-title clients-header__title">
+        <div className="glint-clients-header">
+          <p className="glint-top-title clients-header__top">Our Clients</p>
+          <p className="glint-main-title clients-header__title">
             Glint has been honored to partner up with these clients
           </p>
 
@@ -50,10 +50,10 @@ function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
           </div>
         </div>
       </Aos>
-      <div className="devider dark"></div>
+      <div className="glint-devider dark"></div>
       <Aos aosStyle="fadeInUp" once={true}>
         <div className="clients-team">
-          <div className="team-slider">
+          <div className="glint-team-slider">
             <Swiper
               navigation={{ nextEl: ".arrow-left", prevEl: ".arrow-right" }}
               slidesPerView={1}

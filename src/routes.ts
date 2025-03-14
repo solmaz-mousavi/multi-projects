@@ -14,6 +14,7 @@ const router: RouteObject[] = [
   {path: "/", element: Glint() },
   {path: "/pato/*", element: Pato(), children:[
 		{path: "", element: PatoHome() },
+		{path: "home", element: PatoHome() },
 		{path: "about", element: PatoAbout() },
 		{path: "blog", element: PatoBlog() },
 		{path: "contact", element: PatoContact() },

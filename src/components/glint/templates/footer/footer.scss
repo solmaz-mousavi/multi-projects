@@ -1,7 +1,7 @@
 @import "/src/styles/variables";
 @import "/src/styles/base";
 
-.footer-container {
+.glint-footer-container {
   background-color: #000;
   color: #777;
   padding: 100px 20px;
@@ -60,7 +60,7 @@
 }
 
 @media screen and (max-width: 764px) {
-  .footer-container {
+  .glint-footer-container {
     .footer-top {
       flex-direction: column;
       padding-bottom: 50px;
@@ -80,7 +80,7 @@
 }
 
 @media screen and (max-width: 412px) {
-  .footer-container {
+  .glint-footer-container {
     .footer-top {
       .footer-top__right {
         .subscribe-container {

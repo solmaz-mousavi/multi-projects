@@ -1,7 +1,4 @@
-export type SocialDataType = {
-  socialName: string;
-  iconName: string;
-};
+import { SocialDataType } from "./mainData.type";
 
 export type ScrollStyleType = { txtColor: string; iconColor: string };
 export type ScrollBreakpointsType = { id: string; styleIndex: string };

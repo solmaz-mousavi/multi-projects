@@ -1,6 +1,6 @@
 @import "/src/styles/variables";
 
-.contacts-container {
+.glint-contacts-container {
   height: calc(100vh - 60px);
   background-color: #000;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -95,7 +95,7 @@
 }
 
 @media screen and (max-width: 650px) {
-  .contacts-container {
+  .glint-contacts-container {
     .contacts-bottom-wrapper {
       flex-direction: column;
       .form-container {

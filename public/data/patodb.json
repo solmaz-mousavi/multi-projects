@@ -1,10 +1,18 @@
 {
-	"route":[
-		{"path": "", "element": "PatoHome()" },
-		{"path": "about", "element": "PatoAbout()" },
-		{"path": "blog", "element": "PatoBlog()" },
-		{"path": "contact", "element": "PatoContact()" },
-		{}
-	],
-	"b":[]
+  "navbar": ["home", "about", "blog", "contact", "gallery", "menu", "reservation"],
+	"social": [
+    {
+      "socialName": "Facebook",
+      "iconName": "FaFacebookF"
+    },
+    {
+      "socialName": "Twitter",
+      "iconName": "FaTwitter"
+    },
+    {
+      "socialName": "Tripadvisor",
+      "iconName": "FaTripadvisor"
+    }
+  ],
+	"b": []
 }

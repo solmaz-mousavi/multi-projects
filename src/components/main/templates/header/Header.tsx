@@ -43,7 +43,7 @@ function Header({ data }: HeaderPropsType) {
 
   return (
     <>
-      <header id="Header" className="header-container">
+      <header id="Header" className="main-header-container">
         <div className="header-btn" onClick={showNavbarHandler}>
           <Button
             text="Select Project"
@@ -63,10 +63,10 @@ function Header({ data }: HeaderPropsType) {
           />
         </div>
       </header>
-      <nav className={`navbar-wrapper ${showNavbar && "show"}`}>
+      <nav className={`main-navbar-wrapper ${showNavbar && "show"}`}>
         <Navbar closeNavbarHandler={closeNavbarHandler} data={data} />
       </nav>
-      <section className={`contactInfo-wrapper ${showContactInfo && "show"}`}>
+      <section className={`main-contactInfo-wrapper ${showContactInfo && "show"}`}>
         <ContactInfo data={data.packages} />
       </section>
     </>

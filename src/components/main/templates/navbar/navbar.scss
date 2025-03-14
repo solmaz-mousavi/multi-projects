@@ -1,7 +1,7 @@
 @import "/src/styles/variables";
 @import "/src/styles/base";
 
-.navbar-container {
+.main-navbar-container {
 	@include fullWidth();
   background-color: $main-color-gray;
   transition: $main-transition;
@@ -48,22 +48,22 @@
   }
 }
 
-.navbar-container .mySwiper {
+.main-navbar-container .mySwiper {
   padding: 20px 50px;
 	background-color: $main-color-gray;
 }
-.navbar-container .swiper-button-prev::after,
-.navbar-container .swiper-button-next::after {
+.main-navbar-container .swiper-button-prev::after,
+.main-navbar-container .swiper-button-next::after {
   color: #fff;
 }
 
-.navbar-container .swiper-slide {
+.main-navbar-container .swiper-slide {
 	width: auto!important;
 }
 
 @media screen and (max-width: 412px) {
-  .navbar-container .swiper-button-prev::after,
-  .navbar-container .swiper-button-next::after {
+  .main-navbar-container .swiper-button-prev::after,
+  .main-navbar-container .swiper-button-next::after {
     display: none;
   }
 }

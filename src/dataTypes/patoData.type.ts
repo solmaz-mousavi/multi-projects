@@ -1,1 +1,6 @@
-export type PatoDataType = 1;
+import { SocialDataType } from "./mainData.type";
+
+export type PatoDataType = {
+	navbar: string[];
+	social: SocialDataType[];
+};

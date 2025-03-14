@@ -7,17 +7,14 @@
   scroll-behavior: smooth;
 }
 
-.fullWidth {
-  display: block;
-  width: 100% !important;
-}
 
-.section-container {
+
+.glint-section-container {
   @include flex-center();
   padding: 50px 0px;
   min-height: 100vh;
 }
-.top-title {
+.glint-top-title {
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   margin-left: 6px;
@@ -25,7 +22,7 @@
   font-size: 1.2rem;
   font-weight: 700;
 }
-.main-title {
+.glint-main-title {
   font-size: 3rem;
   font-weight: 500;
   line-height: 1.3;
@@ -35,14 +32,14 @@
   position: relative;
   z-index: 0 !important;
 }
-.devider {
+.glint-devider {
   height: 0px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   width: 60%;
   max-width: 400px;
   margin: 30px;
 }
-.devider.dark {
+.glint-devider.dark {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 .glint-form-button{
@@ -55,11 +52,11 @@
 }
 
 @media screen and (max-width: 992px) {
-  .top-title {
+  .glint-top-title {
     letter-spacing: 0.25rem;
     font-size: 1rem;
   }
-  .main-title {
+  .glint-main-title {
     font-size: 3rem;
   }
 }
@@ -68,19 +65,19 @@
   #glint {
     height: calc(100vh - 50px);
   }
-  .top-title {
+  .glint-top-title {
     font-size: 0.8rem;
   }
-  .main-title {
+  .glint-main-title {
     font-size: 2.2rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .top-title {
+  .glint-top-title {
     font-size: 0.6rem;
   }
-  .main-title {
+  .glint-main-title {
     font-size: 2rem;
   }
 }
@@ -89,7 +86,7 @@
   #glint {
     height: calc(100vh - 40px);
   }
-  .main-title {
+  .glint-main-title {
     font-size: 1.5rem;
   }
 }

@@ -16,7 +16,7 @@ function Navbar({ closeNavbarHandler, data }: NavbarPropsType) {
   return (
     <>
       {data.projects && (
-        <section className="navbar-container">
+        <section className="main-navbar-container">
           <Swiper
             slidesPerView="auto"
             spaceBetween={10}

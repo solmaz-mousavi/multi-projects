@@ -1,7 +1,7 @@
 @import "/src/styles/variables";
 @import "/src/styles/base";
 
-.header-container {
+.main-header-container {
 	@include fullWidth();
 	@include flex-center();
   justify-content: space-between;
@@ -13,7 +13,7 @@
   z-index: 11;
 }
 
-.navbar-wrapper , .contactInfo-wrapper {
+.main-navbar-wrapper , .main-contactInfo-wrapper {
   position: relative;
   top: -40px;
   height: 0;
@@ -22,7 +22,7 @@
 	pointer-events:none;
   z-index: -1;
 }
-.navbar-wrapper.show, .contactInfo-wrapper.show {
+.main-navbar-wrapper.show, .main-contactInfo-wrapper.show {
   height: auto;
   opacity: 1;
   top: 0px;
@@ -31,14 +31,14 @@
 }
 
 @media screen and (max-width: 768px) {
-  .header-container {
+  .main-header-container {
     height: 50px;
 		padding: 0px 30px;
   }
 }
 
 @media screen and (max-width: 412px) {
-  .header-container {
+  .main-header-container {
     height: 40px;
 		padding: 0px 20px;
   }

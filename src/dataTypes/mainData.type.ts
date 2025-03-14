@@ -17,3 +17,9 @@ export type MainDataType = {
   packages: PackageType[];
 	buttonStyles: ButtonStyleType;
 };
+
+
+export type SocialDataType = {
+  socialName: string;
+  iconName: string;
+};

@@ -1,11 +1,11 @@
 @import "/src/styles/variables";
 
-.clients-container {
+.glint-clients-container {
   background-color: #ddd;
   flex-direction: column;
   text-align: center;
 	position: relative;
-  .clients-header {
+  .glint-clients-header {
     padding-bottom: 0px;
     margin: 0 auto;
     .clients-header__top {
@@ -36,7 +36,7 @@
       }
     }
   }
-  .team-slider {
+  .glint-team-slider {
     position: relative;
     .swiper {
       max-width: 1200px;
@@ -88,18 +88,18 @@
 		padding-top: 20px;
 	}
 }
-.clients-header .swiper-button-prev::after,
-.clients-header .swiper-button-next::after {
+.glint-clients-header .swiper-button-prev::after,
+.glint-clients-header .swiper-button-next::after {
   display: none;
 }
-.team-slider .swiper-button-prev::after,
-.team-slider .swiper-button-next::after {
+.glint-team-slider .swiper-button-prev::after,
+.glint-team-slider .swiper-button-next::after {
   color: #555;
   font-size: 1rem;
 }
 
-@media screen and (max-width: 768px) {
-  .clients-container {
+@media screen and (max-width: 768px) { 
+  .glint-clients-container {
     .clients-slider {
       padding-top: 40px;
       .swiper-slide {
@@ -111,7 +111,7 @@
         }
       }
     }
-		.team-slider {
+		.glint-team-slider {
 			.swiper {
 				width: 90vw;
 			}
@@ -135,7 +135,7 @@
 }
 
 @media screen and (max-width: 412px) {
-  .clients-container {
+  .glint-clients-container {
     .clients-slider {
       padding-top: 30px;
       .swiper-slide {
@@ -147,7 +147,7 @@
         }
       }
     }
-		.team-slider {
+		.glint-team-slider {
 			.swiper {
 				width: 95vw;
 			}

@@ -74,7 +74,7 @@ function Scroll({
       {data && (
         <>
           <div
-            className="scroll-container"
+            className="glint-scroll-container"
             style={{
               height: `${Math.max(0, 80 - breakPointShift)}px`,
               bottom: `${Math.min(80, breakPointShift)}px`,
@@ -127,7 +127,7 @@ function Scroll({
           </div>
 
           <div
-            className="scroll-container"
+            className="glint-scroll-container"
             style={{ zIndex: "1" }}
           >
             <div className="scroll-down">

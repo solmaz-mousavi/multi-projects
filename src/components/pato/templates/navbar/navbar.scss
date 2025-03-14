@@ -1,0 +1,56 @@
+@import "/src/styles/base";
+@import "/src/styles/variables";
+
+.pato-navbar-wrapper {
+  @include flex-center;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  padding: 5px 0;
+  transition: $main-transition;
+  &.blured {
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.3);
+    .pato-logo {
+      height: 35px;
+    }
+  }
+  .pato-logo {
+    margin-right: 60px;
+    height: 50px;
+    transition: $main-transition;
+    img {
+      height: 100%;
+      transition: $main-transition;
+    }
+  }
+  .pato-navbar-container {
+    .pato-navbar-link {
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      padding: 5px 20px;
+      transition: $main-transition;
+      font-size: 0.9rem;
+      color: #fff;
+      &:hover {
+        color: $pato-color-red;
+      }
+    }
+    .pato-navbar-link.active {
+      color: $pato-color-red;
+    }
+  }
+  .pato-social-container {
+    .pato-navbar-social-icon {
+      color: #fff;
+      margin: 0px 10px;
+      transition: $main-transition;
+      cursor: pointer;
+      &:hover {
+        color: $pato-color-red;
+      }
+    }
+  }
+}

@@ -16,7 +16,7 @@ function WorksSlider({
   slideNumber,
 }: WorksSliderPropsType) {
   return (
-    <div className="works-slider-container">
+    <div className="glint-works-slider-container">
       <div className="works-slider__header">
         <MdOutlineShare className="works-slider__header-btn" />
         <MdOutlineClose

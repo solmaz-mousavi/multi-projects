@@ -1,7 +1,7 @@
 @import "/src/styles/variables";
 @import "/src/styles/base";
 
-.menu-wrapper {
+.glint-menu-wrapper {
   @include flex-center();
   gap: 15px;
   position: fixed;
@@ -11,38 +11,36 @@
   padding: 12px 24px;
   cursor: pointer;
   z-index: 8;
+	.menu-txt {
+		color: $glint-color-green;
+		font-weight: 600;
+		letter-spacing: 3px;
+		font-size: 0.9rem;
+		transition: $main-transition;
+	}
+	.menu-icon {
+		color: #fff;
+	}
 }
 
-.menu-txt {
-  color: $glint-color-green;
-  font-weight: 600;
-  letter-spacing: 3px;
-  font-size: 0.9rem;
-  transition: $main-transition;
-}
-
-.menu-icon {
-  color: #fff;
-}
-
-.menu-wrapper:hover > .menu-txt {
+.glint-menu-wrapper:hover > .menu-txt {
   color: #fff;
 }
 
 @media screen and (max-width: 768px) {
-  .menu-wrapper {
+  .glint-menu-wrapper {
     top: 70px;
     padding: 10px 20px;
-  }
-  .menu-txt {
-    font-size: 0.8rem;
+		.menu-txt {
+			font-size: 0.8rem;
+		}
   }
 }
 @media screen and (max-width: 412px) {
-  .menu-wrapper {
+  .glint-menu-wrapper {
     top: 60px;
-  }
-  .menu-txt {
-    display: none;
+		.menu-txt {
+			display: none;
+		}
   }
 }

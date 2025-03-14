@@ -1,4 +1,4 @@
-.scroll-container {
+.glint-scroll-container {
   position: fixed;
   bottom: 0px;
   right: 20px;
@@ -45,7 +45,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .scroll-container {
+  .glint-scroll-container {
     display: none;
   }
 }

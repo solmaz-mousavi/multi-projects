@@ -44,7 +44,7 @@ function Footer() {
     console.log(items);
   };
   return (
-    <section className="footer-container">
+    <section className="glint-footer-container">
       <Aos aosStyle="fadeInUp" className="contacts-header" once={true}>
         <div className="footer-top">
           <div className="footer-top__left">

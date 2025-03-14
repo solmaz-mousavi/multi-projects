@@ -8,7 +8,7 @@ type ErrorPropsType = {
 
 function Error({ error, fullScreen }: ErrorPropsType) {
   return (
-    <div className={`error-container ${fullScreen && "fullScreen"}`}>
+    <div className={`main-error-container ${fullScreen && "fullScreen"}`}>
 			<div className="error-top">
 
       {/* <MdOutlineReportGmailerrorred className="error-icon" /> */}

@@ -13,11 +13,11 @@ function Works({ data }: { data: WorksDataType[] }) {
     setSlideNumber(index);
   };
   return (
-    <section id="Works" className="section-container works-container">
+    <section id="Works" className="glint-section-container glint-works-container">
       <div id="WorksTop" className="works-header">
         <Aos aosStyle="fadeInUp" once={true}>
-          <p className="top-title works-header__top">Recent Works </p>
-          <p className="main-title works-header__title">
+          <p className="glint-top-title works-header__top">Recent Works </p>
+          <p className="glint-main-title works-header__title">
             We love what we do, check out some of our latest works
           </p>
         </Aos>

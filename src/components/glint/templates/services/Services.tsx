@@ -5,16 +5,16 @@ import "./services.scss";
 
 function Services({ data }: { data: ServicesDataType[] }) {
   return (
-    <section id="Services" className="section-container services-container">
+    <section id="Services" className="glint-section-container glint-services-container">
       <Aos aosStyle="fadeInUp" once={true}>
         <div className="services-header">
-          <p className="top-title services-header__top">What We Do</p>
-          <p className="main-title services-header__title">
+          <p className="glint-top-title services-header__top">What We Do</p>
+          <p className="glint-main-title services-header__title">
             We've got everything you need to launch and grow your business
           </p>
         </div>
       </Aos>
-      <div className="devider dark"></div>
+      <div className="glint-devider dark"></div>
       <Aos aosStyle="fadeInUp" once={true}>
         <Aos aosStyle="fadeInUp" once={true}>
           <div className="service-item-container">

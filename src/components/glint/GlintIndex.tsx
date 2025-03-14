@@ -42,7 +42,7 @@ function GlintIndex() {
           />
           <Scroll scrollPosition={scrollPosition} data={glintData.scrollData} />
 
-          <Home scrollPosition={scrollPosition} data={glintData.social} />
+				  <Home scrollPosition={scrollPosition} data={glintData.social} />
           <About data={glintData.status} />
           <Services data={glintData.services} />
           <Works data={glintData.works} />

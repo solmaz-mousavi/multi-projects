@@ -1,6 +1,6 @@
 @import "/src/styles/base";
 
-.loader-container {
+.main-loader-container {
   @include full();
   @include flex-center();
   flex-direction: column;

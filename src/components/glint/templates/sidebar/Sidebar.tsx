@@ -29,7 +29,7 @@ function Sidebar({data,
   return (
     <>
         <section
-          className={`sidebar-wrapper ${showSidebar ? "show" : ""}`}
+          className={`glint-sidebar-wrapper ${showSidebar ? "show" : ""}`}
         >
           <div className="sidebar-container">
             <div onClick={() => setShowSidebar(false)} >

@@ -1,8 +1,8 @@
-import { SocialDataType } from "../../../../dataTypes/glintData.type";
 import { StyledHomeWrapper } from "./StyledHomeWrapper";
 import Button from "../../../main/modules/button/Button";
 import "./home.scss";
 import Aos from "../../../main/modules/aos/Aos";
+import { SocialDataType } from "../../../../dataTypes/mainData.type";
 type HomePropsType = {
   scrollPosition: number;
   data: SocialDataType[];
@@ -12,13 +12,13 @@ function Home({ scrollPosition, data }: HomePropsType) {
     <>
       <StyledHomeWrapper
         $scrollposition={`100% ${scrollPosition / -8}px`}
-        className="section-container home-container"
+        className="glint-section-container glint-home-container"
         id="Home"
       >
         <div className="home-txt-container">
           <Aos aosStyle="fadeInUp" once={true}>
-            <p className="top-title home-txt__welcome">Welcome to Glint</p>
-            <p className="main-title home-txt__description">
+            <p className="glint-top-title home-txt__welcome">Welcome to Glint</p>
+            <p className="glint-main-title home-txt__description">
               We are a creative group of people who design influential brands
               and digital experiences.
             </p>
