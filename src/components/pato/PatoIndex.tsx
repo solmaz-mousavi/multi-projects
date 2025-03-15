@@ -36,7 +36,7 @@ function PatoIndex() {
           // setShowSidebar={setShowSidebar}
           />
 					<Navbar scrollPosition={scrollPosition} navbarData={patoData.navbar} socialData = {patoData.social}/>
-					<Outlet />
+					<Outlet context={{b:2}} />
         </div>
       )}
     </>
