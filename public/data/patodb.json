@@ -14,5 +14,10 @@
       "iconName": "FaTripadvisor"
     }
   ],
+	"slides":[
+		{"image":"/assets/images/pato/home/slider/slide01.jpg", "title":"welcome to", "desc":"pato place", "button":{"title":"look menu", "navigate":"/pato/menu"}},
+		{"image":"/assets/images/pato/home/slider/slide02.jpg", "title":"know about us", "desc":"pato place", "button":{"title":"about us", "navigate":"/pato/about"}},
+		{"image":"/assets/images/pato/home/slider/slide03.jpg", "title":"have a look to", "desc":"pato place", "button":{"title":"look gallery", "navigate":"/pato/gallery"}}
+	],
 	"b": []
 }

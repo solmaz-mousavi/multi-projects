@@ -8,7 +8,7 @@ import Header from "./components/main/templates/header/Header";
 import GuidBox from "./components/main/templates/guidBox/GuidBox";
 
 function App() {
-  const routes = useRoutes(router);
+  const routes = useRoutes(router());
   const { mainData, pending, error } = useFetch({
     url: "/data/maindb.json",
     project: "main",

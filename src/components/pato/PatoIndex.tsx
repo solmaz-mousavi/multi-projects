@@ -6,6 +6,9 @@ import Sidebar from "./templates/sidebar/Sidebar";
 import Navbar from "./templates/navbar/Navbar";
 import { Outlet } from "react-router-dom";
 import "./pato.scss";
+import Footer from "./templates/footer/Footer";
+import PatoHome from "./pages/patoHome/PatoHome";
+
 
 function PatoIndex() {
   const { patoData, pending, error } = useFetch({
@@ -29,14 +32,13 @@ function PatoIndex() {
           id="pato"
           onScroll={(e) => setScrollPosition(e.currentTarget.scrollTop)}
         >
-					<p>lll: {scrollPosition}</p>
           <Sidebar
-
           // showSidebar={showSidebar}
           // setShowSidebar={setShowSidebar}
           />
 					<Navbar scrollPosition={scrollPosition} navbarData={patoData.navbar} socialData = {patoData.social}/>
-					<Outlet context={{b:2}} />
+					<Outlet/>
+					<Footer />
         </div>
       )}
     </>
