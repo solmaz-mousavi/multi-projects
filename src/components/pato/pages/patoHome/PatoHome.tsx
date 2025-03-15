@@ -9,21 +9,27 @@ import { SlideDataType } from '../../../../dataTypes/patoData.type';
 
 function PatoHome({data}:{data:SlideDataType[]}) {
 
-	useEffect(()=>{
-		// fetch("/public/data/patodb.json").then(res => console.log(res))
-		console.log(data);
-	},[])
+	const { patoData, pending, error } = useFetch({
+    url: "/data/patodb.json",
+    project: "pato",
+  });
+
+	console.log(patoData)
+	// useEffect(()=>{
+	// 	fetch("/public/data/patodb.json").then(res => console.log(res))
+	// 	console.log(data);
+	// },[])
 	return (
 		<>
-      {/* {error && <Error error={error} fullScreen={true} />}
+      {error && <Error error={error} fullScreen={true} />}
       {pending && <Loader type="data" fullScreen={true} />}
-      {patoData && ( */}
+      {patoData && (
 				<section>
-					<Slider />
+					<Slider data={patoData.slides}/>
 					<Welcome />
 
 				</section>
-			{/* )} */}
+			 )} 
 
 
 
