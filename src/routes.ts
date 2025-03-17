@@ -9,6 +9,7 @@ import PatoContact from "./components/pato/pages/contact/Contact";
 import PatoGallery from "./components/pato/pages/gallery/Gallery";
 import PatoMenu from "./components/pato/pages/menu/Menu";
 import PatoReservation from "./components/pato/pages/reservation/Reservation";
+import NotFound from "./components/main/templates/notFound/NotFound";
 
 const Router = () => {
   const router: RouteObject[] = [
@@ -29,6 +30,7 @@ const Router = () => {
     },
 
     { path: "/dashboard", element: Dashboard() },
+    { path: "/*", element: NotFound() },
   ];
 
   return router;

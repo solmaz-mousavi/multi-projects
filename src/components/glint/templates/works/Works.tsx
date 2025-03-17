@@ -17,9 +17,9 @@ function Works({ data }: { data: WorksDataType[] }) {
       <div id="WorksTop" className="works-header">
         <Aos aosStyle="fadeInUp" once={true}>
           <p className="glint-top-title works-header__top">Recent Works </p>
-          <p className="glint-main-title works-header__title">
+          <h2 className="glint-main-title works-header__title">
             We love what we do, check out some of our latest works
-          </p>
+          </h2>
         </Aos>
       </div>
       <div id="WorksBottom" className="work-items-wrapper">
@@ -38,7 +38,7 @@ function Works({ data }: { data: WorksDataType[] }) {
                       alt={item.title}
                       className="work-item-image"
                     />
-                    <p className="work-item-title">{item.title}</p>
+                    <h4 className="work-item-title">{item.title}</h4>
                     <p className="work-item-cat">{item.category}</p>
                     <FaPlus className="work-item-icon" />
                     <div className="work-item-link" title="Project link">

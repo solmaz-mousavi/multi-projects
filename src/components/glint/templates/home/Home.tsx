@@ -17,11 +17,11 @@ function Home({ scrollPosition, data }: HomePropsType) {
       >
         <div className="home-txt-container">
           <Aos aosStyle="fadeInUp" once={true}>
-            <p className="glint-top-title home-txt__welcome">Welcome to Glint</p>
-            <p className="glint-main-title home-txt__description">
+            <h1 className="glint-top-title home-txt__welcome">Welcome to Glint</h1>
+            <h2 className="glint-main-title home-txt__description">
               We are a creative group of people who design influential brands
               and digital experiences.
-            </p>
+            </h2>
             <div className="home-txt__btn-container">
               <Button
                 type="link"

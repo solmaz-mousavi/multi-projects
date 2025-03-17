@@ -21,9 +21,9 @@ function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
       <Aos aosStyle="fadeInUp" once={true}>
         <div className="glint-clients-header">
           <p className="glint-top-title clients-header__top">Our Clients</p>
-          <p className="glint-main-title clients-header__title">
+          <h2 className="glint-main-title clients-header__title">
             Glint has been honored to partner up with these clients
-          </p>
+          </h2>
 
           <div className="clients-slider">
             <Swiper
@@ -71,7 +71,7 @@ function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
                         src={item.image}
                         alt={item.name}
                       />
-                      <p className="team-name">{item.name}</p>
+                      <h4 className="team-name">{item.name}</h4>
                       <p className="team-job">{item.job}</p>
                     </div>
                   </SwiperSlide>

@@ -1,0 +1,21 @@
+@import "/src/styles/base";
+
+.notfound-container {
+  @include flex-center();
+	height: calc(100vh - 60px);
+  flex-direction: column;
+  background-color: #000;
+
+  .notfound-icon {
+    color: red;
+    font-size: 4rem;
+  }
+  .notfound-txt {
+    color: #fff;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .notFound-btn {
+    margin-top: 20px;
+  }
+}

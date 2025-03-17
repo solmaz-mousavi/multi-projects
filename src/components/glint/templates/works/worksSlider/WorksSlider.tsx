@@ -1,10 +1,17 @@
-import { MdOutlineClose, MdOutlineShare } from "react-icons/md";
+import {
+  MdOutlineClose,
+  MdOutlineShare,
+  MdFullscreen,
+  MdOutlineFileDownload,
+} from "react-icons/md";
+import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import "./worksSlider.scss";
 import { WorksDataType } from "../../../../../dataTypes/glintData.type";
+import { FacebookShareButton, WhatsappShareButton } from "react-share";
 type WorksSliderPropsType = {
   data: WorksDataType[];
   slideNumber: number;
@@ -17,13 +24,6 @@ function WorksSlider({
 }: WorksSliderPropsType) {
   return (
     <div className="glint-works-slider-container">
-      <div className="works-slider__header">
-        <MdOutlineShare className="works-slider__header-btn" />
-        <MdOutlineClose
-          className="works-slider__header-btn"
-          onClick={() => setShowWorksSlider(false)}
-        />
-      </div>
       <div className="works-slider__slides">
         <Swiper
           slidesPerView={1}
@@ -35,22 +35,49 @@ function WorksSlider({
         >
           {data &&
             data.map((item, index) => (
-            
-                <SwiperSlide className="slide-item" key={index}>
-                  <div className="image-wrapper">
-                    <img src={item.image} alt={item.title} />
+              <SwiperSlide className="slide-item" key={index}>
+                <div className="glint-works-slider__icon-container">
+                  <div className="glint-works-slider__share-container">
+                    <MdOutlineShare className="glint-works-slider__btn" />
+
+                    <div className="glint-works-slider-contextMenu">
+                      <FacebookShareButton
+                        url={item.image}
+                        className="context-item"
+                      >
+                        <FaFacebook />
+                        <span>facebook</span>
+                      </FacebookShareButton>
+                      <WhatsappShareButton
+                        url={item.image}
+                        className="context-item"
+                      >
+                        <FaWhatsapp />
+                        <span>whatsapp</span>
+                      </WhatsappShareButton>
+                    </div>
                   </div>
-                  <h5>{item.title}</h5>
-                  <p>{item.des}</p>
-                  <div className="slideNumber">
-                    {index + 1}/{data.length}
-                  </div>
-                </SwiperSlide>
-          
+
+                  <MdFullscreen className="glint-works-slider__btn" />
+                  <a href={item.image} download>
+                    <MdOutlineFileDownload className="glint-works-slider__btn" />
+                  </a>
+                  <MdOutlineClose
+                    className="glint-works-slider__btn"
+                    onClick={() => setShowWorksSlider(false)}
+                  />
+                </div>
+
+                <div className="image-wrapper">
+                  <img src={item.image} alt={item.title} />
+                </div>
+                <h5>{item.title}</h5>
+                <p>{item.des}</p>
+                <div className="slideNumber">
+                  {index + 1}/{data.length}
+                </div>
+              </SwiperSlide>
             ))}
-          <SwiperSlide className="slide-item">
-            <img src="/src/assets/images/works/grow-green.jpg.webp" alt="" />
-          </SwiperSlide>
         </Swiper>
       </div>
     </div>

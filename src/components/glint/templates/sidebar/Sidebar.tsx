@@ -31,7 +31,7 @@ function Sidebar({data,
         <section
           className={`glint-sidebar-wrapper ${showSidebar ? "show" : ""}`}
         >
-          <div className="sidebar-container">
+          <nav className="sidebar-container">
             <div onClick={() => setShowSidebar(false)} >
 							<Icon name="MdClose" className="sidebar-closeBtn"/>
             </div>
@@ -57,7 +57,7 @@ function Sidebar({data,
                porro iusto sequi veritatis libero enim. Iusto id suscipit
               veritatis neque reprehenderit.
             </p>
-          </div>
+          </nav>
         </section>
 
     </>

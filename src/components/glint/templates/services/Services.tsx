@@ -9,9 +9,9 @@ function Services({ data }: { data: ServicesDataType[] }) {
       <Aos aosStyle="fadeInUp" once={true}>
         <div className="services-header">
           <p className="glint-top-title services-header__top">What We Do</p>
-          <p className="glint-main-title services-header__title">
+          <h2 className="glint-main-title services-header__title">
             We've got everything you need to launch and grow your business
-          </p>
+          </h2>
         </div>
       </Aos>
       <div className="glint-devider dark"></div>
@@ -25,7 +25,7 @@ function Services({ data }: { data: ServicesDataType[] }) {
                     <Icon className="service-item-icon" name={item.iconName} />
                   </div>
                   <div className="service-item__desc">
-                    <h5>{item.title}</h5>
+                    <h4>{item.title}</h4>
                     <p>{item.desc}</p>
                   </div>
                 </div>

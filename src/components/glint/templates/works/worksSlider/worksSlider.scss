@@ -3,56 +3,96 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
   background-color: #000000;
   transition: all 2s ease-out;
   z-index: 20;
-  .works-slider__header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px 50px;
-    color: #aaa;
-    font-size: 1.7rem;
-    .works-slider__header-btn {
-      margin: 10px;
-      cursor: pointer;
-      transition: all ease-out 300ms;
-      &:hover {
-        color: #fff;
-      }
-    }
-  }
   .works-slider__slides {
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .image-wrapper {
-      max-width: 700px;
-      width: 100%;
-      margin: 0 auto;
-      overflow: hidden;
-      aspect-ratio: 1/1;
-      border-radius: 10px;
-      img {
-        width: 100%;
-      }
-    }
-    h5 {
-      color: #fff;
-      padding-top: 20px;
-      font-size: 1.3rem;
-    }
-    p {
-      color: #aaa;
-    }
-    .slideNumber {
-      color: #aaa;
-      padding: 5px;
-    }
     .slide-item {
-      text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			height: 100vh;
+      .image-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 700px;
+        max-height: 70vh;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        aspect-ratio: 1/1;
+        border-radius: 10px;
+        img {
+          width: 100%;
+        }
+      }
+      h5 {
+        color: #fff;
+        padding-top: 20px;
+        font-size: 1.3rem;
+      }
+      p {
+        color: #aaa;
+      }
+      .slideNumber {
+        color: #aaa;
+        padding: 5px;
+      }
+      .glint-works-slider__icon-container {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        .glint-works-slider__btn {
+          color: #aaa;
+          font-size: 1.5rem;
+          margin-right: 8px;
+          cursor: pointer;
+          &:hover {
+            color: #fff;
+          }
+        }
+        .glint-works-slider__share-container {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          &:hover .glint-works-slider-contextMenu {
+            opacity: 1;
+						& *{
+							display: inline;
+						}
+          }
+          .glint-works-slider-contextMenu {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 5px 0 5px 5px;
+            padding: 10px;
+            opacity: 0;
+						transition: all ease-out 400ms;
+            & * {
+              color: #aaa;
+							display: none;
+            }
+            .context-item {
+              display: block;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 5px;
+              padding: 5px 20px;
+              cursor: pointer;
+              &:hover * {
+                color: #000;
+              }
+            }
+          }
+        }
+      }
     }
     .swiper-button-prev::after,
     .swiper-button-next::after {

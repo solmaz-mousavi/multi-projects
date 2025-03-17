@@ -110,9 +110,9 @@ function Contact({ data }: { data: SocialDataType[] }) {
       <Aos aosStyle="fadeInUp" className="contacts-header" once={true}>
         <div>
           <p className="glint-top-title contacts-header__top">Contact Us</p>
-          <p className="glint-main-title contacts-header__title">
+          <h2 className="glint-main-title contacts-header__title">
             Reach out for a new project or just say hello
-          </p>
+          </h2>
         </div>
 
       <div className="contacts-bottom-wrapper">
