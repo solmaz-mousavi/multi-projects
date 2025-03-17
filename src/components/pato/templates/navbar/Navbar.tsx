@@ -2,15 +2,18 @@ import { NavLink } from "react-router-dom";
 import "./navbar.scss";
 import { SocialDataType } from "../../../../dataTypes/mainData.type";
 import Icon from "../../../main/modules/icon/Icon";
+import { NavbarDataType } from "../../../../dataTypes/patoData.type";
 type NavbarPropsType = {
-	scrollPosition:number;
-  navbarData: string[];
-	socialData: SocialDataType[];
+  scrollPosition: number;
+  navbarData: NavbarDataType[];
+  socialData: SocialDataType[];
 };
 
-function Navbar({ scrollPosition ,navbarData, socialData }: NavbarPropsType) {
+function Navbar({ scrollPosition, navbarData, socialData }: NavbarPropsType) {
   return (
-    <nav className={`pato-navbar-wrapper ${scrollPosition>10 ? "blured" : ""}`}>
+    <nav
+      className={`pato-navbar-wrapper ${scrollPosition > 10 ? "blured" : ""}`}
+    >
       <div className="pato-logo">
         <img src="/assets/images/pato/logo.png" alt="pato restaurant" />
       </div>
@@ -18,20 +21,21 @@ function Navbar({ scrollPosition ,navbarData, socialData }: NavbarPropsType) {
         {navbarData &&
           navbarData.map((item) => (
             <NavLink
-              to={`/pato/${item}`}
+              to={`/pato/${item.route}`}
               className={(link) =>
                 link.isActive ? "active pato-navbar-link" : "pato-navbar-link"
               }
             >
-              {item}
+              {item.title}
             </NavLink>
           ))}
       </div>
       <div className="pato-social-container">
-				{socialData && socialData.map(item => (
-					<Icon name={item.iconName} className="pato-navbar-social-icon"/>
-				))}
-			</div>
+        {socialData &&
+          socialData.map((item) => (
+            <Icon name={item.iconName} className="pato-navbar-social-icon" />
+          ))}
+      </div>
     </nav>
   );
 }

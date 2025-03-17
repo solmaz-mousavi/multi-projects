@@ -1,4 +1,9 @@
 import { SocialDataType } from "./mainData.type";
+
+export type NavbarDataType = {
+	title: string;
+	route: string;
+}
 export type SlideDataType = {
   image: string;
   title: string;
@@ -7,8 +12,14 @@ export type SlideDataType = {
     title: string;
     navigate: string;
   };}
+	export type IntroDataType = {
+		title: string;
+		desc: string;
+		image: string;
+	}
 export type PatoDataType = {
-	navbar: string[];
+	navbar: NavbarDataType[];
 	social: SocialDataType[];
 	slides:SlideDataType[];
+	intro: IntroDataType[];
 };

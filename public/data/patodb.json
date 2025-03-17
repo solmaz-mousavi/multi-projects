@@ -1,6 +1,14 @@
 {
-  "navbar": ["home", "about", "blog", "contact", "gallery", "menu", "reservation"],
-	"social": [
+  "navbar": [
+    { "title": "home", "route": "home" },
+    { "title": "menu", "route": "menu" },
+    { "title": "reservation", "route": "reservation" },
+    { "title": "gallery", "route": "gallery" },
+    { "title": "blog", "route": "blog" },
+    { "title": "about us", "route": "about" },
+    { "title": "contact us", "route": "contact" }
+  ],
+  "social": [
     {
       "socialName": "Facebook",
       "iconName": "FaFacebookF"
@@ -14,10 +22,29 @@
       "iconName": "FaTripadvisor"
     }
   ],
-	"slides":[
-		{"image":"/assets/images/pato/home/slider/slide01.jpg", "title":"welcome to", "desc":"pato place", "button":{"title":"look menu", "navigate":"/pato/menu"}},
-		{"image":"/assets/images/pato/home/slider/slide02.jpg", "title":"know about us", "desc":"pato place", "button":{"title":"about us", "navigate":"/pato/about"}},
-		{"image":"/assets/images/pato/home/slider/slide03.jpg", "title":"have a look to", "desc":"pato place", "button":{"title":"look gallery", "navigate":"/pato/gallery"}}
-	],
-	"b": []
+  "slides": [
+    {
+      "image": "/assets/images/pato/home/slider/slide01.jpg",
+      "title": "welcome to",
+      "desc": "pato place",
+      "button": { "title": "look menu", "navigate": "/pato/menu" }
+    },
+    {
+      "image": "/assets/images/pato/home/slider/slide02.jpg",
+      "title": "know about us",
+      "desc": "pato place",
+      "button": { "title": "about us", "navigate": "/pato/about" }
+    },
+    {
+      "image": "/assets/images/pato/home/slider/slide03.jpg",
+      "title": "have a look to",
+      "desc": "pato place",
+      "button": { "title": "look gallery", "navigate": "/pato/gallery" }
+    }
+  ],
+	"intro":[
+		{"title":"romantic restaurant", "image":"/assets/images/pato/home/slider/slide02.jpg", "desc":"Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros." },
+		{"title":"Delicious Food", "image":"/assets/images/pato/home/slider/slide02.jpg", "desc":"Aliquam eget aliquam magna, quis posuere risus ac justo ipsum nibh urna." },
+		{"title":"Red Wines You Love", "image":"/assets/images/pato/home/slider/slide02.jpg", "desc":"Sed ornare ligula eget tortor tempor, quis porta tellus dictum." }
+	]
 }
