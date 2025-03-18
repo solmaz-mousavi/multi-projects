@@ -19,8 +19,9 @@ function Navbar({ scrollPosition, navbarData, socialData }: NavbarPropsType) {
       </div>
       <div className="pato-navbar-container">
         {navbarData &&
-          navbarData.map((item) => (
+          navbarData.map((item, index) => (
             <NavLink
+						key={index}
               to={`/pato/${item.route}`}
               className={(link) =>
                 link.isActive ? "active pato-navbar-link" : "pato-navbar-link"

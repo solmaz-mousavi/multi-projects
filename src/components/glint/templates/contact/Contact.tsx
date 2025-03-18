@@ -105,7 +105,7 @@ function Contact({ data }: { data: SocialDataType[] }) {
   };
 
   return (
-    <section id="Contacts" className="glint-section-container glint-contacts-container">
+    <section id="Glint-Contacts" className="glint-section-container glint-contacts-container">
       <div className="decoration"></div>
       <Aos aosStyle="fadeInUp" className="contacts-header" once={true}>
         <div>

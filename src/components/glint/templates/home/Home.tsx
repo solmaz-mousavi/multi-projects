@@ -13,7 +13,7 @@ function Home({ scrollPosition, data }: HomePropsType) {
       <StyledHomeWrapper
         $scrollposition={`100% ${scrollPosition / -8}px`}
         className="glint-section-container glint-home-container"
-        id="Home"
+        id="Glint-Home"
       >
         <div className="home-txt-container">
           <Aos aosStyle="fadeInUp" once={true}>

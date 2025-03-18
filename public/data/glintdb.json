@@ -30,13 +30,13 @@
     ],
     "scrollBreakpoints": [
       { "id": "Header", "styleIndex": "0" },
-      { "id": "Home", "styleIndex": "0" },
-      { "id": "About", "styleIndex": "1" },
-      { "id": "Services", "styleIndex": "2" },
-      { "id": "WorksTop", "styleIndex": "0" },
-      { "id": "WorksBottom", "styleIndex": "2" },
-      { "id": "Clients", "styleIndex": "2" },
-      { "id": "Contacts", "styleIndex": "0" }
+      { "id": "Glint-Home", "styleIndex": "0" },
+      { "id": "Glint-About", "styleIndex": "1" },
+      { "id": "Glint-Services", "styleIndex": "2" },
+      { "id": "Glint-WorksTop", "styleIndex": "0" },
+      { "id": "Glint-WorksBottom", "styleIndex": "2" },
+      { "id": "Glint-Clients", "styleIndex": "2" },
+      { "id": "Glint-Contacts", "styleIndex": "0" }
     ]
   },
   "status": [

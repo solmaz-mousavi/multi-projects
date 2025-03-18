@@ -1,7 +1,7 @@
 import { IconPropsType } from "../components/main/modules/icon/Icon";
 
 type ColorKeyType = "text"|"bg"|"border"|"hoverText"|"hoverBg";
-export type StyleType = "success" | "info" | "warning" | "error" | "light" | "dark" | "grey" | "transparent";
+export type StyleType = "success" | "info" | "warning" | "error" | "light" | "dark" | "grey" | "transparent" |"pato-dark" | "pato-light" | "pato-transparent";
 export type ColorType = {
 	[index in ColorKeyType] : string;
 };

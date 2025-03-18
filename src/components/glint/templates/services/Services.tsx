@@ -5,7 +5,7 @@ import "./services.scss";
 
 function Services({ data }: { data: ServicesDataType[] }) {
   return (
-    <section id="Services" className="glint-section-container glint-services-container">
+    <section id="Glint-Services" className="glint-section-container glint-services-container">
       <Aos aosStyle="fadeInUp" once={true}>
         <div className="services-header">
           <p className="glint-top-title services-header__top">What We Do</p>

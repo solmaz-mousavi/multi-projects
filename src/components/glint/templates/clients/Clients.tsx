@@ -17,7 +17,7 @@ type ClientsPropsType = {
 
 function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
   return (
-    <section id="Clients" className="glint-section-container glint-clients-container">
+    <section id="Glint-Clients" className="glint-section-container glint-clients-container">
       <Aos aosStyle="fadeInUp" once={true}>
         <div className="glint-clients-header">
           <p className="glint-top-title clients-header__top">Our Clients</p>

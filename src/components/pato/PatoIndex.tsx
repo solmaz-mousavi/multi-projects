@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import Error from "../main/templates/error/Error";
 import Loader from "../main/templates/loader/Loader";
@@ -16,10 +16,6 @@ function PatoIndex() {
 
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
   const [scrollPosition, setScrollPosition] = useState<number>(0);
-
-	useEffect(()=>{
-		console.log(scrollPosition);
-	},[scrollPosition]);
 
   return (
     <>

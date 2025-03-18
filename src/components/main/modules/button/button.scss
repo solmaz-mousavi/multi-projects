@@ -1,5 +1,6 @@
 @import "/src/styles/variables";
 @import "/src/styles/base";
+
 @mixin buttonColor($color) {
   background-color: transparentize($color, 0.9);
   border-color: $color;
@@ -96,6 +97,50 @@
   &:hover {
     background-color: transparent;
   }
+}
+
+.btn.pato-dark{
+	background-color: #000;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	padding: 10px 40px;
+	*{
+		font-size: 0.9rem;
+	}
+	&:hover{
+		background-color: $pato-color-red;
+	}
+}
+.btn.pato-light{
+	background-color: #fff;
+	color: $pato-color-red;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	padding: 10px 40px;
+	*{
+		font-size: 0.9rem;
+	}
+	&:hover{
+		background-color: $pato-color-red;
+		color: #fff;
+	}
+}
+.btn.pato-transparent{
+	background-color: transparent;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	color: #777;
+	padding: 20px 0;
+	cursor: pointer;
+	transition: $main-transition;
+	flex-direction: row-reverse;
+	*{
+		font-size: 0.9rem;
+	}
+	&:hover{
+		color: $pato-color-red;
+	}
 }
 
 .btn.fullWidth {

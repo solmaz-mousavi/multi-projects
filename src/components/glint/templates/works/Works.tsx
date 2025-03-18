@@ -13,8 +13,8 @@ function Works({ data }: { data: WorksDataType[] }) {
     setSlideNumber(index);
   };
   return (
-    <section id="Works" className="glint-section-container glint-works-container">
-      <div id="WorksTop" className="works-header">
+    <section id="Glint-Works" className="glint-section-container glint-works-container">
+      <div id="Glint-WorksTop" className="works-header">
         <Aos aosStyle="fadeInUp" once={true}>
           <p className="glint-top-title works-header__top">Recent Works </p>
           <h2 className="glint-main-title works-header__title">
@@ -22,7 +22,7 @@ function Works({ data }: { data: WorksDataType[] }) {
           </h2>
         </Aos>
       </div>
-      <div id="WorksBottom" className="work-items-wrapper">
+      <div id="Glint-WorksBottom" className="work-items-wrapper">
         <div className="work-items-container">
           {data && (
             <>

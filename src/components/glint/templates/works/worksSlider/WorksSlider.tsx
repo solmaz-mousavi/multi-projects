@@ -23,7 +23,7 @@ function WorksSlider({
   slideNumber,
 }: WorksSliderPropsType) {
   return (
-    <div className="glint-works-slider-container">
+    <div className="glint-works-slider-container" id="glint-works-slider">
       <div className="works-slider__slides">
         <Swiper
           slidesPerView={1}
@@ -58,7 +58,14 @@ function WorksSlider({
                     </div>
                   </div>
 
-                  <MdFullscreen className="glint-works-slider__btn" />
+                  <MdFullscreen
+                    className="glint-works-slider__btn"
+                    onClick={() =>
+                      document
+                        .getElementById("glint-works-slider")
+                        ?.requestFullscreen()
+                    }
+                  />
                   <a href={item.image} download>
                     <MdOutlineFileDownload className="glint-works-slider__btn" />
                   </a>

@@ -1,24 +1,29 @@
 import { SlideDataType } from "../../../../../dataTypes/patoData.type";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
 import "./slider.scss";
 import { useNavigate } from "react-router-dom";
+import Button from "../../../../main/modules/button/Button";
 
 function Slider({ data }: { data: SlideDataType[] }) {
-	const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
-    <>
+    <section>
       <Swiper
         slidesPerView={1}
-				spaceBetween={30}
+        spaceBetween={5}
+				autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
         navigation={true}
-				pagination={{
+        pagination={{
           clickable: true,
         }}
-        modules={[Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper pato-home-slider-container"
         loop={true}
       >
@@ -29,14 +34,21 @@ function Slider({ data }: { data: SlideDataType[] }) {
                 className="pato-home-slide-container"
                 style={{ backgroundImage: `url(${item.image})` }}
               >
-                <h5 className="pato-home-slide__title pato-top-title">{item.title}</h5>
+                <h5 className="pato-home-slide__title pato-top-title">
+                  {item.title}
+                </h5>
                 <p className="pato-title">{item.desc}</p>
-                <button className="pato-home-slide__btn" onClick={()=> navigate(`${item.button.navigate}`)}>{item.button.title}</button>
+                <Button
+                  text={item.button.title}
+                  variant="pato-light"
+                  border={false}
+                  clickHandler={() => navigate(`${item.button.navigate}`)}
+                />
               </div>
             </SwiperSlide>
           ))}
       </Swiper>
-    </>
+    </section>
   );
 }
 

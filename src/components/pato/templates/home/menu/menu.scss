@@ -1,0 +1,60 @@
+@import "/src/styles/variables";
+@import "/src/styles/base";
+
+.pato-home__menu-container {
+  padding: 50px;
+  text-align: center;
+  background-color: #f1ede7;
+  .pato-home__menu-header {
+    .pato-top-title {
+      color: $pato-color-red;
+    }
+  }
+  .pato-home__menu-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    width: 90%;
+    aspect-ratio: 3/2;
+		margin: 20px auto;
+    .category_0 {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 2;
+    }
+    .category_1 {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 2;
+    }
+    .category_2 {
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 1;
+    }
+    .category_3 {
+      grid-column: 3 / span 1;
+      grid-row: 2 / span 1;
+    }
+    .category_4 {
+      grid-column: 1 / span 2;
+      grid-row: 3 / span 1;
+    }
+    .pato-home__menu-category {
+      position: relative;
+			cursor: pointer;
+
+      img {
+        width: 100%;
+				height: 100%;
+      }
+      .pato-home__menu-category-btn {
+        position: absolute;
+        top: calc(50% - 20px);
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        width: fit-content;
+      }
+    }
+  }
+}

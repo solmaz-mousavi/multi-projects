@@ -5,7 +5,7 @@ import "./about.scss";
 
 function About({ data }: { data: StatusDataType[] }) {
   return (
-    <section id="About" className="glint-section-container glint-about-container">
+    <section id="Glint-About" className="glint-section-container glint-about-container">
       <Aos aosStyle="fadeInUp" className="about-header" once={true}>
         <div>
           <p className="glint-top-title about-header__top">Hello There</p>

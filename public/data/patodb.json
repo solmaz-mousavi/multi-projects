@@ -42,9 +42,256 @@
       "button": { "title": "look gallery", "navigate": "/pato/gallery" }
     }
   ],
-	"intro":[
-		{"title":"romantic restaurant", "image":"/assets/images/pato/home/slider/slide02.jpg", "desc":"Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros." },
-		{"title":"Delicious Food", "image":"/assets/images/pato/home/slider/slide02.jpg", "desc":"Aliquam eget aliquam magna, quis posuere risus ac justo ipsum nibh urna." },
-		{"title":"Red Wines You Love", "image":"/assets/images/pato/home/slider/slide02.jpg", "desc":"Sed ornare ligula eget tortor tempor, quis porta tellus dictum." }
-	]
+  "intro": [
+    {
+      "title": "romantic restaurant",
+      "image": "/assets/images/pato/home/intro/intro-01.jpg",
+      "desc": "Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.",
+      "route": "/pato/blog"
+    },
+    {
+      "title": "Delicious Food",
+      "image": "/assets/images/pato/home/intro/intro-02.jpg",
+      "desc": "Aliquam eget aliquam magna, quis posuere risus ac justo ipsum nibh urna.",
+      "route": "/pato/blog"
+    },
+    {
+      "title": "Red Wines You Love",
+      "image": "/assets/images/pato/home/intro/intro-03.jpg",
+      "desc": "Sed ornare ligula eget tortor tempor, quis porta tellus dictum.",
+      "route": "/pato/blog"
+    }
+  ],
+  "blogs": [],
+  "menu": [
+    {
+      "category": "Lunch",
+      "image": "/assets/images/pato/menu/category/menu-lunch.webp",
+      "items": [
+        {
+          "title": "Sed varius",
+          "image": "/assets/images/pato/menu/lunch/lunch01.jpg",
+          "desc": "Aenean pharetra tortor dui in pellentesque",
+          "price": 29.79
+        },
+        {
+          "title": "sbrisalona",
+          "image": "/assets/images/pato/menu/lunch/lunch01.jpg",
+          "desc": "Proin lacinia nisl ut ultricies posuere nulla",
+          "price": 21.56
+        },
+        {
+          "title": "tempus aliquet",
+          "image": "/assets/images/pato/menu/lunch/lunch01.jpg",
+          "desc": "Aenean condimentum ante erat",
+          "price": 45.5
+        },
+        {
+          "title": "Cras eget magna",
+          "image": "/assets/images/pato/menu/lunch/lunch01.jpg",
+          "desc": "Sed fermentum eros vitae eros",
+          "price": 45.93
+        },
+        {
+          "title": "Duis massa",
+          "image": "/assets/images/pato/menu/lunch/lunch01.jpg",
+          "desc": "Proin lacinia nisl ut ultricies posuere nulla",
+          "price": 12.67
+        },
+        {
+          "title": "Nullam maximus",
+          "image": "/assets/images/pato/menu/lunch/lunch01.jpg",
+          "desc": "Duis massa nibh porttitor nec imperdiet eget",
+          "price": 10.98
+        }
+      ]
+    },
+    {
+      "category": "Dinner",
+      "image": "/assets/images/pato/menu/category/menu-dinner.webp",
+      "items": [
+        {
+          "title": "Maecenas tristique",
+          "image": "/assets/images/pato/menu/dinner/dinner01.jpg",
+          "desc": "Aenean pharetra tortor dui in pellentesque",
+          "price": 19.65
+        },
+        {
+          "title": "Cras maximus",
+          "image": "/assets/images/pato/menu/dinner/dinner01.jpg",
+          "desc": "Sed fermentum eros vitae eros",
+          "price": 23.89
+        },
+        {
+          "title": "Pine nut sbrisalona",
+          "image": "/assets/images/pato/menu/dinner/dinner01.jpg",
+          "desc": "Proin lacinia nisl ut ultricies posuere nulla",
+          "price": 20.87
+        },
+        {
+          "title": "Tempor malesuada",
+          "image": "/assets/images/pato/menu/dinner/dinner01.jpg",
+          "desc": "Duis massa nibh porttitor nec imperdiet eget",
+          "price": 45.26
+        },
+        {
+          "title": "Suspendisse eu",
+          "image": "/assets/images/pato/menu/dinner/dinner01.jpg",
+          "desc": "Aenean pharetra tortor dui in pellentesque",
+          "price": 32.48
+        },
+        {
+          "title": "Pine nut sbrisalona",
+          "image": "/assets/images/pato/menu/dinner/dinner01.jpg",
+          "desc": "Proin lacinia nisl ut ultricies posuere nulla",
+          "price": 25.98
+        }
+      ]
+    },
+    {
+      "category": "Drink",
+      "image": "/assets/images/pato/menu/category/menu-drink.webp",
+      "items": [
+        {
+          "title": "Vivamus pretium",
+          "desc": "Sed fermentum eros vitae eros",
+          "price": 9.56
+        },
+        {
+          "title": "Duis pharetra ligula",
+          "desc": "Feugiat maximus neque pharetra",
+          "price": 2.68
+        },
+        {
+          "title": "In eu dolor",
+          "desc": "Proin lacinia nisl ut ultricies posuere nulla",
+          "price": 12.65
+        },
+        {
+          "title": "Feugiat maximus",
+          "desc": "Sed fermentum eros vitae eros",
+          "price": 15.98
+        }
+      ]
+    },
+    {
+      "category": "Starter",
+      "image": "/assets/images/pato/menu/category/menu-starter.webp",
+      "items": [
+        {
+          "title": "Pine nut sbrisalona",
+          "desc": "Sed fermentum eros vitae eros",
+          "price": 9.65
+        },
+        {
+          "title": "Aenean eu",
+          "desc": "Feugiat maximus neque pharetra",
+          "price": 5.65
+        },
+        {
+          "title": "Sed feugiat",
+          "desc": "Proin lacinia nisl ut ultricies posuere nulla",
+          "price": 15.69
+        },
+        {
+          "title": "Consectetur",
+          "desc": "Etiam cursus facilisis tortor",
+          "price": 10.94
+        }
+      ]
+    },
+    {
+      "category": "Happy Hours",
+      "image": "/assets/images/pato/menu/category/menu-happyhours.webp",
+      "items": [
+        {
+          "title": "Duis sed aliquet",
+          "desc": "Proin lacinia nisl ut ultricies posuere nulla",
+          "price": 42.68
+        },
+        {
+          "title": "Suspendisse",
+          "desc": "Feugiat maximus neque pharetra",
+          "price": 36.58
+        },
+        {
+          "title": "Scelerisque sed",
+          "desc": "Etiam cursus facilisis tortor",
+          "price": 30.65
+        },
+        {
+          "title": "Mollis nulla",
+          "desc": "Proin lacinia nisl ut ultricies posuere nulla",
+          "price": 92.65
+        },
+        {
+          "title": "Convallis augue",
+          "desc": "Sed fermentum eros vitae eros",
+          "price": 65.24
+        },
+        {
+          "title": "Maecenas tristique",
+          "desc": "Feugiat maximus neque pharetra",
+          "price": 41.25
+        },
+        {
+          "title": "Duis tincidunt",
+          "desc": "Proin lacinia nisl ut ultricies posuere nulla",
+          "price": 85.21
+        }
+      ]
+    },
+
+    {
+      "category": "Dessert",
+      "image": "/assets/images/pato/menu/category/menu-dessert.webp",
+      "items": [
+        {
+          "title": "tempus aliquet",
+          "desc": "Proin lacinia nisl ut ultricies posuere nulla",
+          "price": 5.69
+        },
+        {
+          "title": "scelerisque",
+          "desc": "Sed fermentum eros vitae eros",
+          "price": 7.32
+        },
+        {
+          "title": "Cras maximus",
+          "desc": "Etiam cursus facilisis tortor",
+          "price": 9.25
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "title": "wines during specific nights",
+      "date": "2025-04-01",
+      "time": "20:00",
+      "image": "/assets/images/pato/events/event-01.jpg",
+      "desc": "Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros."
+    },
+    {
+      "title": "sea foods are everything",
+      "date": "2025-04-15",
+      "time": "12:00",
+      "image": "/assets/images/pato/events/event-02.jpg",
+      "desc": "Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros."
+    },
+    {
+      "title": "it is rainbow time",
+      "date": "2025-03-30",
+      "time": "16:00",
+      "image": "/assets/images/pato/events/event-03.jpg",
+      "desc": "Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros."
+    }
+  ],
+
+  "gallery": {
+    "interior": [],
+    "food": [],
+    "events": [],
+    "vip guests": []
+  }
 }
