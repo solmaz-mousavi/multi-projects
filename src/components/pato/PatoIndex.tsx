@@ -32,7 +32,7 @@ function PatoIndex() {
           /> */}
 					<Navbar scrollPosition={scrollPosition} navbarData={patoData.navbar} socialData = {patoData.social}/>
 					<Outlet/>
-					<Footer />
+					<Footer socialData = {patoData.social} galleryData={patoData.gallery}/>
         </div>
       )}
     </>

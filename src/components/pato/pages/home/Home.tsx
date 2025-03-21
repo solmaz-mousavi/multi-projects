@@ -6,6 +6,8 @@ import Slider from "../../templates/home/slider/Slider";
 import Welcome from "../../templates/home/welcome/Welcome";
 import Menu from "../../templates/home/menu/Menu";
 import Events from "../../templates/home/event/Events";
+import Review from "../../templates/home/review/Review";
+import Blog from "../../templates/home/blog/Blog";
 
 function Home() {
   const { patoData, pending, error } = useFetch({
@@ -25,6 +27,8 @@ function Home() {
           <Menu data={patoData.menu} />
 
           <Events data={patoData.events} />
+					<Review data={patoData.reviews}/>
+					<Blog data={patoData.blogs}/>
         </section>
       )}
     </>

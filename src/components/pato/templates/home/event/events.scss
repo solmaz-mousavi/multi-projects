@@ -5,7 +5,7 @@
   background-image: url(../../../../../../public/assets/images/pato/home/intro/bg-intro.jpg);
   background-position: center;
   background-size: cover;
-	background-attachment: fixed;
+  background-attachment: fixed;
   padding: 50px;
   text-align: center;
   .pato-home__events-header {
@@ -55,31 +55,33 @@
         background-color: rgba(255, 255, 255, 0.7);
         border-radius: 0 10px 10px 0;
         max-width: 600px;
-        .title {
-          text-transform: uppercase;
-          letter-spacing: 0.2rem;
-          color: #444;
-        }
         .desc {
-          color: #666;
-          padding: 10px 0;
-          font-size: 1.2rem;
+          padding-top: 10px;
+					padding-bottom: 30px;
         }
-        .remDayContainer {
+        .remDayTxt {
+          text-transform: uppercase;
+          color: #777;
+          letter-spacing: 0.2rem;
+          padding-top: 30px;
+        }
+        .remainTime-container {
           display: flex;
           justify-content: flex-start;
           align-items: center;
           flex-direction: column;
           padding-top: 20px;
-          .remDayTxt {
+
+          .remain-time {
+            color: $pato-color-red;
+            font-size: 4rem;
+            line-height: 3.5rem;
+            font-weight: bolder;
+          }
+          .remain-unit {
             text-transform: uppercase;
             color: #777;
             letter-spacing: 0.2rem;
-          }
-          .remDay {
-            color: $pato-color-red;
-            font-size: 5rem;
-            font-weight: bolder;
           }
         }
         .btn {

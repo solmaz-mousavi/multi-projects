@@ -2,7 +2,7 @@
 @import "/src/styles/base";
 
 .pato-home-intro-container {
-	background-color: #fff;
+  background-color: #fff;
 
   .pato-home-intro-header {
     @include flex-center();
@@ -16,64 +16,35 @@
       color: $pato-color-red;
     }
   }
-	.parallax{
-		perspective: 1px;
-		height: 200px;
-		overflow-x: hidden;
-		overflow-y:hidden;
-		.parallax__layer{
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
-		.parallax__layer--back{
-			transform: translateZ(-10px);
-			scale: 20;
-		}
-		.parallax__layer--base{
-			transform: translateZ(0);
-		}
-	}
-
-	.pato-home-intro-content{
-padding: 20px;
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 30px;
-		.pato-home-intro-content-container{
-			padding: 40px 0;
-			.pato-home-intro-content__image{
-				width: 300px;
-			}
-			.pato-home-intro-content__title{
-				text-transform: uppercase;
-				letter-spacing: 0.2rem;
-				color: #333;
-				font-size:1.2rem;
-				margin: 15px 0;
-			}
-			.pato-home-intro-content__desc{
-				max-width: 300px;
-				color: #555;
-			}
-			.pato-home-intro-content__btn{
-				background-color: transparent;
-				text-transform: uppercase;
-				letter-spacing: 0.1rem;
-				color: #777;
-				padding: 20px 0;
-				cursor: pointer;
-				transition: $main-transition;
-				&:hover{
-					color: $pato-color-red;
-				}
-			}
-
-		}
-	}
-
-
+  .pato-home-intro-content {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    .pato-home-intro-content-container {
+      padding: 40px 0;
+      .pato-home-intro-content__image {
+        width: 300px;
+      }
+      .pato-home-intro-content__title {
+        margin: 15px 0;
+      }
+      .pato-home-intro-content__desc {
+        max-width: 300px;
+      }
+      .pato-home-intro-content__btn {
+        background-color: transparent;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        color: #777;
+        padding: 20px 0;
+        cursor: pointer;
+        transition: $main-transition;
+        &:hover {
+          color: $pato-color-red;
+        }
+      }
+    }
+  }
 }

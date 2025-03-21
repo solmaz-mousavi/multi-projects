@@ -62,7 +62,110 @@
       "route": "/pato/blog"
     }
   ],
-  "blogs": [],
+  "blogCategory": [
+    "Cooking recipe",
+    "Delicious foods",
+    "Events Design",
+    "Restaurant Place"
+  ],
+  "blogs": [
+    {
+      "title": "Cooking recipe Delicious",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget mi sem. Nulla facilisi. Sed ultricies eros a nibh tempus, in sodales mi vestibulum. Nullam quis dui ac nisl ultrices euismod et sit amet urna. Morbi semper sapien quis ex tempor, sit amet scelerisque eros rhoncus. Cras scelerisque auctor gravida. Nunc fermentum luctus rhoncus. Nulla vulputate fermentum convallis. In quis pellentesque tortor. Cras metus nibh, gravida vitae ante vel, finibus semper tellus. Nulla vel tincidunt magna. Morbi tempor velit lectus, eu commodo quam volutpat vitae.",
+      "image": "/assets/images/pato/blogs/blog-01.jpg",
+      "date": "2025-03-01",
+      "author": "Admin",
+      "categories": ["Cooking recipe", "Delicious foods"],
+      "comments": [
+        {
+          "name": "John dff",
+          "city": "New York",
+          "date": "2025-02-01",
+          "desc": "Aenean pharetra tortor dui in pellentesque"
+        },
+
+        {
+          "name": "John dff",
+          "city": "New York",
+          "date": "2025-02-01",
+          "desc": "Aenean pharetra tortor dui in pellentesque"
+        },
+        {
+          "name": "John dff",
+          "city": "New York",
+          "date": "2025-02-01",
+          "desc": "Aenean pharetra tortor dui in pellentesque"
+        }
+      ]
+    },
+    {
+      "title": "Eggs and Cheese",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget mi sem. Nulla facilisi. Sed ultricies eros a nibh tempus, in sodales mi vestibulum. Nullam quis dui ac nisl ultrices euismod et sit amet urna. Morbi semper sapien quis ex tempor, sit amet scelerisque eros rhoncus. Cras scelerisque auctor gravida. Nunc fermentum luctus rhoncus. Nulla vulputate fermentum convallis. In quis pellentesque tortor. Cras metus nibh, gravida vitae ante vel, finibus semper tellus. Nulla vel tincidunt magna. Morbi tempor velit lectus, eu commodo quam volutpat vitae.",
+      "image": "/assets/images/pato/blogs/blog-02.jpg",
+      "date": "2025-03-02",
+      "author": "Gooj",
+      "categories": ["Cooking recipe", "Delicious foods"],
+      "comments": [
+        {
+          "name": "John dff",
+          "city": "New York",
+          "date": "2025-02-01",
+          "desc": "Aenean pharetra tortor dui in pellentesque"
+        },
+
+        {
+          "name": "John dff",
+          "city": "New York",
+          "date": "2025-02-01",
+          "desc": "Aenean pharetra tortor dui in pellentesque"
+        },
+        {
+          "name": "John dff",
+          "city": "New York",
+          "date": "2025-02-01",
+          "desc": "Aenean pharetra tortor dui in pellentesque"
+        }
+      ]
+    },
+    {
+      "title": "Style the Wedding Party",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget mi sem. Nulla facilisi. Sed ultricies eros a nibh tempus, in sodales mi vestibulum. Nullam quis dui ac nisl ultrices euismod et sit amet urna. Morbi semper sapien quis ex tempor, sit amet scelerisque eros rhoncus. Cras scelerisque auctor gravida. Nunc fermentum luctus rhoncus. Nulla vulputate fermentum convallis. In quis pellentesque tortor. Cras metus nibh, gravida vitae ante vel, finibus semper tellus. Nulla vel tincidunt magna. Morbi tempor velit lectus, eu commodo quam volutpat vitae.",
+      "image": "/assets/images/pato/blogs/blog-03.jpg",
+      "date": "2025-01-03",
+      "author": "Admin",
+      "categories": ["Cooking recipe", "Delicious foods"],
+      "comments": [
+        {
+          "name": "John dff",
+          "city": "New York",
+          "date": "2025-02-01",
+          "desc": "Aenean pharetra tortor dui in pellentesque"
+        }
+      ]
+    },
+    {
+      "title": "Cooking recipe Delicious",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget mi sem. Nulla facilisi. Sed ultricies eros a nibh tempus, in sodales mi vestibulum. Nullam quis dui ac nisl ultrices euismod et sit amet urna. Morbi semper sapien quis ex tempor, sit amet scelerisque eros rhoncus. Cras scelerisque auctor gravida. Nunc fermentum luctus rhoncus. Nulla vulputate fermentum convallis. In quis pellentesque tortor. Cras metus nibh, gravida vitae ante vel, finibus semper tellus. Nulla vel tincidunt magna. Morbi tempor velit lectus, eu commodo quam volutpat vitae.",
+      "image": "/assets/images/pato/blogs/blog-04.jpg",
+      "date": "2024-11-30",
+      "author": "Jamie",
+      "categories": ["Cooking recipe", "Delicious foods"],
+      "comments": [
+        {
+          "name": "John dff",
+          "city": "New York",
+          "date": "2025-02-01",
+          "desc": "Aenean pharetra tortor dui in pellentesque"
+        },
+        {
+          "name": "John dff",
+          "city": "New York",
+          "date": "2025-02-01",
+          "desc": "Aenean pharetra tortor dui in pellentesque"
+        }
+      ]
+    }
+  ],
   "menu": [
     {
       "category": "Lunch",
@@ -267,14 +370,21 @@
   "events": [
     {
       "title": "wines during specific nights",
-      "date": "2025-04-01",
+      "date": "Tue Apr 01 2025 03:30:00 GMT+0330 (Iran Standard Time)",
       "time": "20:00",
       "image": "/assets/images/pato/events/event-01.jpg",
       "desc": "Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros."
     },
     {
       "title": "sea foods are everything",
-      "date": "2025-04-15",
+      "date": "2025-03-21",
+      "time": "22:00",
+      "image": "/assets/images/pato/events/event-02.jpg",
+      "desc": "Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros."
+    },
+    {
+      "title": "sea foods are everything",
+      "date": "2025-02-15",
       "time": "12:00",
       "image": "/assets/images/pato/events/event-02.jpg",
       "desc": "Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros."
@@ -287,11 +397,137 @@
       "desc": "Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros."
     }
   ],
-
-  "gallery": {
-    "interior": [],
-    "food": [],
-    "events": [],
-    "vip guests": []
-  }
+  "reviews": [
+    {
+      "name": "Marie Simmons",
+      "city": "New York",
+      "date": "2023-04-01",
+      "desc": "We are lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tellus sem, mattis in pre-tium nec, fermentum viverra dui"
+    },
+    {
+      "name": "John Tailor",
+      "city": "New York",
+      "date": "2024-02-01",
+      "desc": "We are lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tellus sem, mattis in pre-tium nec, fermentum viverra dui"
+    },
+    {
+      "name": "Sara Widneston",
+      "city": "New York",
+      "date": "2024-09-21",
+      "desc": "We are lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tellus sem, mattis in pre-tium nec, fermentum viverra dui"
+    },
+    {
+      "name": "Marie Simmons",
+      "city": "New York",
+      "date": "2025-04-01",
+      "desc": "We are lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tellus sem, mattis in pre-tium nec, fermentum viverra dui"
+    },
+    {
+      "name": "Marie Simmons",
+      "city": "New York",
+      "date": "2025-04-01",
+      "desc": "We are lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tellus sem, mattis in pre-tium nec, fermentum viverra dui"
+    },
+    {
+      "name": "Marie Simmons",
+      "city": "New York",
+      "date": "2025-04-01",
+      "desc": "We are lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tellus sem, mattis in pre-tium nec, fermentum viverra dui"
+    }
+  ],
+  "galleryCategory": ["interior", "food", "events", "vip guests"],
+  "gallery": [
+    {
+      "title": "wine makes everything awesome",
+      "image": "/assets/images/pato/gallery/photo-gallery-thumb-01.jpg",
+      "date": "2025-03-20",
+      "author": "John Will",
+      "categories": ["food", "events"]
+    },
+		{
+      "title": "oh! sea food",
+      "image": "/assets/images/pato/gallery/photo-gallery-thumb-02.jpg",
+      "date": "2025-01-12",
+      "author": "John Will",
+      "categories": ["vip guests"]
+    },
+		{
+      "title": "party time",
+      "image": "/assets/images/pato/gallery/photo-gallery-thumb-03.jpg",
+      "date": "2025-01-05",
+      "author": "John Will",
+      "categories": ["events"]
+    },
+		{
+      "title": "wine makes everything awesome",
+      "image": "/assets/images/pato/gallery/photo-gallery-thumb-04.jpg",
+      "date": "2025-03-20",
+      "author": "John Will",
+      "categories": ["food", "events"]
+    },
+		{
+      "title": "wine makes everything awesome",
+      "image": "/assets/images/pato/gallery/photo-gallery-thumb-05.jpg",
+      "date": "2025-03-20",
+      "author": "John Will",
+      "categories": ["food", "events"]
+    },
+		{
+      "title": "wine makes everything awesome",
+      "image": "/assets/images/pato/gallery/photo-gallery-thumb-06.jpg",
+      "date": "2025-03-20",
+      "author": "John Will",
+      "categories": ["food", "events"]
+    },
+		{
+      "title": "wine makes everything awesome",
+      "image": "/assets/images/pato/gallery/photo-gallery-thumb-07.jpg",
+      "date": "2025-03-20",
+      "author": "John Will",
+      "categories": ["food", "events"]
+    },
+		{
+      "title": "wine makes everything awesome",
+      "image": "/assets/images/pato/gallery/photo-gallery-thumb-10.jpg",
+      "date": "2025-03-20",
+      "author": "John Will",
+      "categories": ["food", "events"]
+    },
+		{
+      "title": "wine makes everything awesome",
+      "image": "/assets/images/pato/gallery/photo-gallery-thumb-09.jpg",
+      "date": "2025-03-20",
+      "author": "John Will",
+      "categories": ["food", "events"]
+    },
+		{
+      "title": "wine makes everything awesome",
+      "image": "/assets/images/pato/home/intro/intro-01.jpg",
+      "date": "2025-03-20",
+      "author": "John Will",
+      "categories": ["food", "events"]
+    },
+		{
+      "title": "wine makes everything awesome",
+      "image": "/assets/images/pato/home/intro/intro-01.jpg",
+      "date": "2025-03-20",
+      "author": "John Will",
+      "categories": ["food", "events"]
+    },
+		{
+      "title": "wine makes everything awesome",
+      "image": "/assets/images/pato/home/intro/intro-01.jpg",
+      "date": "2025-03-20",
+      "author": "John Will",
+      "categories": ["food", "events"]
+    },
+		{
+      "title": "wine makes everything awesome",
+      "image": "/assets/images/pato/home/intro/intro-01.jpg",
+      "date": "2025-03-20",
+      "author": "John Will",
+      "categories": ["food", "events"]
+    },
+    {}
+  ]
 }

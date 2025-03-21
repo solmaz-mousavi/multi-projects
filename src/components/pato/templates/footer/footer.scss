@@ -1,0 +1,101 @@
+@import "/src/styles/base";
+@import "/src/styles/variables";
+
+.pato-footer-wrapper {
+  background-color: #222;
+  color: #777;
+  padding-top: 50px;
+  .pato-footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+		flex-wrap: wrap;
+		margin: 0 auto;
+    .pato-footer-item {
+      padding: 20px 50px;
+      .pato-footer-title {
+        color: #fff;
+        padding: 20px 0;
+        text-transform: uppercase;
+      }
+      .pato-footer-desc {
+        padding-bottom: 5px;
+        svg {
+          color: #fff;
+          margin-right: 5px;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: #777;
+      }
+
+      .pato-footer-social-container {
+        margin: 10px 0;
+        .pato-footer-social-icon {
+          margin-right: 15px;
+          cursor: pointer;
+          color: #fff;
+        }
+      }
+      .form-wrapper {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        .input-container {
+          position: relative;
+          .footer-input {
+            padding: 10px;
+          }
+          .footer-label {
+            position: absolute;
+            right: 10px;
+            top: 3px;
+            font-size: 1.5rem;
+          }
+        }
+				.btn{
+					border: none;
+				}
+
+      }
+      .pato-footer-gallery-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        .pato-footer-gallery-item {
+          position: relative;
+          margin: 5px;
+          height: max-content;
+          width: 80px;
+          height: 80px;
+          overflow: hidden;
+
+          img {
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: transparentize($pato-color-red, 0.3);
+            opacity: 0;
+            transition: $main-transition;
+            cursor: pointer;
+          }
+          &:hover.pato-footer-gallery-item::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+	.footer-bottom p{
+		text-align: center;
+		padding: 20px;
+		border-top: 1px solid #333;
+	}
+}

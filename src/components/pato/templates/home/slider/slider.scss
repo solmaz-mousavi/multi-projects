@@ -9,6 +9,7 @@
   .pato-home-slide-container {
     @include flex-center();
     flex-direction: column;
+		text-align: center;
     height: 100%;
     background-position: center;
     background-size: cover;

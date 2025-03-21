@@ -1,6 +1,7 @@
 import { MenuDataType } from "../../../../../dataTypes/patoData.type";
-import Button from "../../../../main/modules/button/Button";
 import { useNavigate } from "react-router-dom";
+import Button from "../../../../main/modules/button/Button";
+import Aos from "../../../../main/modules/aos/Aos";
 import "./menu.scss";
 
 function Menu({ data }: { data: MenuDataType[] }) {
@@ -15,18 +16,18 @@ function Menu({ data }: { data: MenuDataType[] }) {
         {data &&
           data.map((item, index) => (
             <div
-            onClick={() => navigate("/pato/menu")}  
-						className={`category_${index} pato-home__menu-category  pato-image-hover-wrapper`}
+              onClick={() => navigate("/pato/menu")}
+              className={`category_${index} pato-home__menu-category  pato-image-hover-wrapper`}
             >
-              <img src={item.image} alt="" />
-
-
-              <Button
-                text={item.category}
-                variant="pato-light"
-                border={false}
-                className="pato-home__menu-category-btn"
-              />
+              <Aos aosStyle="fadeInUp" once={true}>
+                <img src={item.image} alt="" />
+                <Button
+                  text={item.category}
+                  variant="pato-light"
+                  border={false}
+                  className="pato-home__menu-category-btn"
+                />
+              </Aos>
             </div>
           ))}
       </div>
