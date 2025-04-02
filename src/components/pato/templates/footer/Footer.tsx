@@ -38,7 +38,7 @@ function Footer({ socialData, galleryData }: FooterPropsType) {
 
       name: "email",
       initialValue: "",
-      validators: [requiredStringValidator, emailValidator],
+      validators: [requiredStringValidator(), emailValidator()],
     },
   ];
 

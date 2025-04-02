@@ -7,36 +7,52 @@
   scroll-behavior: smooth;
 }
 
-.pato-top-title{
-	font-family: 'Courgette';
-	font-size: 1.7rem;
+.pato-top-title {
+  font-family: "Courgette";
+  font-size: 1.7rem;
 }
 
-.pato-title{
-	font-size: 2.8rem;
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: 1rem;
+.pato-title {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1rem;
 }
-.pato-subtitle{
-	text-transform: uppercase;
-	letter-spacing: 0.15rem;
-	color: #333;
-	font-size:1.25rem;
+.pato-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  color: #333;
+  font-size: 1.25rem;
 }
-.pato-desc{
-	color: #777;
-	line-height: 1.5;
-	font-size: 1rem;
+.pato-desc {
+  color: #777;
+  line-height: 1.5;
+  font-size: 1rem;
 }
-.pato-image-hover-wrapper{
-	border-radius: 10px;
-	overflow: hidden;
-	img{
-		border-radius: 10px;
-		transition: $main-transition;
-		&:hover {
-			transform: scale(1.1);
-		}
-	}
+.pato-image-hover-wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  img {
+    border-radius: 10px;
+    transition: $main-transition;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.pato-header {
+  @include flex-center();
+  flex-direction: column;
+  text-align: center;
+  background-image: url("../../../public/assets/images/pato/header.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 200px;
+  .pato-top-title {
+    color: $pato-color-red;
+  }
+  .pato-title {
+    color: #fff;
+  }
 }

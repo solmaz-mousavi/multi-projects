@@ -4,18 +4,6 @@
 .pato-home-intro-container {
   background-color: #fff;
 
-  .pato-home-intro-header {
-    @include flex-center();
-    flex-direction: column;
-    background-image: url("../../../../../../public/assets/images/pato/home/intro/bg-intro.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    height: 200px;
-    color: #fff;
-    .pato-home-intro__title {
-      color: $pato-color-red;
-    }
-  }
   .pato-home-intro-content {
     padding: 20px;
     display: flex;

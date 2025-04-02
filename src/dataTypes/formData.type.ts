@@ -1,8 +1,14 @@
 import { ReactNode } from "react";
 import { ButtonStyleType } from "./buttonData.type";
 
-export type RulesType = "REQUIRED_STRING" | "EMAIL_VALUE" | "PHONE_VALUE";
-export type RuleObjectType = () => { type: RulesType };
+export type RulesType =
+  | "REQUIRED_STRING"
+  | "EMAIL_VALUE"
+  | "PHONE_VALUE"
+  | "MAX_LENGTH"
+  | "MIN_LENGTH"
+	| "PAST_DATE";
+export type RuleObjectType = (val?: any ) => { type: RulesType, validatorValue?: any };
 
 export type ValueType = string | number;
 export type ValuesType = {
@@ -14,8 +20,8 @@ export type ErrorsType = {
 };
 
 export interface IFormInputType {
-  tag: "input" | "textarea";
-  type?: "text" | "email" | "number" | "password";
+  tag: "input" | "textarea" | "select" ;
+  type?: "text" | "email" | "number" | "password" | "date";
   placeholder?: any;
   className?: string;
 
@@ -31,6 +37,8 @@ export interface IFormInputType {
   border?: boolean;
 
   name: string;
+  selectValues?: string[];
   initialValue: ValueType;
-  validators: RuleObjectType[];
+  validators: { type: RulesType, validatorValue?: any }[];
+[index:string]: any;
 }

@@ -1,15 +1,15 @@
-import { requiredString, emailValue, phoneValue } from "./rules";
+import { requiredString, emailValue, phoneValue, maxLength, minLength, pastDate } from "./rules";
 import { phonePattern, emailPattern } from "./regex";
-import { RuleObjectType } from "../dataTypes/formData.type";
+import { RulesType } from "../dataTypes/formData.type";
 
 export default function validatorMethod(
-  inputValue: string | number | boolean,
-  validators: RuleObjectType[]
+  inputValue: string | number | Date,
+  validators: { type: RulesType, validatorValue?: any }[]
 ) {
   let error = "";
   validators.some((validator) => {
     const value = inputValue.toString().trim();
-    switch (validator().type) {
+    switch (validator.type) {
       case requiredString: {
         value.length === 0 && (error = "This field is required.");
         break;
@@ -26,6 +26,25 @@ export default function validatorMethod(
         }
         break;
       }
+
+      case maxLength: {
+        value.length > validator.validatorValue && (error = `Max length for this field is ${validator.validatorValue}.`);
+
+        break;
+      }
+
+      case minLength: {
+				value.length < validator.validatorValue && (error = `Min length for this field is ${validator.validatorValue}.`);
+        break;
+      }
+
+			case pastDate: {
+				const today = new Date();
+				const eventDay = new Date(inputValue);
+				eventDay < today && (error = `You can not select past date.`);
+        break;
+      }
+
       default: {
         break;
       }

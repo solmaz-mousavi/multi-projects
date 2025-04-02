@@ -29,6 +29,7 @@ type MenuItemType = {
 export type MenuDataType = {
   category: string;
   image: string;
+  main: boolean;
   items: MenuItemType[];
 };
 

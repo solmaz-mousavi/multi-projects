@@ -9,12 +9,12 @@ function Intro({ data }: { data: IntroDataType[] }) {
   return (
     <section className="pato-home-intro-container">
 
+        <div className="pato-header">
       <Aos aosStyle="fadeInUp" once={true}>
-        <div className="pato-home-intro-header">
-          <p className="pato-home-intro__title pato-top-title">discover</p>
+          <p className="pato-top-title">discover</p>
           <h3 className="pato-title">pato place</h3>
-        </div>
       </Aos>
+        </div>
 
       <Aos aosStyle="fadeInUp" once={true}>
         <div className="pato-home-intro-content">

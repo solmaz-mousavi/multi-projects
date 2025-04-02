@@ -170,40 +170,41 @@
     {
       "category": "Lunch",
       "image": "/assets/images/pato/menu/category/menu-lunch.webp",
+			"main": true,
       "items": [
         {
           "title": "Sed varius",
-          "image": "/assets/images/pato/menu/lunch/lunch01.jpg",
+          "image": "/assets/images/pato/menu/lunch/lunch-01.webp",
           "desc": "Aenean pharetra tortor dui in pellentesque",
           "price": 29.79
         },
         {
           "title": "sbrisalona",
-          "image": "/assets/images/pato/menu/lunch/lunch01.jpg",
+          "image": "/assets/images/pato/menu/lunch/lunch-02.webp",
           "desc": "Proin lacinia nisl ut ultricies posuere nulla",
           "price": 21.56
         },
         {
           "title": "tempus aliquet",
-          "image": "/assets/images/pato/menu/lunch/lunch01.jpg",
+          "image": "/assets/images/pato/menu/lunch/lunch-03.webp",
           "desc": "Aenean condimentum ante erat",
           "price": 45.5
         },
         {
           "title": "Cras eget magna",
-          "image": "/assets/images/pato/menu/lunch/lunch01.jpg",
+          "image": "/assets/images/pato/menu/lunch/lunch-04.webp",
           "desc": "Sed fermentum eros vitae eros",
           "price": 45.93
         },
         {
           "title": "Duis massa",
-          "image": "/assets/images/pato/menu/lunch/lunch01.jpg",
+          "image": "/assets/images/pato/menu/lunch/lunch-05.webp",
           "desc": "Proin lacinia nisl ut ultricies posuere nulla",
           "price": 12.67
         },
         {
           "title": "Nullam maximus",
-          "image": "/assets/images/pato/menu/lunch/lunch01.jpg",
+          "image": "/assets/images/pato/menu/lunch/lunch-06.webp",
           "desc": "Duis massa nibh porttitor nec imperdiet eget",
           "price": 10.98
         }
@@ -212,40 +213,41 @@
     {
       "category": "Dinner",
       "image": "/assets/images/pato/menu/category/menu-dinner.webp",
+			"main": true,
       "items": [
         {
           "title": "Maecenas tristique",
-          "image": "/assets/images/pato/menu/dinner/dinner01.jpg",
+          "image": "/assets/images/pato/menu/dinner/dinner-01.webp",
           "desc": "Aenean pharetra tortor dui in pellentesque",
           "price": 19.65
         },
         {
           "title": "Cras maximus",
-          "image": "/assets/images/pato/menu/dinner/dinner01.jpg",
+          "image": "/assets/images/pato/menu/dinner/dinner-02.webp",
           "desc": "Sed fermentum eros vitae eros",
           "price": 23.89
         },
         {
           "title": "Pine nut sbrisalona",
-          "image": "/assets/images/pato/menu/dinner/dinner01.jpg",
+          "image": "/assets/images/pato/menu/dinner/dinner-03.webp",
           "desc": "Proin lacinia nisl ut ultricies posuere nulla",
           "price": 20.87
         },
         {
           "title": "Tempor malesuada",
-          "image": "/assets/images/pato/menu/dinner/dinner01.jpg",
+          "image": "/assets/images/pato/menu/dinner/dinner-04.webp",
           "desc": "Duis massa nibh porttitor nec imperdiet eget",
           "price": 45.26
         },
         {
           "title": "Suspendisse eu",
-          "image": "/assets/images/pato/menu/dinner/dinner01.jpg",
+          "image": "/assets/images/pato/menu/dinner/dinner-05.webp",
           "desc": "Aenean pharetra tortor dui in pellentesque",
           "price": 32.48
         },
         {
           "title": "Pine nut sbrisalona",
-          "image": "/assets/images/pato/menu/dinner/dinner01.jpg",
+          "image": "/assets/images/pato/menu/dinner/dinner-06.webp",
           "desc": "Proin lacinia nisl ut ultricies posuere nulla",
           "price": 25.98
         }
@@ -254,6 +256,7 @@
     {
       "category": "Drink",
       "image": "/assets/images/pato/menu/category/menu-drink.webp",
+			"main": false,
       "items": [
         {
           "title": "Vivamus pretium",
@@ -280,6 +283,7 @@
     {
       "category": "Starter",
       "image": "/assets/images/pato/menu/category/menu-starter.webp",
+			"main": false,
       "items": [
         {
           "title": "Pine nut sbrisalona",
@@ -306,6 +310,7 @@
     {
       "category": "Happy Hours",
       "image": "/assets/images/pato/menu/category/menu-happyhours.webp",
+			"main": false,
       "items": [
         {
           "title": "Duis sed aliquet",
@@ -348,6 +353,7 @@
     {
       "category": "Dessert",
       "image": "/assets/images/pato/menu/category/menu-dessert.webp",
+			"main": false,
       "items": [
         {
           "title": "tempus aliquet",

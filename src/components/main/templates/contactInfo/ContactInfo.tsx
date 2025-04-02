@@ -28,7 +28,7 @@ function ContactInfo({ data }: ContactInfoPropsType) {
               </div>
               <div className="main-contactInfo-email">
                 <Icon name="MdOutlineMailOutline" />
-                <a href="mailto:solmaz@gmail.com">solmaz@gmail.com</a>
+                <a href="mailto:solmaz@gmail.com">solmaz.mousavi@gmail.com</a>
               </div>
             </div>
           </div>

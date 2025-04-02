@@ -22,7 +22,7 @@ const months = [
   "december",
 ];
 
-type dateFormatType = 1 | 2;
+type dateFormatType = 1 | 2 | 3;
 export const dateFormatter = (date: string, type: number) => {
   const eventDay = new Date(date);
   switch (type) {
@@ -35,5 +35,8 @@ export const dateFormatter = (date: string, type: number) => {
       return `${eventDay.getDate()} ${
         months[eventDay.getMonth()]
       }, ${eventDay.getFullYear()}`;
+
+			case 3:
+				return `${eventDay.getMonth() + 1}/${eventDay.getDate()}/${eventDay.getFullYear()}`;
   }
 };

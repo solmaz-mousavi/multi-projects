@@ -26,7 +26,7 @@ function Footer() {
 
       name: "email",
       initialValue: "",
-      validators: [requiredStringValidator, emailValidator],
+      validators: [requiredStringValidator(), emailValidator()],
     },
   ];
 

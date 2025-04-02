@@ -26,7 +26,7 @@ function Home({ scrollPosition, data }: HomePropsType) {
               <Button
                 type="link"
                 text="start a project"
-                to="#Contacts"
+                to="#Glint-Contacts"
                 variant="light"
                 transparent={true}
                 className="home-txt__btn"
@@ -34,7 +34,7 @@ function Home({ scrollPosition, data }: HomePropsType) {
               <Button
                 type="link"
                 text="more about us"
-                to="#About"
+                to="#Glint-About"
                 variant="light"
                 transparent={true}
                 className="home-txt__btn"

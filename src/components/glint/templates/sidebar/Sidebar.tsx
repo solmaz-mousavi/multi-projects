@@ -44,7 +44,7 @@ function Sidebar({data,
                   className="sidebar-link"
                   onClick={() => setShowSidebar(false)}
                 >
-                  <a href={`#${item}`}>{item}</a>
+                  <a href={`#Glint-${item}`}>{item}</a>
                 </li>
               ))}
             </ul>

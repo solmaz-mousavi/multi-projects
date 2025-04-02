@@ -53,7 +53,7 @@ export default function Form({
         const { name } = input;
 
         return (
-          <div key={name} className={`input-container ${name}`}>
+          <div key={name} className={`input-wrapper ${name}`}>
             <Input
               {...input}
 							id={name}
@@ -62,7 +62,7 @@ export default function Form({
               onBlur={formik.handleBlur}
             />
             {formik.errors[name] && formik.touched[name] && (
-              <span className="inputError">{formik.errors[name]}</span>
+              <p className="inputError">{formik.errors[name]}</p>
             )}
           </div>
         );
