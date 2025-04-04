@@ -77,6 +77,7 @@ function Footer({ socialData, galleryData }: FooterPropsType) {
               {socialData &&
                 socialData.map((item) => (
                   <Icon
+                    key={item.id}
                     name={item.iconName}
                     className="pato-footer-social-icon"
                   />
@@ -111,6 +112,7 @@ function Footer({ socialData, galleryData }: FooterPropsType) {
               {galleryData &&
                 galleryData.slice(0, 8).map((item) => (
                   <div
+										key={item.id}
                     className="pato-footer-gallery-item"
                     onClick={() => navigate("/pato/gallery")}
                   >

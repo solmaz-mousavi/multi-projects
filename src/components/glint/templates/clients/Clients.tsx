@@ -35,8 +35,8 @@ function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
               loop={true}
             >
               {clientsData &&
-                clientsData.map((item, index) => (
-                  <SwiperSlide key={index}>
+                clientsData.map((item) => (
+                  <SwiperSlide key={item.id}>
                     <Button
                       variant="grey"
                       icon={{ name: `${item.iconName}` }}
@@ -62,8 +62,8 @@ function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
               className="mySwiper"
             >
               {teamMembersData &&
-                teamMembersData.map((item, index) => (
-                  <SwiperSlide key={index}>
+                teamMembersData.map((item) => (
+                  <SwiperSlide key={item.id}>
                     <div className="team-thumbnail">
                       <p className="team-desc">{item.desc}</p>
                       <img

@@ -19,9 +19,9 @@ function Navbar({ scrollPosition, navbarData, socialData }: NavbarPropsType) {
       </div>
       <div className="pato-navbar-container">
         {navbarData &&
-          navbarData.map((item, index) => (
+          navbarData.map((item) => (
             <NavLink
-						key={index}
+              key={item.id}
               to={`/pato/${item.route}`}
               className={(link) =>
                 link.isActive ? "active pato-navbar-link" : "pato-navbar-link"
@@ -34,7 +34,11 @@ function Navbar({ scrollPosition, navbarData, socialData }: NavbarPropsType) {
       <div className="pato-social-container">
         {socialData &&
           socialData.map((item) => (
-            <Icon name={item.iconName} className="pato-navbar-social-icon" />
+            <Icon
+              key={item.id}
+              name={item.iconName}
+              className="pato-navbar-social-icon"
+            />
           ))}
       </div>
     </nav>

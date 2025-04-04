@@ -137,9 +137,9 @@ function Contact({ data }: { data: SocialDataType[] }) {
           </p>
           <div className="social-container">
             {data &&
-              data.map((item, index) => (
+              data.map((item) => (
                 <Button
-                  key={index}
+                  key={item.id}
                   icon={{ name: `${item.iconName}` }}
                   variant="light"
                   transparent={true}

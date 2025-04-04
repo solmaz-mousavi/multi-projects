@@ -19,8 +19,8 @@ function Services({ data }: { data: ServicesDataType[] }) {
         <Aos aosStyle="fadeInUp" once={true}>
           <div className="service-item-container">
             {data &&
-              data.map((item, index) => (
-                <div key={index} className="service-item-thumbnail">
+              data.map((item) => (
+                <div key={item.id} className="service-item-thumbnail">
                   <div>
                     <Icon className="service-item-icon" name={item.iconName} />
                   </div>

@@ -12,8 +12,8 @@ import Logo from "./templates/logo/Logo";
 import Works from "./templates/works/Works";
 import Clients from "./templates/clients/Clients";
 import Contact from "./templates/contact/Contact";
-import "./glint.scss";
 import Footer from "./templates/footer/Footer";
+import "./glint.scss";
 
 function GlintIndex() {
   const { glintData, pending, error } = useFetch({

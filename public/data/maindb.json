@@ -1,12 +1,13 @@
 {
 	"packages":[
-		{"name": "javascript", "iconName": "FaJs", "color": "#E8D44D"},
-		{"name": "reactJS", "iconName": "FaReact", "color": "#5ED3F3"},
-		{"name": "typescript", "iconName": "TbBrandTypescript", "color": "#0076C6"},
-		{"name": "sass", "iconName": "FaSass", "color": "#C76395"}
+		{"id": "01" ,"name": "javascript", "iconName": "FaJs", "color": "#E8D44D"},
+		{"id": "02" ,"name": "reactJS", "iconName": "FaReact", "color": "#5ED3F3"},
+		{"id": "03" ,"name": "typescript", "iconName": "TbBrandTypescript", "color": "#0076C6"},
+		{"id": "04" ,"name": "sass", "iconName": "FaSass", "color": "#C76395"}
 	],
   "projects": [
     {
+			"id": "01" ,
       "title": "glint",
       "image": "/assets/images/main/glint.png",
       "route": "/",
@@ -14,12 +15,15 @@
       "packages": ["javascript", "reactJS", "typescript", "sass"]
     },
 		{
+			"id": "02" ,
       "title": "Pato",
       "image": "/assets/images/main/pato.png",
       "route": "/pato",
 			"description":"a restaurant page - created by 50lm@2",
       "packages": ["javascript", "reactJS", "typescript", "sass"]
-    },		{
+    },		
+		{
+			"id": "03" ,
       "title": "kakura",
       "image": "/assets/images/main/kakura.jpeg",
       "route": "/dashboard",
@@ -27,6 +31,7 @@
       "packages": ["javascript", "reactJS", "typescript", "sass"]
     },
     {
+			"id": "04" ,
       "title": "dashboard",
       "image": "/assets/images/main/kakura.jpeg",
       "route": "/dashboard",

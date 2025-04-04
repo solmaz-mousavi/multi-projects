@@ -49,8 +49,8 @@ function Input({
           onChange={onChange}
 					{...rest}
         >
-          {selectValues?.map((item) => (
-            <option value={item}>{item}</option>
+          {selectValues?.map(item => (
+            <option key={item} value={item}>{item}</option>
           ))}
         </select>
       ) : (

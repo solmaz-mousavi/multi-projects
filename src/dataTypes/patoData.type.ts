@@ -1,44 +1,44 @@
 import { SocialDataType } from "./mainData.type";
 
+type NavbarKeyType = "id" | "title" | "route";
 export type NavbarDataType = {
-  title: string;
-  route: string;
+  [index in NavbarKeyType]: string;
 };
 
-export type SlideDataType = {
-  image: string;
-  title: string;
-  desc: string;
+type SlideKeyType = "id" | "image" | "title" | "desc";
+export type SlideDataType = { [index in SlideKeyType]: string } & {
   button: {
     title: string;
     navigate: string;
   };
 };
 
-type IntroKeyType = "title" | "desc" | "image" | "route";
+type IntroKeyType = "id" | "title" | "desc" | "image" | "route";
 export type IntroDataType = {
   [index in IntroKeyType]: string;
 };
 
-type MenuItemType = {
+export type MenuItemType = {
+	id:string;
   title: string;
   image?: string;
   desc: string;
   price: number;
 };
 export type MenuDataType = {
+	id: string;
   category: string;
   image: string;
   main: boolean;
   items: MenuItemType[];
 };
 
-type EventKeyType = "title" | "date" | "time" | "image" | "desc";
+type EventKeyType = "id" | "title" | "date" | "time" | "image" | "desc";
 export type EventsDataType = {
   [index in EventKeyType]: string;
 };
 
-type ReviewKeyType = "name" | "city" | "date" | "desc";
+type ReviewKeyType = "id" | "name" | "city" | "date" | "desc";
 export type ReviewDataType = {
   [index in ReviewKeyType]: string;
 };
@@ -49,24 +49,21 @@ export type BlogCategoryType =
   | "Events Design"
   | "Restaurant Place";
 
+type BlogKeyType = "id" | "title" | "desc" | "image" | "date" | "author";
 export type BlogDataType = {
-  title: string;
-  desc: string;
-  image: string;
-  date: string;
-  author: string;
+  [index in BlogKeyType]: string;
+} & {
   categories: BlogCategoryType[];
   comments: {
     [index in ReviewKeyType]: string;
-  };
+  }[];
 };
 
 export type GalleryCategoryType = "interior" | "food" | "events" | "vip guests";
+type GalleryKeyType = "id" | "title" | "image" | "date" | "author";
 export type GalleryDataType = {
-  title: string;
-  image: string;
-  date: string;
-  author: string;
+  [index in GalleryKeyType]: string;
+} & {
   categories: GalleryCategoryType[];
 };
 

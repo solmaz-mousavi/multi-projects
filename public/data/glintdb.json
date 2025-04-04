@@ -1,27 +1,32 @@
 {
-	"social": [
+  "social": [
     {
+      "id": "01",
       "socialName": "Facebook",
       "iconName": "FaFacebookF"
     },
     {
+      "id": "02",
       "socialName": "Twitter",
       "iconName": "FaTwitter"
     },
     {
+      "id": "03",
       "socialName": "Instagram",
       "iconName": "FaInstagram"
     },
     {
+      "id": "04",
       "socialName": "Behance",
       "iconName": "FaBehance"
     },
     {
+      "id": "05",
       "socialName": "Dribbble",
       "iconName": "FaDribbble"
     }
   ],
-	"menu":["Home", "About", "Services", "Works", "Clients", "Contacts"],
+  "menu": ["Home", "About", "Services", "Works", "Clients", "Contacts"],
   "scrollData": {
     "scrollStyles": [
       { "txtColor": "fff", "iconColor": "39B44C" },
@@ -41,49 +46,59 @@
   },
   "status": [
     {
+			"id": "01",
       "name": "Awards Received",
       "count": "127"
     },
     {
+			"id": "02",
       "name": "Cups of Coffee",
       "count": "1505"
     },
     {
+			"id": "03",
       "name": "Projects Completed",
       "count": "109"
     },
     {
+			"id": "04",
       "name": "Happy Clients",
       "count": "102"
     }
   ],
   "services": [
     {
+			"id":"01",
       "iconName": "FaPaintRoller",
       "title": "Brand Identity",
       "desc": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint."
     },
     {
+			"id":"02",
       "iconName": "FaObjectGroup",
       "title": "Illustration",
       "desc": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint."
     },
     {
+			"id":"03",
       "iconName": "FaRegBookmark",
       "title": "Marketing",
       "desc": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint."
     },
     {
+			"id":"04",
       "iconName": "FaGlobeAmericas",
       "title": "Web Design",
       "desc": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint."
     },
     {
+			"id":"05",
       "iconName": "FaCube",
       "title": "Packaging Design",
       "desc": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint."
     },
     {
+			"id":"06",
       "iconName": "FaDev",
       "title": "Web Development",
       "desc": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint."
@@ -91,58 +106,100 @@
   ],
   "works": [
     {
+			"id":"01",
       "title": "Shutterbug",
       "category": "Branding",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
       "image": "/assets/images/glint/works/lady-shutterbug.webp"
     },
     {
+			"id":"02",
       "title": "Woodcraft",
       "category": "Web Design",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
       "image": "/assets/images/glint/works/woodcraft.webp"
     },
     {
+			"id":"03",
       "title": "The Beetle",
       "category": "Web Development",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
       "image": "/assets/images/glint/works/the-beetle.webp"
     },
     {
+			"id":"04",
       "title": "Grow Green",
       "category": "Branding",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
       "image": "/assets/images/glint/works/grow-green.webp"
     },
     {
+			"id":"05",
       "title": "Guitarist",
       "category": "Web Design",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
       "image": "/assets/images/glint/works/guitarist.webp"
     },
     {
+			"id":"06",
       "title": "Palmeira",
       "category": "Web Design",
       "des": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, atque!",
       "image": "/assets/images/glint/works/palmeira.webp"
     }
   ],
-	"clients": [
-		{"name":"Chrome", "iconName":"TbBrandChrome"},
-		{"name":"Apple", "iconName":"TbBrandApple"},
-		{"name":"Dropbox", "iconName":"FaDropbox"},
-		{"name":"Blackberry", "iconName":"TbBrandBlackberry"},
-		{"name":"Deezer", "iconName":"TbBrandDeezer"},
-		{"name":"Badoo", "iconName":"TbBrandBadoo"},
-		{"name":"Bluesky", "iconName":"TbBrandBluesky"},
-		{"name":"Bunpo", "iconName":"TbBrandBunpo"}
-	],
-	"teamMembers":[
-		{"name":"Tom Cook", "job":"ceo", "image":"/assets/images/glint/team/user01.webp", "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."},
-		{"name":"Sara Blackwood", "job":"backend", "image":"/assets/images/glint/team/user02.webp", "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."},
-		{"name":"Satya Nadella", "job":"ui developer", "image":"/assets/images/glint/team/user03.jpg", "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."},
-		{"name":"Kate Morgan", "job":"ui developer", "image":"/assets/images/glint/team/user04.jpg", "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."},
-		{"name":"Chain Lock", "job":"backend", "image":"/assets/images/glint/team/user05.png", "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."},
-		{"name":"Mahsa Sharifi", "job":"backend", "image":"/assets/images/glint/team/user06.jpg", "desc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."}
-	]
+  "clients": [
+    { "id":"01", "name": "Chrome", "iconName": "TbBrandChrome" },
+    { "id":"02", "name": "Apple", "iconName": "TbBrandApple" },
+    { "id":"03", "name": "Dropbox", "iconName": "FaDropbox" },
+    { "id":"04", "name": "Blackberry", "iconName": "TbBrandBlackberry" },
+    { "id":"05", "name": "Deezer", "iconName": "TbBrandDeezer" },
+    { "id":"06", "name": "Badoo", "iconName": "TbBrandBadoo" },
+    { "id":"07", "name": "Bluesky", "iconName": "TbBrandBluesky" },
+    { "id":"08", "name": "Bunpo", "iconName": "TbBrandBunpo" }
+  ],
+  "teamMembers": [
+    {
+			"id":"01",
+      "name": "Tom Cook",
+      "job": "ceo",
+      "image": "/assets/images/glint/team/user01.webp",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."
+    },
+    {
+			"id":"02",
+      "name": "Sara Blackwood",
+      "job": "backend",
+      "image": "/assets/images/glint/team/user02.webp",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."
+    },
+    {
+			"id":"03",
+      "name": "Satya Nadella",
+      "job": "ui developer",
+      "image": "/assets/images/glint/team/user03.jpg",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."
+    },
+    {
+			"id":"04",
+      "name": "Kate Morgan",
+      "job": "ui developer",
+      "image": "/assets/images/glint/team/user04.jpg",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."
+    },
+    {
+			"id":"05",
+      "name": "Chain Lock",
+      "job": "backend",
+      "image": "/assets/images/glint/team/user05.png",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."
+    },
+    {
+			"id":"06",
+      "name": "Mahsa Sharifi",
+      "job": "backend",
+      "image": "/assets/images/glint/team/user06.jpg",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt."
+    }
+  ]
 }

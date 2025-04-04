@@ -7,29 +7,29 @@ export type ScrollDataType = {
   scrollBreakpoints: ScrollBreakpointsType[];
 };
 
+type StatusKeyType = "id" | "name" | "count";
 export type StatusDataType = {
-  name: string;
-  count: string;
+  [index in StatusKeyType]: string;
 };
 
-type ServicesKeyType = "iconName"|"title"|"desc";
+type ServicesKeyType = "id" | "iconName" | "title" | "desc";
 export type ServicesDataType = {
-	[index in ServicesKeyType]: string;
+  [index in ServicesKeyType]: string;
 };
 
-type WorksKeyType = "title"|"category"|"des"|"image";
+type WorksKeyType = "id" | "title" | "category" | "des" | "image";
 export type WorksDataType = {
-	[index in WorksKeyType]: string;
+  [index in WorksKeyType]: string;
 };
 
+type ClientsKeyType = "id" | "name" | "iconName";
 export type ClientsDataType = {
-  name: string;
-  iconName: string;
+  [index in ClientsKeyType]: string;
 };
 
-type TeamMembersKeyType = "name"|"job"|"image"|"desc";
+type TeamMembersKeyType = "id" | "name" | "job" | "image" | "desc";
 export type TeamMembersDataType = {
-	[index in TeamMembersKeyType]: string;
+  [index in TeamMembersKeyType]: string;
 };
 
 export type GlintDataType = {
@@ -39,6 +39,6 @@ export type GlintDataType = {
   status: StatusDataType[];
   services: ServicesDataType[];
   works: WorksDataType[];
-	clients: ClientsDataType[];
-	teamMembers: TeamMembersDataType[];
+  clients: ClientsDataType[];
+  teamMembers: TeamMembersDataType[];
 };

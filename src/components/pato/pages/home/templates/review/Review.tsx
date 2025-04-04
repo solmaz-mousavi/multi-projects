@@ -2,8 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css";
-import { ReviewDataType } from "../../../../../dataTypes/patoData.type";
-import Aos from "../../../../main/modules/aos/Aos";
+import { ReviewDataType } from "../../../../../../dataTypes/patoData.type";
+import Aos from "../../../../../main/modules/aos/Aos";
 import "./review.scss";
 
 function Review({ data }: { data: ReviewDataType[] }) {
@@ -24,8 +24,8 @@ function Review({ data }: { data: ReviewDataType[] }) {
           className="mySwiper pato-home__reviews-content"
         >
           {data &&
-            data.map((item, index) => (
-              <SwiperSlide className="pato-home__reviews-item" key={index}>
+            data.map((item) => (
+              <SwiperSlide className="pato-home__reviews-item" key={item.id}>
                 <p className="pato-desc">{item.desc}</p>
                 <div className="pto-home__reviews-sep"></div>
                

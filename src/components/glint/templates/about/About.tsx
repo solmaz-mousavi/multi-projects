@@ -29,8 +29,8 @@ function About({ data }: { data: StatusDataType[] }) {
       <Aos aosStyle="fadeInUp" once={true}>
         <div className="about-status-container">
           {data &&
-            data.map((item, index) => (
-              <div key={index} className="about-status">
+            data.map((item) => (
+              <div key={item.id} className="about-status">
                 <div className="about-status__count">
                   <CounterUp end={Number(item.count)} once={true} />
                 </div>

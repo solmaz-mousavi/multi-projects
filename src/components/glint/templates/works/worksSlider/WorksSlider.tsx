@@ -9,9 +9,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import "./worksSlider.scss";
 import { WorksDataType } from "../../../../../dataTypes/glintData.type";
 import { FacebookShareButton, WhatsappShareButton } from "react-share";
+import "./worksSlider.scss";
 type WorksSliderPropsType = {
   data: WorksDataType[];
   slideNumber: number;
@@ -35,7 +35,7 @@ function WorksSlider({
         >
           {data &&
             data.map((item, index) => (
-              <SwiperSlide className="slide-item" key={index}>
+              <SwiperSlide className="slide-item" key={item.id}>
                 <div className="glint-works-slider__icon-container">
                   <div className="glint-works-slider__share-container">
                     <MdOutlineShare className="glint-works-slider__btn" />

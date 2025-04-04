@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ReactVisibilitySensor from "react-visibility-sensor";
 import "animate.css";
 import "./aos.scss";
@@ -7,9 +7,17 @@ type AosPropsType = {
   aosStyle: string;
   once?: boolean;
   className?: string;
+  unMountStyle?: string;
 };
 
-function Aos({ children, aosStyle, once = false, className }: AosPropsType) {
+function Aos({
+  children,
+  aosStyle,
+  once = false,
+  className,
+  unMountStyle,
+}: AosPropsType) {
+  const [unMount, setUnMount] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const [repeat, setRepeat] = useState<boolean>(true);
   const repeatHandler = () => {
@@ -19,6 +27,12 @@ function Aos({ children, aosStyle, once = false, className }: AosPropsType) {
       }, 1000);
     }
   };
+  useEffect(() => {
+    return () => {
+      setUnMount(true);
+      setTimeout(function () {}, 1000);
+    };
+  }, [unMount]);
   return (
     <ReactVisibilitySensor
       ref={ref}
@@ -37,6 +51,8 @@ function Aos({ children, aosStyle, once = false, className }: AosPropsType) {
                       ? `animate__animated animate__${aosStyle}`
                       : "hidden"
                   }`
+            } ${
+              unMount ? `animate__animated animate__${unMountStyle}` : "ttt"
             }`}
             onAnimationEnd={repeatHandler}
           >

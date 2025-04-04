@@ -1,12 +1,12 @@
-import { SlideDataType } from "../../../../../dataTypes/patoData.type";
+import { SlideDataType } from "../../../../../../dataTypes/patoData.type";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
 import { useNavigate } from "react-router-dom";
-import Button from "../../../../main/modules/button/Button";
-import Aos from "../../../../main/modules/aos/Aos";
+import Button from "../../../../../main/modules/button/Button";
+import Aos from "../../../../../main/modules/aos/Aos";
 import "./slider.scss";
 
 function Slider({ data }: { data: SlideDataType[] }) {
@@ -29,8 +29,8 @@ function Slider({ data }: { data: SlideDataType[] }) {
         loop={true}
       >
         {data &&
-          data.map((item, index) => (
-            <SwiperSlide className="slide-item" key={index}>
+          data.map((item) => (
+            <SwiperSlide className="slide-item" key={item.id}>
               <div
                 className="pato-home-slide-container"
                 style={{ backgroundImage: `url(${item.image})` }}

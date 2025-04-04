@@ -1,0 +1,19 @@
+@import "/src/styles/variables";
+@import "/src/styles/base";
+
+.pato-blog-container {
+  background-color: #fff;
+	.pato-blog-content{
+display: flex;
+
+		.pato-blog-main{
+			width: 70%;
+			padding: 50px 20px;
+		}
+		.pato-blog-sidebar{
+			width: 30%;
+			background-color: yellow;
+		}
+	}
+
+}

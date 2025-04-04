@@ -35,9 +35,9 @@ function ContactInfo({ data }: ContactInfoPropsType) {
           <div className="contactInfo-package">
             <p>skills:</p>
             {data &&
-              data.map((item, index) => (
+              data.map(item => (
                 <Button
-                  key={index}
+                  key={item.id}
                   type="link"
                   variant="grey"
                   text={`${item.name}`}

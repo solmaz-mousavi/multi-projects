@@ -41,7 +41,7 @@ export default function validatorMethod(
 			case pastDate: {
 				const today = new Date();
 				const eventDay = new Date(inputValue);
-				eventDay < today && (error = `You can not select past date.`);
+				eventDay < today && (error = `You can select only future days.`);
         break;
       }
 

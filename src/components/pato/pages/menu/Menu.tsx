@@ -1,7 +1,9 @@
 import useFetch from "../../../../hooks/useFetch";
-import Aos from "../../../main/modules/aos/Aos";
 import Error from "../../../main/templates/error/Error";
 import Loader from "../../../main/templates/loader/Loader";
+import Header from "../../templates/header/Header";
+import MenuThumb from "./modules/menuThumb/menuThumb";
+import MainMenuThumb from "./modules/mainMenuThumb/MainMenuThumb";
 import "./menu.scss";
 
 function Menu() {
@@ -11,11 +13,7 @@ function Menu() {
   });
   return (
     <section className="pato-menu-container">
-      <div className="pato-header pato-menu-header">
-        <Aos aosStyle="fadeInUp" once={true}>
-          <h3 className="pato-title">pato menu</h3>
-        </Aos>
-      </div>
+      <Header title="pato menu" section={true} />
 
       {error && <Error error={error} fullScreen={true} />}
       {pending && <Loader type="data" fullScreen={true} />}
@@ -25,23 +23,10 @@ function Menu() {
             {patoData.menu
               .filter((item) => !item.main)
               .map((item2) => (
-                <div className="pato-menu-category-container">
+                <div className="pato-menu-category-container" key={item2.id}>
                   <h3 className="pato-subtitle">{item2.category}</h3>
                   {item2.items.map((menuItem) => (
-                    <div className="menu-item-container">
-                      <div className="menu-item-details">
-                        <p className="menu-item-title pato-desc">
-                          {menuItem.title}
-                        </p>
-                        <p className="menu-item-price pato-desc">
-                          ${menuItem.price}
-                        </p>
-                      </div>
-
-                      <p className="menu-item-desc pato-desc">
-                        {menuItem.desc}
-                      </p>
-                    </div>
+                    <MenuThumb {...menuItem} key={menuItem.id} />
                   ))}
                 </div>
               ))}
@@ -50,34 +35,14 @@ function Menu() {
           {patoData.menu
             .filter((item) => item.main)
             .map((item2) => (
-              <>
-                <div className="pato-header">
-                  <h3 className="pato-title">{item2.category}</h3>
-                </div>
-
+              <div key={item2.id}>
+                <Header title={item2.category} />
                 <div className="pato-menu-category-wrapper">
                   {item2.items.map((menuItem) => (
-                    <div className="pato-menu-category-container">
-                      <div className="pato-menu-item-container">
-                        <div className="menu-item-image pato-image-hover-wrapper">
-                          <img src={menuItem.image} alt={menuItem.title} />
-                        </div>
-                        <div className="menu-item-details">
-                          <p className="menu-item-title pato-desc">
-                            {menuItem.title}
-                          </p>
-                          <p className="menu-item-desc pato-desc">
-                            {menuItem.desc}
-                          </p>
-                          <p className="menu-item-price pato-desc">
-                            ${menuItem.price}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    <MainMenuThumb key={menuItem.id} {...menuItem} />
                   ))}
                 </div>
-              </>
+              </div>
             ))}
         </>
       )}

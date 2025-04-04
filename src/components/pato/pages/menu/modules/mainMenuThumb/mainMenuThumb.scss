@@ -1,0 +1,35 @@
+@import "/src/styles/variables";
+@import "/src/styles/base";
+
+.pato-menu-item-container {
+  display: flex;
+  .menu-item-image {
+    @include flex-center();
+    width: 160px;
+    height: 120px;
+    border-radius: 5px;
+    overflow: hidden;
+    img {
+      height: 100%;
+    }
+  }
+
+  .menu-item-details {
+    position: relative;
+    padding: 15px;
+    .menu-item-title {
+      text-transform: uppercase;
+    }
+    .menu-item-desc {
+      font-size: 0.85rem;
+    }
+    .menu-item-price {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      color: #333;
+      font-size: 1.3rem;
+      letter-spacing: -0.1rem;
+    }
+  }
+}

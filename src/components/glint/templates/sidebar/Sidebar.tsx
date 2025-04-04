@@ -38,9 +38,9 @@ function Sidebar({data,
 
             <h3 className="sidebar-title">navigation</h3>
             <ul className="sidebar-link-container">
-              {data && data.map((item, index) => (
+              {data && data.map((item) => (
                 <li
-								key={index}
+								key={item}
                   className="sidebar-link"
                   onClick={() => setShowSidebar(false)}
                 >

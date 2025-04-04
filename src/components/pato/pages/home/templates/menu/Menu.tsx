@@ -1,7 +1,7 @@
-import { MenuDataType } from "../../../../../dataTypes/patoData.type";
+import { MenuDataType } from "../../../../../../dataTypes/patoData.type";
 import { useNavigate } from "react-router-dom";
-import Button from "../../../../main/modules/button/Button";
-import Aos from "../../../../main/modules/aos/Aos";
+import Button from "../../../../../main/modules/button/Button";
+import Aos from "../../../../../main/modules/aos/Aos";
 import "./menu.scss";
 
 function Menu({ data }: { data: MenuDataType[] }) {
@@ -18,6 +18,7 @@ function Menu({ data }: { data: MenuDataType[] }) {
             <div
               onClick={() => navigate("/pato/menu")}
               className={`category_${index} pato-home__menu-category  pato-image-hover-wrapper`}
+							key={item.id}
             >
               <Aos aosStyle="fadeInUp" once={true}>
                 <img src={item.image} alt="" />

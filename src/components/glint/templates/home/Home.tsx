@@ -45,9 +45,9 @@ function Home({ scrollPosition, data }: HomePropsType) {
 
         <div className="home-social-container">
           {data &&
-            data.map((item, index) => (
+            data.map((item) => (
               <Button
-							key={index}
+							key={item.id}
                 variant="light"
                 icon={{ name: `${item.iconName}` }}
                 className="social-link"

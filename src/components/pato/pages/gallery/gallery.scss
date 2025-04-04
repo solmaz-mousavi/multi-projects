@@ -1,0 +1,37 @@
+@import "/src/styles/variables";
+@import "/src/styles/base";
+
+.pato-gallery-container {
+  background-color: #fff;
+
+  .pato-galleryCategory-wrapper {
+    @include flex-center();
+    padding: 50px 0px;
+		
+    .galleryCategory {
+      cursor: pointer;
+      padding: 5px 20px;
+      margin: 0 5px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      color: #555;
+      letter-spacing: 0.1rem;
+      font-size: 0.9rem;
+      transition: $main-transition;
+      &:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+    .selected {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+  .pato-gallery-content {
+    @include flex-center();
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+  }
+}

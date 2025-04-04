@@ -30,14 +30,19 @@
   font-size: 1rem;
 }
 .pato-image-hover-wrapper {
+	@include flex-center();
   border-radius: 10px;
   overflow: hidden;
+	&:hover img{
+		transform: scale(1.1);
+	}
   img {
     border-radius: 10px;
     transition: $main-transition;
-    &:hover {
-      transform: scale(1.1);
-    }
+		min-width: 100%;
+		min-height: 100%;
+		object-fit: cover;
+
   }
 }
 
@@ -55,4 +60,10 @@
   .pato-title {
     color: #fff;
   }
+}
+
+.pato-section-header{
+	height: 250px;
+	padding-top: 50px;
+	color: #fff;
 }

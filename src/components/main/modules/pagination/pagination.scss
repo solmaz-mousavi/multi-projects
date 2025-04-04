@@ -1,0 +1,23 @@
+@import "/src/styles/variables";
+@import "/src/styles/base";
+
+.pagination-container{
+@include flex-center();
+gap: 10px;
+padding: 50px 0;
+	.pagination-item{
+		@include flex-center();
+		width: 35px;
+		height: 35px;
+		border-radius: 10px;
+		background-color: #adadad;
+		color: #fff;
+		cursor: pointer;
+		&:hover{
+			background-color: #6b6b6b;
+		}
+		&.active{
+			background-color: #6b6b6b;
+		}
+	}
+}

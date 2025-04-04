@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import Button from "../../../../main/modules/button/Button";
-import Aos from "../../../../main/modules/aos/Aos";
+import Button from "../../../../../main/modules/button/Button";
+import Aos from "../../../../../main/modules/aos/Aos";
 import "./welcome.scss";
 
 function Welcome() {

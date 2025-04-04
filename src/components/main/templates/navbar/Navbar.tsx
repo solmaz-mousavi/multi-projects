@@ -26,7 +26,7 @@ function Navbar({ closeNavbarHandler, data }: NavbarPropsType) {
             className="mySwiper"
           >
             {data.projects.map((item) => (
-              <SwiperSlide key={item.title}>
+              <SwiperSlide key={item.id}>
                 <div className="navbar-thumbnail" onClick={closeNavbarHandler}>
                   <div className="navbar-thumbnail_top">
                     <img
@@ -42,9 +42,9 @@ function Navbar({ closeNavbarHandler, data }: NavbarPropsType) {
                     {item.description}
                   </p>
 
-                  {item.packages.map((pack, index) => (
+                  {item.packages.map((pack) => (
                     <Button
-                      key={index}
+                      key={pack}
                       type="link"
                       variant="grey"
                       text={`${

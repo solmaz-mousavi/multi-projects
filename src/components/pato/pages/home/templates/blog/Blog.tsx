@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import "./blog.scss";
-import Button from "../../../../main/modules/button/Button";
-import Aos from "../../../../main/modules/aos/Aos";
-import { BlogDataType } from "../../../../../dataTypes/patoData.type";
+import { BlogDataType } from "../../../../../../dataTypes/patoData.type";
+import Aos from "../../../../../main/modules/aos/Aos";
+import Button from "../../../../../main/modules/button/Button";
 
 function Blog({ data }: { data: BlogDataType[] }) {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ function Blog({ data }: { data: BlogDataType[] }) {
         <div className="pato-home-blog-content">
           {data &&
             data.slice(0,3).map((item) => (
-              <div className="pato-home-blog-content-container">
+              <div key={item.id} className="pato-home-blog-content-container">
                 <div className="pato-image-hover-wrapper">
                   <img
                     className="pato-home-blog-content__image"

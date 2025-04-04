@@ -10,14 +10,12 @@ import {
   phoneValidator,
   requiredStringValidator,
 } from "../../../../validators/rules";
-import Aos from "../../../main/modules/aos/Aos";
 import Form from "../../../main/modules/form/Form";
+import Header from "../../templates/header/Header";
 import "./reservation.scss";
 
 function Reservation() {
 	const today = new Date().toString();
-
-	console.log(dateFormatter(today, 3));
   const inputs: IFormInputType[] = [
     {
       tag: "input",
@@ -141,14 +139,11 @@ function Reservation() {
 
   return (
     <section className="pato-reservation-container">
-      <div className="pato-header pato-reservation-header">
-        <Aos aosStyle="fadeInUp" once={true}>
-          <p className="pato-top-title">reservation</p>
-          <h3 className="pato-title">book a table</h3>
-        </Aos>
-      </div>
+			<Header title="book a table" topTitle="reservation" section={true} />
+
       <div className="pato-reservation-content">
         <Form inputs={inputs} buttons={buttons} submitHandler={submitHandler} />
+
         <div className="pato-reservation-bottom">
           <div className="pato-reservation-bottom__item">
             <div className="pato-subtitle">Reserve by Phone</div>

@@ -3,12 +3,12 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
-import { EventsDataType } from "../../../../../dataTypes/patoData.type";
+import { EventsDataType } from "../../../../../../dataTypes/patoData.type";
 import { useNavigate } from "react-router-dom";
-import { remainDays, remainHours } from "../../../../../utils/remainTime";
-import { dateFormatter } from "../../../../../utils/dateFormatter";
-import Button from "../../../../main/modules/button/Button";
-import Aos from "../../../../main/modules/aos/Aos";
+import { remainDays, remainHours } from "../../../../../../utils/remainTime";
+import { dateFormatter } from "../../../../../../utils/dateFormatter";
+import Button from "../../../../../main/modules/button/Button";
+import Aos from "../../../../../main/modules/aos/Aos";
 import "./events.scss";
 
 function Events({ data }: { data: EventsDataType[] }) {
@@ -39,11 +39,11 @@ function Events({ data }: { data: EventsDataType[] }) {
           loop={true}
         >
           {data &&
-            data.map((item, index) => {
+            data.map((item) => {
               const remDay = Number(remainDays(item.date));
               const remHour = Number(remainHours(item.time));
               return (
-                <SwiperSlide className="pato-home__events-item" key={index}>
+                <SwiperSlide className="pato-home__events-item" key={item.id}>
                   <div className="pato-home__events-item-time">
                     <p>
                       {item.time} - {dateFormatter(item.date, 1)}

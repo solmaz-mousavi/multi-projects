@@ -27,7 +27,7 @@ function Works({ data }: { data: WorksDataType[] }) {
           {data && (
             <>
               {data.map((item, index) => (
-                <div key={index}
+                <div key={item.id}
                   className={`work-item work-item__${index + 1}`}
                   title={item.title}
                   onClick={() => sliderHandler(index)}
