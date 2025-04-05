@@ -8,22 +8,24 @@
 
     .pato-blog-main-container {
       width: 70%;
-      padding: 50px 20px;
+      padding: 50px;
       border-right: 1px solid #efefef;
     }
     .pato-blog-sidebar {
       width: 30%;
-      padding: 50px 20px;
+      padding: 50px;
       & > div {
         max-width: 300px;
+				padding: 30px 0;
+				.pato-subtitle {
+          padding: 20px 0;
+        }
       }
 			.pato-blog-search-container{
-				margin: 0 auto;
 				.form-wrapper{
 					display: flex;
 					align-items: flex-start;
 					max-width: 300px;
-					margin: 30px auto;
 					padding: 0;
 				}
 				input{
@@ -39,12 +41,9 @@
 					svg{
 						font-size: 1.5rem;
 					}
-
 				}
 			}
       .pato-blog-categories-container {
-        margin: 30px auto;
-
         .pato-blog-category {
           padding: 10px 0;
           text-transform: uppercase;
@@ -57,24 +56,9 @@
 						color: $pato-color-red;
 					}
         }
-        .pato-subtitle {
-          padding: 20px 0;
-        }
       }
 
-			.pato-blog-popular-container{
-				@include flex-center();
-				flex-direction: column;
-				gap: 10px;
-				margin: 30px auto;
-				.pato-blog-popular{
-					display: flex;
-					img{
-						width: 100px;
-						border-radius: 10px;
-					}
-				}
-			}
+
     }
   }
 }

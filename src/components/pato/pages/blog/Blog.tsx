@@ -17,6 +17,7 @@ import {
   BlogCategoryType,
   BlogDataType,
 } from "../../../../dataTypes/patoData.type";
+import PopularBlogThumb from "./components/popularBlogThumb/PopularBlogThumb";
 
 function Blog() {
   const [data, setData] = useState<BlogDataType[]>([] as BlogDataType[]);
@@ -33,7 +34,10 @@ function Blog() {
       setData(patoData.blogs);
       const allData = patoData.blogs;
       setPopularData(
-        allData.slice().sort((a, b) => b.comments.length - a.comments.length).slice(0,3)
+        allData
+          .slice()
+          .sort((a, b) => b.comments.length - a.comments.length)
+          .slice(0, 3)
       );
     }
   }, [patoData]);
@@ -122,18 +126,12 @@ function Blog() {
                   </div>
                 ))}
             </div>
-            <div className="pato-blog-popular-container">{popularData && popularData.map(item => (
-							<div className="pato-blog-popular">
-								<img src={item.image} alt={item.title} />
-								<div className="pato-blog-popular-details">
-									<p className="pato-subtitle">{item.title}</p>
-									<p className="pato-desc">{item.date}</p>
-									<p className="pato-desc">{item.comments.length} comments</p>
-								</div>
-
-							</div>
-						))}</div>
-            <div className="pato-blog-archive"></div>
+            <div className="pato-blog-popular-container">
+              {popularData &&
+                popularData.map((item) => (
+                  <PopularBlogThumb {...item} comment={item.comments.length} />
+                ))}
+            </div>
           </div>
         </div>
       )}

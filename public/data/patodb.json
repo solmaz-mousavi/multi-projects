@@ -102,7 +102,7 @@
           "date": "2025-02-01",
           "desc": "Aenean pharetra tortor dui in pellentesque"
         },
-				{
+        {
           "id": "03",
           "name": "John dff",
           "city": "New York",
@@ -284,42 +284,42 @@
           "date": "2025-02-01",
           "desc": "Aenean pharetra tortor dui in pellentesque"
         },
-				{
+        {
           "id": "02",
           "name": "John dff",
           "city": "New York",
           "date": "2025-02-01",
           "desc": "Aenean pharetra tortor dui in pellentesque Aenean pharetra tortor dui in pellentesque Aenean pharetra tortor dui in pellentesque"
         },
-				{
+        {
           "id": "03",
           "name": "John dff",
           "city": "New York",
           "date": "2025-02-01",
           "desc": "Aenean pharetra tortor dui in pellentesque Aenean pharetra tortor dui in pellentesque Aenean pharetra tortor dui in pellentesque"
         },
-				{
+        {
           "id": "04",
           "name": "John dff",
           "city": "New York",
           "date": "2025-02-01",
           "desc": "Aenean pharetra tortor dui in pellentesque Aenean pharetra tortor dui in pellentesque"
         },
-				{
+        {
           "id": "05",
           "name": "John dff",
           "city": "New York",
           "date": "2025-02-01",
           "desc": "Aenean pharetra tortor dui in pellentesque Aenean pharetra tortor dui in pellentesque Aenean pharetra tortor dui in pellentesque"
         },
-				{
+        {
           "id": "06",
           "name": "John dff",
           "city": "New York",
           "date": "2025-02-01",
           "desc": "Aenean pharetra tortor dui in pellentesque"
         },
-				{
+        {
           "id": "07",
           "name": "John dff",
           "city": "New York",
@@ -526,7 +526,7 @@
           "date": "2025-02-01",
           "desc": "Aenean pharetra tortor dui in pellentesque"
         },
-				{
+        {
           "id": "04",
           "name": "John dff",
           "city": "New York",
@@ -548,7 +548,7 @@
           "date": "2025-02-01",
           "desc": "Aenean pharetra tortor dui in pellentesque"
         },
-				{
+        {
           "id": "07",
           "name": "John dff",
           "city": "New York",
@@ -613,7 +613,7 @@
           "date": "2025-02-01",
           "desc": "Aenean pharetra tortor dui in pellentesque Aenean pharetra tortor dui in pellentesque Aenean pharetra tortor dui in pellentesque"
         },
-				{
+        {
           "id": "03",
           "name": "John dff",
           "city": "New York",
@@ -1120,6 +1120,26 @@
       "date": "2025-03-20",
       "author": "John Will",
       "categories": ["food", "events"]
+    }
+  ],
+  "chefs": [
+    {
+      "id": "01",
+      "name": "Peter Hart",
+      "image": "/assets/images/pato/about/chef/avatar-01.jpg",
+      "desc": "Donec porta eleifend mauris ut effici-tur. Quisque non velit vestibulum, lob-ortis mi eget, rhoncus nunc."
+    },
+    {
+      "id": "02",
+      "name": "Joyce Bowman",
+      "image": "/assets/images/pato/about/chef/avatar-02.jpg",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies felis a sem tempus tempus."
+    },
+    {
+      "id": "03",
+      "name": "John Smith",
+      "image": "/assets/images/pato/about/chef/avatar-03.jpg",
+      "desc": "Phasellus aliquam libero a nisi varius, vitae placerat sem aliquet. Ut at velit nec ipsum iaculis posuere quis in sapien."
     }
   ]
 }

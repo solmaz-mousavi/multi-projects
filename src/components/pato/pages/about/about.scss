@@ -1,0 +1,42 @@
+@import "/src/styles/variables";
+@import "/src/styles/base";
+
+.pato-about-container {
+  background-color: #f3efea;
+  text-align: center;
+
+  .pato-about-item-container {
+    max-width: 1200px;
+    margin: 0 auto;
+		padding: 100px 0;
+		width: 100%;
+    .pato-top-title {
+      color: $pato-color-red;
+    }
+    .pato-title {
+      margin-bottom: 30px;
+    }
+		.pato-about-item {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      margin: 100px auto;
+      .pato-about-details {
+        @include flex-center();
+        flex-direction: column;
+        width: 500px;
+        .pato-top-title {
+          color: $pato-color-red;
+        }
+      }
+      .pato-image-hover-wrapper {
+        width: 400px;
+        height: 400px;
+      }
+    }
+		.pato-about-chef-wrapper{
+@include flex-center();
+		}
+  }
+
+}

@@ -19,14 +19,14 @@ export type IntroDataType = {
 };
 
 export type MenuItemType = {
-	id:string;
+  id: string;
   title: string;
   image?: string;
   desc: string;
   price: number;
 };
 export type MenuDataType = {
-	id: string;
+  id: string;
   category: string;
   image: string;
   main: boolean;
@@ -67,6 +67,11 @@ export type GalleryDataType = {
   categories: GalleryCategoryType[];
 };
 
+type ChefKeyType = "id" | "name" | "image" | "desc";
+export type ChefDataType = {
+  [index in ChefKeyType]: string;
+};
+
 export type PatoDataType = {
   navbar: NavbarDataType[];
   social: SocialDataType[];
@@ -79,4 +84,5 @@ export type PatoDataType = {
   blogs: BlogDataType[];
   galleryCategory: GalleryCategoryType[];
   gallery: GalleryDataType[];
+  chefs: ChefDataType[];
 };
