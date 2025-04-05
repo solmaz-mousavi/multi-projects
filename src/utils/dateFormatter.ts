@@ -8,22 +8,22 @@ const weakDays = [
   "saturday",
 ];
 const months = [
-  "january",
-  "fabruary",
-  "march",
-  "april",
-  "may",
-  "june",
-  "july",
-  "august",
-  "september",
-  "october",
-  "november",
-  "december",
+  "January",
+  "Fabruary",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
 ];
 
-type dateFormatType = 1 | 2 | 3;
-export const dateFormatter = (date: string, type: number) => {
+type dateFormatType = 1 | 2 | 3 |4 |5;
+export const dateFormatter = (date: string, type: dateFormatType) => {
   const eventDate = new Date(date);
   const eventYear = eventDate.getFullYear();
   const eventMonthDigit =
@@ -43,5 +43,11 @@ export const dateFormatter = (date: string, type: number) => {
 
     case 3:
       return `${eventYear}-${eventMonthDigit}-${eventDayDigit}`;
+
+			case 4:
+				return `${eventDayDigit}`;
+
+				case 5:
+					return `${eventMonthName.slice(0,3)}, ${eventYear}`;
   }
 };

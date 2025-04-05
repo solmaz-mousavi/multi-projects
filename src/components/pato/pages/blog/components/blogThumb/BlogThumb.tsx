@@ -1,23 +1,7 @@
-import { BlogCategoryType } from "../../../../../../dataTypes/patoData.type";
+import { BlogCategoryType, BlogDataType } from "../../../../../../dataTypes/patoData.type";
+import { dateFormatter } from "../../../../../../utils/dateFormatter";
 import Button from "../../../../../main/modules/button/Button";
 import "./blogThumb.scss";
-type BlogThumbPropsType = {
-  date: string;
-  desc: string;
-  title: string;
-  image: string;
-  author: string;
-  id: string;
-  categories: BlogCategoryType[];
-  comments: {
-    date: string;
-    desc: string;
-    name: string;
-    id: string;
-    city: string;
-  }[];
-};
-
 function BlogThumb({
   date,
   desc,
@@ -26,7 +10,7 @@ function BlogThumb({
   author,
   categories,
   comments,
-}: BlogThumbPropsType) {
+}: BlogDataType) {
   return (
     <div className="pato-blog-thumb-container">
       <div className="pato-blog-image pato-image-hover-wrapper">
@@ -37,13 +21,17 @@ function BlogThumb({
         by {author} | {date} | {categories.join(",")} | {comments.length}{" "}
         comments{" "}
       </p>
-      <p className="pato-desc">{desc}</p>
+      <p className="pato-desc pato-blog-description">{desc}</p>
       <Button
         text="continue reading"
         variant="pato-transparent"
         border={false}
         icon={{ name: "MdArrowRightAlt" }}
       />
+			<div className="pato-blog-date">
+				<p className="day">{dateFormatter(date, 4)}</p>
+				<p>{dateFormatter(date, 5)}</p>
+			</div>
     </div>
   );
 }

@@ -2,8 +2,8 @@ import useFetch from "../../../../hooks/useFetch";
 import Error from "../../../main/templates/error/Error";
 import Loader from "../../../main/templates/loader/Loader";
 import Header from "../../templates/header/Header";
-import MenuThumb from "./modules/menuThumb/menuThumb";
-import MainMenuThumb from "./modules/mainMenuThumb/MainMenuThumb";
+import MenuThumb from "./components/menuThumb/menuThumb";
+import MainMenuThumb from "./components/mainMenuThumb/MainMenuThumb";
 import "./menu.scss";
 
 function Menu() {

@@ -1,4 +1,5 @@
-import Aos from "../../../../../main/modules/aos/Aos";
+
+import Aos from "../../../../main/modules/aos/Aos";
 import "./galleryThumb.scss";
 type GalleryThumbPropsType = {
   index: number;

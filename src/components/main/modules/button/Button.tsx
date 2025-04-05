@@ -1,5 +1,5 @@
 import { ButtonType } from "../../../../dataTypes/buttonData.type";
-import Icon, { IconPropsType } from "../icon/Icon";
+import Icon from "../icon/Icon";
 import "./button.scss";
 
 

@@ -1,9 +1,9 @@
 import "./works.scss";
 import { FaLink, FaPlus } from "react-icons/fa6";
-import WorksSlider from "./worksSlider/WorksSlider";
 import { WorksDataType } from "../../../../dataTypes/glintData.type";
 import Aos from "../../../main/modules/aos/Aos";
 import { useState } from "react";
+import SliderModal from "../../../main/modules/sliderModal/SliderModal";
 
 function Works({ data }: { data: WorksDataType[] }) {
   const [showWorksSlider, setShowWorksSlider] = useState<boolean>(false);
@@ -13,7 +13,10 @@ function Works({ data }: { data: WorksDataType[] }) {
     setSlideNumber(index);
   };
   return (
-    <section id="Glint-Works" className="glint-section-container glint-works-container">
+    <section
+      id="Glint-Works"
+      className="glint-section-container glint-works-container"
+    >
       <div id="Glint-WorksTop" className="works-header">
         <Aos aosStyle="fadeInUp" once={true}>
           <p className="glint-top-title works-header__top">Recent Works </p>
@@ -27,7 +30,8 @@ function Works({ data }: { data: WorksDataType[] }) {
           {data && (
             <>
               {data.map((item, index) => (
-                <div key={item.id}
+                <div
+                  key={item.id}
                   className={`work-item work-item__${index + 1}`}
                   title={item.title}
                   onClick={() => sliderHandler(index)}
@@ -53,10 +57,10 @@ function Works({ data }: { data: WorksDataType[] }) {
       </div>
       {showWorksSlider && (
         <div className="modal-wrapper">
-          <WorksSlider
+          <SliderModal
             data={data}
-            setShowWorksSlider={setShowWorksSlider}
             slideNumber={slideNumber}
+            setShowSlider={setShowWorksSlider}
           />
         </div>
       )}

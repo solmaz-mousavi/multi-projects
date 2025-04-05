@@ -6,7 +6,7 @@ import { intersection } from "../../../../utils/arrayIntersection";
 import Pagination from "../../../main/modules/pagination/Pagination";
 import SliderModal from "../../../main/modules/sliderModal/SliderModal";
 import Header from "../../templates/header/Header";
-import GalleryThumb from "./modules/galleryThumb/GalleryThumb";
+import GalleryThumb from "./galleryThumb/GalleryThumb";
 import "./gallery.scss";
 
 function Gallery() {
@@ -83,7 +83,7 @@ function Gallery() {
               />
             ))}
       </div>
-      <div>
+      
         {data && (
           <div className="pato-gallery-pagination-wrapper">
             <Pagination
@@ -94,7 +94,7 @@ function Gallery() {
             />
           </div>
         )}
-      </div>
+      
       {data && gallerySliderShow && (
         <div className="modal-wrapper">
           <SliderModal
