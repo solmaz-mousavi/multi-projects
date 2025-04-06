@@ -1,0 +1,60 @@
+@use "/src/styles/global.scss" as *;
+
+.modal-container {
+	@include flex-center;
+  position: fixed;
+  inset: 0;
+  background-color: #000000aa;
+  z-index: 50;
+  .modal {
+    background-color: #fff;
+    display: inline-block;
+    height: 250px;
+		width: 400px;
+		border-radius: 10px;
+    .modal-details {
+			@include flex-center;
+			height: 180px;
+			padding: 20px;
+			border-bottom: 1px solid #e0e0e0;
+			.modal-icon{
+				width: 100px;
+			}
+			.modal-txt{
+				text-align: center;
+				.modal-title{
+					font-weight: bold;
+					color: #555;
+				}
+				.modal-desc{
+					color: #555;
+				}
+
+			}
+    }
+		.modal-btn-container{
+
+			.modal-btn-icon{
+
+			}
+			.modal-btn{
+
+			}
+			.success{
+
+			}
+			.error{
+
+			}
+			.warning{
+
+			}
+			.info{
+
+			}
+			.grey{
+				
+			}
+		}
+  }
+}

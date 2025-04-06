@@ -14,6 +14,7 @@ import Clients from "./templates/clients/Clients";
 import Contact from "./templates/contact/Contact";
 import Footer from "./templates/footer/Footer";
 import "./glint.scss";
+import Modal from "../main/templates/modal/Modal";
 
 function GlintIndex() {
   const { glintData, pending, error } = useFetch({
@@ -51,6 +52,9 @@ function GlintIndex() {
             teamMembersData={glintData.teamMembers}
           />
           <Contact data={glintData.social} />
+					<Modal title="test" desc="are you sure?" button={[{title:"yes",
+variant:"success",
+clickHandler:()=> console.log("dsfbgfbh")}]}/>
 					<Footer/>
         </div>
       )}

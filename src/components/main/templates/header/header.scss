@@ -1,8 +1,8 @@
 @use "/src/styles/global.scss" as *;
 
 .main-header-container {
-	@include flex-space-between;
-	width: 100%;
+  @include flex-space-between;
+  width: 100%;
   height: 60px;
   position: relative;
   top: 0;
@@ -11,33 +11,42 @@
   z-index: 11;
 }
 
-.main-navbar-wrapper , .main-contactInfo-wrapper {
+.main-navbar-wrapper,
+.main-contactInfo-wrapper {
   position: relative;
   top: -40px;
   height: 0;
   opacity: 0;
   transition: $main-transition;
-	pointer-events:none;
+  pointer-events: none;
   z-index: -1;
 }
-.main-navbar-wrapper.show, .main-contactInfo-wrapper.show {
+.main-navbar-wrapper.show,
+.main-contactInfo-wrapper.show {
   height: auto;
   opacity: 1;
   top: 0px;
-	pointer-events:all;
+  pointer-events: all;
   z-index: 10;
 }
 
 @media screen and (max-width: 768px) {
   .main-header-container {
     height: 50px;
-		padding: 0px 30px;
+    padding: 0px;
   }
 }
 
 @media screen and (max-width: 412px) {
   .main-header-container {
     height: 40px;
-		padding: 0px 20px;
+    padding: 0px;
+    margin: 0;
+    * {
+      font-size: 0.9rem;
+    }
+    .btn {
+      padding: 5px 10px;
+    }
   }
 }
