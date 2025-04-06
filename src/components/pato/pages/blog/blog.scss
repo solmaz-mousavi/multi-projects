@@ -5,14 +5,13 @@
   background-color: #fff;
   .pato-blog-content {
     display: flex;
+		justify-content: center;
 
     .pato-blog-main-container {
-      width: 70%;
       padding: 50px;
       border-right: 1px solid #efefef;
     }
     .pato-blog-sidebar {
-      width: 30%;
       padding: 50px;
       & > div {
         max-width: 300px;

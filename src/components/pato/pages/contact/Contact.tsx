@@ -1,3 +1,8 @@
+import {
+  MdCall,
+  MdLocationOn,
+  MdOutlineAccessTimeFilled,
+} from "react-icons/md";
 import { ButtonType } from "../../../../dataTypes/buttonData.type";
 import {
   IFormInputType,
@@ -59,7 +64,7 @@ function Contact() {
       initialValue: "",
       validators: [emailValidator()],
     },
-		{
+    {
       tag: "textarea",
       placeholder: "Message",
       className: "pato-contact-textarea",
@@ -86,24 +91,53 @@ function Contact() {
   const submitHandler: (values: ValuesType) => void = (items) => {
     console.log(items);
   };
+
   return (
     <section className="pato-contact-container">
       <Header title="contact" section={true} />
 
+      <h3 className="pato-subtitle">Find us here</h3>
+      <div id="googleMap">
+        <iframe
+          width="100%"
+          height="300"
+          className="location"
+          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Shariati%20street,%20Tehran,%20Iran+(pato%20restaurant)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+        >
+          <a href="https://www.gps.ie/collections/drones/">buy drones</a>
+        </iframe>
+      </div>
 
+      <h3 className="pato-subtitle">Send us a message</h3>
+      <Form inputs={inputs} buttons={buttons} submitHandler={submitHandler} />
 
-
-
-			<Form inputs={inputs} buttons={buttons} submitHandler={submitHandler} />
-
-
-
-
-
-
-
-
-
+      <div className="pato-contact-bottom">
+        <div className="pato-contact-bottom-item">
+          <MdLocationOn className="pato-contact-bottom-icon"/>
+          <div className="pato-contact-bottom-details">
+            <h3 className="pato-subtitle">location</h3>
+            <address className="pato-desc">
+              8th floor, 379 Hudson St, New York, NY 10018
+            </address>
+          </div>
+        </div>
+        <div className="pato-contact-bottom-item">
+          <MdCall className="pato-contact-bottom-icon"/>
+          <div className="pato-contact-bottom-details">
+            <h3 className="pato-subtitle">call us</h3>
+            <a href="tel:+1967166879" className="pato-desc">
+              (+1) 96 716 6879
+            </a>
+          </div>
+        </div>
+        <div className="pato-contact-bottom-item">
+          <MdOutlineAccessTimeFilled className="pato-contact-bottom-icon"/>
+          <div className="pato-contact-bottom-details">
+            <h3 className="pato-subtitle">openning hours</h3>
+            <p className="pato-desc">09:30 AM - 11:00 PM Every Day</p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
