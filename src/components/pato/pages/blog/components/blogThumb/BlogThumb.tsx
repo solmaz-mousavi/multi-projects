@@ -1,4 +1,4 @@
-import { BlogCategoryType, BlogDataType } from "../../../../../../dataTypes/patoData.type";
+import { BlogDataType } from "../../../../../../dataTypes/patoData.type";
 import { dateFormatter } from "../../../../../../utils/dateFormatter";
 import Button from "../../../../../main/modules/button/Button";
 import "./blogThumb.scss";

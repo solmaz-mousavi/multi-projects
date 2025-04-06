@@ -25,7 +25,7 @@ function Footer() {
       fullWidth: true,
 
       name: "email",
-      initialValue: "",
+      initialvalue: "",
       validators: [requiredStringValidator(), emailValidator()],
     },
   ];

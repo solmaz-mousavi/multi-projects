@@ -1,15 +1,11 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .pato-home-intro-container {
   background-color: #fff;
-
   .pato-home-intro-content {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+		@include flex-center;
     gap: 30px;
+    padding: 20px;
     .pato-home-intro-content-container {
       padding: 40px 0;
       .pato-home-intro-content__image {

@@ -37,7 +37,7 @@ function Footer({ socialData, galleryData }: FooterPropsType) {
       fullWidth: true,
 
       name: "email",
-      initialValue: "",
+      initialvalue: "",
       validators: [requiredStringValidator(), emailValidator()],
     },
   ];

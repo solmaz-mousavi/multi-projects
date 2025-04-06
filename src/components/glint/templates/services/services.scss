@@ -1,9 +1,7 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .glint-services-container {
-  @include flex-center();
-  flex-direction: column;
+  @include flex-center-column;
   background-color: #fff;
   text-align: center;
 
@@ -18,9 +16,9 @@
   }
 
   .service-item-container {
-    @include flex-center();
-    max-width: 1200px;
+    @include flex-center;
     flex-wrap: wrap;
+    max-width: 1200px;
     padding: 20px 0px;
 
     .service-item-thumbnail {

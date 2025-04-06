@@ -1,8 +1,7 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .main-navbar-container {
-	@include fullWidth();
+	width: 100%;
   background-color: $main-color-gray;
   transition: $main-transition;
   position: fixed;
@@ -17,7 +16,7 @@
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 
     .navbar-thumbnail_top {
-			@include flex-center();
+			@include flex-center;
       justify-content: stretch;
       border-bottom: 1px solid $main-color-gray;
 
@@ -27,7 +26,7 @@
         border-radius: 5px;
       }
       .navbar-thumbnail_title {
-				@include fullWidth();
+				width: 100%;
         text-align: center;
         color: #fff;
       }

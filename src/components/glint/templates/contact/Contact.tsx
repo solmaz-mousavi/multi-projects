@@ -25,7 +25,7 @@ function Contact({ data }: { data: SocialDataType[] }) {
       border: false,
 
       name: "username",
-      initialValue: "",
+      initialvalue: "",
       validators: [requiredStringValidator()],
     },
     {
@@ -40,7 +40,7 @@ function Contact({ data }: { data: SocialDataType[] }) {
       border: false,
 
       name: "email",
-      initialValue: "",
+      initialvalue: "",
       validators: [requiredStringValidator(), emailValidator()],
     },
     {
@@ -55,7 +55,7 @@ function Contact({ data }: { data: SocialDataType[] }) {
       border: false,
 
       name: "phone",
-      initialValue: "",
+      initialvalue: "",
       validators: [requiredStringValidator(), phoneValidator()],
     },
     {
@@ -70,7 +70,7 @@ function Contact({ data }: { data: SocialDataType[] }) {
       border: false,
 
       name: "subject",
-      initialValue: "",
+      initialvalue: "",
       validators: [requiredStringValidator()],
     },
     {
@@ -85,7 +85,7 @@ function Contact({ data }: { data: SocialDataType[] }) {
       border: false,
 
       name: "message",
-      initialValue: "",
+      initialvalue: "",
       validators: [requiredStringValidator()],
     },
   ];

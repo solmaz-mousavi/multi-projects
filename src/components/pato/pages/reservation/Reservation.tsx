@@ -29,7 +29,7 @@ function Reservation() {
 
       variant: "light",
       name: "date",
-      initialValue: dateFormatter(today, 3) || "",
+      initialvalue: dateFormatter(today, 3) || "",
       validators: [pastDateValidator(), requiredStringValidator()],
     },
     {
@@ -44,7 +44,7 @@ function Reservation() {
 
       variant: "light",
       name: "time",
-      initialValue: "12:00",
+      initialvalue: "12:00",
       validators: [],
       selectValues: [
         "12:00",
@@ -69,7 +69,7 @@ function Reservation() {
 
       variant: "light",
       name: "people",
-      initialValue: 1,
+      initialvalue: 1,
       validators: [],
       min: 1,
       max: 12,
@@ -87,7 +87,7 @@ function Reservation() {
 
       variant: "light",
       name: "name",
-      initialValue: "",
+      initialvalue: "",
       validators: [requiredStringValidator()],
     },
     {
@@ -103,7 +103,7 @@ function Reservation() {
 
       variant: "light",
       name: "phone",
-      initialValue: "",
+      initialvalue: "",
       validators: [requiredStringValidator(), phoneValidator()],
     },
     {
@@ -119,7 +119,7 @@ function Reservation() {
 
       variant: "light",
       name: "email",
-      initialValue: "",
+      initialvalue: "",
       validators: [emailValidator()],
     },
   ];

@@ -1,5 +1,4 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 #glint {
   overflow-y: auto;
@@ -7,10 +6,8 @@
   scroll-behavior: smooth;
 }
 
-
-
 .glint-section-container {
-  @include flex-center();
+  @include flex-center;
   padding: 50px 0px;
   min-height: 100vh;
 }

@@ -1,13 +1,11 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .pato-contact-container {
   background-color: #efefef;
   text-align: center;
   .form-wrapper {
-    @include flex-center();
+    @include flex-align-start;
     flex-wrap: wrap;
-    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0;
@@ -60,14 +58,11 @@
   }
 
   .pato-contact-bottom {
-    @include flex-center();
-    align-items: flex-start;
+    @include flex-align-start;
 		gap: 50px;
 		padding: 100px 0;
     .pato-contact-bottom-item {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
+      @include flex-align-start;
       gap: 20px;
       color: #555;
 

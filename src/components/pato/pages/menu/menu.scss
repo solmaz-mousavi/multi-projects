@@ -1,11 +1,8 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .pato-menu-container {
   .pato-menu-category-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+		@include flex-align-start;
     flex-wrap: wrap;
     background-color: #efefef;
     padding: 30px;

@@ -1,8 +1,6 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .pato-reservation-container {
-
   .pato-reservation-content {
     background-color: #efefef;
 		padding: 50px 0;
@@ -38,8 +36,7 @@
       }
     }
     .pato-reservation-bottom {
-			@include flex-center();
-			align-items: flex-start;
+			@include flex-align-start;
 			max-width: 1200px;
 			margin: 40px auto;
 			

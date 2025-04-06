@@ -34,7 +34,7 @@ function useFetch({url, project}: PropsType) {
       .catch((err) => {
         setError(err.message);
       });
-  }, []);
+  }, [project, url]);
 
 	if(project === "main"){
 		return { mainData, pending, error };

@@ -1,9 +1,8 @@
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .main-loader-container {
-  @include full();
-  @include flex-center();
-  flex-direction: column;
+  @include full;
+  @include flex-center-column;
   background-color: rgba(0, 0, 0, 0.5);
 
   .loader-txt {
@@ -15,5 +14,5 @@
 }
 
 .fullScreen {
-  @include fullScreen();
+  @include fullscreen;
 }

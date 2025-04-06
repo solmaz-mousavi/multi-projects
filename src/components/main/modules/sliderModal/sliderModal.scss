@@ -1,3 +1,5 @@
+@use "/src/styles/global.scss" as *;
+
 .main-slider-container {
   position: fixed;
   top: 0;
@@ -8,15 +10,10 @@
   z-index: 20;
   .slider__slides {
     .slide-item {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
+			@include flex-center-column;
 			height: 100vh;
       .image-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         max-width: 700px;
         max-height: 70vh;
         width: 100%;
@@ -73,16 +70,14 @@
             border-radius: 5px 0 5px 5px;
             padding: 10px;
             opacity: 0;
-						transition: all ease-out 400ms;
+						transition: $main-transition;
             & * {
               color: #aaa;
 							display: none;
             }
             .context-item {
+							@include flex-center;
               display: block;
-              display: flex;
-              justify-content: center;
-              align-items: center;
               gap: 5px;
               padding: 5px 20px;
               cursor: pointer;
@@ -96,7 +91,7 @@
     }
     .swiper-button-prev::after,
     .swiper-button-next::after {
-      color: var(--main-color-semi-white);
+      color: #ffffff50;
     }
   }
 }

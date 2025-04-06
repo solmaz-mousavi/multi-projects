@@ -1,15 +1,14 @@
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .main-error-container {
-  @include flex-center();
+  @include flex-center-column;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  flex-direction: column;
   color: #da4646d8;
 
   .error-top {
-    @include flex-center();
+    @include flex-center;
     gap: 10px;
 
     .error-icon {
@@ -28,5 +27,5 @@
 }
 
 .fullScreen {
-  @include fullScreen();
+  @include fullscreen;
 }

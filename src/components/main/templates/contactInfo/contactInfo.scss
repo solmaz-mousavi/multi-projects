@@ -1,22 +1,19 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .main-contactInfo-container {
-  @include fullWidth();
-  @include flex-center();
-  justify-content: flex-start;
+  @include flex-justify-start;
+	width: 100%;
   background-color: $main-color-gray;
   transition: $main-transition;
   padding: 10px 50px;
   position: fixed;
 
   .contactInfo-image img {
-    width: 100px;
-    height: 100px;
+    @include fullscreen;
     border-radius: 100%;
   }
   .contactInfo-info {
-    @include flex-center();
+    @include flex-center;
     justify-content: stretch;
     gap: 50px;
     padding-left: 30px;

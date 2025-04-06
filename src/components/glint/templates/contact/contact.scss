@@ -1,4 +1,4 @@
-@import "/src/styles/variables";
+@use "/src/styles/global.scss" as *;
 
 .glint-contacts-container {
   height: calc(100vh - 60px);

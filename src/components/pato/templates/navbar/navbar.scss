@@ -1,5 +1,4 @@
-@import "/src/styles/base";
-@import "/src/styles/variables";
+@use "/src/styles/global.scss" as *;
 
 .pato-navbar-wrapper {
   @include flex-center;

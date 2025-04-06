@@ -1,10 +1,10 @@
 import useFetch from "../../../../hooks/useFetch";
 import Header from "../../templates/header/Header";
-import "./about.scss";
 import ChefThumb from "./chefThumb/ChefThumb";
+import "./about.scss";
 
 function About() {
-  const { patoData, pending, error } = useFetch({
+  const { patoData } = useFetch({
     url: "/data/patodb.json",
     project: "pato",
   });
@@ -74,7 +74,7 @@ function About() {
 				<div className="pato-about-chef-wrapper">
 
 				{patoData?.chefs && patoData.chefs.map((item) => (
-					<ChefThumb {...item} />
+					<ChefThumb {...item} key={item.id} />
 				))}
 				</div>
       </div>

@@ -1,5 +1,4 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 #pato {
   overflow-y: auto;
@@ -30,7 +29,7 @@
   font-size: 1rem;
 }
 .pato-image-hover-wrapper {
-	@include flex-center();
+	@include flex-center;
   border-radius: 10px;
   overflow: hidden;
 	&:hover img{
@@ -47,8 +46,7 @@
 }
 
 .pato-header {
-  @include flex-center();
-  flex-direction: column;
+  @include flex-center-column;
   text-align: center;
   background-image: url("../../../public/assets/images/pato/header.jpg");
   background-attachment: fixed;

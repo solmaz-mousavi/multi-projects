@@ -1,5 +1,4 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .pato-gallery-item {
 	width: 300px;

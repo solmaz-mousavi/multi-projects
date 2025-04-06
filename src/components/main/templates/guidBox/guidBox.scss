@@ -1,11 +1,10 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .main-guidbox-wrapper {
   position: relative;
   z-index: 20;
   .guidbox {
-		@include fullScreen();
+		@include fullscreen;
     position: fixed;
     inset: 0;
     background-color: transparent;

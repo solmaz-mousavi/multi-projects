@@ -1,8 +1,7 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .pato-home-welcome-container {
-  @include flex-center();
+  @include flex-center;
   padding: 50px;
   background-color: #eee;
   .pato-home-welcome__txt {

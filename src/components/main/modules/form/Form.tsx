@@ -21,8 +21,8 @@ export default function Form({
 }: FormPropsType) {
   const formInitialValues: ValuesType = {};
   inputs.forEach((input) => {
-    const { name, initialValue } = input;
-    formInitialValues[name] = initialValue;
+    const { name, initialvalue } = input;
+    formInitialValues[name] = initialvalue;
   });
 
   const formik = useFormik({

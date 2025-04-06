@@ -1,8 +1,7 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .glint-menu-wrapper {
-  @include flex-center();
+  @include flex-center;
   gap: 15px;
   position: fixed;
   right: 40px;

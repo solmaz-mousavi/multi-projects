@@ -1,5 +1,5 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
+
 @mixin inputColor($color) {
   background-color: transparentize($color, 0.9);
   &.border:focus {

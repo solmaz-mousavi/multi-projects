@@ -1,5 +1,4 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .glint-footer-container {
   background-color: #000;
@@ -8,8 +7,7 @@
   margin: 0 auto;
 	border-top: 1px solid #333;
   .footer-top {
-    @include flex-center();
-		align-items: start;
+    @include flex-align-start;
     gap: 20px;
     padding-bottom: 50px;
     .footer-top__left {
@@ -31,7 +29,7 @@
     }
   }
   .footer-bottom {
-    @include flex-center();
+    @include flex-center;
     gap: 20px;
     font-size: 0.9rem;
   }

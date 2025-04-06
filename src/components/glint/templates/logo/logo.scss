@@ -1,4 +1,4 @@
-@import "/src/styles/variables";
+@use "/src/styles/global.scss" as *;
 
 .glint-logo__container {
 	position: fixed;

@@ -31,7 +31,7 @@ function Contact() {
 
       variant: "light",
       name: "name",
-      initialValue: "",
+      initialvalue: "",
       validators: [requiredStringValidator()],
     },
     {
@@ -46,7 +46,7 @@ function Contact() {
 
       variant: "light",
       name: "phone",
-      initialValue: "",
+      initialvalue: "",
       validators: [requiredStringValidator(), phoneValidator()],
     },
     {
@@ -61,7 +61,7 @@ function Contact() {
 
       variant: "light",
       name: "email",
-      initialValue: "",
+      initialvalue: "",
       validators: [emailValidator()],
     },
     {
@@ -76,7 +76,7 @@ function Contact() {
 
       variant: "light",
       name: "email",
-      initialValue: "",
+      initialvalue: "",
       validators: [requiredStringValidator()],
     },
   ];
@@ -102,6 +102,7 @@ function Contact() {
           width="100%"
           height="300"
           className="location"
+					title="pato-restaurant"
           src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Shariati%20street,%20Tehran,%20Iran+(pato%20restaurant)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         >
           <a href="https://www.gps.ie/collections/drones/">buy drones</a>

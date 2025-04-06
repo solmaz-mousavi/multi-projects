@@ -17,7 +17,10 @@ type ClientsPropsType = {
 
 function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
   return (
-    <section id="Glint-Clients" className="glint-section-container glint-clients-container">
+    <section
+      id="Glint-Clients"
+      className="glint-section-container glint-clients-container"
+    >
       <Aos aosStyle="fadeInUp" once={true}>
         <div className="glint-clients-header">
           <p className="glint-top-title clients-header__top">Our Clients</p>
@@ -26,16 +29,16 @@ function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
           </h2>
 
           <div className="clients-slider">
-            <Swiper
-              pagination={true}
-              navigation={true}
-              modules={[Pagination, Navigation]}
-              className="mySwiper"
-              slidesPerView="auto"
-              loop={true}
-            >
-              {clientsData &&
-                clientsData.map((item) => (
+            {clientsData && (
+              <Swiper
+                pagination={true}
+                navigation={true}
+                modules={[Pagination, Navigation]}
+                className="mySwiper"
+                slidesPerView="auto"
+                loop={true}
+              >
+                {clientsData.map((item) => (
                   <SwiperSlide key={item.id}>
                     <Button
                       variant="grey"
@@ -46,7 +49,8 @@ function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
                     />
                   </SwiperSlide>
                 ))}
-            </Swiper>
+              </Swiper>
+            )}
           </div>
         </div>
       </Aos>
@@ -54,15 +58,15 @@ function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
       <Aos aosStyle="fadeInUp" once={true}>
         <div className="clients-team">
           <div className="glint-team-slider">
-            <Swiper
-              navigation={{ nextEl: ".arrow-left", prevEl: ".arrow-right" }}
-              slidesPerView={1}
-              modules={[Navigation]}
-              loop={true}
-              className="mySwiper"
-            >
-              {teamMembersData &&
-                teamMembersData.map((item) => (
+            {teamMembersData && (
+              <Swiper
+                navigation={{ nextEl: ".arrow-left", prevEl: ".arrow-right" }}
+                slidesPerView={1}
+                modules={[Navigation]}
+                loop={true}
+                className="mySwiper"
+              >
+                {teamMembersData.map((item) => (
                   <SwiperSlide key={item.id}>
                     <div className="team-thumbnail">
                       <p className="team-desc">{item.desc}</p>
@@ -76,7 +80,8 @@ function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
                     </div>
                   </SwiperSlide>
                 ))}
-            </Swiper>
+              </Swiper>
+            )}
             <Icon className="arrow arrow-left" name="TbArrowRight" />
             <Icon className="arrow arrow-right" name="TbArrowLeft" />
           </div>

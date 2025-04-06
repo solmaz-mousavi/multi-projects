@@ -1,11 +1,10 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .pato-gallery-container {
   background-color: #fff;
 
   .pato-galleryCategory-wrapper {
-    @include flex-center();
+    @include flex-center;
     padding: 50px 0px;
 		
     .galleryCategory {
@@ -29,9 +28,7 @@
     }
   }
   .pato-gallery-content {
-    @include flex-center();
+    @include flex-align-start;
     flex-wrap: wrap;
-    align-items: flex-start;
-
   }
 }

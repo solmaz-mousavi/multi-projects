@@ -54,7 +54,7 @@ function Scroll({
       );
 
     }
-  }, [scrollPosition, data]);
+  }, [scrollPosition, data, breakPointsData, dynIndex]);
 
   const scrollDownHandler = () => {
     const newPosition = scrollPosition + window.innerHeight;

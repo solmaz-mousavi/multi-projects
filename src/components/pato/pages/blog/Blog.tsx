@@ -51,7 +51,7 @@ function Blog() {
       variant: "light",
 
       name: "search",
-      initialValue: "",
+      initialvalue: "",
       validators: [requiredStringValidator()],
     },
   ];
@@ -119,6 +119,7 @@ function Blog() {
               {patoData?.blogCategory &&
                 patoData.blogCategory.map((item) => (
                   <div
+                    key={item}
                     className="pato-blog-category"
                     onClick={() => filterByCategoryHandler(item)}
                   >
@@ -129,7 +130,7 @@ function Blog() {
             <div className="pato-blog-popular-container">
               {popularData &&
                 popularData.map((item) => (
-                  <PopularBlogThumb {...item} comment={item.comments.length} />
+                  <PopularBlogThumb {...item} comment={item.comments.length} key={item.id} />
                 ))}
             </div>
           </div>

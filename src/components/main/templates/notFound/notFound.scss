@@ -1,9 +1,8 @@
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .notfound-container {
-  @include flex-center();
+  @include flex-center-column;
 	height: calc(100vh - 60px);
-  flex-direction: column;
   background-color: #000;
 
   .notfound-icon {

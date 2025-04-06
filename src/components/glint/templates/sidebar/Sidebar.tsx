@@ -51,9 +51,9 @@ function Sidebar({data,
 
             <p className="sidebar-description">
               Perspiciatis hic praesentium nesciunt. Et neque a dolorum 
-              <a href="#" className="sidebar-description-link">
+              <strong className="sidebar-description-link">
 							{" "}voluptatem{" "}
-								 </a>
+								 </strong>
                porro iusto sequi veritatis libero enim. Iusto id suscipit
               veritatis neque reprehenderit.
             </p>

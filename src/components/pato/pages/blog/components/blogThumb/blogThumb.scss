@@ -1,12 +1,11 @@
+@use "/src/styles/global.scss" as *;
+
 .pato-blog-thumb-container {
-  max-width: 700px;
-  margin: 30px 0 50px auto;
-	// margin-left: auto;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+	@include flex-align-start;
   flex-direction: column;
   gap: 10px;
+  max-width: 700px;
+  margin: 30px 0 50px auto;
   position: relative;
 
   .pato-blog-description {
@@ -26,7 +25,7 @@
     max-width: 100%;
   }
   .pato-blog-date {
-    background-color: #ec1d25;
+    background-color: $pato-color-red;
     position: absolute;
     top: 20px;
     left: 20px;

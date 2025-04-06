@@ -1,5 +1,4 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .glint-home-container {
   height: calc(100vh - 60px);
@@ -11,8 +10,7 @@
   background-repeat: no-repeat;
 
   .home-txt-container {
-    @include flex-center();
-    align-items: start;
+    @include flex-align-start;
     flex-direction: column;
     height: 100%;
     padding: 0px 0px 0px 20%;
@@ -42,9 +40,8 @@
     }
   }
   .home-social-container {
-    @include flex-center();
+    @include flex-center-column;
     align-items: flex-end;
-    flex-direction: column;
     gap: 20px;
     margin: 0px 50px;
   }

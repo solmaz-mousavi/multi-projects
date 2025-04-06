@@ -1,0 +1,51 @@
+{
+  "navbar": [
+    { "id": "01", "title": "home", "route": "home" },
+    { "id": "02", "title": "menu", "route": "menu" },
+    { "id": "03", "title": "reservation", "route": "reservation" },
+    { "id": "04", "title": "gallery", "route": "gallery" },
+    { "id": "05", "title": "blog", "route": "blog" },
+    { "id": "06", "title": "about us", "route": "about" },
+    { "id": "07", "title": "contact us", "route": "contact" }
+  ],
+  "social": [
+    {
+      "id": "01",
+      "socialName": "Facebook",
+      "iconName": "FaFacebookF"
+    },
+    {
+      "id": "02",
+      "socialName": "Twitter",
+      "iconName": "FaTwitter"
+    },
+    {
+      "id": "03",
+      "socialName": "Tripadvisor",
+      "iconName": "FaTripadvisor"
+    }
+  ],
+  "courses": [
+    {
+      "id": "01",
+      "image": "/assets/images/pato/home/slider/slide01.jpg",
+      "title": "welcome to",
+      "desc": "pato place",
+      "button": { "title": "look menu", "navigate": "/pato/menu" }
+    },
+    {
+      "id": "02",
+      "image": "/assets/images/pato/home/slider/slide02.jpg",
+      "title": "know about us",
+      "desc": "pato place",
+      "button": { "title": "about us", "navigate": "/pato/about" }
+    },
+    {
+      "id": "03",
+      "image": "/assets/images/pato/home/slider/slide03.jpg",
+      "title": "have a look to",
+      "desc": "pato place",
+      "button": { "title": "look gallery", "navigate": "/pato/gallery" }
+    }
+  ]
+}

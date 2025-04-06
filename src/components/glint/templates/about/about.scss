@@ -1,5 +1,4 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 .glint-about-container {
   background-color: $glint-color-green;
@@ -20,13 +19,11 @@
     font-size: 1.7rem;
   }
   .about-status-container {
-    @include flex-center();
-    display: flex;
+    @include flex-center;
     flex-wrap: nowrap;
     padding: 50px 0px;
     .about-status {
-      @include flex-center();
-      flex-direction: column;
+      @include flex-center-column;
       width: 300px;
       .about-status__count {
         font-size: 3rem;

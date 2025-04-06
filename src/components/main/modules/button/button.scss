@@ -1,5 +1,4 @@
-@import "/src/styles/variables";
-@import "/src/styles/base";
+@use "/src/styles/global.scss" as *;
 
 @mixin buttonColor($color) {
   background-color: transparentize($color, 0.9);
@@ -21,7 +20,7 @@
 }
 
 .btn {
-  @include flex-center();
+  @include flex-center;
   display: inline-flex;
   gap: 5px;
   position: relative;

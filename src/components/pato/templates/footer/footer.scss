@@ -1,14 +1,11 @@
-@import "/src/styles/base";
-@import "/src/styles/variables";
+@use "/src/styles/global.scss" as *;
 
 .pato-footer-wrapper {
   background-color: #222;
   color: #777;
   padding-top: 50px;
   .pato-footer-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+		@include flex-align-start;
 		flex-wrap: wrap;
 		margin: 0 auto;
     .pato-footer-item {

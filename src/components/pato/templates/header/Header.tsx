@@ -1,5 +1,4 @@
 import Aos from "../../../main/modules/aos/Aos";
-import "./header.scss";
 type HeaderPropsType = {
 	title: string;
 	topTitle?: string;
