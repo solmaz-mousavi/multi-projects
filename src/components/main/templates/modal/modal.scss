@@ -1,7 +1,7 @@
 @use "/src/styles/global.scss" as *;
 
 .modal-container {
-	@include flex-center;
+  @include flex-center;
   position: fixed;
   inset: 0;
   background-color: #000000aa;
@@ -9,52 +9,60 @@
   .modal {
     background-color: #fff;
     display: inline-block;
-    height: 250px;
-		width: 400px;
-		border-radius: 10px;
+    height: 220px;
+    width: 500px;
+    border-radius: 10px;
     .modal-details {
-			@include flex-center;
-			height: 180px;
-			padding: 20px;
-			border-bottom: 1px solid #e0e0e0;
-			.modal-icon{
-				width: 100px;
-			}
-			.modal-txt{
-				text-align: center;
-				.modal-title{
-					font-weight: bold;
-					color: #555;
-				}
-				.modal-desc{
-					color: #555;
-				}
-
-			}
+      @include flex-justify-start;
+      height: 150px;
+      padding: 20px;
+      border-bottom: 1px solid #e0e0e0;
+      button {
+        width: 50px;
+        * {
+          font-size: 2rem;
+        }
+      }
+      .modal-txt {
+        padding: 20px;
+        .modal-title {
+          font-weight: bold;
+          color: #555;
+        }
+        .modal-desc {
+          color: #555;
+        }
+      }
     }
-		.modal-btn-container{
-
-			.modal-btn-icon{
-
-			}
-			.modal-btn{
-
-			}
-			.success{
-
-			}
-			.error{
-
-			}
-			.warning{
-
-			}
-			.info{
-
-			}
-			.grey{
-				
-			}
-		}
+    .modal-btn-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+      padding: 0 20px;
+      height: 70px;
+      .modal-btn {
+        cursor: pointer;
+      }
+    }
   }
+}
+
+@media screen and (max-width: 768px) {
+	
+.modal-container {
+
+  .modal {
+    width: 290px;
+
+			.modal-details {
+				flex-direction: column;
+				.modal-txt {
+					text-align: center;
+					padding: 10px;
+				}
+			}
+
+  }
+}
 }

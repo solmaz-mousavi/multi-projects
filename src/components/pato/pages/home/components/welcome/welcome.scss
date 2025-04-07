@@ -22,3 +22,21 @@
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .pato-home-welcome-container {
+    padding: 50px 10px;
+    .pato-home-welcome__img {
+      margin: 0 20px;
+      img {
+        max-width: 200px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pato-home-welcome-container {
+    flex-direction: column;
+  }
+}

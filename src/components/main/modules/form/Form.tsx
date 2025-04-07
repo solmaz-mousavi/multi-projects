@@ -1,4 +1,8 @@
-import { ErrorsType, IFormInputType, ValuesType } from "../../../../dataTypes/formData.type";
+import {
+  ErrorsType,
+  IFormInputType,
+  ValuesType,
+} from "../../../../dataTypes/formData.type";
 import { ButtonType } from "../../../../dataTypes/buttonData.type";
 import { useFormik } from "formik";
 import Input from "../input/Input";
@@ -28,8 +32,9 @@ export default function Form({
   const formik = useFormik({
     initialValues: formInitialValues,
 
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       submitHandler(values);
+      resetForm();
     },
 
     validate: (values) => {
@@ -56,7 +61,7 @@ export default function Form({
           <div key={name} className={`input-wrapper ${name}`}>
             <Input
               {...input}
-							id={name}
+              id={name}
               value={formik.values[name]}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}

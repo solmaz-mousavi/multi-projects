@@ -16,8 +16,11 @@ import {
 import Form from "../../../main/modules/form/Form";
 import Header from "../../templates/header/Header";
 import "./contact.scss";
+import { useState } from "react";
+import Modal from "../../../main/templates/modal/Modal";
 
 function Contact() {
+  const [showModal, setShowModal] = useState(false);
   const inputs: IFormInputType[] = [
     {
       tag: "input",
@@ -75,7 +78,7 @@ function Contact() {
       },
 
       variant: "light",
-      name: "email",
+      name: "message",
       initialvalue: "",
       validators: [requiredStringValidator()],
     },
@@ -90,6 +93,7 @@ function Contact() {
   ];
   const submitHandler: (values: ValuesType) => void = (items) => {
     console.log(items);
+    setShowModal(true);
   };
 
   return (
@@ -102,7 +106,7 @@ function Contact() {
           width="100%"
           height="300"
           className="location"
-					title="pato-restaurant"
+          title="pato-restaurant"
           src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Shariati%20street,%20Tehran,%20Iran+(pato%20restaurant)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
         >
           <a href="https://www.gps.ie/collections/drones/">buy drones</a>
@@ -114,7 +118,7 @@ function Contact() {
 
       <div className="pato-contact-bottom">
         <div className="pato-contact-bottom-item">
-          <MdLocationOn className="pato-contact-bottom-icon"/>
+          <MdLocationOn className="pato-contact-bottom-icon" />
           <div className="pato-contact-bottom-details">
             <h3 className="pato-subtitle">location</h3>
             <address className="pato-desc">
@@ -123,7 +127,7 @@ function Contact() {
           </div>
         </div>
         <div className="pato-contact-bottom-item">
-          <MdCall className="pato-contact-bottom-icon"/>
+          <MdCall className="pato-contact-bottom-icon" />
           <div className="pato-contact-bottom-details">
             <h3 className="pato-subtitle">call us</h3>
             <a href="tel:+1967166879" className="pato-desc">
@@ -132,13 +136,26 @@ function Contact() {
           </div>
         </div>
         <div className="pato-contact-bottom-item">
-          <MdOutlineAccessTimeFilled className="pato-contact-bottom-icon"/>
+          <MdOutlineAccessTimeFilled className="pato-contact-bottom-icon" />
           <div className="pato-contact-bottom-details">
             <h3 className="pato-subtitle">openning hours</h3>
             <p className="pato-desc">09:30 AM - 11:00 PM Every Day</p>
           </div>
         </div>
       </div>
+      {showModal && (
+        <Modal
+          desc="We receive your message. Our team will contact you as soon as possible."
+          icon={{ name: "MdCheck", variant: "success" }}
+          button={[
+            {
+              title: "OK",
+              variant: "success",
+              clickHandler: () => setShowModal(false),
+            },
+          ]}
+        />
+      )}
     </section>
   );
 }

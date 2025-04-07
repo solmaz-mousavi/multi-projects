@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
-import ReactVisibilitySensor from "react-visibility-sensor";
+import { useEffect, useState } from "react";
 import "animate.css";
 import "./aos.scss";
+import { InView } from "react-intersection-observer";
 type AosPropsType = {
   children?: React.ReactNode;
   aosStyle: string;
@@ -9,7 +9,6 @@ type AosPropsType = {
   className?: string;
   unMountStyle?: string;
 };
-
 function Aos({
   children,
   aosStyle,
@@ -18,7 +17,6 @@ function Aos({
   unMountStyle,
 }: AosPropsType) {
   const [unMount, setUnMount] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
   const [repeat, setRepeat] = useState<boolean>(true);
   const repeatHandler = () => {
     if (once) {
@@ -33,34 +31,32 @@ function Aos({
       setTimeout(function () {}, 1000);
     };
   }, [unMount]);
+
   return (
-    <ReactVisibilitySensor
-      ref={ref}
-      partialVisibility={true}
-      offset={{ top: 10 }}
-      active={true}
-    >
-      {({ isVisible }: { isVisible: boolean }) => (
-        <div className={className}>
-          <div
-            className={`${
-              !repeat
-                ? ""
-                : `${
-                    isVisible
-                      ? `animate__animated animate__${aosStyle}`
-                      : "hidden"
-                  }`
-            } ${
-              unMount ? `animate__animated animate__${unMountStyle}` : "ttt"
-            }`}
-            onAnimationEnd={repeatHandler}
-          >
-            {children}
+    <InView>
+      {({ inView, ref }) => (
+        <div ref={ref}>
+          <div className={className}>
+            <div
+              className={`${
+                !repeat
+                  ? ""
+                  : `${
+                      inView
+                        ? `animate__animated animate__${aosStyle}`
+                        : "hidden"
+                    }`
+              } ${
+                unMount ? `animate__animated animate__${unMountStyle}` : "ttt"
+              }`}
+              onAnimationEnd={repeatHandler}
+            >
+              {children}
+            </div>
           </div>
         </div>
       )}
-    </ReactVisibilitySensor>
+    </InView>
   );
 }
 

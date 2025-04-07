@@ -16,11 +16,14 @@ import { SocialDataType } from "../../../../dataTypes/mainData.type";
 import Icon from "../../../main/modules/icon/Icon";
 import { GalleryDataType } from "../../../../dataTypes/patoData.type";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Modal from "../../../main/templates/modal/Modal";
 type FooterPropsType = {
   socialData: SocialDataType[];
   galleryData: GalleryDataType[];
 };
 function Footer({ socialData, galleryData }: FooterPropsType) {
+	const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
   const inputs: IFormInputType[] = [
     {
@@ -54,6 +57,7 @@ function Footer({ socialData, galleryData }: FooterPropsType) {
 
   const submitHandler: (values: ValuesType) => void = (items) => {
     console.log(items);
+		setShowModal(true);
   };
   return (
     <section className="pato-footer-wrapper">
@@ -129,6 +133,19 @@ function Footer({ socialData, galleryData }: FooterPropsType) {
           <p>© Copyright 2017 by Colorlib</p>
         </Aos>
       </div>
+			{showModal && (
+        <Modal
+          desc="Your email have been submitted successfully."
+          icon={{ name: "MdCheck", variant: "success" }}
+          button={[
+            {
+              title: "OK",
+              variant: "success",
+              clickHandler: () => setShowModal(false),
+            },
+          ]}
+        />
+      )}
     </section>
   );
 }

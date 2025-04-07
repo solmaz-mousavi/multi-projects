@@ -3,13 +3,20 @@ import "./navbar.scss";
 import { SocialDataType } from "../../../../dataTypes/mainData.type";
 import Icon from "../../../main/modules/icon/Icon";
 import { NavbarDataType } from "../../../../dataTypes/patoData.type";
+import { MdDehaze } from "react-icons/md";
 type NavbarPropsType = {
   scrollPosition: number;
   navbarData: NavbarDataType[];
   socialData: SocialDataType[];
+  setShowSidebar: (showSidebar: boolean) => void;
 };
 
-function Navbar({ scrollPosition, navbarData, socialData }: NavbarPropsType) {
+function Navbar({
+  scrollPosition,
+  navbarData,
+  socialData,
+  setShowSidebar,
+}: NavbarPropsType) {
   return (
     <nav
       className={`pato-navbar-wrapper ${scrollPosition > 10 ? "blured" : ""}`}
@@ -40,6 +47,9 @@ function Navbar({ scrollPosition, navbarData, socialData }: NavbarPropsType) {
               className="pato-navbar-social-icon"
             />
           ))}
+      </div>
+      <div className="pato-showSidebar-icon">
+        <MdDehaze onClick={() => setShowSidebar(true)} />
       </div>
     </nav>
   );

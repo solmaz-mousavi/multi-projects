@@ -6,8 +6,8 @@
   top: 60px;
   left: 0;
   right: 0;
-	z-index: 5;
-  padding: 5px 0;
+  z-index: 5;
+  padding: 5px 20px;
   transition: $main-transition;
   &.blured {
     backdrop-filter: blur(5px);
@@ -51,6 +51,28 @@
       &:hover {
         color: $pato-color-red;
       }
+    }
+  }
+  .pato-showSidebar-icon {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 10px;
+    cursor: pointer;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .pato-navbar-wrapper {
+		justify-content: space-between;
+    .pato-social-container {
+      display: none;
+    }
+    .pato-navbar-container {
+      display: none;
+    }
+    .pato-showSidebar-icon {
+      display: block;
     }
   }
 }

@@ -2,51 +2,73 @@
 
 .pato-home-slider-container {
   height: calc(100vh - 60px);
-	&:hover .swiper-button-prev:after, &:hover .swiper-button-next:after{
-		opacity: 1;
-	}
+  &:hover .swiper-button-prev:after,
+  &:hover .swiper-button-next:after {
+    opacity: 1;
+  }
   .pato-home-slide-container {
     @include flex-center-column;
-		text-align: center;
+    text-align: center;
     height: 100%;
     background-position: center;
     background-size: cover;
     color: #fff;
     .pato-home-slide__title {
-			line-height: 1rem;
+      line-height: 1rem;
     }
-		.pato-title{
-			font-size: 4rem;
-		}
+    .pato-title {
+      font-size: 4rem;
+    }
     .pato-home-slide__btn {
       padding: 5px 20px;
     }
   }
-  .swiper-button-prev, .swiper-button-next {
+  .swiper-button-prev,
+  .swiper-button-next {
     width: 50px !important;
     height: 50px !important;
     transform: translateX(20px);
   }
-	.swiper-button-next{
+  .swiper-button-next {
     transform: translateX(-20px);
-	}
-  .swiper-button-prev:after, .swiper-button-next:after {
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
     @include flex-center;
     width: 100%;
     height: 100%;
     font-size: 1rem;
     color: #fff;
-		background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 50%;
-		transition: $main-transition;
-		opacity: 0;
-		&:hover {
+    transition: $main-transition;
+    opacity: 0;
+    &:hover {
       background-color: transparentize($pato-color-red, 0.8);
     }
   }
-	.swiper-pagination-bullet{
-		background-color: rgba(255, 255, 255, 0.4);
-		width: 12px;
-		height: 12px;
-	}
+  .swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pato-home-slider-container {
+    .pato-home-slide-container {
+      .pato-title {
+        font-size: 2rem;
+        margin: 30px 0;
+        letter-spacing: 1px;
+      }
+      .pato-home-slide__title {
+        font-size: 1.2rem;
+      }
+    }
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+      display: none;
+    }
+  }
 }

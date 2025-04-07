@@ -30,7 +30,13 @@ function PatoIndex() {
           showSidebar={showSidebar}
            setShowSidebar={setShowSidebar}
           /> */}
-					<Navbar scrollPosition={scrollPosition} navbarData={patoData.navbar} socialData = {patoData.social}/>
+					<Navbar setShowSidebar={setShowSidebar} scrollPosition={scrollPosition} navbarData={patoData.navbar} socialData = {patoData.social}/>
+					<Sidebar
+            navbarData={patoData.navbar}
+						socialData = {patoData.social}
+            showSidebar={showSidebar}
+            setShowSidebar={setShowSidebar}
+          />
 					<Outlet/>
 					<Footer socialData = {patoData.social} galleryData={patoData.gallery}/>
         </div>

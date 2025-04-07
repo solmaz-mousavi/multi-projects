@@ -188,7 +188,7 @@
   }
 }
 
-@media screen and (max-width: 764px) {
+@media screen and (max-width: 768px) {
   .glint-works-container {
     .work-items-wrapper {
       @include flex-center;
@@ -208,7 +208,7 @@
   }
 }
 
-@media screen and (max-width: 764px) {
+@media screen and (max-width: 412px) {
   .glint-works-container {
     .works-header {
       padding: 40px;

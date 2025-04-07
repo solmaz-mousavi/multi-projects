@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ReactVisibilitySensor from "react-visibility-sensor";
+import { InView } from "react-intersection-observer";
 import CountUp from "react-countup";
 type CounterUpPropsType = {
   end: number;
@@ -14,17 +14,17 @@ function CounterUp({ end, once }: CounterUpPropsType) {
     }
   };
   return (
-    <ReactVisibilitySensor>
-      {({ isVisible }: { isVisible: boolean }) => (
+    <InView>
+      {({ inView, ref }) => (
         <div>
-          {isVisible && repeat ? (
+          {inView && repeat ? (
             <CountUp end={end} onEnd={repeatHandler} />
           ) : (
             <>{end.toLocaleString()}</>
           )}
         </div>
       )}
-    </ReactVisibilitySensor>
+    </InView>
   );
 }
 export default CounterUp;

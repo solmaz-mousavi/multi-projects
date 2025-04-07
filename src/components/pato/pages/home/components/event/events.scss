@@ -23,6 +23,7 @@
     }
     .pato-home__events-item {
       @include flex-align-start;
+      align-items: stretch;
       padding: 50px 100px;
 
       .pato-home__events-item-time {
@@ -36,7 +37,7 @@
       }
 
       .pato-home__events-item-image {
-				@include flex-align-start;
+        @include flex-align-start;
         overflow: hidden;
         max-width: 50%;
         width: fit-content;
@@ -54,7 +55,7 @@
         max-width: 600px;
         .desc {
           padding-top: 10px;
-					padding-bottom: 30px;
+          padding-bottom: 30px;
         }
         .remDayTxt {
           text-transform: uppercase;
@@ -63,7 +64,7 @@
           padding-top: 30px;
         }
         .remainTime-container {
-					@include flex-justify-start;
+          @include flex-justify-start;
           flex-direction: column;
           padding-top: 20px;
 
@@ -116,6 +117,79 @@
       background-color: rgba(255, 255, 255, 0.4);
       width: 12px;
       height: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .pato-home__events-container {
+    padding: 50px 20px;
+    .pato-home__events-content {
+      width: 100%;
+      &:hover .swiper-button-prev:after,
+      &:hover .swiper-button-next:after {
+        display: none;
+      }
+      .pato-home__events-item {
+        height: 350px;
+        padding: 50px 10px;
+        .pato-home__events-item-details {
+          padding: 10px;
+          max-width: 1000px;
+          width: 90%;
+          .desc {
+            padding: 10px;
+            padding-top: 0;
+            line-height: 0.9rem;
+          }
+          .remDayTxt {
+            padding-top: 10px;
+          }
+          .remainTime-container {
+            padding-top: 0px;
+            .remain-time {
+              padding-bottom: 50px;
+              font-size: 2rem;
+              line-height: 2rem;
+            }
+          }
+          .btn {
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pato-home__events-container {
+    padding: 50px 10px;
+    .pato-home__events-content {
+      .pato-home__events-item {
+        flex-direction: column;
+        height: auto;
+        .pato-home__events-item-time {
+          writing-mode: horizontal-tb;
+          font-size: 0.9rem;
+          border-radius: 10px 10px 0 0;
+        }
+        .pato-home__events-item-image {
+          @include flex-align-start;
+          max-width: 100%;
+          width: 100%;
+          aspect-ratio: 2/1;
+          img {
+            width: 100%;
+          }
+        }
+        .pato-home__events-item-details {
+          padding: 20px;
+          border-radius: 0 0 10px 10px;
+          max-width: 100%;
+          width: 100%;
+        }
+      }
     }
   }
 }

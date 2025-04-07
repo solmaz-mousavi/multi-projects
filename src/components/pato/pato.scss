@@ -29,19 +29,18 @@
   font-size: 1rem;
 }
 .pato-image-hover-wrapper {
-	@include flex-center;
+  @include flex-center;
   border-radius: 10px;
   overflow: hidden;
-	&:hover img{
-		transform: scale(1.1);
-	}
+  &:hover img {
+    transform: scale(1.1);
+  }
   img {
     border-radius: 10px;
     transition: $main-transition;
-		min-width: 100%;
-		min-height: 100%;
-		object-fit: cover;
-
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -60,8 +59,18 @@
   }
 }
 
-.pato-section-header{
-	height: 250px;
-	padding-top: 50px;
-	color: #fff;
+.pato-section-header {
+  height: 250px;
+  padding-top: 50px;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .pato-top-title {
+    font-size: 1.2rem;
+  }
+  .pato-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
 }

@@ -1,3 +1,4 @@
+import Button from "../../modules/button/Button";
 import Icon from "../../modules/icon/Icon";
 import "./modal.scss";
 type ModalPropsType = {
@@ -5,11 +6,10 @@ type ModalPropsType = {
   desc: string;
   icon?: {
     name: string;
-    className: string;
+		variant:"success" | "error" | "warning" | "info" | "grey";
   };
   button: {
     title: string;
-    iconName?: string;
     variant: "success" | "error" | "warning" | "info" | "grey";
     clickHandler: () => void;
   }[];
@@ -19,7 +19,12 @@ function Modal({ title, desc, icon, button }: ModalPropsType) {
     <div className="modal-container">
       <div className="modal">
         <div className="modal-details">
-          {icon && <Icon name={icon.name} className={`modal-icon ${icon.className}`} />}
+          {icon && (
+						<>
+            {/* <Icon name={icon.name} className={`modal-icon ${icon.variant}`} /> */}
+						<Button variant={icon.variant} transparent={true} icon={{name: icon.name}} border={false} />
+						</>
+          )}
           <div className="modal-txt">
             <h4 className="modal-title">{title}</h4>
             <p className="modal-desc">{desc}</p>
@@ -27,10 +32,13 @@ function Modal({ title, desc, icon, button }: ModalPropsType) {
         </div>
         <div className="modal-btn-container">
           {button.map((item) => (
-            <button onClick={item.clickHandler} className={`modal-btn ${item.variant}`}>
-              {item.iconName && <Icon name={item.iconName} className="modal-btn-icon"/>}
-              {item.title}
-            </button>
+            <Button
+              text={item.title}
+              className="modal-btn"
+              clickHandler={item.clickHandler}
+              variant={item.variant}
+              key={item.title}
+            />
           ))}
         </div>
       </div>

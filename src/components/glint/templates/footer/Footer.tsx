@@ -1,5 +1,8 @@
 import { ButtonType } from "../../../../dataTypes/buttonData.type";
-import { IFormInputType, ValuesType } from "../../../../dataTypes/formData.type";
+import {
+  IFormInputType,
+  ValuesType,
+} from "../../../../dataTypes/formData.type";
 import {
   emailValidator,
   requiredStringValidator,
@@ -8,8 +11,11 @@ import { MdMailOutline } from "react-icons/md";
 import "./footer.scss";
 import Form from "../../../main/modules/form/Form";
 import Aos from "../../../main/modules/aos/Aos";
+import Modal from "../../../main/templates/modal/Modal";
+import { useState } from "react";
 
 function Footer() {
+  const [showModal, setShowModal] = useState(false);
   const inputs: IFormInputType[] = [
     {
       tag: "input",
@@ -41,7 +47,8 @@ function Footer() {
   ];
 
   const submitHandler: (values: ValuesType) => void = (items) => {
-    console.log(items);
+		console.log(items);
+    setShowModal(true);
   };
   return (
     <section className="glint-footer-container">
@@ -77,6 +84,19 @@ function Footer() {
           <div className="footer-bottom__right">Site Template by Colorlib</div>
         </div>
       </Aos>
+      {showModal && (
+        <Modal
+          desc="Your email have been submitted successfully."
+          icon={{ name: "MdCheck", variant: "success" }}
+          button={[
+            {
+              title: "OK",
+              variant: "success",
+              clickHandler: () => setShowModal(false),
+            },
+          ]}
+        />
+      )}
     </section>
   );
 }

@@ -27,7 +27,7 @@ function Events({ data }: { data: EventsDataType[] }) {
           slidesPerView={1}
           spaceBetween={30}
           autoplay={{
-            delay: 4000,
+            delay: 40000,
             disableOnInteraction: false,
           }}
           navigation={true}
