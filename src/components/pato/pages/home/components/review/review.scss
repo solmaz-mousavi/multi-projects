@@ -2,7 +2,7 @@
 
 .pato-home__reviews-container {
   background-color: #fff;
-  padding: 50px;
+  padding: 50px 10px;
   text-align: center;
   .pato-home__reviews-header {
     .pato-top-title {
@@ -14,7 +14,8 @@
   }
 
   .pato-home__reviews-content {
-    width: 100%;
+    // width: 100%;
+		max-width: 1000px;
     &:hover .swiper-button-prev:after,
     &:hover .swiper-button-next:after {
       opacity: 1;
@@ -41,10 +42,6 @@
     .swiper-button-next {
       width: 50px !important;
       height: 50px !important;
-      transform: translateX(20px);
-    }
-    .swiper-button-next {
-      transform: translateX(-20px);
     }
     .swiper-button-prev:after,
     .swiper-button-next:after {
@@ -67,4 +64,15 @@
       height: 12px;
     }
   }
+}
+
+@media screen and (max-width:768px) {
+	.pato-home__reviews-container {
+
+		.swiper-button-prev,
+	.swiper-button-next {
+		display: none;
+	}
+}
+	
 }

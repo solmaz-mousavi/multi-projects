@@ -55,7 +55,8 @@
   }
   .pato-showSidebar-icon {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
+		line-height: 1rem;
     margin: 0 10px;
     cursor: pointer;
     display: none;
@@ -75,4 +76,17 @@
       display: block;
     }
   }
+}
+
+
+@media screen and (max-width: 768px) {
+	.pato-navbar-wrapper {
+		top: 50px;
+	}
+}
+
+@media screen and (max-width: 412px) {
+	.pato-navbar-wrapper {
+		top: 40px;
+	}
 }

@@ -7,6 +7,10 @@ import Aos from "../../../../../main/modules/aos/Aos";
 import "./review.scss";
 
 function Review({ data }: { data: ReviewDataType[] }) {
+  const screenWidth = window.innerWidth;
+  let slideNum;
+  screenWidth > 768 ? (slideNum = 2) : (slideNum = 1);
+
   return (
     <section className="pato-home__reviews-container">
       <Aos aosStyle="fadeInUp" once={true}>
@@ -18,7 +22,7 @@ function Review({ data }: { data: ReviewDataType[] }) {
 
       <Aos aosStyle="fadeInUp" once={true}>
         <Swiper
-          slidesPerView={2}
+          slidesPerView={slideNum}
           navigation={true}
           modules={[Navigation]}
           className="mySwiper pato-home__reviews-content"
@@ -28,9 +32,10 @@ function Review({ data }: { data: ReviewDataType[] }) {
               <SwiperSlide className="pato-home__reviews-item" key={item.id}>
                 <p className="pato-desc">{item.desc}</p>
                 <div className="pto-home__reviews-sep"></div>
-               
-               
-							  <p className="pto-home__reviews-name">{item.name} - {item.city}</p>
+
+                <p className="pto-home__reviews-name">
+                  {item.name} - {item.city}
+                </p>
                 <p className="pto-home__reviews-date">{item.date}</p>
               </SwiperSlide>
             ))}
