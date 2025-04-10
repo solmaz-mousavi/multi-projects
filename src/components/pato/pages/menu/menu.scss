@@ -2,25 +2,25 @@
 
 .pato-menu-container {
   .pato-menu-category-wrapper {
-		@include flex-align-start;
+    @include flex-align-start;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     background-color: #efefef;
     padding: 30px;
-		.pato-menu-category-container {
-			padding: 30px;
-			width: 500px;
-		}
+    .pato-menu-category-container {
+      padding: 30px;
+      width: 500px;
+    }
   }
 }
 
 @media screen and (max-width: 576px) {
-	.pato-menu-container {
-		.pato-menu-category-wrapper {
-			padding: 30px 10px;
-			.pato-menu-category-container {
-				padding: 0;
-			}
-		}
-	}
-	
+  .pato-menu-container {
+    .pato-menu-category-wrapper {
+      padding: 30px 10px;
+      .pato-menu-category-container {
+        padding: 0;
+      }
+    }
+  }
 }

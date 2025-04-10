@@ -14,8 +14,7 @@
   }
 
   .pato-home__reviews-content {
-    // width: 100%;
-		max-width: 1000px;
+    max-width: 1000px;
     &:hover .swiper-button-prev:after,
     &:hover .swiper-button-next:after {
       opacity: 1;
@@ -52,6 +51,8 @@
       color: #fff;
       background-color: rgba(0, 0, 0, 0.4);
       border-radius: 50%;
+      -webkit-transition: $main-transition;
+      -o-transition: $main-transition;
       transition: $main-transition;
       opacity: 0;
       &:hover {
@@ -66,13 +67,11 @@
   }
 }
 
-@media screen and (max-width:768px) {
-	.pato-home__reviews-container {
-
-		.swiper-button-prev,
-	.swiper-button-next {
-		display: none;
-	}
-}
-	
+@media screen and (max-width: 768px) {
+  .pato-home__reviews-container {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
 }

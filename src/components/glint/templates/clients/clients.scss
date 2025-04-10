@@ -2,9 +2,12 @@
 
 .glint-clients-container {
   background-color: #ddd;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
-	position: relative;
+  position: relative;
   .glint-clients-header {
     padding-bottom: 0px;
     margin: 0 auto;
@@ -22,7 +25,7 @@
       max-width: 1200px;
       width: 80vw;
       text-align: center;
-			height: 150px;
+      height: 150px;
     }
     .swiper-slide {
       width: 200px;
@@ -30,8 +33,8 @@
     .clients-item-icon {
       display: inline-block;
       .icon {
-				font-size: 6rem;
-        &:hover *{
+        font-size: 6rem;
+        &:hover * {
           color: #111 !important;
         }
       }
@@ -70,7 +73,7 @@
       position: absolute;
       top: 50%;
       z-index: 10;
-			cursor: pointer !important;
+      cursor: pointer !important;
     }
     .arrow-left {
       right: 20px;
@@ -79,16 +82,15 @@
       left: 20px;
     }
   }
-	.decoration{
-		height: 80px;
-		width: 1px;
-		border: 1px solid $glint-color-green;
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		padding-top: 20px;
-	}
-
+  .decoration {
+    height: 80px;
+    width: 1px;
+    border: 1px solid $glint-color-green;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    padding-top: 20px;
+  }
 }
 .glint-clients-header .swiper-button-prev::after,
 .glint-clients-header .swiper-button-next::after {
@@ -100,7 +102,7 @@
   font-size: 1rem;
 }
 
-@media screen and (max-width: 768px) { 
+@media screen and (max-width: 768px) {
   .glint-clients-container {
     .clients-slider {
       padding-top: 40px;
@@ -113,26 +115,26 @@
         }
       }
     }
-		.glint-team-slider {
-			.swiper {
-				width: 90vw;
-			}
-			.team-thumbnail {
-				padding: 10%;
-				.team-desc {
-					font-size: 1rem;
-				}
-				.team-name {
-					font-size: 1.1rem;
-				}
-			}
-			.team-job {
-				font-size: 0.8rem;
-			}
-			.arrow{
-				display: none;
-			}
-		}
+    .glint-team-slider {
+      .swiper {
+        width: 90vw;
+      }
+      .team-thumbnail {
+        padding: 10%;
+        .team-desc {
+          font-size: 1rem;
+        }
+        .team-name {
+          font-size: 1.1rem;
+        }
+      }
+      .team-job {
+        font-size: 0.8rem;
+      }
+      .arrow {
+        display: none;
+      }
+    }
   }
 }
 
@@ -149,22 +151,22 @@
         }
       }
     }
-		.glint-team-slider {
-			.swiper {
-				width: 95vw;
-			}
-			.team-thumbnail {
-				padding: 5px;
-				.team-desc {
-					font-size: 0.9rem;
-				}
-				.team-name {
-					font-size: 1rem;
-				}
-			}
-			.team-job {
-				font-size: 0.7rem;
-			}
-		}
+    .glint-team-slider {
+      .swiper {
+        width: 95vw;
+      }
+      .team-thumbnail {
+        padding: 5px;
+        .team-desc {
+          font-size: 0.9rem;
+        }
+        .team-name {
+          font-size: 1rem;
+        }
+      }
+      .team-job {
+        font-size: 0.7rem;
+      }
+    }
   }
 }

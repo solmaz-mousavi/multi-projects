@@ -9,23 +9,26 @@
   &:hover {
     background-color: $color;
     * {
-			@if(lightness($color) >= 50%){
-				color: darken($color, 40%);
-			}
-			@else {
-				color: lighten($color, 40%);
-			}
+      @if (lightness($color) >= 50%) {
+        color: darken($color, 40%);
+      } @else {
+        color: lighten($color, 40%);
+      }
     }
   }
 }
 
 .btn {
   @include flex-center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   gap: 5px;
   position: relative;
   padding: 5px;
   border-radius: 5px;
+  -webkit-transition: $main-transition;
+  -o-transition: $main-transition;
   transition: $main-transition;
   cursor: pointer;
   * {
@@ -36,6 +39,10 @@
   }
   .tooltip {
     position: absolute;
+    -webkit-transition: right 400ms ease-out, left 400ms ease-out,
+      top 400ms ease-out, bottom 400ms ease-out;
+    -o-transition: right 400ms ease-out, left 400ms ease-out, top 400ms ease-out,
+      bottom 400ms ease-out;
     transition: right 400ms ease-out, left 400ms ease-out, top 400ms ease-out,
       bottom 400ms ease-out;
     opacity: 0;
@@ -75,13 +82,13 @@
   @include buttonColor(#7de39d);
 }
 
-.btn.info{
-	@include buttonColor(#7abbe6);
+.btn.info {
+  @include buttonColor(#7abbe6);
 }
-.btn.error{
+.btn.error {
   @include buttonColor(#da7171);
 }
-.btn.warning{
+.btn.warning {
   @include buttonColor(#e9b555);
 }
 
@@ -98,48 +105,53 @@
   }
 }
 
-.btn.pato-dark{
-	background-color: #000;
-	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: 0.1rem;
-	padding: 10px 40px;
-	*{
-		font-size: 0.9rem;
-	}
-	&:hover{
-		background-color: $pato-color-red;
-	}
+.btn.pato-dark {
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 10px 40px;
+  * {
+    font-size: 0.9rem;
+  }
+  &:hover {
+    background-color: $pato-color-red;
+  }
 }
-.btn.pato-light{
-	background-color: #fff;
-	color: $pato-color-red;
-	text-transform: uppercase;
-	letter-spacing: 0.1rem;
-	padding: 10px 40px;
-	*{
-		font-size: 0.9rem;
-	}
-	&:hover{
-		background-color: $pato-color-red;
-		color: #fff;
-	}
+.btn.pato-light {
+  background-color: #fff;
+  color: $pato-color-red;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 10px 40px;
+  * {
+    font-size: 0.9rem;
+  }
+  &:hover {
+    background-color: $pato-color-red;
+    color: #fff;
+  }
 }
-.btn.pato-transparent{
-	background-color: transparent;
-	text-transform: uppercase;
-	letter-spacing: 0.1rem;
-	color: #777;
-	padding: 20px 0;
-	cursor: pointer;
-	transition: $main-transition;
-	flex-direction: row-reverse;
-	*{
-		font-size: 0.9rem;
-	}
-	&:hover{
-		color: $pato-color-red;
-	}
+.btn.pato-transparent {
+  background-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #777;
+  padding: 20px 0;
+  cursor: pointer;
+  -webkit-transition: $main-transition;
+  -o-transition: $main-transition;
+  transition: $main-transition;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  * {
+    font-size: 0.9rem;
+  }
+  &:hover {
+    color: $pato-color-red;
+  }
 }
 
 .btn.fullWidth {

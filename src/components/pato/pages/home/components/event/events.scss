@@ -23,12 +23,16 @@
     }
     .pato-home__events-item {
       @include flex-align-start;
+      -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
       align-items: stretch;
       padding: 50px 100px;
 
       .pato-home__events-item-time {
         background-color: $pato-color-red;
         color: #fff;
+        -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
         writing-mode: vertical-lr;
         padding: 20px;
         border-radius: 10px 0 0 10px;
@@ -40,8 +44,11 @@
         @include flex-align-start;
         overflow: hidden;
         max-width: 50%;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
         img {
+          -o-object-fit: cover;
           object-fit: cover;
           height: 100%;
         }
@@ -65,6 +72,9 @@
         }
         .remainTime-container {
           @include flex-justify-start;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
           flex-direction: column;
           padding-top: 20px;
 
@@ -93,9 +103,13 @@
     .swiper-button-next {
       width: 50px !important;
       height: 50px !important;
+      -webkit-transform: translateX(20px);
+      -ms-transform: translateX(20px);
       transform: translateX(20px);
     }
     .swiper-button-next {
+      -webkit-transform: translateX(-20px);
+      -ms-transform: translateX(-20px);
       transform: translateX(-20px);
     }
     .swiper-button-prev:after,
@@ -107,6 +121,8 @@
       color: #fff;
       background-color: rgba(255, 255, 255, 0.4);
       border-radius: 50%;
+      -webkit-transition: $main-transition;
+      -o-transition: $main-transition;
       transition: $main-transition;
       opacity: 0;
       &:hover {
@@ -167,9 +183,14 @@
     padding: 50px 10px;
     .pato-home__events-content {
       .pato-home__events-item {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         height: auto;
         .pato-home__events-item-time {
+          -webkit-writing-mode: horizontal-tb;
+          -ms-writing-mode: lr-tb;
           writing-mode: horizontal-tb;
           font-size: 0.9rem;
           border-radius: 10px 10px 0 0;

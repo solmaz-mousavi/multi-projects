@@ -16,7 +16,11 @@
       margin-bottom: 30px;
     }
     .pato-about-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       gap: 100px;
       margin: 100px auto;
@@ -34,6 +38,7 @@
     }
     .pato-about-chef-wrapper {
       @include flex-center;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
     }
   }
@@ -43,7 +48,11 @@
   .pato-about-container {
     .pato-about-item-container {
       .pato-about-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         gap: 50px;
         margin: 50px auto;
@@ -67,7 +76,12 @@
   .pato-about-container {
     .pato-about-item-container {
       .pato-about-item {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         gap: 10px;
         margin: 50px auto;

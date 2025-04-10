@@ -7,22 +7,21 @@
 
   .input-wrapper {
     @include flex-center-column;
-		width: 100%;
-		.input-container{
-			width: 100%;
-		}
-		.fullWidth{
-			width: 100%;
-		}
-		.inputError{
-			color: red;
-			font-size: 0.8rem;
-			width: 100%;
-		}
+    width: 100%;
+    .input-container {
+      width: 100%;
+    }
+    .fullWidth {
+      width: 100%;
+    }
+    .inputError {
+      color: red;
+      font-size: 0.8rem;
+      width: 100%;
+    }
   }
-	.buttons-container{
-		@include flex-justify-start;
-		gap: 20px;
-	}
+  .buttons-container {
+    @include flex-justify-start;
+    gap: 20px;
+  }
 }
-

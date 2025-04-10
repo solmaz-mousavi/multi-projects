@@ -2,7 +2,7 @@
 
 .notfound-container {
   @include flex-center-column;
-	height: calc(100vh - 60px);
+  height: calc(100vh - 60px);
   background-color: #000;
 
   .notfound-icon {

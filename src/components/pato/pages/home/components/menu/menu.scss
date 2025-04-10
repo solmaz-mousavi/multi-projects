@@ -10,8 +10,11 @@
     }
   }
   .pato-home__menu-content {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 2fr 20px 1fr 20px 1fr 20px 2fr;
     grid-template-columns: 2fr 1fr 1fr 2fr;
+    -ms-grid-rows: 1fr 20px 1fr 20px 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 20px;
     max-width: 1200px;
@@ -19,27 +22,51 @@
     aspect-ratio: 3/2;
     margin: 20px auto;
     .category_0 {
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 1;
       grid-column: 1 / span 1;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 2;
       grid-row: 1 / span 2;
     }
     .category_1 {
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 2;
       grid-column: 2 / span 2;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 2;
       grid-row: 1 / span 2;
     }
     .category_2 {
+      -ms-grid-column: 4;
+      -ms-grid-column-span: 1;
       grid-column: 4 / span 1;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
       grid-row: 1 / span 1;
     }
     .category_3 {
+      -ms-grid-column: 4;
+      -ms-grid-column-span: 1;
       grid-column: 4 / span 1;
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
       grid-row: 2 / span 1;
     }
     .category_4 {
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 3;
       grid-column: 1 / span 3;
+      -ms-grid-row: 3;
+      -ms-grid-row-span: 1;
       grid-row: 3 / span 1;
     }
     .category_5 {
+      -ms-grid-column: 4;
+      -ms-grid-column-span: 1;
       grid-column: 4 / span 1;
+      -ms-grid-row: 3;
+      -ms-grid-row-span: 1;
       grid-row: 3 / span 1;
     }
     .pato-home__menu-category {
@@ -56,9 +83,59 @@
         left: 0;
         right: 0;
         margin-inline: auto;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
       }
     }
+  }
+  .pato-home__menu-content > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .pato-home__menu-content > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .pato-home__menu-content > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+  .pato-home__menu-content > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 7;
+  }
+  .pato-home__menu-content > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .pato-home__menu-content > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .pato-home__menu-content > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+  }
+  .pato-home__menu-content > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 7;
+  }
+  .pato-home__menu-content > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .pato-home__menu-content > *:nth-child(10) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .pato-home__menu-content > *:nth-child(11) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 5;
+  }
+  .pato-home__menu-content > *:nth-child(12) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 7;
   }
 }
 
@@ -66,31 +143,56 @@
   .pato-home__menu-container {
     padding: 50px 10px;
     .pato-home__menu-content {
+      -ms-grid-rows: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
       gap: 10px;
       aspect-ratio: 3/5;
       .category_0 {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
         grid-column: 1 / span 2;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
         grid-row: 1 / span 2;
       }
       .category_1 {
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 2;
         grid-column: 3 / span 2;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
         grid-row: 1 / span 2;
       }
       .category_2 {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
         grid-column: 1 / span 2;
+        -ms-grid-row: 4;
+        -ms-grid-row-span: 1;
         grid-row: 4 / span 1;
       }
       .category_3 {
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 2;
         grid-column: 3 / span 2;
+        -ms-grid-row: 4;
+        -ms-grid-row-span: 1;
         grid-row: 4 / span 1;
       }
       .category_4 {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 4;
         grid-column: 1 / span 4;
+        -ms-grid-row: 3;
+        -ms-grid-row-span: 1;
         grid-row: 3 / span 1;
       }
       .category_5 {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 4;
         grid-column: 1 / span 4;
+        -ms-grid-row: 5;
+        -ms-grid-row-span: 1;
         grid-row: 5 / span 1;
       }
       .pato-home__menu-category-btn {

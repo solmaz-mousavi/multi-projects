@@ -16,11 +16,11 @@
 
   .pato-home-blog-content {
     @include flex-align-start;
-		flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     padding: 0 40px;
     gap: 30px;
     .pato-home-blog-content-container {
-
       .pato-image-hover-wrapper {
         position: relative;
 
@@ -40,7 +40,7 @@
       }
       .pato-home-blog-content__title {
         margin: 15px 0;
-				width: 250px;
+        width: 250px;
       }
       .pato-home-blog-content__desc {
         max-width: 250px;
@@ -53,6 +53,8 @@
         letter-spacing: 0.1rem;
         color: #777;
         padding: 20px 0;
+        -webkit-transition: $main-transition;
+        -o-transition: $main-transition;
         transition: $main-transition;
         cursor: pointer;
         &:hover {
@@ -62,4 +64,3 @@
     }
   }
 }
-

@@ -3,6 +3,16 @@
 .glint-home-container {
   height: calc(100vh - 60px);
   background-color: #000;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
+    url("../../../../../public/assets/images/glint/hero-bg.webp");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../../../../public/assets/images/glint/hero-bg.webp");
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../../../../../public/assets/images/glint/hero-bg.webp");
   background-size: cover;
@@ -11,6 +21,9 @@
 
   .home-txt-container {
     @include flex-align-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     height: 100%;
     padding: 0px 0px 0px 20%;
@@ -22,7 +35,10 @@
     }
     .home-txt__btn-container {
       margin-top: 80px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       .home-txt__btn {
         width: 215px;
@@ -41,6 +57,8 @@
   }
   .home-social-container {
     @include flex-center-column;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
     gap: 20px;
     margin: 0px 50px;
@@ -74,8 +92,13 @@
   .glint-home-container {
     min-height: unset;
     padding: 100px 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 
     .home-txt-container {
@@ -85,7 +108,12 @@
         padding: 0px 20px;
       }
       .home-txt__btn-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         width: 100%;
         height: auto;
@@ -98,6 +126,9 @@
     }
     .home-social-container {
       margin: 20px 0px;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
       flex-direction: row;
 
       .tooltip {

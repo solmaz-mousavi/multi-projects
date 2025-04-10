@@ -6,7 +6,7 @@
   .pato-galleryCategory-wrapper {
     @include flex-center;
     padding: 50px 0px;
-		
+
     .galleryCategory {
       cursor: pointer;
       padding: 5px 20px;
@@ -16,6 +16,8 @@
       color: #555;
       letter-spacing: 0.1rem;
       font-size: 0.9rem;
+      -webkit-transition: $main-transition;
+      -o-transition: $main-transition;
       transition: $main-transition;
       &:hover {
         background-color: #000;
@@ -29,26 +31,25 @@
   }
   .pato-gallery-content {
     @include flex-align-start;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-		max-width: 1000px;
-		margin: 0 auto;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 }
 
-@media screen and (max-width:768px) {
-	.pato-gallery-container {
-	
-		.pato-galleryCategory-wrapper {
-			
-			flex-direction: column;
-			padding: 30px 10px;
-			
-			.galleryCategory {
-				padding: 5px 20px;
-				margin: 0 5px;
-			}
-
-		}
-
-	}
+@media screen and (max-width: 768px) {
+  .pato-gallery-container {
+    .pato-galleryCategory-wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding: 30px 10px;
+      .galleryCategory {
+        padding: 5px 20px;
+        margin: 0 5px;
+      }
+    }
+  }
 }

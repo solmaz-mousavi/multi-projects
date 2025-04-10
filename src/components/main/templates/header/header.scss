@@ -17,6 +17,8 @@
   top: -40px;
   height: 0;
   opacity: 0;
+  -webkit-transition: $main-transition;
+  -o-transition: $main-transition;
   transition: $main-transition;
   pointer-events: none;
   z-index: -1;
@@ -50,4 +52,3 @@
     }
   }
 }
-

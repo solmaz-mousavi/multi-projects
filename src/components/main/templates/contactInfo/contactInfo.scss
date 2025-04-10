@@ -2,18 +2,23 @@
 
 .main-contactInfo-container {
   @include flex-justify-start;
-	width: 100%;
+  width: 100%;
   background-color: $main-color-gray;
+  -webkit-transition: $main-transition;
+  -o-transition: $main-transition;
   transition: $main-transition;
   padding: 10px 50px;
   position: fixed;
 
   .contactInfo-image img {
-    @include fullscreen;
+    width: 100px;
+    height: 100px;
     border-radius: 100%;
   }
   .contactInfo-info {
     @include flex-center;
+    -webkit-box-pack: stretch;
+    -ms-flex-pack: stretch;
     justify-content: stretch;
     gap: 50px;
     padding-left: 30px;
@@ -29,7 +34,10 @@
   .contactInfo-package {
     text-align: left;
     padding-left: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     p {
       color: #fff;
@@ -93,6 +101,9 @@
     }
     .contactInfo-info {
       padding-left: 10px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
       gap: 0px;
       .main-contactInfo-name,

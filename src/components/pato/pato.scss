@@ -33,13 +33,18 @@
   border-radius: 10px;
   overflow: hidden;
   &:hover img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1);
   }
   img {
     border-radius: 10px;
+    -webkit-transition: $main-transition;
+    -o-transition: $main-transition;
     transition: $main-transition;
     min-width: 100%;
     min-height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
   }
 }

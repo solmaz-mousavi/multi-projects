@@ -6,11 +6,15 @@
     padding: 50px 0;
     .form-wrapper {
       @include flex-center();
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       max-width: 1200px;
       margin: 0 auto;
       .input-wrapper {
         width: auto;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         margin: 20px 15px 0 15px;
         input,
@@ -69,7 +73,12 @@
       }
 
       .pato-reservation-bottom {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         text-align: center;
         .pato-reservation-bottom__item {

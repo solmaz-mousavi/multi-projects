@@ -1,7 +1,11 @@
 .menu-item-container {
   margin-bottom: 20px;
   .menu-item-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
     position: relative;

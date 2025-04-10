@@ -3,10 +3,23 @@
 .glint-contacts-container {
   height: calc(100vh - 60px);
   background-color: #000;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0.5))
+    ),
+    url("../../../../../public/assets/images/glint/contact-bg.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../../../../public/assets/images/glint/contact-bg.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../../../../../public/assets/images/glint/contact-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
   padding-top: 90px !important;
@@ -32,6 +45,8 @@
   .contacts-bottom-wrapper {
     max-width: 1000px;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-top: 40px;
     .form-container {
@@ -97,6 +112,9 @@
 @media screen and (max-width: 650px) {
   .glint-contacts-container {
     .contacts-bottom-wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
       .form-container {
         width: 100%;

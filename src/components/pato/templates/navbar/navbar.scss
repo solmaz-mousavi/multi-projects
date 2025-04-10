@@ -8,8 +8,11 @@
   right: 0;
   z-index: 5;
   padding: 5px 20px;
+  -webkit-transition: $main-transition;
+  -o-transition: $main-transition;
   transition: $main-transition;
   &.blured {
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.4);
     .pato-logo {
@@ -19,9 +22,13 @@
   .pato-logo {
     margin-right: 60px;
     height: 50px;
+    -webkit-transition: $main-transition;
+    -o-transition: $main-transition;
     transition: $main-transition;
     img {
       height: 100%;
+      -webkit-transition: $main-transition;
+      -o-transition: $main-transition;
       transition: $main-transition;
     }
   }
@@ -31,6 +38,8 @@
       text-transform: uppercase;
       letter-spacing: 0.1rem;
       padding: 5px 20px;
+      -webkit-transition: $main-transition;
+      -o-transition: $main-transition;
       transition: $main-transition;
       font-size: 0.9rem;
       color: #fff;
@@ -46,6 +55,8 @@
     .pato-navbar-social-icon {
       color: #fff;
       margin: 0px 10px;
+      -webkit-transition: $main-transition;
+      -o-transition: $main-transition;
       transition: $main-transition;
       cursor: pointer;
       &:hover {
@@ -56,7 +67,7 @@
   .pato-showSidebar-icon {
     color: #fff;
     font-size: 1.5rem;
-		line-height: 1rem;
+    line-height: 1rem;
     margin: 0 10px;
     cursor: pointer;
     display: none;
@@ -65,7 +76,9 @@
 
 @media screen and (max-width: 1200px) {
   .pato-navbar-wrapper {
-		justify-content: space-between;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     .pato-social-container {
       display: none;
     }
@@ -78,15 +91,14 @@
   }
 }
 
-
 @media screen and (max-width: 768px) {
-	.pato-navbar-wrapper {
-		top: 50px;
-	}
+  .pato-navbar-wrapper {
+    top: 50px;
+  }
 }
 
 @media screen and (max-width: 412px) {
-	.pato-navbar-wrapper {
-		top: 40px;
-	}
+  .pato-navbar-wrapper {
+    top: 40px;
+  }
 }

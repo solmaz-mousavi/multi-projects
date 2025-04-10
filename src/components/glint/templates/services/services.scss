@@ -17,12 +17,17 @@
 
   .service-item-container {
     @include flex-center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     max-width: 1200px;
     padding: 20px 0px;
 
     .service-item-thumbnail {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
       align-items: flex-start;
       padding: 10px;
       width: 45%;

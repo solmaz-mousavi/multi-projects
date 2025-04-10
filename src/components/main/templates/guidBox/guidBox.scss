@@ -4,11 +4,13 @@
   position: relative;
   z-index: 20;
   .guidbox {
-		@include fullscreen;
+    @include fullscreen;
     position: fixed;
     inset: 0;
     background-color: transparent;
-		transition: $main-transition;
+    -webkit-transition: $main-transition;
+    -o-transition: $main-transition;
+    transition: $main-transition;
     .guidbox-arrow-top {
       position: relative;
       top: 0px;
@@ -35,7 +37,7 @@
     .guidbox-btn {
       position: relative;
       top: -10px;
-			color: rgba(255, 255, 0, 0.5);
+      color: rgba(255, 255, 0, 0.5);
       font-size: 1.1rem;
       font-weight: 500;
       background-color: transparent;
@@ -46,7 +48,7 @@
       }
     }
   }
-	.guidbox-1 {
+  .guidbox-1 {
     border-left: 20px solid rgba(0, 0, 0, 0.7);
     border-right: calc(100vw - 190px) solid rgba(0, 0, 0, 0.7);
     border-bottom: calc(100vh - 60px) solid rgba(0, 0, 0, 0.7);
@@ -62,7 +64,7 @@
       left: 360px;
     }
   }
-	.guidbox-2 {
+  .guidbox-2 {
     border-left: calc(100vw - 190px) solid rgba(0, 0, 0, 0.7);
     border-right: 20px solid rgba(0, 0, 0, 0.7);
     border-bottom: calc(100vh - 60px) solid rgba(0, 0, 0, 0.7);
@@ -78,8 +80,8 @@
       right: 230px;
     }
   }
-	.hidden {
-		opacity: 0;
-		display: none;
-	}
+  .hidden {
+    opacity: 0;
+    display: none;
+  }
 }
