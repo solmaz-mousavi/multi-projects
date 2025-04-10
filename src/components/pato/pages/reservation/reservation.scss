@@ -3,7 +3,7 @@
 .pato-reservation-container {
   .pato-reservation-content {
     background-color: #efefef;
-		padding: 50px 0;
+    padding: 50px 0;
     .form-wrapper {
       @include flex-center();
       flex-wrap: wrap;
@@ -12,18 +12,18 @@
       .input-wrapper {
         width: auto;
         flex-direction: column;
-				margin: 20px 15px 0 15px;
-        input, select {
+        margin: 20px 15px 0 15px;
+        input,
+        select {
           width: 300px;
           background-color: #fff;
-					color: #555;
+          color: #555;
         }
-				
       }
       .buttons-container {
         @include flex-center();
         width: 100%;
-				margin: 30px;
+        margin: 30px;
       }
       .pato-reservation-label {
         display: block;
@@ -32,22 +32,48 @@
         font-size: 1.1rem;
         letter-spacing: 0.1rem;
         padding-bottom: 5px;
-				padding-left: 5px;
+        padding-left: 5px;
       }
     }
     .pato-reservation-bottom {
-			@include flex-align-start;
-			max-width: 1200px;
-			margin: 40px auto;
-			
+      @include flex-align-start;
+      max-width: 1200px;
+      margin: 40px auto;
+
       .pato-reservation-bottom__item {
-				width: 50%;
-				padding: 30px;
-				.pato-subtitle{
-					margin-bottom: 10px;
-				}
+        min-width: 300px;
+        max-width: 500px;
+        padding: 30px;
+        .pato-subtitle {
+          margin-bottom: 10px;
+        }
         .pato-reservation-bold {
           color: $pato-color-red;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .pato-reservation-container {
+    .pato-reservation-content {
+      .form-wrapper {
+        .input-wrapper {
+          width: 80%;
+          input,
+          select {
+            width: 100%;
+          }
+        }
+      }
+
+      .pato-reservation-bottom {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        .pato-reservation-bottom__item {
+          margin: 0 auto;
         }
       }
     }

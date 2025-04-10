@@ -8,7 +8,19 @@
     padding: 30px;
 		.pato-menu-category-container {
 			padding: 30px;
-			width: 40%;
+			width: 500px;
 		}
   }
+}
+
+@media screen and (max-width: 576px) {
+	.pato-menu-container {
+		.pato-menu-category-wrapper {
+			padding: 30px 10px;
+			.pato-menu-category-container {
+				padding: 0;
+			}
+		}
+	}
+	
 }

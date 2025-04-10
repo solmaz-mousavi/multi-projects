@@ -16,6 +16,7 @@ function Pagination({
     <div className="pagination-container">
       {pages.map((item) => (
         <div
+				key={item}
           className={`pagination-item ${startIndex === item * perPage ? "active" : ""}`}
           onClick={() => setStartIndex(item * perPage)}
         >

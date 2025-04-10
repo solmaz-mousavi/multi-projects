@@ -34,6 +34,78 @@
     }
     .pato-about-chef-wrapper {
       @include flex-center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .pato-about-container {
+    .pato-about-item-container {
+      .pato-about-item {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin: 50px auto;
+        .pato-about-details {
+          width: 300px;
+          * {
+            width: 300px;
+            letter-spacing: normal;
+          }
+        }
+        .pato-image-hover-wrapper {
+          width: 300px;
+          height: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pato-about-container {
+    .pato-about-item-container {
+      .pato-about-item {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        margin: 50px auto;
+        text-align: center;
+        .pato-about-details {
+          width: 80%;
+          margin: 0 auto;
+          * {
+            width: 80%;
+          }
+        }
+        .pato-image-hover-wrapper {
+          width: 60%;
+          height: auto;
+          margin: 0 auto;
+          img {
+            aspect-ratio: 2/1;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .pato-about-container {
+    .pato-about-item-container {
+      .pato-about-item {
+        .pato-about-details {
+          width: 90%;
+          * {
+            width: 90%;
+          }
+        }
+        .pato-image-hover-wrapper {
+          width: 80%;
+        }
+      }
     }
   }
 }

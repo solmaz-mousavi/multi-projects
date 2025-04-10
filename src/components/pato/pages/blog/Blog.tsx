@@ -79,6 +79,7 @@ function Blog() {
   return (
     <section className="pato-blog-container">
       <Header title="blog" section={true} />
+
       {error && <Error error={error} fullScreen={true} />}
       {pending && <Loader type="data" fullScreen={true} />}
       {data && (
@@ -99,6 +100,7 @@ function Blog() {
               />
             </div>
           </div>
+
           <div className="pato-blog-sidebar">
             <div className="pato-blog-search-container">
               <Form
@@ -127,10 +129,16 @@ function Blog() {
                   </div>
                 ))}
             </div>
+
             <div className="pato-blog-popular-container">
+              <h3 className="pato-subtitle">popular blogs</h3>
               {popularData &&
                 popularData.map((item) => (
-                  <PopularBlogThumb {...item} comment={item.comments.length} key={item.id} />
+                  <PopularBlogThumb
+                    {...item}
+                    comment={item.comments.length}
+                    key={item.id}
+                  />
                 ))}
             </div>
           </div>

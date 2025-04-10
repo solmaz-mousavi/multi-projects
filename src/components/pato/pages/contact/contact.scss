@@ -6,52 +6,117 @@
   .form-wrapper {
     @include flex-align-start;
     flex-wrap: wrap;
-    max-width: 1200px;
+    gap: 2%;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 0;
+    padding: 30px;
     .input-wrapper {
-      width: auto;
+      width: 32%;
       flex-direction: column;
-      margin: 20px 15px 0 15px;
       input,
       select {
-        width: 300px;
+        width: 100%;
         background-color: #fff;
         color: #555;
       }
+    }
+    .input-wrapper:nth-child(4) {
+      width: 100%;
       textarea {
-        width: 960px;
+        width: 100%;
         height: 150px;
         background-color: #fff;
         color: #555;
+        max-width: 100%;
       }
     }
-    .buttons-container {
-      @include flex-center();
-      width: 100%;
-      margin: 30px;
-    }
-    .pato-contact-label {
-      display: block;
-      width: 100%;
-      text-align: left;
-      font-size: 1.1rem;
-      letter-spacing: 0.1rem;
-      padding-bottom: 5px;
-      padding-left: 5px;
-    }
+  }
+  .buttons-container {
+    @include flex-center();
+    width: 100%;
+    margin: 30px;
+  }
+  .pato-contact-label {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    padding-bottom: 5px;
+    padding-left: 5px;
   }
 
-  #googleMap {
-    margin: 0 auto;
-    max-width: 960px;
-    width: 80%;
-    height: 300px;
-    .location {
-      border: 4px solid #fff;
-      border-radius: 10px;
+
+#googleMap {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 80%;
+  height: 300px;
+  .location {
+    border: 4px solid #fff;
+    border-radius: 10px;
+  }
+}
+.pato-subtitle {
+  padding-top: 100px;
+  padding-bottom: 10px;
+}
+
+.pato-contact-bottom {
+  @include flex-align-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 100px 0;
+  .pato-contact-bottom-item {
+    @include flex-align-start;
+    gap: 20px;
+    color: #555;
+
+    .pato-contact-bottom-icon {
+      font-size: 1.5rem;
+      width: 30px;
+      margin-top: 5px;
+    }
+    .pato-contact-bottom-details {
+      text-align: left;
+      width: 100%;
+      max-width: 200px;
+      .pato-subtitle {
+        padding-top: 0;
+      }
     }
   }
+}
+}
+
+@media screen and (max-width: 768px) {
+  .pato-contact-container {
+    #googleMap {
+      width: 90%;
+      height: 300px;
+    }
+
+    .pato-contact-bottom {
+      .pato-contact-bottom-item {
+        width: 100%;
+        .pato-contact-bottom-details {
+          max-width: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pato-contact-container {
+    .form-wrapper {
+      gap: 10px;
+      .input-wrapper {
+        width: 100%;
+      }
+    }
+  
+
   .pato-subtitle {
     padding-top: 100px;
     padding-bottom: 10px;
@@ -59,8 +124,8 @@
 
   .pato-contact-bottom {
     @include flex-align-start;
-		gap: 50px;
-		padding: 100px 0;
+    gap: 50px;
+    padding: 100px 0;
     .pato-contact-bottom-item {
       @include flex-align-start;
       gap: 20px;
@@ -80,4 +145,6 @@
       }
     }
   }
+
+}
 }

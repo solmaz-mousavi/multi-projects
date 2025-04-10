@@ -32,3 +32,20 @@
     }
   }
 }
+
+@media screen and (max-width: 576px) {
+  .pato-menu-item-container {
+    padding: 10px 0;
+    .menu-item-image {
+      width: 80px;
+      height: 80px;
+      min-width: 80px;
+    }
+    .menu-item-details {
+      padding: 5px;
+      .menu-item-price {
+        position: static;
+      }
+    }
+  }
+}

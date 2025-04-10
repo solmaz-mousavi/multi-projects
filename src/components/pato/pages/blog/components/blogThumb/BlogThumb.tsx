@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import { BlogDataType } from "../../../../../../dataTypes/patoData.type";
 import { dateFormatter } from "../../../../../../utils/dateFormatter";
 import Button from "../../../../../main/modules/button/Button";
 import "./blogThumb.scss";
 function BlogThumb({
+	id,
   date,
   desc,
   title,
@@ -11,6 +13,7 @@ function BlogThumb({
   categories,
   comments,
 }: BlogDataType) {
+	const navigate = useNavigate();
   return (
     <div className="pato-blog-thumb-container">
       <div className="pato-blog-image pato-image-hover-wrapper">
@@ -27,6 +30,7 @@ function BlogThumb({
         variant="pato-transparent"
         border={false}
         icon={{ name: "MdArrowRightAlt" }}
+				clickHandler={()=>navigate(`/pato/blog/${id}`)}
       />
 			<div className="pato-blog-date">
 				<p className="day">{dateFormatter(date, 4)}</p>
