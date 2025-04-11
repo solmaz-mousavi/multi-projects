@@ -3,10 +3,11 @@ import axios from "axios";
 import { MainDataType } from "../dataTypes/mainData.type";
 import { GlintDataType } from "../dataTypes/glintData.type";
 import { PatoDataType } from "../dataTypes/patoData.type";
+import { AcademiaDataType } from "../dataTypes/academiaData.type";
 
 type PropsType = {
 	url: string;
-	project: "main" | "glint" | "pato";
+	project: "main" | "glint" | "pato" | "academia";
 }
 
 
@@ -14,6 +15,7 @@ function useFetch({url, project}: PropsType) {
   const [mainData, setMainData] = useState<MainDataType>({} as MainDataType);
   const [glintData, setGlintData] = useState<GlintDataType>({} as GlintDataType);
   const [patoData, setPatoData] = useState<PatoDataType>({} as PatoDataType);
+  const [academiaData, setAcademiaData] = useState<AcademiaDataType>({} as AcademiaDataType);
   const [pending, setPending] = useState<boolean>(true);
   const [error, setError] = useState<string>("");
 
@@ -27,8 +29,10 @@ function useFetch({url, project}: PropsType) {
 					setMainData(res.data);
 				} else if(project === "glint") {
 					setGlintData(res.data);
-				} else {
+				} else if(project === "pato") {
 					setPatoData(res.data);
+				} else {
+					setAcademiaData(res.data);
 				}
       })
       .catch((err) => {
@@ -40,8 +44,10 @@ function useFetch({url, project}: PropsType) {
 		return { mainData, pending, error };
 	} else if(project === "glint"){
 		return { glintData, pending, error };
-	} else {
+	} else if(project === "pato") {
 		return { patoData, pending, error };
+	} else {
+		return { academiaData, pending, error };
 	}
 
 }

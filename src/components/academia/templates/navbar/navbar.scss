@@ -1,0 +1,52 @@
+@use "/src/styles/global.scss" as *;
+
+.academia-navbar-wrapper {
+  @include flex-space-between;
+  height: 70px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+
+  .academia-navbar-container {
+    height: 100%;
+    .academia-navbar-link {
+      font-size: 1rem;
+      padding: 1.4rem 25px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+      line-height: 70px;
+      &.active {
+        color: $academia-color;
+      }
+    }
+  }
+  .academia-navbar-right {
+    .academia-subtitle {
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.3);
+      background: #1eb2a6;
+      padding: 1.5rem;
+      color: #fff;
+      border-radius: 0;
+      position: relative;
+      width: 250px;
+      text-align: center;
+      border: 1px solid transparent;
+      letter-spacing: 2px;
+      &::after {
+        content: "";
+        position: absolute;
+        left: -26px;
+        top: 0;
+        bottom: 0;
+        width: 25px;
+        height: 100%;
+        background-color: transparent;
+        border-bottom: 69px solid $academia-color;
+        border-left: 25px solid transparent;
+      }
+    }
+  }
+}

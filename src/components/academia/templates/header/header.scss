@@ -1,0 +1,67 @@
+@use "/src/styles/global.scss" as *;
+
+.academia-header-wrapper {
+  @include flex-space-between;
+  max-width: 1200px;
+  padding: 20px 0;
+  margin: 0 auto;
+  background-color: transparent;
+  color: #fff;
+
+  .academia-header-logo-container {
+    position: relative;
+    line-height: 1.1;
+    text-transform: uppercase;
+    .header-logo {
+      font-weight: 800;
+      font-size: 1.875rem;
+      z-index: 3;
+      position: relative;
+      transition: $main-transition;
+      &:hover {
+        color: $academia-color;
+        cursor: pointer;
+      }
+    }
+    p {
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+  }
+
+  .academia-header-details-container {
+    @include flex-center;
+    gap: 40px;
+    .academia-header-item-container {
+      @include flex-center;
+      gap: 10px;
+      .header-icon {
+        color: #fff;
+        font-size: 2.4rem;
+        line-height: 1;
+        font-weight: lighter;
+      }
+      .academia-header-item-details {
+        a {
+          color: #fff;
+        }
+      }
+    }
+    .academia-header-social-container {
+      .header-social {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 4px;
+        background: rgba(255, 255, 255, 0.2);
+        color: $academia-color;
+        padding: 12px;
+        transition: $main-transition;
+        &:hover {
+          background-color: $academia-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

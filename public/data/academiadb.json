@@ -1,30 +1,44 @@
 {
   "navbar": [
-    { "id": "01", "title": "home", "route": "home" },
-    { "id": "02", "title": "menu", "route": "menu" },
-    { "id": "03", "title": "reservation", "route": "reservation" },
-    { "id": "04", "title": "gallery", "route": "gallery" },
-    { "id": "05", "title": "blog", "route": "blog" },
-    { "id": "06", "title": "about us", "route": "about" },
-    { "id": "07", "title": "contact us", "route": "contact" }
+    { "id": "01", "title": "Home", "route": "home" },
+    { "id": "02", "title": "Courses", "route": "course" },
+    { "id": "06", "title": "About", "route": "about" },
+    { "id": "03", "title": "Team", "route": "team" },
+    { "id": "04", "title": "Pricing", "route": "pricing" },
+    { "id": "05", "title": "Journal", "route": "blog" },
+    { "id": "07", "title": "Contact", "route": "contact" }
   ],
   "social": [
     {
       "id": "01",
       "socialName": "Facebook",
-      "iconName": "FaFacebookF"
+      "iconName": "FaFacebookF",
+			"link":"https://www.facebook.com"
     },
     {
       "id": "02",
-      "socialName": "Twitter",
-      "iconName": "FaTwitter"
+      "socialName": "X",
+      "iconName": "TbBrandXFilled",
+			"link":"https://x.com"
     },
     {
       "id": "03",
-      "socialName": "Tripadvisor",
-      "iconName": "FaTripadvisor"
+      "socialName": "Instagram",
+      "iconName": "FaInstagram",
+			"link":"https://www.instagram.com"
+    },
+		{
+      "id": "04",
+      "socialName": "Behance",
+      "iconName": "FaBehance",
+			"link":"https://www.behance.net"
     }
   ],
+
+
+
+
+	
   "courses": [
     {
       "id": "01",

@@ -1,4 +1,9 @@
+import { SocialDataType } from "./mainData.type";
 
+type NavbarKeyType = "id" | "title" | "route";
+export type NavbarDataType = {
+  [index in NavbarKeyType]: string;
+};
 
 
 
@@ -10,8 +15,8 @@
 
 
 export type AcademiaDataType = {
-  navbar: any[];
-  social: any[];
+  navbar: NavbarDataType[];
+  social: SocialDataType[];
 
 
 };

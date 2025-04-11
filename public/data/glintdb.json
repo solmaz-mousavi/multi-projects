@@ -3,27 +3,32 @@
     {
       "id": "01",
       "socialName": "Facebook",
-      "iconName": "FaFacebookF"
+      "iconName": "FaFacebookF",
+			"link":"https://www.facebook.com"
     },
     {
       "id": "02",
-      "socialName": "Twitter",
-      "iconName": "FaTwitter"
+      "socialName": "X",
+      "iconName": "TbBrandXFilled",
+			"link":"https://x.com"
     },
     {
       "id": "03",
       "socialName": "Instagram",
-      "iconName": "FaInstagram"
+      "iconName": "FaInstagram",
+			"link":"https://www.instagram.com"
     },
     {
       "id": "04",
       "socialName": "Behance",
-      "iconName": "FaBehance"
+      "iconName": "FaBehance",
+			"link":"https://www.behance.net"
     },
     {
       "id": "05",
       "socialName": "Dribbble",
-      "iconName": "FaDribbble"
+      "iconName": "FaDribbble",
+			"link":"https://dribbble.com"
     }
   ],
   "menu": ["Home", "About", "Services", "Works", "Clients", "Contacts"],

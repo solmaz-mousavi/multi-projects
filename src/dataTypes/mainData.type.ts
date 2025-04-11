@@ -9,7 +9,7 @@ type ProjectKeyType = "id" | "image" | "route" | "description";
 export type ProjectType = {
   [index in ProjectKeyType]: string;
 } & {
-  title: "glint" | "kakura" | "dashboard" | "pato";
+  title: "glint" | "pato" | "academia" | "ddfr";
   packages: string[];
 };
 
@@ -19,7 +19,7 @@ export type MainDataType = {
   buttonStyles: ButtonStyleType;
 };
 
-type SocialKeyType = "id" | "socialName" | "iconName";
+type SocialKeyType = "id" | "socialName" | "iconName" | "link";
 export type SocialDataType = {
   [index in SocialKeyType]: string;
 };

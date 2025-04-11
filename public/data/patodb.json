@@ -12,17 +12,20 @@
     {
       "id": "01",
       "socialName": "Facebook",
-      "iconName": "FaFacebookF"
+      "iconName": "FaFacebookF",
+			"link":"https://www.facebook.com"
     },
     {
       "id": "02",
-      "socialName": "Twitter",
-      "iconName": "FaTwitter"
+      "socialName": "X",
+      "iconName": "TbBrandXFilled",
+			"link":"https://x.com"
     },
     {
       "id": "03",
       "socialName": "Tripadvisor",
-      "iconName": "FaTripadvisor"
+      "iconName": "FaTripadvisor",
+			"link":"https://www.tripadvisor.com"
     }
   ],
   "slides": [
