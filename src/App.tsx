@@ -1,14 +1,12 @@
 import { useEffect, useState } from "react";
-import { useRoutes } from "react-router-dom";
-import router from "./routes";
 import useFetch from "./hooks/useFetch";
 import Error from "./components/main/templates/error/Error";
 import Loader from "./components/main/templates/loader/Loader";
 import Header from "./components/main/templates/header/Header";
 import GuidBox from "./components/main/templates/guidBox/GuidBox";
+import Router from "./Router";
 
 function App() {
-  const routes = useRoutes(router());
   const { mainData, pending, error } = useFetch({
     url: "/data/maindb.json",
     project: "main",
@@ -26,7 +24,9 @@ function App() {
       {mainData && (
         <>
           <Header data={mainData} />
-          <main id="main-wrapper">{routes}</main>
+          <main id="main-wrapper">
+            <Router />
+          </main>
         </>
       )}
     </>
