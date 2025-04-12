@@ -3,9 +3,12 @@
 .academia-navbar-wrapper {
   @include flex-space-between;
   height: 70px;
-  max-width: 1200px;
-  margin: 0 auto;
   background: rgba(255, 255, 255, 0.1);
+	position: absolute;
+	top: 90px;
+	left: 0;
+	right: 0;
+	z-index: 3;
 
   .academia-navbar-container {
     height: 100%;
@@ -21,30 +24,23 @@
     }
   }
   .academia-navbar-right {
-    .academia-subtitle {
-      text-transform: uppercase;
-      font-size: 13px;
-      font-weight: 700;
-      background: rgba(255, 255, 255, 0.3);
-      background: #1eb2a6;
-      padding: 1.5rem;
-      color: #fff;
-      border-radius: 0;
+    .academia-toptitle {
       position: relative;
       width: 250px;
+      padding: 1.5rem;
       text-align: center;
-      border: 1px solid transparent;
-      letter-spacing: 2px;
+      background-color: #1eb2a6;
+      color: #fff;
       &::after {
         content: "";
         position: absolute;
-        left: -26px;
+        left: -25px;
         top: 0;
         bottom: 0;
         width: 25px;
         height: 100%;
         background-color: transparent;
-        border-bottom: 69px solid $academia-color;
+        border-bottom: 68px solid $academia-color;
         border-left: 25px solid transparent;
       }
     }

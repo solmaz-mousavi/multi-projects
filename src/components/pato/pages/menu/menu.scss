@@ -1,15 +1,15 @@
 @use "/src/styles/global.scss" as *;
 
 .pato-menu-container {
+	background-color: #efefef;
   .pato-menu-category-wrapper {
     @include flex-align-start;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    background-color: #efefef;
     padding: 30px;
     .pato-menu-category-container {
       padding: 30px;
-      width: 500px;
+			width: 500px;
     }
   }
 }

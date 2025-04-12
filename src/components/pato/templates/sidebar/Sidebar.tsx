@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import "./sidebar.scss";
 import Icon from "../../../main/modules/icon/Icon";
-import { NavbarDataType } from "../../../../dataTypes/patoData.type";
-import { SocialDataType } from "../../../../dataTypes/mainData.type";
+import { NavbarDataType, SocialDataType } from "../../../../dataTypes/mainData.type";
 import { NavLink } from "react-router-dom";
 type SidebarPropsType = {
   navbarData: NavbarDataType[];

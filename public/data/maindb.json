@@ -25,7 +25,7 @@
 		{
 			"id": "03" ,
       "title": "academia",
-      "image": "/assets/images/main/kakura.jpeg",
+      "image": "/assets/images/main/academia.png",
       "route": "/academia",
 			"description":"a landingPage created by 50lm@2",
       "packages": ["javascript", "reactJS", "typescript", "sass"]

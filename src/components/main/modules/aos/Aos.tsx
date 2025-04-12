@@ -35,7 +35,7 @@ function Aos({
   return (
     <InView>
       {({ inView, ref }) => (
-        <div ref={ref}>
+        <div ref={ref} style={{width:"100%"}}>
           <div className={className}>
             <div
               className={`${

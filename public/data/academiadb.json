@@ -13,32 +13,47 @@
       "id": "01",
       "socialName": "Facebook",
       "iconName": "FaFacebookF",
-			"link":"https://www.facebook.com"
+      "link": "https://www.facebook.com"
     },
     {
       "id": "02",
       "socialName": "X",
       "iconName": "TbBrandXFilled",
-			"link":"https://x.com"
+      "link": "https://x.com"
     },
     {
       "id": "03",
       "socialName": "Instagram",
       "iconName": "FaInstagram",
-			"link":"https://www.instagram.com"
+      "link": "https://www.instagram.com"
     },
-		{
+    {
       "id": "04",
       "socialName": "Behance",
       "iconName": "FaBehance",
-			"link":"https://www.behance.net"
+      "link": "https://www.behance.net"
     }
   ],
-
-
-
-
-	
+  "intro": [
+    {
+      "id": "01",
+      "title": "Online Courses",
+      "desc": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+      "img": "/assets/images/academia/home/intro/e-learning.png"
+    },
+		{
+      "id": "02",
+      "title": "Earn A Certificate",
+      "desc": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+      "img": "/assets/images/academia/home/intro/certificate.png"
+    },
+		{
+      "id": "03",
+      "title": "Learn with Experts",
+      "desc": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+      "img": "/assets/images/academia/home/intro/scientist.png"
+    }
+  ],
   "courses": [
     {
       "id": "01",
@@ -61,5 +76,9 @@
       "desc": "pato place",
       "button": { "title": "look gallery", "navigate": "/pato/gallery" }
     }
-  ]
+  ],
+  "onlineCourse": [{ "id": "01" }, {}],
+  "testimonial": [{ "id": "01" }, {}],
+  "blogs": [{ "id": "01" }, {}],
+  "pricing": [{ "id": "01" }, {}]
 }

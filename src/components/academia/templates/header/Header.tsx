@@ -1,16 +1,13 @@
 import { BsClock } from "react-icons/bs";
 import { BsTelephone } from "react-icons/bs";
-import useFetch from "../../../../hooks/useFetch";
+import { SocialDataType } from "../../../../dataTypes/mainData.type";
 import Icon from "../../../main/modules/icon/Icon";
 import "./header.scss";
 
-function Header() {
-  const { academiaData } = useFetch({
-    url: "/data/academiadb.json",
-    project: "academia",
-  });
+function Header({data}:{data:SocialDataType[]}) {
+
   return (
-    <section className="academia-header-wrapper">
+    <section className="academia-header-wrapper academia-container">
       <div className="academia-header-logo-container">
         <h2 className="header-logo">academia</h2>
         <p>Online Education & Learning</p>
@@ -35,8 +32,8 @@ function Header() {
           </div>
         </div>
         <div className="academia-header-social-container">
-          {academiaData?.social &&
-            academiaData.social.map((item) => (
+          {data &&
+            data.map((item) => (
               <a href={item.link} target="_blank">
                 <Icon
                   key={item.id}

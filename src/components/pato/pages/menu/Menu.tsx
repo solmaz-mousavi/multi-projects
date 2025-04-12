@@ -19,7 +19,7 @@ function Menu() {
       {pending && <Loader type="data" fullScreen={true} />}
       {patoData?.menu && (
         <>
-          <div className="pato-menu-category-wrapper">
+          <div className="pato-menu-category-wrapper container">
             {patoData.menu
               .filter((item) => !item.main)
               .map((item2) => (
@@ -37,7 +37,7 @@ function Menu() {
             .map((item2) => (
               <div key={item2.id}>
                 <Header title={item2.category} />
-                <div className="pato-menu-category-wrapper">
+                <div className="pato-menu-category-wrapper container">
                   {item2.items.map((menuItem) => (
                     <MainMenuThumb key={menuItem.id} {...menuItem} />
                   ))}

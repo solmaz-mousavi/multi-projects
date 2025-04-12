@@ -1,9 +1,4 @@
-import { SocialDataType } from "./mainData.type";
-
-type NavbarKeyType = "id" | "title" | "route";
-export type NavbarDataType = {
-  [index in NavbarKeyType]: string;
-};
+import { NavbarDataType, SocialDataType } from "./mainData.type";
 
 type SlideKeyType = "id" | "image" | "title" | "desc";
 export type SlideDataType = { [index in SlideKeyType]: string } & {

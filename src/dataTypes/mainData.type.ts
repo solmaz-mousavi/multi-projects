@@ -23,3 +23,8 @@ type SocialKeyType = "id" | "socialName" | "iconName" | "link";
 export type SocialDataType = {
   [index in SocialKeyType]: string;
 };
+
+type NavbarKeyType = "id" | "title" | "route";
+export type NavbarDataType = {
+  [index in NavbarKeyType]: string;
+};

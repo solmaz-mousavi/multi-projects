@@ -35,6 +35,9 @@
     flex-wrap: wrap;
     max-width: 1000px;
     margin: 0 auto;
+		& > div{
+			width: 320px !important;
+		}
   }
 }
 

@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import "./navbar.scss";
-import { SocialDataType } from "../../../../dataTypes/mainData.type";
+import { NavbarDataType, SocialDataType } from "../../../../dataTypes/mainData.type";
 import Icon from "../../../main/modules/icon/Icon";
-import { NavbarDataType } from "../../../../dataTypes/patoData.type";
+
 import { MdDehaze } from "react-icons/md";
 type NavbarPropsType = {
   scrollPosition: number;

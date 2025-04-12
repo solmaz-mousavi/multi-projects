@@ -1,0 +1,47 @@
+@use "/src/styles/global.scss" as *;
+
+.academia-home-intro-container {
+  @include flex-center;
+  background-color: #f8f8f8;
+  .academia-container {
+    @include flex-center;
+    .academia-home-intro-image {
+      width: 50%;
+      img {
+        height: 850px;
+      }
+    }
+    .academia-home-intro-details {
+      width: 50%;
+      padding: 0 24px;
+      .academia-toptitle {
+        color: $academia-color;
+        margin-bottom: 10px;
+      }
+      .academia-main-title {
+        margin-bottom: 32px;
+      }
+      .academia-home-intro-thumb {
+        @include flex-align-start;
+        background-color: #fff;
+        padding: 25px;
+        margin-bottom: 10px;
+        .academia-home-intro-thumb-img {
+          width: 60px;
+          img {
+            width: 60px;
+          }
+        }
+        .academia-home-intro-thumb-details {
+          padding-left: 20px;
+          .academia-subtitle {
+            padding-bottom: 15px;
+          }
+          .academia-desc {
+            color: #aaa;
+          }
+        }
+      }
+    }
+  }
+}

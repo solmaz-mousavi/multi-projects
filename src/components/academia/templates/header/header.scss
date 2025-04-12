@@ -2,11 +2,15 @@
 
 .academia-header-wrapper {
   @include flex-space-between;
-  max-width: 1200px;
+	height: 90px;
   padding: 20px 0;
-  margin: 0 auto;
   background-color: transparent;
   color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 3;
 
   .academia-header-logo-container {
     position: relative;
@@ -15,7 +19,6 @@
     .header-logo {
       font-weight: 800;
       font-size: 1.875rem;
-      z-index: 3;
       position: relative;
       transition: $main-transition;
       &:hover {

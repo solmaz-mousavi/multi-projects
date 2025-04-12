@@ -4,9 +4,13 @@
   @include flex-center;
   padding: 50px;
   background-color: #eee;
+	& > div{
+		max-width: 500px;
+	}
   .pato-home-welcome__txt {
     text-align: center;
     padding: 40px;
+		
     .pato-home-welcome__txt-title {
       margin-bottom: 10px;
       color: $pato-color-red;
@@ -17,6 +21,7 @@
   }
   .pato-home-welcome__img {
     margin: 0 50px;
+		
     img {
       max-width: 400px;
     }

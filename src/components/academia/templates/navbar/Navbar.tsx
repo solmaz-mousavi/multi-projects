@@ -1,29 +1,28 @@
 import { NavLink } from "react-router-dom";
-import useFetch from "../../../../hooks/useFetch";
+import { NavbarDataType } from "../../../../dataTypes/mainData.type";
 import "./navbar.scss";
 
-function Navbar() {
-	const { academiaData, pending, error } = useFetch({
-    url: "/data/academiadb.json",
-    project: "academia",
-  });
+function Navbar({ data }: { data: NavbarDataType[] }) {
   return (
-    <section className="academia-navbar-wrapper">
+    <section className="academia-navbar-wrapper academia-container">
       <nav className="academia-navbar-container">
-				{academiaData?.navbar && academiaData.navbar.map(item => (
-					            <NavLink
-											key={item.id}
-											to={`/academia/${item.route}`}
-											className={(link) =>
-												link.isActive ? "active academia-navbar-link" : "academia-navbar-link"
-											}
-										>
-											{item.title}
-										</NavLink>
-				))}
-			</nav>
+        {data &&
+          data.map((item) => (
+            <NavLink
+              key={item.id}
+              to={`/academia/${item.route}`}
+              className={(link) =>
+                link.isActive
+                  ? "active academia-navbar-link"
+                  : "academia-navbar-link"
+              }
+            >
+              {item.title}
+            </NavLink>
+          ))}
+      </nav>
       <div className="academia-navbar-right">
-        <p className="academia-subtitle">get certificate</p>
+        <p className="academia-toptitle">get certificate</p>
       </div>
     </section>
   );

@@ -83,7 +83,7 @@ function Blog() {
       {error && <Error error={error} fullScreen={true} />}
       {pending && <Loader type="data" fullScreen={true} />}
       {data && (
-        <div className="pato-blog-content">
+        <div className="pato-blog-content container">
           <div className="pato-blog-main-container">
             <div className="pato-blog-main">
               {data.length === 0 && <p>Not fount any data to show.</p>}

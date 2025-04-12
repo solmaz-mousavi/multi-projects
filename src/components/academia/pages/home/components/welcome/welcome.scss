@@ -1,0 +1,35 @@
+@use "/src/styles/global.scss" as *;
+
+.academia-home-welcome-wrapper {
+  @include flex-center;
+  background-image: url("../../../../../../../public/assets/images/academia/home/bg_1.jpg");
+  background-position: 0px 60px;
+  background-size: cover;
+  background-attachment: fixed;
+  height: calc(100vh - 60px);
+  padding-top: 160px;
+  .academia-home-welcome-container {
+    width: 100%;
+    & > * {
+      width: 40%;
+    }
+    .academia-toptitle {
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 10px;
+    }
+    .academia-main-title {
+      color: #fff;
+      margin-bottom: 24px;
+    }
+    .academia-desc {
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    .academia-home-welcome-btn-container {
+      .btn {
+        margin-right: 5px;
+      }
+    }
+  }
+}
