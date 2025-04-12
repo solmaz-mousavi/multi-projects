@@ -4,9 +4,10 @@ import CountUp from "react-countup";
 type CounterUpPropsType = {
   end: number;
   once: boolean;
+	className?:string;
 };
 
-function CounterUp({ end, once }: CounterUpPropsType) {
+function CounterUp({ end, once, className }: CounterUpPropsType) {
   const [repeat, setRepeat] = useState<boolean>(true);
   const repeatHandler = () => {
     if (once) {
@@ -18,7 +19,7 @@ function CounterUp({ end, once }: CounterUpPropsType) {
       {({ inView, ref }) => (
         <div>
           {inView && repeat ? (
-            <CountUp end={end} onEnd={repeatHandler} />
+            <CountUp end={end} onEnd={repeatHandler} className={className ? className : ""}/>
           ) : (
             <>{end.toLocaleString()}</>
           )}

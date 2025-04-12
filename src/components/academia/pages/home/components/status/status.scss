@@ -1,0 +1,37 @@
+@use "/src/styles/global.scss" as *;
+
+.academia-home-status-container {
+  background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url("../../../../../../../public/assets/images/academia/home/status.jpg");
+  background-position: center;
+  background-size: cover;
+  .academia-container {
+    @include flex-space-around;
+		width: 100%;
+		padding: 80px 0;
+
+    .academia-status-thumb {
+      @include flex-center;
+      gap: 20px;
+      .academia-status-img {
+        img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+      .academia-status-details {
+        .academia-status-count {
+          color: #fff;
+          font-size: 2.5rem;
+          font-weight: 700;
+          line-height: 1;
+        }
+        .academia-desc {
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.8);
+					font-weight: normal;
+					letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@ import Courses from './components/courses/Courses';
 import Intro from './components/intro/Intro';
 import OnlineCourse from './components/onlineCourses/OnlineCourse';
 import Pricing from './components/pricing/Pricing';
+import Status from './components/status/Status';
 import Testimonial from './components/testimonial/Testimonial';
 import Welcome from './components/welcome/Welcome';
 
@@ -22,6 +23,7 @@ function Home() {
         <section className="pato-home-wrapper">
           <Welcome />
           <Intro data={academiaData.intro} />
+					<Status data={academiaData.status} />
           <Courses data={academiaData.courses} />
           <OnlineCourse data={academiaData.onlineCourse} />
           <Testimonial data={academiaData.testimonial} />

@@ -39,42 +39,357 @@
       "id": "01",
       "title": "Online Courses",
       "desc": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-      "img": "/assets/images/academia/home/intro/e-learning.png"
+      "img": "/assets/images/academia/flaticons/aqua/e-learning.png"
     },
-		{
+    {
       "id": "02",
       "title": "Earn A Certificate",
       "desc": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-      "img": "/assets/images/academia/home/intro/certificate.png"
+      "img": "/assets/images/academia/flaticons/aqua/certificate.png"
     },
-		{
+    {
       "id": "03",
       "title": "Learn with Experts",
       "desc": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-      "img": "/assets/images/academia/home/intro/scientist.png"
+      "img": "/assets/images/academia/flaticons/aqua/scientist.png"
     }
   ],
-  "courses": [
+  "status": [
     {
       "id": "01",
-      "image": "/assets/images/pato/home/slider/slide01.jpg",
-      "title": "welcome to",
-      "desc": "pato place",
-      "button": { "title": "look menu", "navigate": "/pato/menu" }
+      "title": "Success Stories",
+      "number": 3000,
+      "img": "/assets/images/academia/flaticons/white/graduated.png"
     },
     {
       "id": "02",
-      "image": "/assets/images/pato/home/slider/slide02.jpg",
-      "title": "know about us",
-      "desc": "pato place",
-      "button": { "title": "about us", "navigate": "/pato/about" }
+      "title": "Trusted Tutors",
+      "number": 320,
+      "img": "/assets/images/academia/flaticons/white/scientist.png"
     },
     {
       "id": "03",
-      "image": "/assets/images/pato/home/slider/slide03.jpg",
-      "title": "have a look to",
-      "desc": "pato place",
-      "button": { "title": "look gallery", "navigate": "/pato/gallery" }
+      "title": "Schedules",
+      "number": 1000,
+      "img": "/assets/images/academia/flaticons/white/calendar.png"
+    },
+    {
+      "id": "04",
+      "title": "Courses",
+      "number": 587,
+      "img": "/assets/images/academia/flaticons/white/learning.png"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "01",
+      "name": "Dr. John Will",
+      "desc": "frontend developer",
+			"img":"",
+      "social": [
+        {
+          "id": "01",
+          "socialName": "Facebook",
+          "iconName": "FaFacebookF",
+          "link": "https://www.facebook.com"
+        },
+        {
+          "id": "02",
+          "socialName": "X",
+          "iconName": "TbBrandXFilled",
+          "link": "https://x.com"
+        },
+        {
+          "id": "03",
+          "socialName": "Instagram",
+          "iconName": "FaInstagram",
+          "link": "https://www.instagram.com"
+        }
+      ]
+    },
+		{
+      "id": "02",
+      "name": "Sarah Clerck",
+      "desc": "full stack",
+			"img":"",
+      "social": [
+        {
+          "id": "01",
+          "socialName": "Facebook",
+          "iconName": "FaFacebookF",
+          "link": "https://www.facebook.com"
+        },
+        {
+          "id": "02",
+          "socialName": "X",
+          "iconName": "TbBrandXFilled",
+          "link": "https://x.com"
+        },
+        {
+          "id": "03",
+          "socialName": "Instagram",
+          "iconName": "FaInstagram",
+          "link": "https://www.instagram.com"
+        }
+      ]
+    },
+		{
+      "id": "03",
+      "name": "Bill Jackson",
+      "desc": "software engineer",
+			"img":"",
+      "social": [
+        {
+          "id": "01",
+          "socialName": "Facebook",
+          "iconName": "FaFacebookF",
+          "link": "https://www.facebook.com"
+        },
+        {
+          "id": "02",
+          "socialName": "X",
+          "iconName": "TbBrandXFilled",
+          "link": "https://x.com"
+        }
+      ]
+    }
+  ],
+  "categories": [
+		{"id":"01", "title":"frontend", "img":""},
+		{"id":"02", "title":"backend", "img":""},
+		{"id":"03", "title":"network", "img":""},
+		{"id":"04", "title":"android", "img":""},
+		{"id":"05", "title":"database", "img":""},
+		{"id":"06", "title":"ai", "img":""}
+	],
+  "courses": [
+    {
+      "id": "01",
+      "title": "html",
+      "image": "",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, leo nec blandit sagittis, velit velit ultrices dui, eu pretium arcu enim vel ligula. Mauris dolor nisl, luctus at auctor ac, porttitor id ipsum. Sed ut eros vel sem tempor suscipit. Proin vitae ipsum ex. Nam fringilla magna non massa ullamcorper viverra. Nullam eget sapien sem. Phasellus faucibus metus vitae lobortis cursus. In dapibus lacinia nulla eu eleifend. Aenean pellentesque, neque vitae lobortis interdum, mauris orci efficitur risus, vestibulum sodales lectus est eget odio. Etiam nulla diam, consectetur eu varius sit amet, fringilla ac ligula. Curabitur faucibus nulla non diam egestas, vel molestie metus feugiat. Aliquam facilisis purus non quam bibendum congue id ut ipsum. Cras auctor urna justo, ac tempor nisl semper sit amet.",
+			"teacher":    {
+				"id": "01",
+				"name": "John Will",
+				"desc": "frontend developer",
+				"social": [
+					{
+						"id": "01",
+						"socialName": "Facebook",
+						"iconName": "FaFacebookF",
+						"link": "https://www.facebook.com"
+					},
+					{
+						"id": "02",
+						"socialName": "X",
+						"iconName": "TbBrandXFilled",
+						"link": "https://x.com"
+					},
+					{
+						"id": "03",
+						"socialName": "Instagram",
+						"iconName": "FaInstagram",
+						"link": "https://www.instagram.com"
+					}
+				]
+			},
+			"time":{"lectures":50, "hours":190},
+			"price":{"perMonth":17, "all":40},
+			"categories":[
+				{"id":"01", "title":"frontend", "img":""},
+				{"id":"04", "title":"android", "img":""}
+			]
+   
+    },
+		{
+      "id": "02",
+      "title": "python",
+      "image": "",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, leo nec blandit sagittis, velit velit ultrices dui, eu pretium arcu enim vel ligula. Mauris dolor nisl, luctus at auctor ac, porttitor id ipsum. Sed ut eros vel sem tempor suscipit. Proin vitae ipsum ex. Nam fringilla magna non massa ullamcorper viverra. Nullam eget sapien sem. Phasellus faucibus metus vitae lobortis cursus. In dapibus lacinia nulla eu eleifend. Aenean pellentesque, neque vitae lobortis interdum, mauris orci efficitur risus, vestibulum sodales lectus est eget odio. Etiam nulla diam, consectetur eu varius sit amet, fringilla ac ligula. Curabitur faucibus nulla non diam egestas, vel molestie metus feugiat. Aliquam facilisis purus non quam bibendum congue id ut ipsum. Cras auctor urna justo, ac tempor nisl semper sit amet.",
+			"teacher":    {
+				"id": "01",
+				"name": "John Will",
+				"desc": "frontend developer",
+				"social": [
+					{
+						"id": "01",
+						"socialName": "Facebook",
+						"iconName": "FaFacebookF",
+						"link": "https://www.facebook.com"
+					},
+					{
+						"id": "02",
+						"socialName": "X",
+						"iconName": "TbBrandXFilled",
+						"link": "https://x.com"
+					},
+					{
+						"id": "03",
+						"socialName": "Instagram",
+						"iconName": "FaInstagram",
+						"link": "https://www.instagram.com"
+					}
+				]
+			},
+			"time":{"lectures":50, "hours":190},
+			"price":{"perMonth":17, "all":40},
+			"categories":[
+				{"id":"01", "title":"frontend", "img":""},
+				{"id":"04", "title":"android", "img":""}
+			]
+   
+    },
+		{
+      "id": "03",
+      "title": "java",
+      "image": "",
+			"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, leo nec blandit sagittis, velit velit ultrices dui, eu pretium arcu enim vel ligula. Mauris dolor nisl, luctus at auctor ac, porttitor id ipsum. Sed ut eros vel sem tempor suscipit. Proin vitae ipsum ex. Nam fringilla magna non massa ullamcorper viverra. Nullam eget sapien sem. Phasellus faucibus metus vitae lobortis cursus. In dapibus lacinia nulla eu eleifend. Aenean pellentesque, neque vitae lobortis interdum, mauris orci efficitur risus, vestibulum sodales lectus est eget odio. Etiam nulla diam, consectetur eu varius sit amet, fringilla ac ligula. Curabitur faucibus nulla non diam egestas, vel molestie metus feugiat. Aliquam facilisis purus non quam bibendum congue id ut ipsum. Cras auctor urna justo, ac tempor nisl semper sit amet.",
+			"teacher":    {
+				"id": "01",
+				"name": "John Will",
+				"desc": "frontend developer",
+				"social": [
+					{
+						"id": "01",
+						"socialName": "Facebook",
+						"iconName": "FaFacebookF",
+						"link": "https://www.facebook.com"
+					},
+					{
+						"id": "02",
+						"socialName": "X",
+						"iconName": "TbBrandXFilled",
+						"link": "https://x.com"
+					},
+					{
+						"id": "03",
+						"socialName": "Instagram",
+						"iconName": "FaInstagram",
+						"link": "https://www.instagram.com"
+					}
+				]
+			},
+			"time":{"lectures":50, "hours":190},
+			"price":{"perMonth":17, "all":40},
+			"categories":[
+				{"id":"01", "title":"frontend", "img":""},
+				{"id":"04", "title":"android", "img":""}
+			]
+   
+    },
+		{
+      "id": "04",
+      "title": "data science",
+      "image": "",
+			"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, leo nec blandit sagittis, velit velit ultrices dui, eu pretium arcu enim vel ligula. Mauris dolor nisl, luctus at auctor ac, porttitor id ipsum. Sed ut eros vel sem tempor suscipit. Proin vitae ipsum ex. Nam fringilla magna non massa ullamcorper viverra. Nullam eget sapien sem. Phasellus faucibus metus vitae lobortis cursus. In dapibus lacinia nulla eu eleifend. Aenean pellentesque, neque vitae lobortis interdum, mauris orci efficitur risus, vestibulum sodales lectus est eget odio. Etiam nulla diam, consectetur eu varius sit amet, fringilla ac ligula. Curabitur faucibus nulla non diam egestas, vel molestie metus feugiat. Aliquam facilisis purus non quam bibendum congue id ut ipsum. Cras auctor urna justo, ac tempor nisl semper sit amet.",
+			"teacher":    {
+				"id": "01",
+				"name": "John Will",
+				"desc": "frontend developer",
+				"social": [
+					{
+						"id": "01",
+						"socialName": "Facebook",
+						"iconName": "FaFacebookF",
+						"link": "https://www.facebook.com"
+					},
+					{
+						"id": "02",
+						"socialName": "X",
+						"iconName": "TbBrandXFilled",
+						"link": "https://x.com"
+					},
+					{
+						"id": "03",
+						"socialName": "Instagram",
+						"iconName": "FaInstagram",
+						"link": "https://www.instagram.com"
+					}
+				]
+			},
+			"time":{"lectures":50, "hours":190},
+			"price":{"perMonth":17, "all":40},
+			"categories":[
+				{"id":"01", "title":"frontend", "img":""},
+				{"id":"04", "title":"android", "img":""}
+			]
+   
+    },
+		{
+      "id": "05",
+      "title": "photoshop",
+      "image": "",
+			"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, leo nec blandit sagittis, velit velit ultrices dui, eu pretium arcu enim vel ligula. Mauris dolor nisl, luctus at auctor ac, porttitor id ipsum. Sed ut eros vel sem tempor suscipit. Proin vitae ipsum ex. Nam fringilla magna non massa ullamcorper viverra. Nullam eget sapien sem. Phasellus faucibus metus vitae lobortis cursus. In dapibus lacinia nulla eu eleifend. Aenean pellentesque, neque vitae lobortis interdum, mauris orci efficitur risus, vestibulum sodales lectus est eget odio. Etiam nulla diam, consectetur eu varius sit amet, fringilla ac ligula. Curabitur faucibus nulla non diam egestas, vel molestie metus feugiat. Aliquam facilisis purus non quam bibendum congue id ut ipsum. Cras auctor urna justo, ac tempor nisl semper sit amet.",
+			"teacher":    {
+				"id": "01",
+				"name": "John Will",
+				"desc": "frontend developer",
+				"social": [
+					{
+						"id": "01",
+						"socialName": "Facebook",
+						"iconName": "FaFacebookF",
+						"link": "https://www.facebook.com"
+					},
+					{
+						"id": "02",
+						"socialName": "X",
+						"iconName": "TbBrandXFilled",
+						"link": "https://x.com"
+					},
+					{
+						"id": "03",
+						"socialName": "Instagram",
+						"iconName": "FaInstagram",
+						"link": "https://www.instagram.com"
+					}
+				]
+			},
+			"time":{"lectures":50, "hours":190},
+			"price":{"perMonth":17, "all":40},
+			"categories":[
+				{"id":"01", "title":"frontend", "img":""},
+				{"id":"04", "title":"android", "img":""}
+			]
+   
+    },
+		{
+      "id": "06",
+      "title": "react",
+      "image": "",
+			"desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, leo nec blandit sagittis, velit velit ultrices dui, eu pretium arcu enim vel ligula. Mauris dolor nisl, luctus at auctor ac, porttitor id ipsum. Sed ut eros vel sem tempor suscipit. Proin vitae ipsum ex. Nam fringilla magna non massa ullamcorper viverra. Nullam eget sapien sem. Phasellus faucibus metus vitae lobortis cursus. In dapibus lacinia nulla eu eleifend. Aenean pellentesque, neque vitae lobortis interdum, mauris orci efficitur risus, vestibulum sodales lectus est eget odio. Etiam nulla diam, consectetur eu varius sit amet, fringilla ac ligula. Curabitur faucibus nulla non diam egestas, vel molestie metus feugiat. Aliquam facilisis purus non quam bibendum congue id ut ipsum. Cras auctor urna justo, ac tempor nisl semper sit amet.",
+			"teacher":    {
+				"id": "01",
+				"name": "John Will",
+				"desc": "frontend developer",
+				"social": [
+					{
+						"id": "01",
+						"socialName": "Facebook",
+						"iconName": "FaFacebookF",
+						"link": "https://www.facebook.com"
+					},
+					{
+						"id": "02",
+						"socialName": "X",
+						"iconName": "TbBrandXFilled",
+						"link": "https://x.com"
+					},
+					{
+						"id": "03",
+						"socialName": "Instagram",
+						"iconName": "FaInstagram",
+						"link": "https://www.instagram.com"
+					}
+				]
+			},
+			"time":{"lectures":50, "hours":190},
+			"price":{"perMonth":17, "all":40},
+			"categories":[
+				{"id":"01", "title":"frontend", "img":""},
+				{"id":"04", "title":"android", "img":""}
+			]
+   
     }
   ],
   "onlineCourse": [{ "id": "01" }, {}],

@@ -7,7 +7,7 @@ function Intro({ data }: { data: IntroDataType[] }) {
       <div className="academia-container">
         <div className="academia-img-wrapper academia-home-intro-image">
           <img
-            src="/assets/images/academia/home/intro/intro.jpg"
+            src="/assets/images/academia/home/intro.jpg"
             alt="academia"
           />
         </div>
@@ -18,7 +18,7 @@ function Intro({ data }: { data: IntroDataType[] }) {
           </h2>
           {data &&
             data.map((item) => (
-              <div className="academia-home-intro-thumb">
+              <div className="academia-home-intro-thumb" key={item.id}>
                 <div className="academia-home-intro-thumb-img">
                   <img src={item.img} alt={item.title} />
                 </div>

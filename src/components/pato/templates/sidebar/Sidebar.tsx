@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import "./sidebar.scss";
 import Icon from "../../../main/modules/icon/Icon";
 import { NavbarDataType, SocialDataType } from "../../../../dataTypes/mainData.type";
@@ -11,12 +11,13 @@ type SidebarPropsType = {
 }
 
 function Sidebar({navbarData,socialData,	showSidebar,	setShowSidebar}:SidebarPropsType) {
-	const closeSidebarHandler = () => {
+
+	const closeSidebarHandler = useCallback( () => {
     setShowSidebar(false);
     window.document
       .getElementById("pato")
       ?.removeEventListener("click", closeSidebarHandler);
-  };
+  },[setShowSidebar]);
 
   useEffect(() => {
     if (showSidebar) {
@@ -24,7 +25,7 @@ function Sidebar({navbarData,socialData,	showSidebar,	setShowSidebar}:SidebarPro
         .getElementById("pato")
         ?.addEventListener("click", closeSidebarHandler);
     }
-  }, [showSidebar]);
+  }, [showSidebar, closeSidebarHandler]);
 
 	return (
 	    <>

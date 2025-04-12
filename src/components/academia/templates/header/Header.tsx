@@ -34,7 +34,7 @@ function Header({data}:{data:SocialDataType[]}) {
         <div className="academia-header-social-container">
           {data &&
             data.map((item) => (
-              <a href={item.link} target="_blank">
+              <a href={item.link} target="_blank" rel="noreferrer" key={item.id}>
                 <Icon
                   key={item.id}
                   name={item.iconName}
