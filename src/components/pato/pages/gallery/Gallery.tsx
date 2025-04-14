@@ -1,15 +1,15 @@
 import { useState } from "react";
-import useFetch from "../../../../hooks/useFetch";
-import Error from "../../../main/templates/error/Error";
-import Loader from "../../../main/templates/loader/Loader";
 import { intersection } from "../../../../utils/arrayIntersection";
 import Pagination from "../../../main/modules/pagination/Pagination";
 import SliderModal from "../../../main/modules/sliderModal/SliderModal";
 import Header from "../../templates/header/Header";
 import GalleryThumb from "./galleryThumb/GalleryThumb";
 import "./gallery.scss";
+import { useOutletContext } from "react-router-dom";
+import { PatoDataType } from "../../../../dataTypes/patoData.type";
 
 function Gallery() {
+	const patoData = useOutletContext<PatoDataType>();
   const [categories, setCategories] = useState<string[]>(["all"]);
   const [startIndex, setStartIndex] = useState(0);
   const [gallerySliderShow, setGallerySliderShow] = useState(false);
@@ -25,10 +25,7 @@ function Gallery() {
       setCategories((pre) => [...pre, item].filter((i) => i !== "all"));
     }
   };
-  const { patoData, pending, error } = useFetch({
-    url: "/data/patodb.json",
-    project: "pato",
-  });
+
   let data;
   if (patoData?.gallery) {
     data = patoData.gallery.filter(
@@ -42,8 +39,6 @@ function Gallery() {
     <section className="pato-gallery-container">
       <Header title="gallery" section={true} />
 
-      {error && <Error error={error} fullScreen={true} />}
-      {pending && <Loader type="data" fullScreen={true} />}
       {patoData?.galleryCategory && (
         <div className="pato-galleryCategory-wrapper">
           <>

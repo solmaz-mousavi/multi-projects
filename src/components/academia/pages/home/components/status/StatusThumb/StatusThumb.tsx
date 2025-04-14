@@ -1,3 +1,4 @@
+
 import CounterUp from "../../../../../../main/modules/countUp/CounterUp";
 import "./statusThumb.scss";
 type StatusThumbPropsType = {
@@ -13,7 +14,7 @@ function StatusThumb({ img, title, number }: StatusThumbPropsType) {
       </div>
       <div className="academia-status-details">
         <div className="academia-status-count">
-          <CounterUp end={number} once={true} />
+          <CounterUp end={number} once={false} />
         </div>
         <h4 className="academia-desc">{title}</h4>
       </div>

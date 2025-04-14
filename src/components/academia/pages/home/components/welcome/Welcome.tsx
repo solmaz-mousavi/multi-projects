@@ -7,8 +7,8 @@ function Welcome() {
   const navigate = useNavigate();
   return (
     <section className="academia-home-welcome-wrapper">
-      <Aos aosStyle="fadeInUp" once={true}>
         <div className="academia-home-welcome-container academia-container">
+      <Aos aosStyle="fadeInUp" once={true}>
           <h4 className="academia-toptitle">welcome to academia</h4>
           <h1 className="academia-main-title">
             Best Online Education Expertise
@@ -34,8 +34,8 @@ function Welcome() {
               clickHandler={() => navigate("/academia/course")}
             />
           </div>
-        </div>
       </Aos>
+        </div>
     </section>
   );
 }

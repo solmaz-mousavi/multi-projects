@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
-import useFetch from "../../../../hooks/useFetch";
 import Header from "../../templates/header/Header";
 import BlogThumb from "./components/blogThumb/BlogThumb";
 import "./blog.scss";
-import Error from "../../../main/templates/error/Error";
-import Loader from "../../../main/templates/loader/Loader";
 import Pagination from "../../../main/modules/pagination/Pagination";
 import {
   IFormInputType,
@@ -16,19 +13,19 @@ import Form from "../../../main/modules/form/Form";
 import {
   BlogCategoryType,
   BlogDataType,
+  PatoDataType,
 } from "../../../../dataTypes/patoData.type";
 import PopularBlogThumb from "./components/popularBlogThumb/PopularBlogThumb";
+import { useOutletContext } from "react-router-dom";
 
 function Blog() {
+  const patoData = useOutletContext<PatoDataType>();
   const [data, setData] = useState<BlogDataType[]>([] as BlogDataType[]);
   const [popularData, setPopularData] = useState<BlogDataType[]>(
     [] as BlogDataType[]
   );
   const [startIndex, setStartIndex] = useState(0);
-  const { patoData, pending, error } = useFetch({
-    url: "/data/patodb.json",
-    project: "pato",
-  });
+
   useEffect(() => {
     if (patoData?.blogs) {
       setData(patoData.blogs);
@@ -80,8 +77,6 @@ function Blog() {
     <section className="pato-blog-container">
       <Header title="blog" section={true} />
 
-      {error && <Error error={error} fullScreen={true} />}
-      {pending && <Loader type="data" fullScreen={true} />}
       {data && (
         <div className="pato-blog-content container">
           <div className="pato-blog-main-container">

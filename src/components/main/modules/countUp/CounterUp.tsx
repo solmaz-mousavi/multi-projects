@@ -17,7 +17,7 @@ function CounterUp({ end, once, className }: CounterUpPropsType) {
   return (
     <InView>
       {({ inView, ref }) => (
-        <div>
+        <div ref={ref}>
           {inView && repeat ? (
             <CountUp end={end} onEnd={repeatHandler} className={className ? className : ""}/>
           ) : (

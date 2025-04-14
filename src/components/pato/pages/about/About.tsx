@@ -1,13 +1,12 @@
-import useFetch from "../../../../hooks/useFetch";
 import Header from "../../templates/header/Header";
 import ChefThumb from "./chefThumb/ChefThumb";
 import "./about.scss";
+import { useOutletContext } from "react-router-dom";
+import { PatoDataType } from "../../../../dataTypes/patoData.type";
 
 function About() {
-  const { patoData } = useFetch({
-    url: "/data/patodb.json",
-    project: "pato",
-  });
+	const patoData = useOutletContext<PatoDataType>();
+
   return (
     <section className="pato-about-container">
       <Header title="about us" section={true} />

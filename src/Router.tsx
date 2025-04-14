@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Glint from "./projects/Glint";
 import Dashboard from "./projects/Dashboard";
 
-import Pato from "./projects/Pato";
+import Pato from "./components/pato/Pato";
 import PatoHome from "./components/pato/pages/home/Home";
 import PatoAbout from "./components/pato/pages/about/About";
 import PatoBlog from "./components/pato/pages/blog/Blog";
