@@ -1,0 +1,14 @@
+@use "/src/styles/global.scss" as *;
+
+.academia-section-header-container {
+  text-align: center;
+
+  .academia-toptitle {
+    color: $academia-color;
+    margin-bottom: 5px;
+  }
+  .academia-main-title {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 50px;
+  }
+}

@@ -1,0 +1,13 @@
+@use "/src/styles/global.scss" as *;
+
+.academia-home-category-container {
+  padding: 80px 0;
+  background-color: #f8f8f8;
+  .academia-container {
+    .academia-home-category-content {
+      @include flex-center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+}

@@ -1,5 +1,11 @@
-export const getStudentByID = () => console.log("yes");
-export const getTeacherByID = () => console.log("yes");
-export const getCourseByID = () => console.log("yes");
-export const getCategoryByID = () => console.log("yes");
+interface IdInclude {
+  id: string;
+}
 
+function getResultByID<T extends IdInclude>(ID: string, data: T[]): T {
+  const res = data.find((item) => item.id === ID);
+  return res ? res : {} as T;
+}
+const getStudentCountByCourseID = () => console.log("yes");
+
+export {getResultByID, getStudentCountByCourseID}

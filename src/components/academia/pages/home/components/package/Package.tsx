@@ -1,22 +1,21 @@
 import SectionHeader from "../../../../modules/sectionHeader/SectionHeader";
-import "./blog.scss";
-import BlogThumb from "./blogThumb/BlogThumb";
+import "./package.scss";
 
-function Blog({ data }: { data: any[] }) {
+function Package() {
 	return (
 		<section className="academia-home-category-container">
 		<div className="academia-container">
 			<SectionHeader
-				toptitle="Our Blog"
-				title="Recent From Blog"
+				toptitle="Our Categories"
+				title="Browse Our Online Courses"
 			/>
 			<div className="academia-home-category-content">
-				{data &&
-					data.slice(0,3).map((item) => <BlogThumb {...item} key={item.id} />)}
+				{/* {data &&
+					data.map((item) => <CategoryThumb {...item} key={item.id} />)} */}
 			</div>
 		</div>
 	</section>
 	)
 }
 
-export default Blog
+export default Package

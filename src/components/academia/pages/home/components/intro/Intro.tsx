@@ -1,4 +1,5 @@
 import { IntroDataType } from "../../../../../../dataTypes/academiaData.type";
+import IntroThumb from "./IntroThumb/IntroThumb";
 import "./intro.scss";
 
 function Intro({ data }: { data: IntroDataType[] }) {
@@ -6,28 +7,14 @@ function Intro({ data }: { data: IntroDataType[] }) {
     <section className="academia-home-intro-container">
       <div className="academia-container">
         <div className="academia-img-wrapper academia-home-intro-image">
-          <img
-            src="/assets/images/academia/home/intro.jpg"
-            alt="academia"
-          />
+          <img src="/assets/images/academia/home/intro.jpg" alt="academia" />
         </div>
         <div className="academia-home-intro-details">
           <h4 className="academia-toptitle">learn anything</h4>
           <h2 className="academia-main-title">
             Benefits About Online Learning Expertise
           </h2>
-          {data &&
-            data.map((item) => (
-              <div className="academia-home-intro-thumb" key={item.id}>
-                <div className="academia-home-intro-thumb-img">
-                  <img src={item.img} alt={item.title} />
-                </div>
-                <div className="academia-home-intro-thumb-details">
-                  <h4 className="academia-subtitle">{item.title}</h4>
-                  <p className="academia-desc">{item.desc}</p>
-                </div>
-              </div>
-            ))}
+          {data && data.map((item) => <IntroThumb {...item} key={item.id} />)}
         </div>
       </div>
     </section>

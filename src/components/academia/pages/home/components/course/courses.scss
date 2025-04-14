@@ -1,0 +1,26 @@
+@use "/src/styles/global.scss" as *;
+
+.academia-home-courses-container {
+  padding:80px 0;
+  background-color: #f8f8f8;
+  .academia-container {
+    .academia-home-course-content {
+      .swiper-slide {
+        width: auto;
+      }
+
+      .swiper-pagination {
+        .swiper-pagination-bullet {
+          background-color: $academia-color;
+          width: 20px;
+          height: 3px;
+          border-radius: 2px;
+        }
+      }
+      .swiper-wrapper {
+        height: 500px;
+      }
+
+    }
+  }
+}

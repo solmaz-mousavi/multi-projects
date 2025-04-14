@@ -13,6 +13,7 @@ function Header({data}:{data:SocialDataType[]}) {
         <p>Online Education & Learning</p>
       </div>
       <div className="academia-header-details-container">
+
         <div className="academia-header-item-container">
           <BsClock className="header-icon" />
           <div className="academia-header-item-details">
@@ -20,6 +21,7 @@ function Header({data}:{data:SocialDataType[]}) {
             <strong className="academia-desc">8:00AM - 8:00PM</strong>
           </div>
         </div>
+
         <div className="academia-header-item-container">
           <BsTelephone className="header-icon" />
           <div className="academia-header-item-details">
@@ -31,6 +33,7 @@ function Header({data}:{data:SocialDataType[]}) {
             </strong>
           </div>
         </div>
+
         <div className="academia-header-social-container">
           {data &&
             data.map((item) => (
@@ -43,6 +46,7 @@ function Header({data}:{data:SocialDataType[]}) {
               </a>
             ))}
         </div>
+				
       </div>
     </section>
   );
