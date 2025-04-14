@@ -1,0 +1,184 @@
+@use "/src/styles/global.scss" as *;
+
+.academia-footer-container {
+  .academia-footer-top {
+    background-color: $academia-color;
+    padding: 30px 0;
+    color: #fff;
+    .academia-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      h3 {
+        font-size: 1.6rem;
+        font-weight: bold;
+        line-height: 1.5;
+      }
+      .form-wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: stretch;
+        padding: 0;
+        border-radius: 0;
+        border-bottom: 1px solid #fff;
+
+        .academia-footer-input {
+          color: #fff;
+          padding-left: 0;
+          width: 300px;
+          &::placeholder {
+            color: #fff;
+          }
+        }
+        .academia-footer-btn {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  // --------------------------------------------
+  .academia-footer-content {
+    background-color: #fff;
+    padding: 30px 0;
+    .academia-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .academia-footer-item {
+        width: 27%;
+
+        .academia-footer-logo-container {
+          position: relative;
+          line-height: 1.1;
+          text-transform: uppercase;
+          .academia-footer-logo {
+            font-weight: 800;
+            font-size: 1.875rem;
+            position: relative;
+            transition: $main-transition;
+            color: #000;
+            cursor: pointer;
+          }
+          p {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: $academia-color;
+          }
+        }
+
+        .academia-desc {
+          color: #999;
+          margin-top: 32px;
+          margin-bottom: 16px;
+        }
+
+        .academia-footer-social-container {
+          .academia-footer-social {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 4px;
+            padding: 12px;
+            transition: $main-transition;
+            background-color: $academia-color;
+            color: #fff;
+          }
+        }
+
+        .academia-subtitle {
+          margin-bottom: 32px;
+        }
+
+        .academia-footer-navbar-container {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .academia-footer-navbar-link {
+            font-size: 1rem;
+            color: rgba(0, 0, 0, 0.5);
+            font-weight: 500;
+            &:hover {
+              color: $academia-color;
+            }
+          }
+          .academia-footer-navbar-icon {
+            color: $academia-color;
+            margin-right: 10px;
+          }
+        }
+
+        .academia-footer-blog-container {
+          .academia-footer-blog {
+            display: flex;
+            gap: 15px;
+            .academia-footer-blog-image {
+              @include flex-center;
+              width: 50px;
+              min-width: 50px;
+              height: 50px;
+              margin-top: 5px;
+              border-radius: 5px;
+              overflow: hidden;
+
+              img {
+                height: 100%;
+              }
+            }
+            .academia-footer-blog-details-wrapper {
+              .academia-footer-blog-icon {
+                color: $academia-color;
+                font-size: 1rem;
+                margin-right: 5px;
+              }
+              span {
+                color: $academia-color;
+                font-size: 0.8rem;
+                margin-right: 12px;
+              }
+              .academia-subtitle {
+                color: #999;
+                &:hover {
+                  color: $academia-color;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        .academia-footer-contact-container {
+          .academia-footer-contact {
+            display: flex;
+            margin-bottom: 16px;
+            .academia-footer-contact-icon {
+              color: $academia-color;
+              margin-right: 10px;
+              margin-top: 5px;
+              min-width: 15px;
+            }
+            .academia-desc {
+              color: #999;
+              margin: 0;
+            }
+          }
+        }
+      }
+      .academia-footer-item:nth-child(2) {
+        width: 15%;
+      }
+    }
+  }
+
+  // -------------------------------------------
+  .academia-footer-bottom {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #f8f8f8;
+    .academia-desc {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  }
+}

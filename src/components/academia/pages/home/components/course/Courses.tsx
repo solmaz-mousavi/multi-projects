@@ -4,7 +4,6 @@ import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./courses.scss";
-import Icon from "../../../../../main/modules/icon/Icon";
 import SectionHeader from "../../../../modules/sectionHeader/SectionHeader";
 import CourseThumb from "./courseThumb/CourseThumb";
 import Aos from "../../../../../main/modules/aos/Aos";
@@ -37,7 +36,7 @@ function Courses({ data }: { data: CourseDataType[] }) {
             >
               {data.map((item) => (
                 <SwiperSlide key={item.id}>
-                  <CourseThumb {...item} key={item.id} />
+                  <CourseThumb {...item} />
                 </SwiperSlide>
               ))}
             </Swiper>

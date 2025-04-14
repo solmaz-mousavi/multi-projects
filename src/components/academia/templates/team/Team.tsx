@@ -1,6 +1,6 @@
-import { TeacherDataType } from "../../../../../../dataTypes/academiaData.type";
-import Aos from "../../../../../main/modules/aos/Aos";
-import SectionHeader from "../../../../modules/sectionHeader/SectionHeader";
+import { TeacherDataType } from "../../../../dataTypes/academiaData.type";
+import Aos from "../../../main/modules/aos/Aos";
+import SectionHeader from "../../modules/sectionHeader/SectionHeader";
 import "./team.scss";
 import TeamThumb from "./teamThumb/TeamThumb";
 
@@ -17,8 +17,8 @@ function Team({ data }: { data: TeacherDataType[] }) {
         <div className="academia-home-team-content">
           {data &&
             data.map((item) => (
-              <Aos aosStyle="fadeInUp" once={true}>
-                <TeamThumb {...item} key={item.id} />
+              <Aos aosStyle="fadeInUp" once={true} key={item.id}>
+                <TeamThumb {...item} />
               </Aos>
             ))}
         </div>

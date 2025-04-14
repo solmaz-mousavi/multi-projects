@@ -11,7 +11,6 @@ import {
   requiredStringValidator,
 } from "../../../../validators/rules";
 import Aos from "../../../main/modules/aos/Aos";
-import Button from "../../../main/modules/button/Button";
 import Form from "../../../main/modules/form/Form";
 import "./contact.scss";
 import Modal from "../../../main/templates/modal/Modal";
@@ -146,7 +145,8 @@ function Contact({ data }: { data: SocialDataType[] }) {
             </p>
             <h5 className="info-title">Call Us At</h5>
             <p className="info-desc">
-              Phone: (+63) 555 1212 Mobile: (+63) 555 0100 Fax: (+63) 555 0101
+              Phone: <>&#x28;</>+63<>&#x29;</> 555 1212 Mobile: <>&#x28;</>+63
+              <>&#x29;</> 555 0100 Fax: <>&#x28;</>+63<>&#x29;</> 555 0101
             </p>
             <div className="social-container">
               {data &&

@@ -80,7 +80,7 @@ function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <div className="footer-bottom__left">© Copyright Glint 2022</div>
+          <div className="footer-bottom__left"><>&#xa9;</> Copyright Glint 2022</div>
           <div className="footer-bottom__right">Site Template by Colorlib</div>
         </div>
       </Aos>

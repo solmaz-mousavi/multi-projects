@@ -1,18 +1,18 @@
 import { useOutletContext } from "react-router-dom";
 import { AcademiaDataType } from "../../../../dataTypes/academiaData.type";
-import Intro from "../../templates/intro/Intro";
-import Status from "../../templates/status/Status";
 import PageHeader from "../../modules/pageHeader/PageHeader";
+import Status from "../../templates/status/Status";
+import Team from "../../templates/team/Team";
 
-function About() {
+function OurTeam() {
   const academiaData = useOutletContext<AcademiaDataType>();
   return (
     <>
-      <PageHeader title="Know More About Us" />
-      <Intro data={academiaData.intro} />
+      <PageHeader title="Meet Our Professional Team" />
+			<Team data={academiaData.teachers} />
       <Status data={academiaData.status} />
     </>
   );
 }
 
-export default About;
+export default OurTeam;

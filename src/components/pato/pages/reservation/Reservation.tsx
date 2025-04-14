@@ -150,15 +150,15 @@ function Reservation() {
             <p className="pato-desc">
               Donec quis euismod purus. Donec feugiat ligula rhoncus, varius
               nisl sed, tincidunt lectus. Nulla vulputate , lectus vel volutpat
-              efficitur, orci lacus sodales sem, sit amet quam:{" "}
-              <span className="pato-reservation-bold">(001) 345 6889</span>
+              efficitur, orci lacus sodales sem, sit amet quam:<>&#xa0;</>
+              <span className="pato-reservation-bold"><>&#x28;</>001<>&#x29;</> 345 6889</span>
             </p>
           </div>
           <div className="pato-reservation-bottom__item">
             <div className="pato-subtitle">For Event Booking</div>
             <p className="pato-desc">
-              Donec feugiat ligula rhoncus:{" "}
-              <span className="pato-reservation-bold">(001) 345 6889</span>,
+              Donec feugiat ligula rhoncus:<>&#xa0;</>
+              <span className="pato-reservation-bold"><>&#x28;</>001<>&#x29;</> 345 6889</span>,
               varius nisl sed, tinci-dunt lectus sodales sem.
             </p>
           </div>

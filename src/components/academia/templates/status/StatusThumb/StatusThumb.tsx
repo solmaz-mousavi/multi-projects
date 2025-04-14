@@ -1,5 +1,5 @@
 
-import CounterUp from "../../../../../../main/modules/countUp/CounterUp";
+import CounterUp from "../../../../main/modules/countUp/CounterUp";
 import "./statusThumb.scss";
 type StatusThumbPropsType = {
   img: string;

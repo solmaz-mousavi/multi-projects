@@ -1,7 +1,7 @@
 @use "/src/styles/global.scss" as *;
 
 .academia-home-status-container {
-  background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url("../../../../../../../public/assets/images/academia/home/status.jpg");
+  background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url("../../../../../public/assets/images/academia/home/status.jpg");
   background-position: center;
   background-size: cover;
   .academia-container {

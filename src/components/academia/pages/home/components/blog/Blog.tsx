@@ -16,8 +16,8 @@ function Blog({ data }: { data: any[] }) {
         <div className="academia-home-blog-content">
           {data &&
             data.slice(0, 3).map((item) => (
-              <Aos aosStyle="fadeInUp" once={true}>
-                <BlogThumb {...item} key={item.id} />
+              <Aos aosStyle="fadeInUp" once={true} key={item.id}>
+                <BlogThumb {...item} />
               </Aos>
             ))}
         </div>

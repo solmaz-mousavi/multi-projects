@@ -1,7 +1,7 @@
 import { useOutletContext } from "react-router-dom";
-import { getResultByID } from "../../../../../../../utils/getDataByID";
 import "./packageThumb.scss";
-import { AcademiaDataType, PackageDataType } from "../../../../../../../dataTypes/academiaData.type";
+import { AcademiaDataType, PackageDataType } from "../../../../../dataTypes/academiaData.type";
+import { getResultByID } from "../../../../../utils/getDataByID";
 
 function PackageThumb({ title, desc, courses, price }: PackageDataType) {
   const academiaData = useOutletContext<AcademiaDataType>();
@@ -15,7 +15,7 @@ function PackageThumb({ title, desc, courses, price }: PackageDataType) {
       <p className="academia-desc">{desc}</p>
       {courses &&
         courses.map((item, index) => (
-          <div className="academia-package-course-container">
+          <div className="academia-package-course-container" key={index}>
             <div className="row">{index + 1}</div>
             <div className="academia-desc">
               {getResultByID({ ID: item, data: academiaData.courses }).title}

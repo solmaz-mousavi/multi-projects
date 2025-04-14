@@ -16,7 +16,7 @@ import Academia from "./components/academia/Academia";
 import AcademiaHome from "./components/academia/pages/home/Home";
 import AcademiaCourse from "./components/academia/pages/course/Course";
 import AcademiaAbout from "./components/academia/pages/about/About";
-import AcademiaTeam from "./components/academia/pages/team/Team";
+import AcademiaTeam from "./components/academia/pages/team/OurTeam";
 import AcademiaContact from "./components/academia/pages/contact/Contact";
 import AcademiaPricing from "./components/academia/pages/pricing/Pricing";
 import AcademiaBlog from "./components/academia/pages/blog/Blog";

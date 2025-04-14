@@ -71,7 +71,7 @@ function Footer({ socialData, galleryData }: FooterPropsType) {
             </p>
             <p className="pato-footer-desc">
               <FaPhone />
-              <a href="tel:+196 716 6879">(+1) 96 716 6879</a>
+              <a href="tel:+196 716 6879"><>&#x28;</>+1<>&#x29;</> 96 716 6879</a>
             </p>
             <p className="pato-footer-desc">
               <MdLocationOn />
@@ -136,7 +136,7 @@ function Footer({ socialData, galleryData }: FooterPropsType) {
 
       <div className="footer-bottom">
         <Aos aosStyle="fadeInUp" once={true}>
-          <p>© Copyright 2017 by Colorlib</p>
+          <p><>&#xa9;</> Copyright 2017 by Colorlib</p>
         </Aos>
       </div>
       {showModal && (

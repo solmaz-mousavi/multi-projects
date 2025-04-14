@@ -1,6 +1,6 @@
-import { PackageDataType } from "../../../../../../dataTypes/academiaData.type";
-import Aos from "../../../../../main/modules/aos/Aos";
-import SectionHeader from "../../../../modules/sectionHeader/SectionHeader";
+import { PackageDataType } from "../../../../dataTypes/academiaData.type";
+import Aos from "../../../main/modules/aos/Aos";
+import SectionHeader from "../../modules/sectionHeader/SectionHeader";
 import "./package.scss";
 import PackageThumb from "./packageThumb/PackageThumb";
 
@@ -17,8 +17,8 @@ function Package({ data }: { data: PackageDataType[] }) {
         <div className="academia-home-category-content">
           {data &&
             data.map((item) => (
-              <Aos aosStyle="fadeInUp" once={true}>
-                <PackageThumb {...item} key={item.id} />
+              <Aos aosStyle="fadeInUp" once={true} key={item.id}>
+                <PackageThumb {...item} />
               </Aos>
             ))}
         </div>

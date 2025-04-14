@@ -1,7 +1,7 @@
 import { useNavigate, useOutletContext } from "react-router-dom";
-import Icon from "../../../../../../main/modules/icon/Icon";
+import Icon from "../../../../main/modules/icon/Icon";
 import "./teamThumb.scss";
-import { AcademiaDataType, TeacherDataType } from "../../../../../../../dataTypes/academiaData.type";
+import { AcademiaDataType, TeacherDataType } from "../../../../../dataTypes/academiaData.type";
 
 function TeamThumb({id, name, education, img, social }: TeacherDataType) {
 	const navigate = useNavigate();
@@ -18,7 +18,7 @@ function TeamThumb({id, name, education, img, social }: TeacherDataType) {
       <p className="academia-desc">{courseNum} courses</p>
 			<div className="social-container">
 				{social.map(item=>(
-					<a href={item.link}>
+					<a href={item.link} key={item.id}>
 						<Icon name={item.iconName} />
 					</a>
 				))}

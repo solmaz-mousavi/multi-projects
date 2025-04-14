@@ -131,7 +131,7 @@ function Contact() {
           <div className="pato-contact-bottom-details">
             <h3 className="pato-subtitle">call us</h3>
             <a href="tel:+1967166879" className="pato-desc">
-              (+1) 96 716 6879
+						<>&#x28;</>+1<>&#x29;</> 96 716 6879
             </a>
           </div>
         </div>

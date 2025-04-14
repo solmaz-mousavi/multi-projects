@@ -22,7 +22,7 @@ function Academia() {
           <Header data={academiaData.social} />
           <Navbar data={academiaData.navbar} />
           <Outlet context={academiaData} />
-          <Footer />
+          <Footer socialData={academiaData.social} navbarData={academiaData.navbar} blogData={academiaData.blogs} />
         </div>
       )}
     </>

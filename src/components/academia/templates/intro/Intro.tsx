@@ -1,5 +1,5 @@
-import { IntroDataType } from "../../../../../../dataTypes/academiaData.type";
-import Aos from "../../../../../main/modules/aos/Aos";
+import { IntroDataType } from "../../../../dataTypes/academiaData.type";
+import Aos from "../../../main/modules/aos/Aos";
 import IntroThumb from "./IntroThumb/IntroThumb";
 import "./intro.scss";
 
@@ -20,8 +20,8 @@ function Intro({ data }: { data: IntroDataType[] }) {
           </Aos>
           {data &&
             data.map((item) => (
-              <Aos aosStyle="fadeInUp" once={true}>
-                <IntroThumb {...item} key={item.id} />
+              <Aos aosStyle="fadeInUp" once={true} key={item.id}>
+                <IntroThumb {...item} />
               </Aos>
             ))}
         </div>
