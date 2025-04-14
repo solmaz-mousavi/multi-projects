@@ -2,13 +2,11 @@ import { useOutletContext } from "react-router-dom";
 import {
   AcademiaDataType,
   CourseDataType,
-  TeacherDataType,
 } from "../../../../../../../dataTypes/academiaData.type";
 import { getResultByID } from "../../../../../../../utils/getDataByID";
 import Icon from "../../../../../../main/modules/icon/Icon";
 import Score from "../../../../../../main/modules/score/Score";
 import "./courseThumb.scss";
-import { useEffect } from "react";
 
 function CourseThumb({
   title,
@@ -57,7 +55,7 @@ function CourseThumb({
             )}
           </div>
 					<button className="academia-course-thumb-btn">enroll now!</button>
-      <p className="academia-category-thumb-desc"></p>
+      {discount>0 && <div className="academia-course-discount">{discount}%</div>}
     </div>
   );
 }

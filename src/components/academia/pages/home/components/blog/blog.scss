@@ -1,0 +1,23 @@
+@use "/src/styles/global.scss" as *;
+
+.academia-home-blog-container {
+  padding: 80px 0;
+  background-color: #f8f8f8;
+	text-align: center;
+  .academia-container {
+    .academia-home-blog-content {
+      @include flex-center;
+      flex-wrap: wrap;
+      gap: 20px;
+			text-align: left;
+    }
+  }
+	.btn{
+		flex-direction: row-reverse;
+		color: $academia-color;
+		text-transform: uppercase;
+		margin: 30px auto;
+		letter-spacing: 2px;
+		// width: 100%;
+	}
+}

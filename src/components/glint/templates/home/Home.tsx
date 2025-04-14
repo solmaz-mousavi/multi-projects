@@ -54,7 +54,7 @@ function Home({ scrollPosition, data }: HomePropsType) {
                 round={true}
                 tooltip={{
                   content: `${item.socialName}`,
-                  color: "var(--glint-color-green)",
+                  color: "$glint-color-green",
                   position: "left",
                 }}
               ></Button>

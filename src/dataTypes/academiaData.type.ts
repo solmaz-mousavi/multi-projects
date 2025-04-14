@@ -67,6 +67,13 @@ export type BlogDataType = {
   comments: CommentDataType[];
 };
 
+export type PackageDataType = {
+	id:string;
+	title:string;
+	desc:string;
+	courses: string[];
+price:number;
+}
 
 
 
@@ -85,7 +92,7 @@ export type AcademiaDataType = {
   students: StudentDataType[];
   courses: CourseDataType[];
   blogs: BlogDataType[];
-	
+	packages: PackageDataType[]
   onlineCourse: any[];
   testimonial: any[];
   pricing: any[];

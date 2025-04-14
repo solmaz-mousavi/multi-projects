@@ -2,7 +2,6 @@ import { useOutletContext } from 'react-router-dom';
 import Blog from './components/blog/Blog';
 import Courses from './components/course/Courses';
 import Intro from './components/intro/Intro';
-import OnlineCourse from './components/onlineCourses/OnlineCourse';
 import Status from './components/status/Status';
 import Testimonial from './components/testimonial/Testimonial';
 import Welcome from './components/welcome/Welcome';
@@ -23,10 +22,9 @@ function Home() {
           <Courses data={academiaData.courses} />
 					<Team data={academiaData.teachers} />
 					<Blog data={academiaData.blogs}/>
+					<Package data={academiaData.packages}/>
 
-          <OnlineCourse data={academiaData.onlineCourse} />
           <Testimonial data={academiaData.testimonial} />
-					<Package/>
         </section>
 
 		
