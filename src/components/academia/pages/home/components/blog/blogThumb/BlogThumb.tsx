@@ -1,14 +1,7 @@
 import { FaCalendarAlt, FaComment, FaUser } from "react-icons/fa";
-import { CommentDataType } from "../../../../../../../dataTypes/academiaData.type";
+import { BlogDataType, CommentDataType } from "../../../../../../../dataTypes/academiaData.type";
 import "./blogThumb.scss";
-type BlogThumbPropsType = {
-  title: string;
-  desc: string;
-  image: string;
-  date: string;
-  author: string;
-  comments: CommentDataType[];
-};
+
 function BlogThumb({
   title,
   desc,
@@ -16,7 +9,7 @@ function BlogThumb({
   date,
   author,
   comments,
-}: BlogThumbPropsType) {
+}: BlogDataType) {
   return(
     <div className="academia-blog-thumb-container">
       <div className="image-wrapper">

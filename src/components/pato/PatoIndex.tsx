@@ -26,10 +26,6 @@ function PatoIndex() {
           id="pato"
           onScroll={(e) => setScrollPosition(e.currentTarget.scrollTop)}
         >
-          {/* <Sidebar
-          showSidebar={showSidebar}
-           setShowSidebar={setShowSidebar}
-          /> */}
 					<Navbar setShowSidebar={setShowSidebar} scrollPosition={scrollPosition} navbarData={patoData.navbar} socialData = {patoData.social}/>
 					<Sidebar
             navbarData={patoData.navbar}

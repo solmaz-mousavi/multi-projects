@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
 import "./navbar.scss";
-import { NavbarDataType, SocialDataType } from "../../../../dataTypes/mainData.type";
+import {
+  NavbarDataType,
+  SocialDataType,
+} from "../../../../dataTypes/mainData.type";
 import Icon from "../../../main/modules/icon/Icon";
 
 import { MdDehaze } from "react-icons/md";
@@ -41,11 +44,9 @@ function Navbar({
       <div className="pato-social-container">
         {socialData &&
           socialData.map((item) => (
-            <Icon
-              key={item.id}
-              name={item.iconName}
-              className="pato-navbar-social-icon"
-            />
+            <a href={item.link} target="_blank" rel="noreferrer" key={item.id}>
+              <Icon name={item.iconName} className="pato-navbar-social-icon" />
+            </a>
           ))}
       </div>
       <div className="pato-showSidebar-icon">

@@ -5,6 +5,9 @@
   background-color: #f8f8f8;
   .academia-container {
     .academia-home-course-content {
+			.swiper{
+				width: 1200px;
+			}
       .swiper-slide {
         width: auto;
       }
@@ -19,6 +22,7 @@
       }
       .swiper-wrapper {
         height: 500px;
+			
       }
 
     }

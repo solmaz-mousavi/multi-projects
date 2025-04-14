@@ -86,7 +86,6 @@
       "name": "Dr. Adrian Molises",
       "education": "Ph.D on Data Science",
 			"img":"/assets/images/academia/team/team-1.jpg",
-			"courses" : ["04","07"],
       "social": [
         {
           "id": "01",
@@ -113,7 +112,6 @@
       "name": "Arthur MaGregor",
       "education": "Full Stack Developer",
 			"img":"/assets/images/academia/team/team-2.jpg",
-			"courses" : ["01","02","05"],
       "social": [
         {
           "id": "01",
@@ -134,7 +132,6 @@
       "name": "Dr. Anna Hanzen",
       "education": "Ph.d on Developer and Lead Instructor",
 			"img":"/assets/images/academia/team/team-3.jpg",
-			"courses" : ["06","09"],
       "social": [
 				{
           "id": "01",
@@ -161,7 +158,6 @@
       "name": "Brian Wooden",
       "education": "FrontEnd Developer",
 			"img":"/assets/images/academia/team/team-4.jpg",
-			"courses" : ["03","08","10"],
       "social": [
 				{
           "id": "01",

@@ -23,7 +23,7 @@ type FooterPropsType = {
   galleryData: GalleryDataType[];
 };
 function Footer({ socialData, galleryData }: FooterPropsType) {
-	const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
   const inputs: IFormInputType[] = [
     {
@@ -57,7 +57,7 @@ function Footer({ socialData, galleryData }: FooterPropsType) {
 
   const submitHandler: (values: ValuesType) => void = (items) => {
     console.log(items);
-		setShowModal(true);
+    setShowModal(true);
   };
   return (
     <section className="pato-footer-wrapper">
@@ -80,11 +80,17 @@ function Footer({ socialData, galleryData }: FooterPropsType) {
             <div className="pato-footer-social-container">
               {socialData &&
                 socialData.map((item) => (
-                  <Icon
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noreferrer"
                     key={item.id}
-                    name={item.iconName}
-                    className="pato-footer-social-icon"
-                  />
+                  >
+                    <Icon
+                      name={item.iconName}
+                      className="pato-footer-social-icon"
+                    />
+                  </a>
                 ))}
             </div>
           </Aos>
@@ -116,7 +122,7 @@ function Footer({ socialData, galleryData }: FooterPropsType) {
               {galleryData &&
                 galleryData.slice(0, 8).map((item) => (
                   <div
-										key={item.id}
+                    key={item.id}
                     className="pato-footer-gallery-item"
                     onClick={() => navigate("/pato/gallery")}
                   >
@@ -133,7 +139,7 @@ function Footer({ socialData, galleryData }: FooterPropsType) {
           <p>© Copyright 2017 by Colorlib</p>
         </Aos>
       </div>
-			{showModal && (
+      {showModal && (
         <Modal
           desc="Your email have been submitted successfully."
           icon={{ name: "MdCheck", variant: "success" }}

@@ -17,7 +17,9 @@ function Home({ scrollPosition, data }: HomePropsType) {
       >
         <div className="home-txt-container">
           <Aos aosStyle="fadeInUp" once={true}>
-            <h1 className="glint-top-title home-txt__welcome">Welcome to Glint</h1>
+            <h1 className="glint-top-title home-txt__welcome">
+              Welcome to Glint
+            </h1>
             <h2 className="glint-main-title home-txt__description">
               We are a creative group of people who design influential brands
               and digital experiences.
@@ -47,17 +49,19 @@ function Home({ scrollPosition, data }: HomePropsType) {
           {data &&
             data.map((item) => (
               <Button
-							key={item.id}
+                type="link"
+                key={item.id}
                 variant="light"
                 icon={{ name: `${item.iconName}` }}
                 className="social-link"
                 round={true}
                 tooltip={{
                   content: `${item.socialName}`,
-                  color: "$glint-color-green",
+                  color: "green",
                   position: "left",
                 }}
-              ></Button>
+                to={item.link}
+              />
             ))}
         </div>
       </StyledHomeWrapper>

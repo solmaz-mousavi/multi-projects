@@ -15,6 +15,7 @@ import Button from "../../../main/modules/button/Button";
 import Form from "../../../main/modules/form/Form";
 import "./contact.scss";
 import Modal from "../../../main/templates/modal/Modal";
+import Icon from "../../../main/modules/icon/Icon";
 
 function Contact({ data }: { data: SocialDataType[] }) {
   const [showModal, setShowModal] = useState(false);
@@ -150,14 +151,17 @@ function Contact({ data }: { data: SocialDataType[] }) {
             <div className="social-container">
               {data &&
                 data.map((item) => (
-                  <Button
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noreferrer"
                     key={item.id}
-                    icon={{ name: `${item.iconName}` }}
-                    variant="light"
-                    transparent={true}
-                    border={false}
-                    className="contacts-info-social"
-                  />
+                  >
+                    <Icon
+                      name={item.iconName}
+                      className="contacts-info-social"
+                    />
+                  </a>
                 ))}
             </div>
           </div>

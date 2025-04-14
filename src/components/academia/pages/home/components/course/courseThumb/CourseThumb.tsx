@@ -3,7 +3,7 @@ import {
   AcademiaDataType,
   CourseDataType,
 } from "../../../../../../../dataTypes/academiaData.type";
-import { getResultByID } from "../../../../../../../utils/getDataByID";
+import { getRangeSumOfData, getResultByID } from "../../../../../../../utils/getDataByID";
 import Icon from "../../../../../../main/modules/icon/Icon";
 import Score from "../../../../../../main/modules/score/Score";
 import "./courseThumb.scss";
@@ -18,7 +18,8 @@ function CourseThumb({
   lectures,
 }: CourseDataType) {
   const academiaData = useOutletContext<AcademiaDataType>();
-  const courseTeacher = getResultByID(teacher, academiaData.teachers);
+  const courseTeacher = getResultByID({ID:teacher, data:academiaData.teachers});
+	const duration = getRangeSumOfData({data:lectures, range:"duration"});
 
   return (
     <div className="academia-course-thumb-container">
@@ -41,7 +42,7 @@ function CourseThumb({
             </p>
           </div>
           <p className="lecture">
-            {lectures.length} lectures ( {190} hours){" "}
+            {lectures.length} lectures ( {duration} mins){" "}
           </p>
 
 						</div>

@@ -29,4 +29,5 @@ function Academia() {
   );
 }
 
+
 export default Academia;

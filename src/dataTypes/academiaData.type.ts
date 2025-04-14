@@ -17,7 +17,6 @@ export type TeacherDataType = {
   name: string;
   education: string;
   img: string;
-  courses: string[];
   social: SocialDataType[];
 };
 
