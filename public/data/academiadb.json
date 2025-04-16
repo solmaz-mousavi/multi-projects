@@ -4,7 +4,7 @@
     { "id": "02", "title": "Courses", "route": "course" },
     { "id": "06", "title": "About", "route": "about" },
     { "id": "03", "title": "Team", "route": "team" },
-    { "id": "04", "title": "Pricing", "route": "pricing" },
+    { "id": "04", "title": "Packages & Pricing", "route": "pricing" },
     { "id": "05", "title": "Journal", "route": "blog" },
     { "id": "07", "title": "Contact", "route": "contact" }
   ],

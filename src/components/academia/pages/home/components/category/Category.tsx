@@ -23,7 +23,7 @@ function Category({ data }: { data: CategoryDataType[] }) {
           {data &&
             data.map((item) => (
               <Aos aosStyle="fadeInUp" once={true} key={item.id}>
-                <CategoryThumb {...item} />
+                <CategoryThumb {...item} onClick={()=> console.log("hhh")}/>
               </Aos>
             ))}
         </div>

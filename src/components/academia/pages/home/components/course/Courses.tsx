@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "./courses.scss";
 import SectionHeader from "../../../../modules/sectionHeader/SectionHeader";
-import CourseThumb from "./courseThumb/CourseThumb";
+import CourseThumb from "../../../../templates/courseThumb/grid/CourseThumb";
 import Aos from "../../../../../main/modules/aos/Aos";
 
 function Courses({ data }: { data: CourseDataType[] }) {

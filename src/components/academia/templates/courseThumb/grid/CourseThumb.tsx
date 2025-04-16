@@ -2,13 +2,13 @@ import { useOutletContext } from "react-router-dom";
 import {
   AcademiaDataType,
   CourseDataType,
-} from "../../../../../../../dataTypes/academiaData.type";
+} from "../../../../../dataTypes/academiaData.type";
 import {
   getRangeSumOfData,
   getResultByID,
-} from "../../../../../../../utils/getDataByID";
-import Icon from "../../../../../../main/modules/icon/Icon";
-import Score from "../../../../../../main/modules/score/Score";
+} from "../../../../../utils/getDataByID";
+import Icon from "../../../../main/modules/icon/Icon";
+import Score from "../../../../main/modules/score/Score";
 import "./courseThumb.scss";
 
 function CourseThumb({

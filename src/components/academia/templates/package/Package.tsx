@@ -11,7 +11,7 @@ function Package({ data }: { data: PackageDataType[] }) {
         <Aos aosStyle="fadeInUp" once={true}>
           <SectionHeader
             toptitle="Pricing and Packages"
-            title="Be Professional With Our Rad Maps And Special Offers"
+            title="Be Professional With Our Road Maps And Special Offers"
           />
         </Aos>
         <div className="academia-home-category-content">
