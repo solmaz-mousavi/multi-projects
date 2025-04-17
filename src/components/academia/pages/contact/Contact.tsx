@@ -1,8 +1,12 @@
-import React from 'react'
+import PageHeader from "../../modules/pageHeader/PageHeader";
+import "./contact.scss";
 
 function Contact() {
 	return (
-		<div>Contact</div>
+
+    <section className="academia-contact-wrapper">
+      <PageHeader title="Contact Us" />
+			</section>
 	)
 }
 

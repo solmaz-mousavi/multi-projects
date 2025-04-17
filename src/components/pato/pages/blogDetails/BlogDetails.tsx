@@ -2,12 +2,15 @@ import { useLocation, useOutletContext, useParams } from "react-router-dom";
 import "./blogDetails.scss";
 import Header from "../../templates/header/Header";
 import { useEffect, useState } from "react";
-import { BlogDataType, PatoDataType } from "../../../../dataTypes/patoData.type";
+import {
+  BlogDataType,
+  PatoDataType,
+} from "../../../../dataTypes/patoData.type";
 import BlogThumb from "../blog/components/blogThumb/BlogThumb";
 import PopularBlogThumb from "../blog/components/popularBlogThumb/PopularBlogThumb";
 
 function BlogDetails() {
-	const patoData = useOutletContext<PatoDataType>();
+  const patoData = useOutletContext<PatoDataType>();
   const [data, setData] = useState<BlogDataType | undefined>(undefined);
 
   const blogID = useLocation().pathname.split("/").reverse()[0];
@@ -31,7 +34,7 @@ function BlogDetails() {
     <section className="pato-blog-details-wrapper">
       <Header title={data?.title || ""} section={true} />
 
-      <section className="pato-blog-details-container">
+      <div className="pato-blog-details-container">
         <div className="pato-blog-details-main">
           {data && <BlogThumb {...data} />}
         </div>
@@ -47,7 +50,7 @@ function BlogDetails() {
               />
             ))}
         </div>
-      </section>
+      </div>
     </section>
   );
 }

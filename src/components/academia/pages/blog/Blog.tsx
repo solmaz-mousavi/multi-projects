@@ -1,9 +1,102 @@
-import React from 'react'
+import "./blog.scss";
+import PageHeader from "../../modules/pageHeader/PageHeader";
+import Form from "../../../main/modules/form/Form";
+import { useNavigate, useOutletContext } from "react-router-dom";
+import {
+  AcademiaDataType,
+  BlogDataType,
+} from "../../../../dataTypes/academiaData.type";
+import { useState } from "react";
+import {
+  IFormInputType,
+  ValuesType,
+} from "../../../../dataTypes/formData.type";
+import { ButtonType } from "../../../../dataTypes/buttonData.type";
+import { requiredStringValidator } from "../../../../validators/rules";
+import { CiGrid2H, CiGrid41 } from "react-icons/ci";
+import BlogThumb from "../../templates/blogThumb/BlogThumb";
+import Pagination from "../../../main/modules/pagination/Pagination";
 
 function Blog() {
-	return (
-		<div>Blog</div>
-	)
+  const academiaData = useOutletContext<AcademiaDataType>();
+  const [data, setData] = useState<BlogDataType[]>(academiaData.blogs);
+  const [startIndex, setStartIndex] = useState(0);
+	const [view, setView] = useState<"grid"|"list">("grid")
+
+  const inputs: IFormInputType[] = [
+    {
+      tag: "input",
+      type: "text",
+      className: "academia-search-input",
+      variant: "light",
+      border: false,
+
+      name: "search",
+      initialvalue: "",
+      validators: [requiredStringValidator()],
+    },
+  ];
+
+  const buttons: ButtonType[] = [
+    {
+      type: "submit",
+      variant: "transparent",
+      icon: { name: "BsSearch" },
+      className: "academia-search-btn",
+      border: false,
+    },
+  ];
+
+  const submitHandler: (values: ValuesType) => void = (items) => {
+    const allData = academiaData.blogs;
+
+    setData(
+      allData.filter((i) =>
+        i.title.toLowerCase().includes(String(items.search).toLowerCase())
+      )
+    );
+  };
+  return (
+    <section className="academia-blog-wrapper">
+      <PageHeader title="Journals" />
+
+      <div className="academia-container">
+        <div className="academia-filtering-wrapper">
+          <div className="academia-search-container">
+            <Form
+              inputs={inputs}
+              buttons={buttons}
+              submitHandler={submitHandler}
+            />
+            <p onClick={() => setData(academiaData.blogs)}>View All</p>
+          </div>
+          <div className="academia-view-container">
+            <CiGrid2H className="academia-view-icon" onClick={()=> setView("list")} />
+            <CiGrid41 className="academia-view-icon" onClick={()=> setView("grid")} />
+          </div>
+        </div>
+
+        <div className={`academia-blog-container ${view}`}>
+          {data && data.length === 0 && <p>Not found any data to show.</p>}
+          {data &&
+            data
+              .slice(startIndex, startIndex + 6)
+              .map((item) => <BlogThumb {...item} key={item.id} />)}
+        </div>
+
+        {data && (
+          <div className="pato-gallery-pagination-wrapper">
+            <Pagination
+              dataLength={data.length}
+              perPage={6}
+              startIndex={startIndex}
+              setStartIndex={setStartIndex}
+            />
+          </div>
+        )}
+      </div>
+    </section>
+  );
 }
 
-export default Blog
+export default Blog;

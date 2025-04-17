@@ -2,7 +2,7 @@ import React from "react";
 import { useOutletContext } from "react-router-dom";
 import { AcademiaDataType } from "../../../../dataTypes/academiaData.type";
 import PageHeader from "../../modules/pageHeader/PageHeader";
-import Package from "../../templates/package/Package";
+import Package from "../home/components/package/Package";
 
 function Pricing() {
   const academiaData = useOutletContext<AcademiaDataType>();

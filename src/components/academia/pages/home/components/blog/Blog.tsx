@@ -2,11 +2,11 @@ import { useNavigate } from "react-router-dom";
 import Button from "../../../../../main/modules/button/Button";
 import SectionHeader from "../../../../modules/sectionHeader/SectionHeader";
 import "./blog.scss";
-import BlogThumb from "./blogThumb/BlogThumb";
+import BlogThumb from "../../../../templates/blogThumb/BlogThumb";
 import Aos from "../../../../../main/modules/aos/Aos";
+import SeeAll from "../seeAll/SeeAll";
 
 function Blog({ data }: { data: any[] }) {
-  const navigate = useNavigate();
   return (
     <section className="academia-home-blog-container">
       <div className="academia-container">
@@ -16,20 +16,17 @@ function Blog({ data }: { data: any[] }) {
         <div className="academia-home-blog-content">
           {data &&
             data.slice(0, 3).map((item) => (
-              <Aos aosStyle="fadeInUp" once={true} key={item.id}>
+              <Aos
+                aosStyle="fadeInUp"
+                once={true}
+                key={item.id}
+                className="grid"
+              >
                 <BlogThumb {...item} />
               </Aos>
             ))}
         </div>
-        <Aos aosStyle="fadeInUp" once={true}>
-          <Button
-            text="see all"
-            variant="transparent"
-            border={false}
-            icon={{ name: "BsArrowRight" }}
-            clickHandler={() => navigate("/academia/blog")}
-          />
-        </Aos>
+        <SeeAll route="blog" />
       </div>
     </section>
   );

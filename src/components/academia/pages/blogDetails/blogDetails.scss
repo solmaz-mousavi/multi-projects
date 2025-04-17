@@ -1,0 +1,44 @@
+@use "/src/styles/global.scss" as *;
+
+.academia-blog-details-wrapper {
+  .academia-page-header h1 {
+    font-size: 2rem;
+  }
+
+  .academia-blog-details-container {
+    background-color: #f8f8f8;
+
+    .academia-blog-thumb-container {
+      height: auto;
+
+      width: 100%;
+      padding: 40px 0;
+      text-align: center;
+			box-shadow: none;
+      cursor: auto;
+			&:hover{
+				background-color: #f8f8f8;
+			}
+      .image-wrapper {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        margin: 16px auto;
+        padding: 0 20px;
+        border-radius: 5px;
+      }
+
+      .details-wrapper {
+        justify-content: center;
+        margin: 16px auto;
+      }
+      .academia-subtitle {
+        display: none;
+      }
+
+      .academia-desc {
+        height: auto;
+      }
+    }
+  }
+}

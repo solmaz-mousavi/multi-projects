@@ -10,6 +10,8 @@
 .academia-container{
 	max-width: 1300px;
 	margin: 0 auto;
+	transition: $main-transition;
+	transition: max-height 1s ease-in;
 }
 .academia-desc{
 	line-height: 1.4;
@@ -35,4 +37,9 @@
 	img {
 		min-height: 100%;
 	}
+}
+
+.academia-icon{
+	color: $academia-color;
+	margin-right: 2px;
 }

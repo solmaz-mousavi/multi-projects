@@ -1,0 +1,44 @@
+import { FaCalendarAlt, FaComment, FaUser } from "react-icons/fa";
+import { BlogDataType } from "../../../../dataTypes/academiaData.type";
+import "./blogThumb.scss";
+import { useNavigate } from "react-router-dom";
+
+function BlogThumb({
+  id,
+  title,
+  desc,
+  image,
+  date,
+  author,
+  comments,
+}: BlogDataType) {
+  const navigate = useNavigate();
+  return (
+    <div
+      className="academia-blog-thumb-container"
+      onClick={() => navigate(`/academia/blog/${id}`)}
+    >
+      <div className="image-wrapper">
+        <img src={image} alt={title} className="academia-blog-thumb-img" />
+      </div>
+
+      <div>
+        <div className="details-wrapper">
+          <FaUser className="academia-icon" />
+          <span>{author}</span>
+
+          <FaCalendarAlt className="academia-icon" />
+          <span>{date}</span>
+
+          <FaComment className="academia-icon" />
+          <span>{comments.length} comments</span>
+        </div>
+
+        <h3 className="academia-subtitle">{title}</h3>
+        <p className="academia-desc">{desc}</p>
+      </div>
+    </div>
+  );
+}
+
+export default BlogThumb;

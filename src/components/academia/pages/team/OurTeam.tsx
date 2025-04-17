@@ -2,7 +2,7 @@ import { useOutletContext } from "react-router-dom";
 import { AcademiaDataType } from "../../../../dataTypes/academiaData.type";
 import PageHeader from "../../modules/pageHeader/PageHeader";
 import Status from "../../templates/status/Status";
-import Team from "../../templates/team/Team";
+import Team from "../home/components/team/Team";
 
 function OurTeam() {
   const academiaData = useOutletContext<AcademiaDataType>();

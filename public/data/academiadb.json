@@ -87,6 +87,7 @@
       "name": "Dr. Adrian Molises",
       "education": "Ph.D on Data Science",
 			"img":"/assets/images/academia/team/team-1.jpg",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, leo nec blandit sagittis, velit velit ultrices dui, eu pretium arcu enim vel ligula. Mauris dolor nisl, luctus at auctor ac, porttitor id ipsum. Sed ut eros vel sem tempor suscipit. Proin vitae ipsum ex. Nam fringilla magna non massa ullamcorper viverra. Nullam eget sapien sem. Phasellus faucibus metus vitae lobortis cursus. In dapibus lacinia nulla eu eleifend. Aenean pellentesque, neque vitae lobortis interdum, mauris orci efficitur risus, vestibulum sodales lectus est eget odio. Etiam nulla diam, consectetur eu varius sit amet, fringilla ac ligula. Curabitur faucibus nulla non diam egestas, vel molestie metus feugiat. Aliquam facilisis purus non quam bibendum congue id ut ipsum. Cras auctor urna justo, ac tempor nisl semper sit amet.",
       "social": [
         {
           "id": "01",
@@ -113,6 +114,7 @@
       "name": "Arthur MaGregor",
       "education": "Full Stack Developer",
 			"img":"/assets/images/academia/team/team-2.jpg",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, leo nec blandit sagittis, velit velit ultrices dui, eu pretium arcu enim vel ligula. Mauris dolor nisl, luctus at auctor ac, porttitor id ipsum. Sed ut eros vel sem tempor suscipit. Proin vitae ipsum ex. Nam fringilla magna non massa ullamcorper viverra. Nullam eget sapien sem. Phasellus faucibus metus vitae lobortis cursus. In dapibus lacinia nulla eu eleifend. Aenean pellentesque, neque vitae lobortis interdum, mauris orci efficitur risus, vestibulum sodales lectus est eget odio. Etiam nulla diam, consectetur eu varius sit amet, fringilla ac ligula. Curabitur faucibus nulla non diam egestas, vel molestie metus feugiat. Aliquam facilisis purus non quam bibendum congue id ut ipsum. Cras auctor urna justo, ac tempor nisl semper sit amet.",
       "social": [
         {
           "id": "01",
@@ -133,6 +135,7 @@
       "name": "Dr. Anna Hanzen",
       "education": "Ph.d on Developer and Lead Instructor",
 			"img":"/assets/images/academia/team/team-3.jpg",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, leo nec blandit sagittis, velit velit ultrices dui, eu pretium arcu enim vel ligula. Mauris dolor nisl, luctus at auctor ac, porttitor id ipsum. Sed ut eros vel sem tempor suscipit. Proin vitae ipsum ex. Nam fringilla magna non massa ullamcorper viverra. Nullam eget sapien sem. Phasellus faucibus metus vitae lobortis cursus. In dapibus lacinia nulla eu eleifend. Aenean pellentesque, neque vitae lobortis interdum, mauris orci efficitur risus, vestibulum sodales lectus est eget odio. Etiam nulla diam, consectetur eu varius sit amet, fringilla ac ligula. Curabitur faucibus nulla non diam egestas, vel molestie metus feugiat. Aliquam facilisis purus non quam bibendum congue id ut ipsum. Cras auctor urna justo, ac tempor nisl semper sit amet.",
       "social": [
 				{
           "id": "01",
@@ -159,6 +162,7 @@
       "name": "Brian Wooden",
       "education": "FrontEnd Developer",
 			"img":"/assets/images/academia/team/team-4.jpg",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, leo nec blandit sagittis, velit velit ultrices dui, eu pretium arcu enim vel ligula. Mauris dolor nisl, luctus at auctor ac, porttitor id ipsum. Sed ut eros vel sem tempor suscipit. Proin vitae ipsum ex. Nam fringilla magna non massa ullamcorper viverra. Nullam eget sapien sem. Phasellus faucibus metus vitae lobortis cursus. In dapibus lacinia nulla eu eleifend. Aenean pellentesque, neque vitae lobortis interdum, mauris orci efficitur risus, vestibulum sodales lectus est eget odio. Etiam nulla diam, consectetur eu varius sit amet, fringilla ac ligula. Curabitur faucibus nulla non diam egestas, vel molestie metus feugiat. Aliquam facilisis purus non quam bibendum congue id ut ipsum. Cras auctor urna justo, ac tempor nisl semper sit amet.",
       "social": [
 				{
           "id": "01",
@@ -222,14 +226,14 @@
 			"discount": 10,
 			"categories":["01", "05"],
 			"lectures":[
-				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"06", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"07", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"08", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"}
+				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"06", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"07", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"08", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo2.mp4"}
 			],
 			"comments":[
 				{"id":"01", "userID":"04", "role":"student", "date":"2024-05-24", "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend"},
@@ -248,21 +252,21 @@
 			"discount": 30,
 			"categories":["01", "05"],
 			"lectures":[
-				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"06", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"07", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"08", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"09", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"10", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"11", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"12", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"13", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"14", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"15", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"}
+				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"06", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"07", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"08", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"09", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"10", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"11", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"12", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"13", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"14", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"15", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo3.mp4"}
 			],
 			"comments":[
 				{"id":"01", "userID":"02", "role":"teacher", "date":"2024-05-24", "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend"},
@@ -281,18 +285,18 @@
 			"discount": 20,
 			"categories":["02", "05"],
 			"lectures":[
-				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"06", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"07", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"08", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"09", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"10", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"11", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"12", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"}
+				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"06", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"07", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"08", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"09", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"10", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"11", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"12", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo3.mp4"}
 			],
 			"comments":[
 				{"id":"01", "userID":"14", "role":"student", "date":"2024-11-19", "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend"}
@@ -309,12 +313,12 @@
 			"discount": 0,
 			"categories":["02", "05"],
 			"lectures":[
-				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"06", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"}
+				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"06", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo3.mp4"}
 			],
 			"comments":[
 				{"id":"01", "userID":"02", "role":"teacher", "date":"2024-05-24", "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend"},
@@ -333,16 +337,16 @@
 			"discount": 30,
 			"categories":["01", "02", "05"],
 			"lectures":[
-				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"06", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"07", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"08", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"09", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"10", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"}
+				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"06", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"07", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"08", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"09", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"10", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo.mp4"}
 			],
 			"comments":[
 				{"id":"01", "userID":"02", "role":"teacher", "date":"2024-05-24", "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend"},
@@ -360,11 +364,11 @@
 			"discount": 10,
 			"categories":["03", "05"],
 			"lectures":[
-				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"}
+				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo2.mp4"}
 			],
 			"comments":[]
     },
@@ -379,16 +383,16 @@
 			"discount": 0,
 			"categories":["05"],
 			"lectures":[
-				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"06", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"07", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"08", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"09", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"10", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"}
+				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"06", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"07", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"08", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"09", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"10", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo.mp4"}
 			],
 			"comments":[
 				{"id":"01", "userID":"02", "role":"teacher", "date":"2024-05-24", "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend"},
@@ -410,18 +414,18 @@
 			"discount": 10,
 			"categories":["02", "04"],
 			"lectures":[
-				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"06", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"07", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"08", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"09", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"10", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"11", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"12", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"}
+				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"06", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"07", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"08", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"09", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"10", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"11", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"12", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo3.mp4"}
 			],
 			"comments":[
 				{"id":"01", "userID":"02", "role":"teacher", "date":"2024-05-24", "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend"},
@@ -440,10 +444,10 @@
 			"discount": 0,
 			"categories":["03", "05"],
 			"lectures":[
-				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"}
+				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo.mp4"}
 			],
 			"comments":[
 				{"id":"01", "userID":"02", "role":"teacher", "date":"2024-05-24", "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend"},
@@ -461,21 +465,21 @@
 			"discount": 25,
 			"categories":["02", "04"],
 			"lectures":[
-				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"06", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"07", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"08", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"09", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"10", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"11", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"12", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"13", "title":"Consectetur adipiscing elit", "duration":13, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"14", "title":"Vivamus eleifend", "duration":8, "video":"/public/assets/videos/testVideo.mp4"},
-				{"id":"15", "title":"Leo nec blandit sagittis", "duration":11, "video":"/public/assets/videos/testVideo.mp4"}
+				{"id":"01", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"02", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"03", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"04", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"05", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"06", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"07", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"08", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"09", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"10", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"11", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"12", "title":"Lorem ipsum dolor sit amet", "duration":16, "video":"/assets/videos/testVideo3.mp4"},
+				{"id":"13", "title":"Consectetur adipiscing elit", "duration":13, "video":"/assets/videos/testVideo.mp4"},
+				{"id":"14", "title":"Vivamus eleifend", "duration":8, "video":"/assets/videos/testVideo2.mp4"},
+				{"id":"15", "title":"Leo nec blandit sagittis", "duration":11, "video":"/assets/videos/testVideo3.mp4"}
 			],
 			"comments":[]
     }
@@ -718,6 +722,5 @@
 		{"id":"01", "title":"Leran Everything You Need About FronrEnd" , "desc":"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.", "courses":["01", "02", "05"], "price":50},
 		{"id":"02", "title":"Be Th Best on Backend Developing" , "desc":"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.", "courses":["03", "08", "09"], "price":40},
 		{"id":"03", "title":"Be Professional in AI" , "desc":"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.", "courses":["03", "04", "07"], "price":70}
-	],
-	"testimonial": [{ "id": "01" }, {}]
+	]
 }

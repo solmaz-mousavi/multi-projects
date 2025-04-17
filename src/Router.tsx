@@ -6,7 +6,7 @@ import Pato from "./components/pato/Pato";
 import PatoHome from "./components/pato/pages/home/Home";
 import PatoAbout from "./components/pato/pages/about/About";
 import PatoBlog from "./components/pato/pages/blog/Blog";
-import BlogDetails from "./components/pato/pages/blogDetails/BlogDetails";
+import PatoBlogDetails from "./components/pato/pages/blogDetails/BlogDetails";
 import PatoContact from "./components/pato/pages/contact/Contact";
 import PatoGallery from "./components/pato/pages/gallery/Gallery";
 import PatoMenu from "./components/pato/pages/menu/Menu";
@@ -15,11 +15,14 @@ import PatoReservation from "./components/pato/pages/reservation/Reservation";
 import Academia from "./components/academia/Academia";
 import AcademiaHome from "./components/academia/pages/home/Home";
 import AcademiaCourse from "./components/academia/pages/course/Course";
+import AcademiaCourseDetails from "./components/academia/pages/courseDetails/CourseDetails";
 import AcademiaAbout from "./components/academia/pages/about/About";
 import AcademiaTeam from "./components/academia/pages/team/OurTeam";
 import AcademiaContact from "./components/academia/pages/contact/Contact";
 import AcademiaPricing from "./components/academia/pages/pricing/Pricing";
 import AcademiaBlog from "./components/academia/pages/blog/Blog";
+import AcademiaBlogDetails from "./components/academia/pages/blogDetails/BlogDetails";
+
 
 import NotFound from "./components/main/templates/notFound/NotFound";
 function Router() {
@@ -32,7 +35,7 @@ function Router() {
         <Route path="home" element={<PatoHome />} />
         <Route path="about" element={<PatoAbout />} />
         <Route path="blog" element={<PatoBlog />} />
-        <Route path="blog/:ID" element={<BlogDetails />} />
+        <Route path="blog/:ID" element={<PatoBlogDetails />} />
         <Route path="contact" element={<PatoContact />} />
         <Route path="gallery" element={<PatoGallery />} />
         <Route path="menu" element={<PatoMenu />} />
@@ -43,10 +46,12 @@ function Router() {
         <Route path="" element={<AcademiaHome />} />
         <Route path="home" element={<AcademiaHome />} />
         <Route path="course" element={<AcademiaCourse />} />
+        <Route path="course/:ID" element={<AcademiaCourseDetails />} />
         <Route path="about" element={<AcademiaAbout />} />
         <Route path="team" element={<AcademiaTeam />} />
         <Route path="pricing" element={<AcademiaPricing />} />
         <Route path="blog" element={<AcademiaBlog />} />
+        <Route path="blog/:ID" element={<AcademiaBlogDetails />} />
         <Route path="contact" element={<AcademiaContact />} />
       </Route>
 

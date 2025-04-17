@@ -17,6 +17,7 @@ export type TeacherDataType = {
   name: string;
   education: string;
   img: string;
+	desc: string;
   social: SocialDataType[];
 };
 
@@ -91,6 +92,4 @@ export type AcademiaDataType = {
   courses: CourseDataType[];
   blogs: BlogDataType[];
   packages: PackageDataType[];
-  onlineCourse: any[];
-  testimonial: any[];
 };

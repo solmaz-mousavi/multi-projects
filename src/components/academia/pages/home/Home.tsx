@@ -5,9 +5,9 @@ import Status from "../../templates/status/Status";
 import Welcome from "./components/welcome/Welcome";
 import { AcademiaDataType } from "../../../../dataTypes/academiaData.type";
 import Category from "./components/category/Category";
-import Team from "../../templates/team/Team";
+import Team from "./components/team/Team";
 import Intro from "../../templates/intro/Intro";
-import Package from "../../templates/package/Package";
+import Package from "./components/package/Package";
 
 function Home() {
   const academiaData = useOutletContext<AcademiaDataType>();

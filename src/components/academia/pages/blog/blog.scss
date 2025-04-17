@@ -1,0 +1,64 @@
+@use "/src/styles/global.scss" as *;
+
+.academia-blog-wrapper {
+  background-color: #f8f8f8;
+  .academia-container {
+    .academia-filtering-wrapper {
+      @include flex-space-between;
+      padding: 40px 0;
+      border-bottom: 1px solid #ccc;
+      .academia-search-container {
+        @include flex-justify-start;
+        gap: 20px;
+        p {
+          color: $academia-color;
+          cursor: pointer;
+        }
+        .form-wrapper {
+          @include flex-center;
+          position: relative;
+          border: 1px solid #999;
+          padding: 0;
+          padding-right: 10px;
+          height: 40px;
+          input {
+            color: #555;
+            padding: 10px;
+          }
+          .inputError {
+            color: $academia-color;
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+          }
+          .btn {
+            color: $academia-color;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .academia-view-container {
+        @include flex-center;
+        gap: 10px;
+        .academia-view-icon {
+          width: 40px;
+          height: 40px;
+          color: $academia-color;
+          font-weight: bold;
+          cursor: pointer;
+          margin: 5px;
+          border: 1px solid #999;
+          padding: 5px;
+          border-radius: 5px;
+        }
+      }
+    }
+    .academia-blog-container {
+      @include flex-align-start;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 80px 0;
+    }
+  }
+}

@@ -7,7 +7,7 @@ import {
   CourseDataType,
 } from "../../../../dataTypes/academiaData.type";
 import PageHeader from "../../modules/pageHeader/PageHeader";
-import CourseThumb from "../../templates/courseThumb/grid/CourseThumb";
+import CourseThumb from "../../templates/courseThumb/CourseThumb";
 import {
   IFormInputType,
   ValuesType,
@@ -23,6 +23,7 @@ function Course() {
   const [data, setData] = useState<CourseDataType[]>([]);
   const [category, setCategory] = useState<CategoryDataType | "all">("all");
   const [startIndex, setStartIndex] = useState(0);
+	const [view, setView] = useState<"grid"|"list">("list")
 
   const inputs: IFormInputType[] = [
     {
@@ -79,8 +80,8 @@ function Course() {
             />
           </div>
           <div className="academia-view-container">
-            <CiGrid2H className="academia-view-icon" />
-            <CiGrid41 className="academia-view-icon" />
+            <CiGrid2H className="academia-view-icon" onClick={()=> setView("list")}  />
+            <CiGrid41 className="academia-view-icon" onClick={()=> setView("grid")} />
           </div>
         </div>
 
@@ -110,7 +111,7 @@ function Course() {
           )}
         </div>
 
-        <div className="academia-course-container">
+        <div className={`academia-course-container ${view}`}>
           {data && data.length === 0 && <p>Not fount any data to show.</p>}
           {data &&
             data

@@ -5,8 +5,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "./courses.scss";
 import SectionHeader from "../../../../modules/sectionHeader/SectionHeader";
-import CourseThumb from "../../../../templates/courseThumb/grid/CourseThumb";
+import CourseThumb from "../../../../templates/courseThumb/CourseThumb";
 import Aos from "../../../../../main/modules/aos/Aos";
+import SeeAll from "../seeAll/SeeAll";
 
 function Courses({ data }: { data: CourseDataType[] }) {
   return (
@@ -35,13 +36,14 @@ function Courses({ data }: { data: CourseDataType[] }) {
               loop={true}
             >
               {data.map((item) => (
-                <SwiperSlide key={item.id}>
+                <SwiperSlide key={item.id} className="grid">
                   <CourseThumb {...item} />
                 </SwiperSlide>
               ))}
             </Swiper>
           )}
         </div>
+				<SeeAll route="course"/>
       </div>
     </section>
   );

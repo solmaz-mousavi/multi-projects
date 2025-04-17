@@ -1,0 +1,12 @@
+@use "/src/styles/global.scss" as *;
+
+.see-all-btn {
+	text-align: center;
+  .btn {
+    flex-direction: row-reverse;
+    color: $academia-color;
+    text-transform: uppercase;
+    margin: 30px auto;
+    letter-spacing: 2px;
+  }
+}

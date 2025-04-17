@@ -39,6 +39,10 @@ html {
   width: 100% !important;
 }
 
+.main-wrapper{
+	max-height: auto;
+	transition: max-height 1s ease-in;
+}
 // @font-face {
 //   font-family: "Courgette";
 //   src: local("Courgette"),
