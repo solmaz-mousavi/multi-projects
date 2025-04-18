@@ -11,6 +11,7 @@ function Pagination({
 	startIndex,
   setStartIndex,
 }: PaginationPropsType) {
+	// ---- Create an array where the length corresponds to the number of pages
   const pages = Array.from(Array(Math.ceil(dataLength / perPage)).keys());
   return (
     <div className="pagination-container">

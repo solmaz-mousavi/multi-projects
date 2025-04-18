@@ -17,6 +17,7 @@ function Works({ data }: { data: WorksDataType[] }) {
       id="Glint-Works"
       className="glint-section-container glint-works-container"
     >
+      {/* ---- works title ---- */}
       <div id="Glint-WorksTop" className="works-header">
         <Aos aosStyle="fadeInUp" once={true}>
           <p className="glint-top-title works-header__top">Recent Works </p>
@@ -25,6 +26,8 @@ function Works({ data }: { data: WorksDataType[] }) {
           </h2>
         </Aos>
       </div>
+
+      {/* ---- works content ---- */}
       <div id="Glint-WorksBottom" className="work-items-wrapper">
         <div className="work-items-container">
           {data && (
@@ -55,6 +58,8 @@ function Works({ data }: { data: WorksDataType[] }) {
           )}
         </div>
       </div>
+
+      {/* ---- modal ---- */}
       {showWorksSlider && (
         <div className="modal-wrapper">
           <SliderModal

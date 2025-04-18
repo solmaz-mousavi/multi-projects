@@ -6,6 +6,8 @@
   padding: 100px 20px;
   margin: 0 auto;
   border-top: 1px solid #333;
+
+  // ---- description ----
   .footer-top {
     @include flex-align-start;
     gap: 20px;
@@ -27,35 +29,41 @@
       }
     }
   }
+
+  // ----copy right ----
   .footer-bottom {
     @include flex-center;
     gap: 20px;
     font-size: 0.9rem;
   }
+
+  // ---- contact form ----
   .form-wrapper {
     padding: 20px 0px !important;
     max-width: 300px;
-  }
-  .input-container {
-    position: relative;
-  }
-  .footer-label {
-    position: absolute;
-    top: 3px;
-    left: 10px;
-    * {
-      font-size: 1.8rem;
+
+    .input-container {
+      position: relative;
     }
-  }
-  .footer-input {
-    padding-left: 45px;
-    border-radius: 5px 5px 0 0;
-  }
-  .glint-form-button {
-    border-radius: 0 0 5px 5px;
+    .footer-label {
+      position: absolute;
+      top: 3px;
+      left: 10px;
+      * {
+        font-size: 1.8rem;
+      }
+    }
+    .footer-input {
+      padding-left: 45px;
+      border-radius: 5px 5px 0 0;
+    }
+    .glint-form-button {
+      border-radius: 0 0 5px 5px;
+    }
   }
 }
 
+// ---- responsive ----
 @media screen and (max-width: 768px) {
   .glint-footer-container {
     .footer-top {

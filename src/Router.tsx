@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import Glint from "./projects/Glint";
-import Dashboard from "./projects/Dashboard";
+import Glint from "./components/glint/Glint";
+import Dashboard from "./components/dashboard/Dashboard";
 
 import Pato from "./components/pato/Pato";
 import PatoHome from "./components/pato/pages/home/Home";

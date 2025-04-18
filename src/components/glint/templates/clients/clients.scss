@@ -8,6 +8,8 @@
   flex-direction: column;
   text-align: center;
   position: relative;
+
+	// --- title ----
   .glint-clients-header {
     padding-bottom: 0px;
     margin: 0 auto;
@@ -18,6 +20,8 @@
       color: #000;
     }
   }
+
+	// ---- clients ----
   .clients-slider {
     overflow: hidden;
     padding-top: 40px;
@@ -40,6 +44,8 @@
       }
     }
   }
+
+	// ---- team members ----
   .glint-team-slider {
     position: relative;
     .swiper {
@@ -82,6 +88,8 @@
       left: 20px;
     }
   }
+
+	// ---- decoration ----
   .decoration {
     height: 80px;
     width: 1px;
@@ -92,16 +100,15 @@
     padding-top: 20px;
   }
 }
-.glint-clients-header .swiper-button-prev::after,
-.glint-clients-header .swiper-button-next::after {
-  display: none;
-}
+
+// ---- additional slider styles (for team members) ----
 .glint-team-slider .swiper-button-prev::after,
 .glint-team-slider .swiper-button-next::after {
   color: #555;
   font-size: 1rem;
 }
 
+// ---- responsive ----
 @media screen and (max-width: 768px) {
   .glint-clients-container {
     .clients-slider {

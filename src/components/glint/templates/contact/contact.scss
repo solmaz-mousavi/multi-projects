@@ -1,5 +1,6 @@
 @use "/src/styles/global.scss" as *;
 
+// ---- background style ----
 .glint-contacts-container {
   height: calc(100vh - 60px);
   background-color: #000;
@@ -33,6 +34,8 @@
     left: 50%;
     padding-top: 20px;
   }
+
+	// ---- title ----
   .contacts-header {
     text-align: center;
     .contacts-header__title {
@@ -49,11 +52,15 @@
     display: -ms-flexbox;
     display: flex;
     padding-top: 40px;
+
+		// ---- form ----
     .form-container {
       width: 65%;
       padding: 20px;
       background-color: rgba(0, 0, 0, 0.5);
     }
+
+		// ---- contact info ----
     .info-container {
       width: 35%;
       padding: 20px;
@@ -78,6 +85,8 @@
       }
     }
   }
+
+	// ---- social btns ----
   .social-container {
     .contacts-info-social {
       margin-right: 10px;
@@ -91,6 +100,8 @@
       }
     }
   }
+
+	// ---- form styles ----
   .contacts-input {
     border-bottom: 1px solid #555;
     border-radius: 0px;
@@ -110,6 +121,7 @@
   }
 }
 
+// ---- responsive ----
 @media screen and (max-width: 650px) {
   .glint-contacts-container {
     .contacts-bottom-wrapper {

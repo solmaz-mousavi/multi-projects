@@ -2,22 +2,21 @@ import { useCallback, useEffect } from "react";
 import "./sidebar.scss";
 import Icon from "../../../main/modules/icon/Icon";
 type SidebarPropsType = {
-	data: string[];
-	showSidebar: boolean;
-	setShowSidebar: (showSidebar:boolean)=>void;
-}
+  data: string[];
+  showSidebar: boolean;
+  setShowSidebar: (showSidebar: boolean) => void;
+};
 
-function Sidebar({data,
-	showSidebar,
-	setShowSidebar}:SidebarPropsType) {
-
-  const closeSidebarHandler =useCallback (() => {
+function Sidebar({ data, showSidebar, setShowSidebar }: SidebarPropsType) {
+  // ---- sidebar close handler ----
+  const closeSidebarHandler = useCallback(() => {
     setShowSidebar(false);
     window.document
       .getElementById("glint")
       ?.removeEventListener("click", closeSidebarHandler);
-  },[setShowSidebar]);
+  }, [setShowSidebar]);
 
+  // ---- add event listener when sidebar is open ----
   useEffect(() => {
     if (showSidebar) {
       window.document
@@ -28,38 +27,39 @@ function Sidebar({data,
 
   return (
     <>
-        <section
-          className={`glint-sidebar-wrapper ${showSidebar ? "show" : ""}`}
-        >
-          <nav className="sidebar-container">
-            <div onClick={() => setShowSidebar(false)} >
-							<Icon name="MdClose" className="sidebar-closeBtn"/>
-            </div>
+      <section className={`glint-sidebar-wrapper ${showSidebar ? "show" : ""}`}>
+        <nav className="sidebar-container">
+          {/* ---- close btn ---- */}
+          <div onClick={() => setShowSidebar(false)}>
+            <Icon name="MdClose" className="sidebar-closeBtn" />
+          </div>
 
-            <h3 className="sidebar-title">navigation</h3>
-            <ul className="sidebar-link-container">
-              {data && data.map((item) => (
+          {/* ---- title ---- */}
+          <h3 className="sidebar-title">navigation</h3>
+
+          {/* ---- navbar ---- */}
+          <ul className="sidebar-link-container">
+            {data &&
+              data.map((item) => (
                 <li
-								key={item}
+                  key={item}
                   className="sidebar-link"
                   onClick={() => setShowSidebar(false)}
                 >
                   <a href={`#Glint-${item}`}>{item}</a>
                 </li>
               ))}
-            </ul>
+          </ul>
 
-            <p className="sidebar-description">
-              Perspiciatis hic praesentium nesciunt. Et neque a dolorum 
-              <strong className="sidebar-description-link">
-							{" "}voluptatem{" "}
-								 </strong>
-               porro iusto sequi veritatis libero enim. Iusto id suscipit
-              veritatis neque reprehenderit.
-            </p>
-          </nav>
-        </section>
-
+          {/* ---- description ---- */}
+          <p className="sidebar-description">
+            Perspiciatis hic praesentium nesciunt. Et neque a dolorum
+            <strong className="sidebar-description-link"> voluptatem </strong>
+            porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis
+            neque reprehenderit.
+          </p>
+        </nav>
+      </section>
     </>
   );
 }

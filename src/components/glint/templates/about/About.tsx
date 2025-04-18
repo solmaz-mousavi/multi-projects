@@ -5,16 +5,24 @@ import "./about.scss";
 
 function About({ data }: { data: StatusDataType[] }) {
   return (
-    <section id="Glint-About" className="glint-section-container glint-about-container">
+    <section
+      id="Glint-About"
+      className="glint-section-container glint-about-container"
+    >
+      {/* ---- title ---- */}
       <Aos aosStyle="fadeInUp" className="about-header" once={true}>
         <div>
           <p className="glint-top-title about-header__top">Hello There</p>
           <h2 className="glint-main-title about-header__title">We Are Glint</h2>
         </div>
-				</Aos>
-				<div className="glint-devider"></div>
-				<Aos aosStyle="fadeInUp" className="about-description" once={true}>
-        <div >
+      </Aos>
+
+      {/* ---- devider ---- */}
+      <div className="glint-devider"></div>
+
+      {/* ---- description ---- */}
+      <Aos aosStyle="fadeInUp" className="about-description" once={true}>
+        <div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -26,6 +34,8 @@ function About({ data }: { data: StatusDataType[] }) {
           </p>
         </div>
       </Aos>
+
+      {/* ---- status ---- */}
       <Aos aosStyle="fadeInUp" once={true}>
         <div className="about-status-container">
           {data &&

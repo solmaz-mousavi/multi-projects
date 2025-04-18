@@ -1,14 +1,11 @@
+import { IntroDataType } from "../../../../dataTypes/academiaData.type";
 import "./introThumb.scss";
-type IntroThumbPropsType = {
-  title: string;
-  img: string;
-  desc: string;
-};
-function IntroThumb({ title, img, desc }: IntroThumbPropsType) {
+
+function IntroThumb({ title, image, desc }: IntroDataType) {
   return (
 		<div className="academia-home-intro-thumb">
 		<div className="academia-home-intro-thumb-img">
-			<img src={img} alt={title} />
+			<img src={image} alt={title} />
 		</div>
 		<div className="academia-home-intro-thumb-details">
 			<h4 className="academia-subtitle">{title}</h4>

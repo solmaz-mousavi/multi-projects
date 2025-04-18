@@ -3,6 +3,8 @@
 .main-guidbox-wrapper {
   position: relative;
   z-index: 20;
+
+	// ------------- guid box common styles -------------
   .guidbox {
     @include fullscreen;
     position: fixed;
@@ -48,6 +50,7 @@
       }
     }
   }
+	// ------------- guid user - how to see other projects -------------
   .guidbox-1 {
     border-left: 20px solid rgba(0, 0, 0, 0.7);
     border-right: calc(100vw - 190px) solid rgba(0, 0, 0, 0.7);
@@ -64,6 +67,8 @@
       left: 360px;
     }
   }
+
+	// ------------- guid user - how to see contact information -------------
   .guidbox-2 {
     border-left: calc(100vw - 190px) solid rgba(0, 0, 0, 0.7);
     border-right: 20px solid rgba(0, 0, 0, 0.7);
@@ -80,6 +85,7 @@
       right: 230px;
     }
   }
+
   .hidden {
     opacity: 0;
     display: none;

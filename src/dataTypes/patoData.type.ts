@@ -1,60 +1,69 @@
-import { NavbarDataType, SocialDataType } from "./mainData.type";
+import {
+  NavbarDataType,
+  PersonType,
+  SocialDataType,
+  BaseType,
+  ImgIncludedType,
+} from "./mainData.type";
 
-type SlideKeyType = "id" | "image" | "title" | "desc";
-export type SlideDataType = { [index in SlideKeyType]: string } & {
+// --------------------home--------------------
+
+// ----slider
+export interface SlideDataType extends BaseType, ImgIncludedType {
   button: {
-    title: string;
-    navigate: string;
+    [index in "title" | "navigate"]: string;
   };
-};
+}
 
-type IntroKeyType = "id" | "title" | "desc" | "image" | "route";
-export type IntroDataType = {
-  [index in IntroKeyType]: string;
-};
+// ----intro
+export interface IntroDataType extends BaseType, ImgIncludedType {
+  route: string;
+}
 
-export type MenuItemType = {
-  id: string;
-  title: string;
+// ----review
+export interface ReviewDataType extends PersonType, CommentKeyType {}
+
+// --------------------menu--------------------
+export interface MenuItemType extends BaseType {
   image?: string;
-  desc: string;
   price: number;
+}
+type MenuDataKeyType = {
+  [index in "id" | "category" | "image"]: string;
 };
-export type MenuDataType = {
-  id: string;
-  category: string;
-  image: string;
+export interface MenuDataType extends MenuDataKeyType {
   main: boolean;
   items: MenuItemType[];
-};
+}
 
-type EventKeyType = "id" | "title" | "date" | "time" | "image" | "desc";
-export type EventsDataType = {
-  [index in EventKeyType]: string;
-};
+// --------------------event--------------------
+export interface EventsDataType extends BaseType, ImgIncludedType {
+  date: string;
+  time: string;
+}
 
-type ReviewKeyType = "id" | "name" | "city" | "date" | "desc";
-export type ReviewDataType = {
-  [index in ReviewKeyType]: string;
-};
-
+// --------------------blog--------------------
 export type BlogCategoryType =
   | "Cooking recipe"
   | "Delicious foods"
   | "Events Design"
   | "Restaurant Place";
 
-type BlogKeyType = "id" | "title" | "desc" | "image" | "date" | "author";
-export type BlogDataType = {
-  [index in BlogKeyType]: string;
-} & {
-  categories: BlogCategoryType[];
-  comments: {
-    [index in ReviewKeyType]: string;
-  }[];
+type CommentKeyType = {
+  [index in "city" | "date" | "desc"]: string;
 };
+interface CommentType extends PersonType, CommentKeyType {}
 
+export interface BlogDataType extends BaseType, ImgIncludedType {
+  date: string;
+  author: string;
+  categories: BlogCategoryType[];
+  comments: CommentType[];
+}
+
+// --------------------gallery--------------------
 export type GalleryCategoryType = "interior" | "food" | "events" | "vip guests";
+
 type GalleryKeyType = "id" | "title" | "image" | "date" | "author";
 export type GalleryDataType = {
   [index in GalleryKeyType]: string;
@@ -62,11 +71,11 @@ export type GalleryDataType = {
   categories: GalleryCategoryType[];
 };
 
-type ChefKeyType = "id" | "name" | "image" | "desc";
-export type ChefDataType = {
-  [index in ChefKeyType]: string;
-};
+export interface ChefDataType extends PersonType, ImgIncludedType {
+  desc: string;
+}
 
+// --------------------data--------------------
 export type PatoDataType = {
   navbar: NavbarDataType[];
   social: SocialDataType[];

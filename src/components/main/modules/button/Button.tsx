@@ -19,8 +19,10 @@ function Button({
   round = false,
   children,
 }: ButtonType) {
+	
   return (
     <>
+		{/* ------------- anchor link ------------- */}
       {type === "link" ? (
         <a
           href={to}
@@ -44,6 +46,7 @@ function Button({
         </a>
       ) : (
         <>
+				{/* ------------- button ------------- */}
           <button
             type={type}
             title={title}

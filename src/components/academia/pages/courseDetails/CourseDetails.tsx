@@ -1,6 +1,6 @@
 import { useLocation, useOutletContext } from "react-router-dom";
 import PageHeader from "../../modules/pageHeader/PageHeader";
-import CourseThumb from "../../templates/courseThumb/CourseThumb";
+import CourseThumb from "../../modules/courseThumb/CourseThumb";
 import "./courseDetails.scss";
 import {
   AcademiaDataType,

@@ -1,11 +1,6 @@
 @use "/src/styles/global.scss" as *;
 
-#academia {
-  overflow-y: auto;
-  height: calc(100vh - 60px);
-  scroll-behavior: smooth;
-	position: relative;
-}
+
 
 .academia-container{
 	max-width: 1300px;

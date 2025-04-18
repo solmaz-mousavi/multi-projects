@@ -14,6 +14,8 @@
     .slide-item {
       @include flex-center-column;
       height: 100vh;
+
+			// ---------------- image----------------
       .image-wrapper {
         @include flex-center;
         max-width: 700px;
@@ -27,6 +29,8 @@
           width: 100%;
         }
       }
+
+			// ---------------- details----------------
       h5 {
         color: #fff;
         padding-top: 20px;
@@ -39,6 +43,8 @@
         color: #aaa;
         padding: 5px;
       }
+
+			// ---------------- header btn styles ----------------
       .main-slider__icon-container {
         position: absolute;
         top: 20px;
@@ -55,6 +61,8 @@
             color: #fff;
           }
         }
+
+				// ---------------- share btn ----------------
         .main-slider__share-container {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -109,6 +117,8 @@
         }
       }
     }
+
+		// ---------------- slider styles ----------------
     .swiper-button-prev::after,
     .swiper-button-next::after {
       color: #ffffff50;
@@ -116,6 +126,7 @@
   }
 }
 
+// ---------------- responsive styles ----------------
 @media screen and (max-width: 412px) {
   .main-slider-container {
     .slider__slides {

@@ -1,6 +1,6 @@
 import { StatusDataType } from "../../../../dataTypes/academiaData.type";
 import Aos from "../../../main/modules/aos/Aos";
-import StatusThumb from "./StatusThumb/StatusThumb";
+import StatusThumb from "../../modules/StatusThumb/StatusThumb";
 
 import "./status.scss";
 

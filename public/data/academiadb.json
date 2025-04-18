@@ -39,19 +39,19 @@
       "id": "01",
       "title": "Online Courses",
       "desc": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-      "img": "/assets/images/academia/flaticons/aqua/e-learning.png"
+      "image": "/assets/images/academia/flaticons/aqua/e-learning.png"
     },
     {
       "id": "02",
       "title": "Earn A Certificate",
       "desc": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-      "img": "/assets/images/academia/flaticons/aqua/certificate.png"
+      "image": "/assets/images/academia/flaticons/aqua/certificate.png"
     },
     {
       "id": "03",
       "title": "Learn with Experts",
       "desc": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-      "img": "/assets/images/academia/flaticons/aqua/scientist.png"
+      "image": "/assets/images/academia/flaticons/aqua/scientist.png"
     }
   ],
   "status": [
@@ -59,25 +59,25 @@
       "id": "01",
       "title": "Professionals",
       "number": 4,
-      "img": "/assets/images/academia/flaticons/white/businessman.png"
+      "image": "/assets/images/academia/flaticons/white/businessman.png"
     },
     {
       "id": "02",
       "title": "Courses",
       "number": 10,
-      "img": "/assets/images/academia/flaticons/white/learning.png"
+      "image": "/assets/images/academia/flaticons/white/learning.png"
     },
     {
       "id": "03",
       "title": "Students",
       "number": 21,
-      "img": "/assets/images/academia/flaticons/white/graduated.png"
+      "image": "/assets/images/academia/flaticons/white/graduated.png"
     },
     {
       "id": "04",
       "title": "articles",
       "number": 16,
-      "img": "/assets/images/academia/flaticons/white/newspaper.png"
+      "image": "/assets/images/academia/flaticons/white/newspaper.png"
     }
 
   ],
@@ -86,7 +86,7 @@
       "id": "01",
       "name": "Dr. Adrian Molises",
       "education": "Ph.D on Data Science",
-			"img":"/assets/images/academia/team/team-1.jpg",
+			"image":"/assets/images/academia/team/team-1.jpg",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, leo nec blandit sagittis, velit velit ultrices dui, eu pretium arcu enim vel ligula. Mauris dolor nisl, luctus at auctor ac, porttitor id ipsum. Sed ut eros vel sem tempor suscipit. Proin vitae ipsum ex. Nam fringilla magna non massa ullamcorper viverra. Nullam eget sapien sem. Phasellus faucibus metus vitae lobortis cursus. In dapibus lacinia nulla eu eleifend. Aenean pellentesque, neque vitae lobortis interdum, mauris orci efficitur risus, vestibulum sodales lectus est eget odio. Etiam nulla diam, consectetur eu varius sit amet, fringilla ac ligula. Curabitur faucibus nulla non diam egestas, vel molestie metus feugiat. Aliquam facilisis purus non quam bibendum congue id ut ipsum. Cras auctor urna justo, ac tempor nisl semper sit amet.",
       "social": [
         {
@@ -113,7 +113,7 @@
       "id": "02",
       "name": "Arthur MaGregor",
       "education": "Full Stack Developer",
-			"img":"/assets/images/academia/team/team-2.jpg",
+			"image":"/assets/images/academia/team/team-2.jpg",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, leo nec blandit sagittis, velit velit ultrices dui, eu pretium arcu enim vel ligula. Mauris dolor nisl, luctus at auctor ac, porttitor id ipsum. Sed ut eros vel sem tempor suscipit. Proin vitae ipsum ex. Nam fringilla magna non massa ullamcorper viverra. Nullam eget sapien sem. Phasellus faucibus metus vitae lobortis cursus. In dapibus lacinia nulla eu eleifend. Aenean pellentesque, neque vitae lobortis interdum, mauris orci efficitur risus, vestibulum sodales lectus est eget odio. Etiam nulla diam, consectetur eu varius sit amet, fringilla ac ligula. Curabitur faucibus nulla non diam egestas, vel molestie metus feugiat. Aliquam facilisis purus non quam bibendum congue id ut ipsum. Cras auctor urna justo, ac tempor nisl semper sit amet.",
       "social": [
         {
@@ -134,7 +134,7 @@
       "id": "03",
       "name": "Dr. Anna Hanzen",
       "education": "Ph.d on Developer and Lead Instructor",
-			"img":"/assets/images/academia/team/team-3.jpg",
+			"image":"/assets/images/academia/team/team-3.jpg",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, leo nec blandit sagittis, velit velit ultrices dui, eu pretium arcu enim vel ligula. Mauris dolor nisl, luctus at auctor ac, porttitor id ipsum. Sed ut eros vel sem tempor suscipit. Proin vitae ipsum ex. Nam fringilla magna non massa ullamcorper viverra. Nullam eget sapien sem. Phasellus faucibus metus vitae lobortis cursus. In dapibus lacinia nulla eu eleifend. Aenean pellentesque, neque vitae lobortis interdum, mauris orci efficitur risus, vestibulum sodales lectus est eget odio. Etiam nulla diam, consectetur eu varius sit amet, fringilla ac ligula. Curabitur faucibus nulla non diam egestas, vel molestie metus feugiat. Aliquam facilisis purus non quam bibendum congue id ut ipsum. Cras auctor urna justo, ac tempor nisl semper sit amet.",
       "social": [
 				{
@@ -161,7 +161,7 @@
       "id": "04",
       "name": "Brian Wooden",
       "education": "FrontEnd Developer",
-			"img":"/assets/images/academia/team/team-4.jpg",
+			"image":"/assets/images/academia/team/team-4.jpg",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eleifend, leo nec blandit sagittis, velit velit ultrices dui, eu pretium arcu enim vel ligula. Mauris dolor nisl, luctus at auctor ac, porttitor id ipsum. Sed ut eros vel sem tempor suscipit. Proin vitae ipsum ex. Nam fringilla magna non massa ullamcorper viverra. Nullam eget sapien sem. Phasellus faucibus metus vitae lobortis cursus. In dapibus lacinia nulla eu eleifend. Aenean pellentesque, neque vitae lobortis interdum, mauris orci efficitur risus, vestibulum sodales lectus est eget odio. Etiam nulla diam, consectetur eu varius sit amet, fringilla ac ligula. Curabitur faucibus nulla non diam egestas, vel molestie metus feugiat. Aliquam facilisis purus non quam bibendum congue id ut ipsum. Cras auctor urna justo, ac tempor nisl semper sit amet.",
       "social": [
 				{
@@ -186,11 +186,11 @@
     }
   ],
   "categories": [
-		{"id":"01", "title":"Frontend", "img":"/assets/images/academia/flaticons/aqua/front-end-programming.png"},
-		{"id":"02", "title":"Backend", "img":"/assets/images/academia/flaticons/aqua/coding.png"},
-		{"id":"03", "title":"Network", "img":"/assets/images/academia/flaticons/aqua/computer.png"},
-		{"id":"04", "title":"Database", "img":"/assets/images/academia/flaticons/aqua/database-storage.png"},
-		{"id":"05", "title":"AI", "img":"/assets/images/academia/flaticons/aqua/artificial-intelligence.png"}
+		{"id":"01", "title":"Frontend", "image":"/assets/images/academia/flaticons/aqua/front-end-programming.png"},
+		{"id":"02", "title":"Backend", "image":"/assets/images/academia/flaticons/aqua/coding.png"},
+		{"id":"03", "title":"Network", "image":"/assets/images/academia/flaticons/aqua/computer.png"},
+		{"id":"04", "title":"Database", "image":"/assets/images/academia/flaticons/aqua/database-storage.png"},
+		{"id":"05", "title":"AI", "image":"/assets/images/academia/flaticons/aqua/artificial-intelligence.png"}
 	],
 	"students":[
 {"id":"01", "name":"Jack will", "courses":["01", "04"]},

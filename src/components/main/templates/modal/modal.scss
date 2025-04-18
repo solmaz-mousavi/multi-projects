@@ -12,6 +12,8 @@
     height: 220px;
     width: 500px;
     border-radius: 10px;
+
+		// ------------- modal messages -------------
     .modal-details {
       @include flex-justify-start;
       height: 150px;
@@ -34,6 +36,8 @@
         }
       }
     }
+
+		// ------------- modal buttons ------------- 
     .modal-btn-container {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -54,6 +58,7 @@
   }
 }
 
+// ------------- responsive styles ------------- 
 @media screen and (max-width: 768px) {
   .modal-container {
     .modal {

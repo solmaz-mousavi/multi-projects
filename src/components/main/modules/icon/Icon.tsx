@@ -3,7 +3,8 @@ export type IconPropsType = {
   name: string;
   className?: string;
 };
-
+ 
+// --- create icon component
 function Icon({
   name,
   className,

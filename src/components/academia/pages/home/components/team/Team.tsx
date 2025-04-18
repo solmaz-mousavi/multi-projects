@@ -2,7 +2,7 @@ import { TeacherDataType } from "../../../../../../dataTypes/academiaData.type";
 import Aos from "../../../../../main/modules/aos/Aos";
 import SectionHeader from "../../../../modules/sectionHeader/SectionHeader";
 import "./team.scss";
-import TeamThumb from "../../../../templates/teamThumb/TeamThumb";
+import TeamThumb from "../../../../modules/teamThumb/TeamThumb";
 import SeeAll from "../seeAll/SeeAll";
 
 function Team({ data }: { data: TeacherDataType[] }) {

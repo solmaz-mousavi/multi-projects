@@ -5,7 +5,11 @@ import "./services.scss";
 
 function Services({ data }: { data: ServicesDataType[] }) {
   return (
-    <section id="Glint-Services" className="glint-section-container glint-services-container">
+    <section
+      id="Glint-Services"
+      className="glint-section-container glint-services-container"
+    >
+      {/* ---- title ---- */}
       <Aos aosStyle="fadeInUp" once={true}>
         <div className="services-header">
           <p className="glint-top-title services-header__top">What We Do</p>
@@ -14,7 +18,11 @@ function Services({ data }: { data: ServicesDataType[] }) {
           </h2>
         </div>
       </Aos>
+
+      {/* ---- devider ---- */}
       <div className="glint-devider dark"></div>
+
+      {/* ---- content ---- */}
       <Aos aosStyle="fadeInUp" once={true}>
         <Aos aosStyle="fadeInUp" once={true}>
           <div className="service-item-container">
@@ -33,6 +41,7 @@ function Services({ data }: { data: ServicesDataType[] }) {
           </div>
         </Aos>
       </Aos>
+			
     </section>
   );
 }

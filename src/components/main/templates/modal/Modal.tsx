@@ -5,7 +5,7 @@ type ModalPropsType = {
   desc: string;
   icon?: {
     name: string;
-		variant:"success" | "error" | "warning" | "info" | "grey";
+    variant: "success" | "error" | "warning" | "info" | "grey";
   };
   button: {
     title: string;
@@ -13,22 +13,29 @@ type ModalPropsType = {
     clickHandler: () => void;
   }[];
 };
+
 function Modal({ title, desc, icon, button }: ModalPropsType) {
   return (
     <div className="modal-container">
       <div className="modal">
+
+				{/* ------------- modal messages ------------- */}
         <div className="modal-details">
           {icon && (
-						<>
-            {/* <Icon name={icon.name} className={`modal-icon ${icon.variant}`} /> */}
-						<Button variant={icon.variant} transparent={true} icon={{name: icon.name}} border={false} />
-						</>
+            <Button
+              variant={icon.variant}
+              transparent={true}
+              icon={{ name: icon.name }}
+              border={false}
+            />
           )}
           <div className="modal-txt">
             <h4 className="modal-title">{title}</h4>
             <p className="modal-desc">{desc}</p>
           </div>
         </div>
+
+				{/* ------------- modal buttons ------------- */}
         <div className="modal-btn-container">
           {button.map((item) => (
             <Button
@@ -40,6 +47,7 @@ function Modal({ title, desc, icon, button }: ModalPropsType) {
             />
           ))}
         </div>
+
       </div>
     </div>
   );

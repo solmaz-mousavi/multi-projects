@@ -22,12 +22,26 @@ const months = [
   "December",
 ];
 
-type dateFormatType = 1 | 2 | 3 |4 |5;
-export const dateFormatter = (date: string, type: dateFormatType) => {
+type dateFormatType = 1 | 2 | 3 | 4 | 5;
+
+// ---------------------------------------
+//  1 -->  friday - 24 October 2025
+//  2 -->  24 October, 2025
+//  3 -->  2025-10-24
+//  4 -->  24
+//  5 -->  Oct, 2025
+// ---------------------------------------
+
+export const dateFormatter = ({
+  date,
+  type,
+}: {
+  date: string;
+  type: dateFormatType;
+}) => {
   const eventDate = new Date(date);
   const eventYear = eventDate.getFullYear();
-  const eventMonthDigit =
-		(eventDate.getMonth() + 1)
+  const eventMonthDigit = (eventDate.getMonth() + 1)
     .toString()
     .padStart(2, "0");
   const eventMonthName = months[eventDate.getMonth()];
@@ -44,10 +58,10 @@ export const dateFormatter = (date: string, type: dateFormatType) => {
     case 3:
       return `${eventYear}-${eventMonthDigit}-${eventDayDigit}`;
 
-			case 4:
-				return `${eventDayDigit}`;
+    case 4:
+      return `${eventDayDigit}`;
 
-				case 5:
-					return `${eventMonthName.slice(0,3)}, ${eventYear}`;
+    case 5:
+      return `${eventMonthName.slice(0, 3)}, ${eventYear}`;
   }
 };

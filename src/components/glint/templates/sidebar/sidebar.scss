@@ -31,6 +31,7 @@
     opacity: 0;
     padding-left: 100px;
 
+		// ---- close btn ----
     .sidebar-closeBtn {
       display: inline-block;
       position: absolute;
@@ -41,6 +42,8 @@
       cursor: pointer;
       color: #fff;
     }
+
+		// ---- title ----
     .sidebar-title {
       color: $glint-color-green;
       text-transform: uppercase;
@@ -48,6 +51,8 @@
       font-size: 0.75rem;
       margin-bottom: 50px;
     }
+
+		// ---- navbar ----
     .sidebar-link {
       list-style: none;
       height: 45px;
@@ -65,6 +70,8 @@
         }
       }
     }
+
+		// ---- description ----
     .sidebar-description {
       color: rgba(255, 255, 255, 0.2);
       margin-top: 50px;
@@ -86,6 +93,7 @@
   }
 }
 
+// ---- responsive ----
 @media screen and (max-width: 412px) {
   .glint-sidebar-wrapper {
     right: -170px;

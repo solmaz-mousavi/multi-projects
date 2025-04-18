@@ -7,6 +7,8 @@
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
+
+	// ---- title ----
   .about-header {
     padding-bottom: 20px;
     margin: 0 auto;
@@ -17,10 +19,14 @@
       color: #fff;
     }
   }
+
+	// ---- description ----
   .about-description {
     padding: 20px 10%;
     font-size: 1.7rem;
   }
+
+	// ---- status ----
   .about-status-container {
     @include flex-center;
     -ms-flex-wrap: nowrap;
@@ -47,6 +53,7 @@
   }
 }
 
+// ---- responsive ----
 @media screen and (max-width: 1300px) {
   .glint-about-container .about-status-container .about-status {
     width: 200px;

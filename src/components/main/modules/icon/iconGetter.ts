@@ -4,6 +4,7 @@ import * as TbIcons from "react-icons/tb";
 import * as BsIcons from "react-icons/bs";
 import { IconType } from "react-icons";
 
+// ---- get icon dynamically from react-icons library
 const GetIcon = ( icon:string ) => {
   const getIcon = (iconName: string) => {
     const iconsMap = new Map();

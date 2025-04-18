@@ -14,7 +14,7 @@ import {
 import { ButtonType } from "../../../../dataTypes/buttonData.type";
 import { requiredStringValidator } from "../../../../validators/rules";
 import { CiGrid2H, CiGrid41 } from "react-icons/ci";
-import BlogThumb from "../../templates/blogThumb/BlogThumb";
+import BlogThumb from "../../modules/blogThumb/BlogThumb";
 import Pagination from "../../../main/modules/pagination/Pagination";
 
 function Blog() {

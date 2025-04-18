@@ -40,5 +40,5 @@ export interface IFormInputType {
   selectValues?: string[];
   initialvalue: ValueType;
   validators: { type: RulesType, validatorValue?: any }[];
-[index:string]: any;
+ [index:string]: any;
 }

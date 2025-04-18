@@ -8,7 +8,7 @@ import {
   getResultByID,
 } from "../../../../utils/getDataByID";
 import Icon from "../../../main/modules/icon/Icon";
-import Score from "../../../main/modules/score/Score";
+import Score from "../score/Score";
 import "./courseThumb.scss";
 import "animate.css";
 
@@ -53,7 +53,7 @@ function CourseThumb({
           </div>
           <div className="teacher-wrapper">
             <div className="image-wrapper">
-              <img src={courseTeacher.img} alt={courseTeacher.name} />
+              <img src={courseTeacher.image} alt={courseTeacher.name} />
             </div>
             <p className="author">
               by <>&#xa0;</>

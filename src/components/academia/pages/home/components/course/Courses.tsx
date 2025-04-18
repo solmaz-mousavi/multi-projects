@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "./courses.scss";
 import SectionHeader from "../../../../modules/sectionHeader/SectionHeader";
-import CourseThumb from "../../../../templates/courseThumb/CourseThumb";
+import CourseThumb from "../../../../modules/courseThumb/CourseThumb";
 import Aos from "../../../../../main/modules/aos/Aos";
 import SeeAll from "../seeAll/SeeAll";
 

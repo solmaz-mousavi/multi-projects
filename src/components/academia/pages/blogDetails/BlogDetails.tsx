@@ -6,7 +6,7 @@ import {
   BlogDataType,
 } from "../../../../dataTypes/academiaData.type";
 import { useEffect, useState } from "react";
-import BlogThumb from "../../templates/blogThumb/BlogThumb";
+import BlogThumb from "../../modules/blogThumb/BlogThumb";
 import Comment from "../../templates/comment/Comment";
 
 function BlogDetails() {

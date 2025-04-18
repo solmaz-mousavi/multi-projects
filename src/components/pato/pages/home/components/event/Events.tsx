@@ -46,7 +46,8 @@ function Events({ data }: { data: EventsDataType[] }) {
                 <SwiperSlide className="pato-home__events-item" key={item.id}>
                   <div className="pato-home__events-item-time">
                     <p>
-                      {item.time} - {dateFormatter(item.date, 1)}
+                      {item.time} -{" "}
+                      {dateFormatter({ date: item.date, type: 1 })}
                     </p>
                   </div>
                   <div className="pato-home__events-item-image">

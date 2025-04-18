@@ -1,4 +1,5 @@
 // --------------------------------------------------------------------
+// ---- get object from an array by its id ----------------------------
 interface IdInclude {
   id: string;
 }
@@ -15,6 +16,7 @@ function getResultByID<T extends IdInclude>({
 }
 
 // --------------------------------------------------------------------
+// ---- get some of an item of object from an array -------------------
 type GetRangeSumOfDataInput<T> = {
   data: T[];
   range: keyof T;

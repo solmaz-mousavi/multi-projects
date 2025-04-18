@@ -15,7 +15,7 @@ import Header from "../../templates/header/Header";
 import "./reservation.scss";
 
 function Reservation() {
-	const today = new Date().toString();
+  const today = new Date().toString();
   const inputs: IFormInputType[] = [
     {
       tag: "input",
@@ -29,7 +29,7 @@ function Reservation() {
 
       variant: "light",
       name: "date",
-      initialvalue: dateFormatter(today, 3) || "",
+      initialvalue: dateFormatter({ date: today, type: 3 }) || "",
       validators: [pastDateValidator(), requiredStringValidator()],
     },
     {
@@ -139,7 +139,7 @@ function Reservation() {
 
   return (
     <section className="pato-reservation-container">
-			<Header title="book a table" topTitle="reservation" section={true} />
+      <Header title="book a table" topTitle="reservation" section={true} />
 
       <div className="pato-reservation-content">
         <Form inputs={inputs} buttons={buttons} submitHandler={submitHandler} />
@@ -151,15 +151,19 @@ function Reservation() {
               Donec quis euismod purus. Donec feugiat ligula rhoncus, varius
               nisl sed, tincidunt lectus. Nulla vulputate , lectus vel volutpat
               efficitur, orci lacus sodales sem, sit amet quam:<>&#xa0;</>
-              <span className="pato-reservation-bold"><>&#x28;</>001<>&#x29;</> 345 6889</span>
+              <span className="pato-reservation-bold">
+                <>&#x28;</>001<>&#x29;</> 345 6889
+              </span>
             </p>
           </div>
           <div className="pato-reservation-bottom__item">
             <div className="pato-subtitle">For Event Booking</div>
             <p className="pato-desc">
               Donec feugiat ligula rhoncus:<>&#xa0;</>
-              <span className="pato-reservation-bold"><>&#x28;</>001<>&#x29;</> 345 6889</span>,
-              varius nisl sed, tinci-dunt lectus sodales sem.
+              <span className="pato-reservation-bold">
+                <>&#x28;</>001<>&#x29;</> 345 6889
+              </span>
+              , varius nisl sed, tinci-dunt lectus sodales sem.
             </p>
           </div>
         </div>

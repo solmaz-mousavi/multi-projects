@@ -23,17 +23,18 @@ function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
     >
       <Aos aosStyle="fadeInUp" once={true}>
         <div className="glint-clients-header">
+          {/* ---- title ---- */}
           <p className="glint-top-title clients-header__top">Our Clients</p>
           <h2 className="glint-main-title clients-header__title">
             Glint has been honored to partner up with these clients
           </h2>
 
+          {/* ---- clients ---- */}
           <div className="clients-slider">
             {clientsData && (
               <Swiper
                 pagination={true}
-                navigation={true}
-                modules={[Pagination, Navigation]}
+                modules={[Pagination]}
                 className="mySwiper"
                 slidesPerView="auto"
                 loop={true}
@@ -54,7 +55,11 @@ function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
           </div>
         </div>
       </Aos>
+
+      {/* ---- devider ---- */}
       <div className="glint-devider dark"></div>
+
+      {/* ---- team members ---- */}
       <Aos aosStyle="fadeInUp" once={true}>
         <div className="clients-team">
           <div className="glint-team-slider">
@@ -87,6 +92,7 @@ function Clients({ clientsData, teamMembersData }: ClientsPropsType) {
           </div>
         </div>
       </Aos>
+
       <div className="decoration"></div>
     </section>
   );

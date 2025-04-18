@@ -16,6 +16,7 @@ function Home({ scrollPosition, data }: HomePropsType) {
         id="Glint-Home"
       >
         <div className="home-txt-container">
+          {/* ---- title and welcome text ---- */}
           <Aos aosStyle="fadeInUp" once={true}>
             <h1 className="glint-top-title home-txt__welcome">
               Welcome to Glint
@@ -45,6 +46,7 @@ function Home({ scrollPosition, data }: HomePropsType) {
           </Aos>
         </div>
 
+        {/* ---- social btns ---- */}
         <div className="home-social-container">
           {data &&
             data.map((item) => (

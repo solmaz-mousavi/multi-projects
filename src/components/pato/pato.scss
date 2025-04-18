@@ -1,10 +1,6 @@
 @use "/src/styles/global.scss" as *;
 
-#pato {
-  overflow-y: auto;
-  height: calc(100vh - 60px);
-  scroll-behavior: smooth;
-}
+
 
 .container{
 	max-width: 1200px;

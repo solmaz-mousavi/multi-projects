@@ -5,14 +5,18 @@ import "./contactInfo.scss";
 type ContactInfoPropsType = {
   data: PackageType[];
 };
+
 function ContactInfo({ data }: ContactInfoPropsType) {
   return (
     <>
       <div className="main-contactInfo-container">
+        {/* ------------- image ------------- */}
         <div className="contactInfo-image">
           <img src="/assets/images/main/profile.JPG" alt="profile" />
         </div>
+
         <div className="contactInfo-right">
+          {/* ------------- contact info ------------- */}
           <div className="contactInfo-info">
             <div className="main-contactInfo-name">
               <p>Solmaz Mousavi</p>
@@ -32,10 +36,12 @@ function ContactInfo({ data }: ContactInfoPropsType) {
               </div>
             </div>
           </div>
+
+          {/* ------------- skills ------------- */}
           <div className="contactInfo-package">
             <p>skills:</p>
             {data &&
-              data.map(item => (
+              data.map((item) => (
                 <Button
                   key={item.id}
                   type="link"

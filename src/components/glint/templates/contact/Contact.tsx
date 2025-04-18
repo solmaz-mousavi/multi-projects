@@ -18,6 +18,8 @@ import Icon from "../../../main/modules/icon/Icon";
 
 function Contact({ data }: { data: SocialDataType[] }) {
   const [showModal, setShowModal] = useState(false);
+
+	// ---- Identify the different parts of the form such as inputs, buttons and submit handler
   const inputs: IFormInputType[] = [
     {
       tag: "input",
@@ -95,7 +97,6 @@ function Contact({ data }: { data: SocialDataType[] }) {
       validators: [requiredStringValidator()],
     },
   ];
-
   const buttons: ButtonType[] = [
     {
       type: "submit",
@@ -105,7 +106,6 @@ function Contact({ data }: { data: SocialDataType[] }) {
       fullWidth: true,
     },
   ];
-
   const submitHandler: (values: ValuesType) => void = (items) => {
     console.log(items);
     setShowModal(true);
@@ -118,6 +118,8 @@ function Contact({ data }: { data: SocialDataType[] }) {
     >
       <div className="decoration"></div>
       <Aos aosStyle="fadeInUp" className="contacts-header" once={true}>
+
+				{/* ---- title ---- */}
         <div>
           <p className="glint-top-title contacts-header__top">Contact Us</p>
           <h2 className="glint-main-title contacts-header__title">
@@ -125,7 +127,10 @@ function Contact({ data }: { data: SocialDataType[] }) {
           </h2>
         </div>
 
+
         <div className="contacts-bottom-wrapper">
+
+					{/* ---- form ---- */}
           <div className="form-container">
             <Form
               inputs={inputs}
@@ -133,6 +138,8 @@ function Contact({ data }: { data: SocialDataType[] }) {
               submitHandler={submitHandler}
             />
           </div>
+
+					{/* ---- contact info ---- */}
           <div className="info-container" style={{ color: "#fff" }}>
             <h4 className="info-top-title">Contact Info </h4>
             <h5 className="info-title">Where to Find Us </h5>
@@ -165,8 +172,11 @@ function Contact({ data }: { data: SocialDataType[] }) {
                 ))}
             </div>
           </div>
+
         </div>
       </Aos>
+
+			{/* ---- modal ---- */}
       {showModal && (
         <Modal
           desc="We receive your message. Our team will contact you as soon as possible."

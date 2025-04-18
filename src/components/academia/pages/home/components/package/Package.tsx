@@ -2,7 +2,7 @@ import { PackageDataType } from "../../../../../../dataTypes/academiaData.type";
 import Aos from "../../../../../main/modules/aos/Aos";
 import SectionHeader from "../../../../modules/sectionHeader/SectionHeader";
 import "./package.scss";
-import PackageThumb from "../../../../templates/packageThumb/PackageThumb";
+import PackageThumb from "../../../../modules/packageThumb/PackageThumb";
 import SeeAll from "../seeAll/SeeAll";
 
 function Package({ data }: { data: PackageDataType[] }) {

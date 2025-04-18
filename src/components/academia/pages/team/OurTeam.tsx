@@ -4,8 +4,8 @@ import PageHeader from "../../modules/pageHeader/PageHeader";
 import Status from "../../templates/status/Status";
 import Aos from "../../../main/modules/aos/Aos";
 import SectionHeader from "../../modules/sectionHeader/SectionHeader";
-import TeamThumb from "../../templates/teamThumb/TeamThumb";
-import CourseThumb from "../../templates/courseThumb/CourseThumb";
+import TeamThumb from "../../modules/teamThumb/TeamThumb";
+import CourseThumb from "../../modules/courseThumb/CourseThumb";
 import "./ourTeam.scss";
 
 function OurTeam() {

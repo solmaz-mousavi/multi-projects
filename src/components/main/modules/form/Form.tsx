@@ -23,13 +23,17 @@ export default function Form({
   submitHandler,
   className,
 }: FormPropsType) {
+// ---- initial values of inputs
   const formInitialValues: ValuesType = {};
+
   inputs.forEach((input) => {
     const { name, initialvalue } = input;
     formInitialValues[name] = initialvalue;
   });
 
+	// ---- create form by formik library
   const formik = useFormik({
+
     initialValues: formInitialValues,
 
     onSubmit: (values, { resetForm }) => {

@@ -11,6 +11,7 @@
   z-index: 11;
 }
 
+// ---- navbar and contact info wrappers ----
 .main-navbar-wrapper,
 .main-contactInfo-wrapper {
   position: relative;
@@ -23,6 +24,7 @@
   pointer-events: none;
   z-index: -1;
 }
+
 .main-navbar-wrapper.show,
 .main-contactInfo-wrapper.show {
   height: auto;
@@ -32,6 +34,7 @@
   z-index: 10;
 }
 
+// ---- responsive ----
 @media screen and (max-width: 768px) {
   .main-header-container {
     height: 50px;

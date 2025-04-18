@@ -1,44 +1,39 @@
-import { NavbarDataType, SocialDataType } from "./mainData.type";
+import {
+  NavbarDataType,
+  PersonType,
+  SocialDataType,
+  BaseType,
+  ImgIncludedType,
+} from "./mainData.type";
 
-type IntroKeyType = "id" | "title" | "desc" | "img";
-export type IntroDataType = {
-  [index in IntroKeyType]: string;
+type TitleType = {
+  [index in "id" | "title" | "image"]: string;
 };
 
-export type StatusDataType = {
-  id: string;
-  title: string;
+
+// --------------------about--------------------
+export interface IntroDataType extends BaseType, ImgIncludedType {}
+
+export interface StatusDataType extends TitleType {
   number: number;
-  img: string;
-};
+}
 
-export type TeacherDataType = {
-  id: string;
-  name: string;
+// --------------------teacher--------------------
+export interface TeacherDataType extends PersonType, ImgIncludedType {
   education: string;
-  img: string;
-	desc: string;
+  desc: string;
   social: SocialDataType[];
-};
+}
 
-export type CategoryDataType = {
-  id: string;
-  title: string;
-  img: string;
-};
-
-export type StudentDataType = {
-  id: string;
-  name: string;
+// --------------------student--------------------
+export interface StudentDataType extends PersonType {
   courses: string[];
-};
+}
 
-export type LectureDataType = {
-  id: string;
-  title: string;
-  duration: number;
-  video: string;
-};
+// --------------------category--------------------
+export type CategoryDataType = TitleType;
+
+// --------------------comment--------------------
 export type CommentDataType = {
   id: string;
   userID: string;
@@ -46,11 +41,14 @@ export type CommentDataType = {
   date: string;
   desc: string;
 };
-export type CourseDataType = {
-  id: string;
-  title: string;
+
+// --------------------course--------------------
+export type LectureDataType = {
+  [index in "id" | "title" | "duration" | "video"]: string;
+};
+
+export interface CourseDataType extends BaseType {
   iconName: string;
-  desc: string;
   teacher: string;
   score: number;
   price: number;
@@ -58,8 +56,9 @@ export type CourseDataType = {
   categories: string[];
   lectures: LectureDataType[];
   comments: CommentDataType[];
-};
+}
 
+// --------------------blog--------------------
 type BlogKeyType = "id" | "title" | "desc" | "image" | "date" | "author";
 export type BlogDataType = {
   [index in BlogKeyType]: string;
@@ -67,20 +66,15 @@ export type BlogDataType = {
   comments: CommentDataType[];
 };
 
-export type PackageDataType = {
-  id: string;
-  title: string;
-  desc: string;
+
+// --------------------package--------------------
+export interface PackageDataType extends BaseType {
   courses: string[];
   price: number;
 };
 
 
-
-
-
-
-
+// --------------------data--------------------
 export type AcademiaDataType = {
   navbar: NavbarDataType[];
   social: SocialDataType[];

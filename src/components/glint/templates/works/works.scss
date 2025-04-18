@@ -12,6 +12,8 @@
   background-color: #fff;
   height: auto !important;
   padding: 0 !important;
+
+	// ---- works title ----
   .works-header {
     width: 100%;
     text-align: center;
@@ -25,6 +27,8 @@
       color: #fff;
     }
   }
+
+	// ---- works content ----
   .work-items-wrapper {
     position: relative;
     bottom: 150px;
@@ -213,6 +217,7 @@
   }
 }
 
+// ---- responsive ----
 @media screen and (max-width: 1200px) {
   .glint-works-container {
     .works-header {

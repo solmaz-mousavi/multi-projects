@@ -1,6 +1,6 @@
 import SectionHeader from "../../../../modules/sectionHeader/SectionHeader";
 import "./blog.scss";
-import BlogThumb from "../../../../templates/blogThumb/BlogThumb";
+import BlogThumb from "../../../../modules/blogThumb/BlogThumb";
 import Aos from "../../../../../main/modules/aos/Aos";
 import SeeAll from "../seeAll/SeeAll";
 

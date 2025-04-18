@@ -13,6 +13,7 @@ function Header({ data }: HeaderPropsType) {
   const [showContactInfo, setShowContactInfo] = useState<boolean>(false);
   const [showNavbar, setShowNavbar] = useState<boolean>(false);
 
+  // ---- navbar show and hide handler ---------------------
   const showNavbarHandler = () => {
     setShowNavbar(true);
     setShowContactInfo(false);
@@ -27,6 +28,7 @@ function Header({ data }: HeaderPropsType) {
       ?.removeEventListener("click", closeNavbarHandler);
   };
 
+  // ---- contact info section show and hide handler ---------------------
   const showContactInfoHandler = () => {
     setShowContactInfo(true);
     setShowNavbar(false);
@@ -43,7 +45,9 @@ function Header({ data }: HeaderPropsType) {
 
   return (
     <>
+      {/* ------------- main - header ------------- */}
       <header id="Header" className="main-header-container">
+        {/* ------------- navbar show btn ------------- */}
         <div className="header-btn" onClick={showNavbarHandler}>
           <Button
             text="Select Project"
@@ -53,6 +57,8 @@ function Header({ data }: HeaderPropsType) {
             border={false}
           />
         </div>
+
+        {/* ------------- contact info show btn ------------- */}
         <div className="header-btn" onClick={showContactInfoHandler}>
           <Button
             text="Contact Info"
@@ -63,10 +69,16 @@ function Header({ data }: HeaderPropsType) {
           />
         </div>
       </header>
+
+      {/* ------------- main - navbar (includes projects) ------------- */}
       <nav className={`main-navbar-wrapper ${showNavbar && "show"}`}>
         <Navbar closeNavbarHandler={closeNavbarHandler} data={data} />
       </nav>
-      <section className={`main-contactInfo-wrapper ${showContactInfo && "show"}`}>
+
+      {/* ------------- main - contact info ------------- */}
+      <section
+        className={`main-contactInfo-wrapper ${showContactInfo && "show"}`}
+      >
         <ContactInfo data={data.packages} />
       </section>
     </>

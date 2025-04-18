@@ -2,28 +2,29 @@ import { useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import Error from "../main/templates/error/Error";
 import Loader from "../main/templates/loader/Loader";
-import Home from "./templates/home/Home";
+import Logo from "./templates/logo/Logo";
 import Menu from "./templates/menu/Menu";
 import Sidebar from "./templates/sidebar/Sidebar";
 import Scroll from "./templates/scroll/Scroll";
+import Home from "./templates/home/Home";
 import About from "./templates/about/About";
 import Services from "./templates/services/Services";
-import Logo from "./templates/logo/Logo";
 import Works from "./templates/works/Works";
 import Clients from "./templates/clients/Clients";
 import Contact from "./templates/contact/Contact";
 import Footer from "./templates/footer/Footer";
 import "./glint.scss";
 
-function GlintIndex() {
-  const { glintData, pending, error } = useFetch({
+const Glint = () => {
+	const [scrollPosition, setScrollPosition] = useState<number>(0);
+	const [showSidebar, setShowSidebar] = useState<boolean>(false);
+
+	// ---- fetch data and send by props to all components
+	const { glintData, pending, error } = useFetch({
     url: "/data/glintdb.json",
     project: "glint",
   });
-
-  const [scrollPosition, setScrollPosition] = useState<number>(0);
-  const [showSidebar, setShowSidebar] = useState<boolean>(false);
-
+	
   return (
     <>
       {error && <Error error={error} fullScreen={true} />}
@@ -57,6 +58,6 @@ function GlintIndex() {
       )}
     </>
   );
-}
+};
 
-export default GlintIndex;
+export default Glint;

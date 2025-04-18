@@ -1,6 +1,6 @@
 import { IntroDataType } from "../../../../dataTypes/academiaData.type";
 import Aos from "../../../main/modules/aos/Aos";
-import IntroThumb from "./IntroThumb/IntroThumb";
+import IntroThumb from "../../modules/IntroThumb/IntroThumb";
 import "./intro.scss";
 
 function Intro({ data }: { data: IntroDataType[] }) {

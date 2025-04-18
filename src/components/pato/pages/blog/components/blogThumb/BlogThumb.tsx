@@ -33,8 +33,8 @@ function BlogThumb({
 				clickHandler={()=>navigate(`/pato/blog/${id}`)}
       />
 			<div className="pato-blog-date">
-				<p className="day">{dateFormatter(date, 4)}</p>
-				<p>{dateFormatter(date, 5)}</p>
+				<p className="day">{dateFormatter({date, type:4})}</p>
+				<p>{dateFormatter({date, type:5})}</p>
 			</div>
     </div>
   );

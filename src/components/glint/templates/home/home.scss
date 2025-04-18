@@ -1,5 +1,6 @@
 @use "/src/styles/global.scss" as *;
 
+// ---- background style ----
 .glint-home-container {
   height: calc(100vh - 60px);
   background-color: #000;
@@ -19,6 +20,7 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
 
+	// ---- title and welcome text ---- 
   .home-txt-container {
     @include flex-align-start;
     -webkit-box-orient: vertical;
@@ -55,6 +57,8 @@
       }
     }
   }
+
+	// ---- social btns ----
   .home-social-container {
     @include flex-center-column;
     -webkit-box-align: end;
@@ -65,6 +69,7 @@
   }
 }
 
+// ---- resonsive ----
 @media screen and (max-width: 992px) {
   .glint-home-container {
     min-height: 480px;

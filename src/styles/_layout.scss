@@ -43,9 +43,18 @@ html {
 	max-height: auto;
 	transition: max-height 1s ease-in;
 }
-// @font-face {
-//   font-family: "Courgette";
-//   src: local("Courgette"),
-//     url("../../public/assets/fonts/Courgette/Courgette-Regular.ttf")
-//       format("ttf");
-// }
+
+// ---- animation for aos comp 
+.animate__animated,
+.animate__fadeInUp {
+  position: relative;
+  z-index: 0 !important;
+}
+
+// ---- projects wrapper ----
+#glint, #pato, #academia {
+  overflow-y: auto;
+  height: calc(100vh - 60px);
+  scroll-behavior: smooth;
+	position: relative;
+}

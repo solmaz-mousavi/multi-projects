@@ -59,7 +59,7 @@ function Comment({
       id: String(data.length),
       userID: "01",
       role: "student",
-      date: dateFormatter(String(new Date()), 3),
+      date: dateFormatter({date:String(new Date()), type:3}),
       desc: String(items.message),
     };
 
@@ -73,7 +73,7 @@ function Comment({
     <div className="academia-comment-wrapper">
       <div className="academia-comment-title">
         <h3>
-          all comments <span>({data.length || ""})</span>{" "}
+          all comments <span><>&#x28;</>{data.length || ""}<>&#x29;</></span>{" "}
         </h3>
         <VscTriangleDown className="academia-icon icon" />
       </div>
@@ -108,7 +108,7 @@ function Comment({
                         <>&#xa0;</>-<>&#xa0;</>
                       </span>
                       <TbUsers className="academia-icon" />
-                      <p>({item.role})</p>
+                      <p><>&#x28;</>{item.role}<>&#x29;</></p>
                       <span>
                         <>&#xa0;</>-<>&#xa0;</>
                       </span>

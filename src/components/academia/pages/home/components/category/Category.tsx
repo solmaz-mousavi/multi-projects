@@ -1,6 +1,6 @@
 import { CategoryDataType } from "../../../../../../dataTypes/academiaData.type";
 import SectionHeader from "../../../../modules/sectionHeader/SectionHeader";
-import CategoryThumb from "./categoryThumb/CategoryThumb";
+import CategoryThumb from "../../../../modules/categoryThumb/CategoryThumb";
 import "./category.scss";
 import { useNavigate } from "react-router-dom";
 import Aos from "../../../../../main/modules/aos/Aos";

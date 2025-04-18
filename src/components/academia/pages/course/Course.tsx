@@ -7,7 +7,7 @@ import {
   CourseDataType,
 } from "../../../../dataTypes/academiaData.type";
 import PageHeader from "../../modules/pageHeader/PageHeader";
-import CourseThumb from "../../templates/courseThumb/CourseThumb";
+import CourseThumb from "../../modules/courseThumb/CourseThumb";
 import {
   IFormInputType,
   ValuesType,

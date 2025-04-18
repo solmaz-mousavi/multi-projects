@@ -11,10 +11,14 @@
   align-items: stretch;
   overflow: hidden;
   z-index: 2;
+
+	// ---- spacer ----
   .scroll-spacer {
     width: 4px;
     margin-top: 15px;
   }
+
+	// ---- scroll down and up ----
   .scroll-down,
   .scroll-up {
     display: -webkit-box;
@@ -39,6 +43,8 @@
     padding-bottom: 10px;
     width: 90px;
   }
+
+	// ---- button style ----
   .scroll-icon {
     font-size: 1rem;
   }
@@ -60,6 +66,7 @@
   }
 }
 
+// ---- responsive ----
 @media screen and (max-width: 576px) {
   .glint-scroll-container {
     display: none;

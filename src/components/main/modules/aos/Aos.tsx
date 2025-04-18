@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "animate.css";
 import "./aos.scss";
 import { InView } from "react-intersection-observer";
@@ -7,16 +7,15 @@ type AosPropsType = {
   aosStyle: string;
   once?: boolean;
   className?: string;
-  unMountStyle?: string;
 };
-function Aos({
-  children,
-  aosStyle,
-  once = false,
-  className,
-  unMountStyle,
-}: AosPropsType) {
-  const [unMount, setUnMount] = useState(false);
+
+// ---- animation on scroll------------------------
+// When a <div> is placed between AOS (Animate On Scroll) tags,
+// it triggers an animation as soon as it appears on the screen.
+// Setting once="true" ensures the animation plays only once.
+// The aosStyle class references an animation style from the Animate.css library.
+
+function Aos({ children, aosStyle, once = false, className }: AosPropsType) {
   const [repeat, setRepeat] = useState<boolean>(true);
   const repeatHandler = () => {
     if (once) {
@@ -25,12 +24,6 @@ function Aos({
       }, 1000);
     }
   };
-  useEffect(() => {
-    return () => {
-      setUnMount(true);
-      setTimeout(function () {}, 1000);
-    };
-  }, [unMount]);
 
   return (
     <InView>
@@ -46,9 +39,7 @@ function Aos({
                         ? `animate__animated animate__${aosStyle}`
                         : "hidden"
                     }`
-              } ${
-                unMount ? `animate__animated animate__${unMountStyle}` : "ttt"
-              }`}
+              } `}
               onAnimationEnd={repeatHandler}
             >
               {children}

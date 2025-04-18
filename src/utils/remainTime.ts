@@ -1,4 +1,4 @@
-
+// ---- calc remain day from a date to today ----------------------------
 export const remainDays = (date: string) => {
   const today = new Date();
   const eventDay = new Date(date);
@@ -9,6 +9,7 @@ export const remainDays = (date: string) => {
   return remDays + 1;
 };
 
+// ---- calc remain hours from a time ----------------------------------
 export const remainHours = (time: string) => {
   const today = new Date();
   const remainHour = Number(time.split(":")[0]) - Number(today.getHours());

@@ -18,6 +18,7 @@
     -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 
+    // ------------- image and main info --------------
     .navbar-thumbnail_top {
       @include flex-center;
       -webkit-box-pack: stretch;
@@ -36,6 +37,8 @@
         color: #fff;
       }
     }
+
+    // ------------- description ----------------------
     .navbar-thumbnail_description {
       text-align: left;
       color: $main-color-gray-light;
@@ -43,6 +46,8 @@
       padding: 5px 0px;
       border-bottom: 1px solid $main-color-gray;
     }
+
+    // ------------- used technologies ----------------
     .navbar-thumbnail_package {
       padding: 0 5px;
       * {
@@ -52,19 +57,23 @@
   }
 }
 
-.main-navbar-container .mySwiper {
-  padding: 20px 50px;
-  background-color: $main-color-gray;
-}
-.main-navbar-container .swiper-button-prev::after,
-.main-navbar-container .swiper-button-next::after {
-  color: #fff;
+// ------------- additional swiper slide styles ----------------
+
+.main-navbar-container {
+  .mySwiper {
+    padding: 20px 50px;
+    background-color: $main-color-gray;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    color: #fff;
+  }
+  .swiper-slide {
+    width: auto !important;
+  }
 }
 
-.main-navbar-container .swiper-slide {
-  width: auto !important;
-}
-
+// ------------- responsive styles ----------------
 @media screen and (max-width: 412px) {
   .main-navbar-container .swiper-button-prev::after,
   .main-navbar-container .swiper-button-next::after {

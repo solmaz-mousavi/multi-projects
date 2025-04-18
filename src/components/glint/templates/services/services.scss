@@ -5,6 +5,7 @@
   background-color: #fff;
   text-align: center;
 
+	// ---- title ----
   .services-header {
     padding: 0px 10%;
     .services-header__top {
@@ -15,6 +16,7 @@
     }
   }
 
+	// ---- content ----
   .service-item-container {
     @include flex-center;
     -ms-flex-wrap: wrap;
@@ -55,6 +57,7 @@
   }
 }
 
+// ---- responsive ----
 @media screen and (max-width: 768px) {
   .glint-services-container {
     .service-item-container {

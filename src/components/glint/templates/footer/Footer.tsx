@@ -16,6 +16,8 @@ import { useState } from "react";
 
 function Footer() {
   const [showModal, setShowModal] = useState(false);
+
+	// ---- Identify the different parts of the form such as inputs, buttons and submit handler
   const inputs: IFormInputType[] = [
     {
       tag: "input",
@@ -35,7 +37,6 @@ function Footer() {
       validators: [requiredStringValidator(), emailValidator()],
     },
   ];
-
   const buttons: ButtonType[] = [
     {
       type: "submit",
@@ -45,15 +46,18 @@ function Footer() {
       fullWidth: true,
     },
   ];
-
   const submitHandler: (values: ValuesType) => void = (items) => {
 		console.log(items);
     setShowModal(true);
   };
+
+
   return (
     <section className="glint-footer-container">
       <Aos aosStyle="fadeInUp" className="contacts-header" once={true}>
         <div className="footer-top">
+
+					{/* ---- description ---- */}
           <div className="footer-top__left">
             <h3>Glint.</h3>
             <p>
@@ -65,6 +69,7 @@ function Footer() {
               autem necessitatibus vitae aut.
             </p>
           </div>
+
           <div className="footer-top__right">
             <h3>Get Notified</h3>
             <p>
@@ -72,6 +77,8 @@ function Footer() {
               aut non alias sed quia. Ut itaque enim optio ut excepturi deserunt
               iusto porro.
             </p>
+
+						{/* ---- contact form ---- */}
             <Form
               inputs={inputs}
               buttons={buttons}
@@ -79,11 +86,15 @@ function Footer() {
             />
           </div>
         </div>
+
+				{/* ---- copy right ---- */}
         <div className="footer-bottom">
           <div className="footer-bottom__left"><>&#xa9;</> Copyright Glint 2022</div>
           <div className="footer-bottom__right">Site Template by Colorlib</div>
         </div>
       </Aos>
+
+			{/* ---- modal ---- */}
       {showModal && (
         <Modal
           desc="Your email have been submitted successfully."
