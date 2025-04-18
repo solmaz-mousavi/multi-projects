@@ -1,5 +1,4 @@
 import Button from "../../modules/button/Button";
-import Icon from "../../modules/icon/Icon";
 import "./modal.scss";
 type ModalPropsType = {
   title?: string;

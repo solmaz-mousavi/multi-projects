@@ -1,5 +1,3 @@
-import { useNavigate } from "react-router-dom";
-import Button from "../../../../../main/modules/button/Button";
 import SectionHeader from "../../../../modules/sectionHeader/SectionHeader";
 import "./blog.scss";
 import BlogThumb from "../../../../templates/blogThumb/BlogThumb";

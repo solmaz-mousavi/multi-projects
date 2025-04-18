@@ -1,4 +1,4 @@
-import { useLocation, useOutletContext, useParams } from "react-router-dom";
+import { useLocation, useOutletContext } from "react-router-dom";
 import "./blogDetails.scss";
 import Header from "../../templates/header/Header";
 import { useEffect, useState } from "react";
@@ -28,7 +28,7 @@ function BlogDetails() {
           .slice(0, 3)
       );
     }
-  }, [patoData]);
+  }, [patoData, blogID]);
 
   return (
     <section className="pato-blog-details-wrapper">

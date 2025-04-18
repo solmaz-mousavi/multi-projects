@@ -10,6 +10,8 @@ import {
 import Icon from "../../../main/modules/icon/Icon";
 import Score from "../../../main/modules/score/Score";
 import "./courseThumb.scss";
+import "animate.css";
+
 interface CourseThumbPropsType extends CourseDataType {
 	purchased?: boolean;
 }
@@ -34,7 +36,7 @@ function CourseThumb({
 
   return (
     <div
-      className={`academia-course-thumb-container ${purchased ? "purchased" : ""}`}
+      className={`academia-course-thumb-container animate__animated animate__fadeIn ${purchased ? "purchased" : ""}`}
       onClick={() => navigate(`/academia/course/${id}`)}
     >
       <div className="academia-course-thumb-top">

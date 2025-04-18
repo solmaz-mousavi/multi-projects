@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import "./sidebar.scss";
 import Icon from "../../../main/modules/icon/Icon";
 type SidebarPropsType = {
@@ -11,12 +11,12 @@ function Sidebar({data,
 	showSidebar,
 	setShowSidebar}:SidebarPropsType) {
 
-  const closeSidebarHandler = () => {
+  const closeSidebarHandler =useCallback (() => {
     setShowSidebar(false);
     window.document
       .getElementById("glint")
       ?.removeEventListener("click", closeSidebarHandler);
-  };
+  },[setShowSidebar]);
 
   useEffect(() => {
     if (showSidebar) {
@@ -24,7 +24,7 @@ function Sidebar({data,
         .getElementById("glint")
         ?.addEventListener("click", closeSidebarHandler);
     }
-  }, [showSidebar]);
+  }, [showSidebar, closeSidebarHandler]);
 
   return (
     <>

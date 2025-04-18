@@ -9,6 +9,7 @@ import {
 import { useEffect, useState } from "react";
 import Modal from "../../../main/templates/modal/Modal";
 import Comment from "../../templates/comment/Comment";
+import AddScore from "../../templates/addScore/AddScore";
 
 function CourseDetails() {
   const academiaData = useOutletContext<AcademiaDataType>();
@@ -23,7 +24,7 @@ function CourseDetails() {
       const allData = academiaData.courses;
       setData(allData.find((i) => i.id === courseID));
     }
-  }, [academiaData]);
+  }, [academiaData, courseID]);
 
   return (
     <section className="academia-course-details-wrapper">
@@ -63,6 +64,7 @@ function CourseDetails() {
                       videoNum === index ? "active" : ""
                     } ${purchased ? "purchased" : ""}`}
                     onClick={() => setVideoNum(index)}
+										key={item.id}
                   >
                     <div className="academia-lectures-list-title">
                       <p className="row">{index + 1}</p>
@@ -74,10 +76,11 @@ function CourseDetails() {
             </div>
           </div>
 
-{data?.comments && <Comment data={data.comments} addComment={purchased}/>
-}
+          {purchased && <AddScore />}
 
-
+          {data?.comments && (
+            <Comment data={data.comments} addComment={purchased} />
+          )}
         </div>
       </div>
 

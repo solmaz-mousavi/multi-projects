@@ -1,7 +1,7 @@
 import "./blog.scss";
 import PageHeader from "../../modules/pageHeader/PageHeader";
 import Form from "../../../main/modules/form/Form";
-import { useNavigate, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 import {
   AcademiaDataType,
   BlogDataType,

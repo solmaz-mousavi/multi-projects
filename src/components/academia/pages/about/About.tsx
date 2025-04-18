@@ -6,6 +6,7 @@ import PageHeader from "../../modules/pageHeader/PageHeader";
 
 function About() {
   const academiaData = useOutletContext<AcademiaDataType>();
+
   return (
     <>
       <PageHeader title="Know More About Us" />

@@ -1,0 +1,35 @@
+@use "/src/styles/global.scss" as *;
+
+.academia-team-container {
+  background-color: #f8f8f8;
+  padding: 80px 0;
+  .academia-container {
+    .academia-team-content {
+      display: flex;
+
+      padding: 40px 0;
+      gap: 20px;
+      height: 100%;
+      .academia-team-thumb-container {
+        min-height: 100%;
+        height: auto;
+        padding-bottom: 30px;
+        margin-bottom: 10px;
+      }
+      .list {
+        width: 100%;
+
+        .academia-course-thumb-container {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .academia-teacher-description {
+      color: #999;
+      text-align: justify;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}

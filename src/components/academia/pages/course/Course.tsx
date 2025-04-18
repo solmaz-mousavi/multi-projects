@@ -64,7 +64,12 @@ function Course() {
     category === "all"
       ? setData(allData)
       : setData(allData.filter((i) => i.categories.includes(category.id)));
+		setStartIndex(0);
   }, [academiaData, category]);
+
+	useEffect(()=>{
+		window.document.getElementById("academia")?.scrollTo(0,350);
+	},[startIndex]);
 
   return (
     <section className="academia-course-wrapper">

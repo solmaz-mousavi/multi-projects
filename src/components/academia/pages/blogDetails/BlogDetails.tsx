@@ -7,8 +7,7 @@ import {
 } from "../../../../dataTypes/academiaData.type";
 import { useEffect, useState } from "react";
 import BlogThumb from "../../templates/blogThumb/BlogThumb";
-import { getResultByID } from "../../../../utils/getDataByID";
-import { FaComment } from "react-icons/fa";
+import Comment from "../../templates/comment/Comment";
 
 function BlogDetails() {
   const academiaData = useOutletContext<AcademiaDataType>();
@@ -20,32 +19,18 @@ function BlogDetails() {
       const allData = academiaData.blogs;
       setData(allData.find((i) => i.id === blogID));
     }
-  }, [academiaData]);
+  }, [academiaData, blogID]);
 
   return (
-    <section className="academia-blog-details-wrapper list" >
+    <section className="academia-blog-details-wrapper list">
       <PageHeader title={data?.title || ""} />
 
       <div className="academia-blog-details-container">
-				<div className="academia-container">
-        {data && <BlogThumb {...data} />}
+        <div className="academia-container">
+          {data && <BlogThumb {...data} />}
 
-<div className="academia-comments-container">
-<h3><FaComment /> comments:</h3>
-{data && data.comments.length>0 && data.comments.map(item => (
-	<div className="academia-comment">
-		<p>{item.role}</p>
-		<p>{item.role==="student" ? getResultByID({ID:item.userID, data: academiaData.students}).name : getResultByID({ID:item.userID, data: academiaData.teachers}).name}</p>
-	<p>{item.date}</p>
-	<p>{item.desc}</p>
-	
-	
-	
-	</div>
-))}
-</div>
-
-				</div>
+          {data?.comments && <Comment data={data.comments} addComment={true} />}
+        </div>
       </div>
     </section>
   );

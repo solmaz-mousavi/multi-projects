@@ -17,7 +17,7 @@ function Team({ data }: { data: TeacherDataType[] }) {
         </Aos>
         <div className="academia-home-team-content">
           {data &&
-            data.map((item) => (
+            data.slice(0,4).map((item) => (
               <Aos aosStyle="fadeInUp" once={true} key={item.id}>
                 <TeamThumb {...item} />
               </Aos>
