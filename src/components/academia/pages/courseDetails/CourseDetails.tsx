@@ -11,11 +11,11 @@ import Modal from "../../../main/templates/modal/Modal";
 import Comment from "../../templates/comment/Comment";
 import AddScore from "../../templates/addScore/AddScore";
 
-function CourseDetails() {
+function CourseDetails({purchasedPack=false}:{purchasedPack?:boolean}) {
   const academiaData = useOutletContext<AcademiaDataType>();
   const [data, setData] = useState<CourseDataType | undefined>(undefined);
   const courseID = useLocation().pathname.split("/").reverse()[0];
-  const [purchased, setPurchased] = useState(false);
+  const [purchased, setPurchased] = useState(purchasedPack);
   const [showModal, setShowModal] = useState(false);
   const [videoNum, setVideoNum] = useState(0);
 

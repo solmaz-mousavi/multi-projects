@@ -23,7 +23,6 @@ import AcademiaPricing from "./components/academia/pages/pricing/Pricing";
 import AcademiaBlog from "./components/academia/pages/blog/Blog";
 import AcademiaBlogDetails from "./components/academia/pages/blogDetails/BlogDetails";
 
-
 import NotFound from "./components/main/templates/notFound/NotFound";
 function Router() {
   return (

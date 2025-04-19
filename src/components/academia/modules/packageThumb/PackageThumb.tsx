@@ -1,18 +1,22 @@
-import { useOutletContext } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 import "./packageThumb.scss";
 import { AcademiaDataType, PackageDataType } from "../../../../dataTypes/academiaData.type";
 import { getResultByID } from "../../../../utils/getDataByID";
+interface PackageThumbPropsType extends PackageDataType {
+	purchased?: boolean;
+}
 
-function PackageThumb({ title, desc, courses, price }: PackageDataType) {
+function PackageThumb({id, title, desc, courses, price, purchased }: PackageThumbPropsType) {
+	const navigate = useNavigate();
   const academiaData = useOutletContext<AcademiaDataType>();
+
   return (
-    <div className="academia-package-thumb-container">
+    <div className={`academia-package-thumb-container ${purchased ? "purchased" : ""}`} onClick={() => navigate(`/academia/course/${id}`)}>
       <img
         src="/assets/images/academia/flaticons/aqua/milestone.png"
         alt="road map"
       />
       <h3 className="academia-subtitle">{title}</h3>
-      <p className="academia-desc">{desc}</p>
       {courses &&
         courses.map((item, index) => (
           <div className="academia-package-course-container" key={index}>
