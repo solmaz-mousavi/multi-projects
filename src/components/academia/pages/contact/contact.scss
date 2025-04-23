@@ -1,0 +1,55 @@
+.academia-contact-wrapper {
+  background-color: #f8f8f8;
+  .academia-container {
+    .academia-contact-container {
+      display: flex;
+      padding: 50px 0;
+      #googleMap {
+        width: 50%;
+        border-radius: 5px 0 0 5px;
+        .location {
+          border: none;
+        }
+      }
+      .academia-contact-right {
+        width: 50%;
+        padding: 50px 30px;
+        background-color: #fff;
+        border-radius: 0 5px 5px 0;
+        .academia-contact-details {
+          display: flex;
+          justify-content: space-between;
+          gap: 20px;
+          .academia-contact-item:first-child {
+            width: 40%;
+          }
+        }
+        .academia-title-sm {
+          padding-top: 40px;
+        }
+        .form-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+          padding: 0;
+          .input-wrapper {
+            width: calc(50% - 3px);
+            padding: 3px 0;
+            .input {
+              width: 100%;
+              padding: 10px;
+              color: #555;
+            }
+            textarea {
+              height: 200px;
+            }
+          }
+          .email,
+          .message {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

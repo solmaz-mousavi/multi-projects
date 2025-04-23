@@ -11,13 +11,13 @@ import { MdMailOutline } from "react-icons/md";
 import "./footer.scss";
 import Form from "../../../main/modules/form/Form";
 import Aos from "../../../main/modules/aos/Aos";
-import Modal from "../../../main/templates/modal/Modal";
-import { useState } from "react";
+import { useContext } from "react";
+import { ModalContext } from "../../../../contexts/ModalContext";
 
 function Footer() {
-  const [showModal, setShowModal] = useState(false);
-
+	
 	// ---- Identify the different parts of the form such as inputs, buttons and submit handler
+	const { setShowModal, setModalDetails  } = useContext(ModalContext);
   const inputs: IFormInputType[] = [
     {
       tag: "input",
@@ -48,9 +48,13 @@ function Footer() {
   ];
   const submitHandler: (values: ValuesType) => void = (items) => {
 		console.log(items);
+		setModalDetails({
+			desc:"Your email have been submitted successfully.",
+			icon:{ name: "MdCheck", variant: "success" },
+			 button:[{title:"OK", variant:"success", clickHandler:()=>setShowModal(false)}]
+		});
     setShowModal(true);
   };
-
 
   return (
     <section className="glint-footer-container">
@@ -94,20 +98,6 @@ function Footer() {
         </div>
       </Aos>
 
-			{/* ---- modal ---- */}
-      {showModal && (
-        <Modal
-          desc="Your email have been submitted successfully."
-          icon={{ name: "MdCheck", variant: "success" }}
-          button={[
-            {
-              title: "OK",
-              variant: "success",
-              clickHandler: () => setShowModal(false),
-            },
-          ]}
-        />
-      )}
     </section>
   );
 }

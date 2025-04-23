@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext } from "react";
 import "./footer.scss";
 import {
   IFormInputType,
@@ -25,7 +25,7 @@ import {
   FaPhoneAlt,
   FaUser,
 } from "react-icons/fa";
-import Modal from "../../../main/templates/modal/Modal";
+import { ModalContext } from "../../../../contexts/ModalContext";
 
 function Footer({
   socialData,
@@ -37,7 +37,8 @@ function Footer({
   blogData: BlogDataType[];
 }) {
   const navigate = useNavigate();
-  const [showModal, setShowModal] = useState(false);
+
+	const { setShowModal, setModalDetails  } = useContext(ModalContext);
   const inputs: IFormInputType[] = [
     {
       tag: "input",
@@ -52,7 +53,6 @@ function Footer({
       validators: [requiredStringValidator(), emailValidator()],
     },
   ];
-
   const buttons: ButtonType[] = [
     {
       type: "submit",
@@ -62,11 +62,17 @@ function Footer({
       border: false,
     },
   ];
-
   const submitHandler: (values: ValuesType) => void = (items) => {
     console.log(items);
-    setShowModal(true);
+
+		setModalDetails({
+			desc:"Your email have been submitted successfully.",
+			icon:{ name: "MdCheck", variant: "success" },
+			 button:[{title:"OK", variant:"success", clickHandler:()=>setShowModal(false)}]
+		});
+		setShowModal(true);
   };
+
   return (
     <section className="academia-footer-container">
       <div className="academia-footer-top">
@@ -109,7 +115,7 @@ function Footer({
                     <Icon
                       key={item.id}
                       name={item.iconName}
-                      className="academia-footer-social"
+                      className="academia-social"
                     />
                   </a>
                 ))}
@@ -117,13 +123,13 @@ function Footer({
           </div>
 
           <div className="academia-footer-item">
-            <h3 className="academia-subtitle">Quick Links</h3>
+            <h3 className="academia-title-sm">Quick Links</h3>
 
             <nav className="academia-footer-navbar-container">
               {navbarData &&
                 navbarData.map((item) => (
                   <div key={item.id}>
-                    <MdArrowRightAlt className="academia-footer-navbar-icon" />
+                    <MdArrowRightAlt className="academia-icon" />
                     <NavLink
                       to={`/academia/${item.route}`}
                       className={(link) =>
@@ -140,7 +146,7 @@ function Footer({
           </div>
 
           <div className="academia-footer-item">
-            <h3 className="academia-subtitle">Recent Posts</h3>
+            <h3 className="academia-title-sm">Recent Posts</h3>
 
             <div className="academia-footer-blog-container">
               {blogData &&
@@ -155,13 +161,13 @@ function Footer({
                     </div>
                     <div className="academia-footer-blog-details-wrapper">
                       <div>
-                        <FaCalendarAlt className="academia-footer-blog-icon" />
+                        <FaCalendarAlt className="academia-icon" />
                         <span>{item.date}</span>
 
-                        <FaUser className="academia-footer-blog-icon" />
+                        <FaUser className="academia-icon" />
                         <span>{item.author}</span>
                       </div>
-                      <div className="academia-subtitle">{item.title}</div>
+                      <div className="academia-desc">{item.title}</div>
                     </div>
                   </div>
                 ))}
@@ -169,25 +175,25 @@ function Footer({
           </div>
 
           <div className="academia-footer-item">
-            <h3 className="academia-subtitle">Have a Question?</h3>
+            <h3 className="academia-title-sm">Have a Question?</h3>
 
             <div className="academia-footer-contact-container">
               <div className="academia-footer-contact">
-                <FaMap className="academia-footer-contact-icon" />
+                <FaMap className="academia-icon" />
                 <p className="academia-desc">
                   203 Fake St. Mountain View, San Francisco, California, USA
                 </p>
               </div>
 
               <div className="academia-footer-contact">
-                <FaPhoneAlt className="academia-footer-contact-icon" />
+                <FaPhoneAlt className="academia-icon" />
                 <a className="academia-desc" href="tel:+23923929210">
                   +2 392 3929 210
                 </a>
               </div>
 
               <div className="academia-footer-contact">
-                <FaPaperPlane className="academia-footer-contact-icon" />
+                <FaPaperPlane className="academia-icon" />
                 <a className="academia-desc" href="mailto:info@yourdomain.com">
                   info@yourdomain.com
                 </a>
@@ -204,9 +210,9 @@ function Footer({
         </p>
       </div>
 
-      {showModal && (
+      {/* {showModal && (
         <Modal
-          desc="Your email have been submitted successfully."
+          desc="."
           icon={{ name: "MdCheck", variant: "success" }}
           button={[
             {
@@ -216,7 +222,7 @@ function Footer({
             },
           ]}
         />
-      )}
+      )} */}
     </section>
   );
 }

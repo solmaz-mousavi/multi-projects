@@ -1,23 +1,13 @@
 @use "/src/styles/global.scss" as *;
 
 .academia-home-intro-thumb {
-	@include flex-align-start;
-	background-color: #fff;
-	padding: 25px;
-	margin-bottom: 10px;
-	.academia-home-intro-thumb-img {
-		width: 60px;
-		img {
-			width: 60px;
-		}
-	}
-	.academia-home-intro-thumb-details {
-		padding-left: 20px;
-		.academia-subtitle {
-			padding-bottom: 15px;
-		}
-		.academia-desc {
-			color: #aaa;
-		}
-	}
+  .academia-home-intro-thumb-details {
+    padding-left: 20px;
+    .academia-subtitle {
+      padding-bottom: 15px;
+    }
+    .academia-desc {
+      color: #aaa;
+    }
+  }
 }

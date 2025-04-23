@@ -16,11 +16,11 @@ import {
 import Form from "../../../main/modules/form/Form";
 import Header from "../../templates/header/Header";
 import "./contact.scss";
-import { useState } from "react";
-import Modal from "../../../main/templates/modal/Modal";
+import { useContext } from "react";
+import { ModalContext } from "../../../../contexts/ModalContext";
 
 function Contact() {
-  const [showModal, setShowModal] = useState(false);
+  const { setShowModal, setModalDetails  } = useContext(ModalContext);
   const inputs: IFormInputType[] = [
     {
       tag: "input",
@@ -93,7 +93,13 @@ function Contact() {
   ];
   const submitHandler: (values: ValuesType) => void = (items) => {
     console.log(items);
-    setShowModal(true);
+
+		setModalDetails({
+			desc:"We receive your message. Our team will contact you as soon as possible.",
+			icon:{ name: "MdCheck", variant: "success" },
+			 button:[{title:"OK", variant:"success", clickHandler:()=>setShowModal(false)}]
+		});
+		setShowModal(true);
   };
 
   return (
@@ -143,19 +149,6 @@ function Contact() {
           </div>
         </div>
       </div>
-      {showModal && (
-        <Modal
-          desc="We receive your message. Our team will contact you as soon as possible."
-          icon={{ name: "MdCheck", variant: "success" }}
-          button={[
-            {
-              title: "OK",
-              variant: "success",
-              clickHandler: () => setShowModal(false),
-            },
-          ]}
-        />
-      )}
     </section>
   );
 }

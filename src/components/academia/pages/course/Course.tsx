@@ -50,7 +50,6 @@ function Course() {
   ];
 
   const submitHandler: (values: ValuesType) => void = (items) => {
-    console.log(typeof items.search);
     const allData = academiaData.courses;
     setData(
       allData.filter((i) =>

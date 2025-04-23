@@ -20,6 +20,7 @@ function Input({
   onBlur,
 	...rest
 }: InputType) {
+
   return (
     <div className="input-container">
       {label && (
@@ -27,6 +28,9 @@ function Input({
           {label.content}
         </label>
       )}
+
+
+
       {tag === "textarea" ? (
         <textarea
           id={id}
@@ -53,7 +57,7 @@ function Input({
             <option key={item} value={item}>{item}</option>
           ))}
         </select>
-      ) : (
+				      ) : (
         <input
           type={type}
           id={id}

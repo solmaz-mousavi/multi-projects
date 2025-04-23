@@ -3,8 +3,26 @@
 .academia-course-details-wrapper {
   background-color: #f8f8f8;
 
+	
   .academia-course-details-container {
     padding: 40px 0;
+		.academia-container{
+.list{
+	.academia-course-thumb-container{
+		&:hover{
+			background-color: #fff;
+		}
+		.academia-course-details, .academia-course-purchased{
+			display: none;
+		}
+	}
+}
+
+
+
+
+
+		}
 
     .academia-course-thumb-container.purchased {
       background-color: #f8f8f8;
@@ -15,7 +33,6 @@
 
     .academia-desc.course-description {
       padding: 40px 0;
-      color: #999;
       text-align: justify;
       border-bottom: 1px solid #ccc;
     }

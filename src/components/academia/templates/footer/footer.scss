@@ -14,6 +14,9 @@
         font-weight: bold;
         line-height: 1.5;
       }
+      .academia-desc {
+        color: #fff;
+      }
       .form-wrapper {
         display: flex;
         align-items: flex-start;
@@ -33,9 +36,9 @@
         .academia-footer-btn {
           color: #fff;
         }
-				.inputError{
-					color: yellow;
-				}
+        .inputError {
+          color: yellow;
+        }
       }
     }
   }
@@ -72,7 +75,6 @@
         }
 
         .academia-desc {
-          color: #999;
           margin-top: 32px;
           margin-bottom: 16px;
         }
@@ -90,7 +92,7 @@
           }
         }
 
-        .academia-subtitle {
+        .academia-title-sm {
           margin-bottom: 32px;
         }
 
@@ -106,8 +108,7 @@
               color: $academia-color;
             }
           }
-          .academia-footer-navbar-icon {
-            color: $academia-color;
+          .academia-icon {
             margin-right: 10px;
           }
         }
@@ -124,28 +125,24 @@
               margin-top: 5px;
               border-radius: 5px;
               overflow: hidden;
-
               img {
                 height: 100%;
               }
             }
             .academia-footer-blog-details-wrapper {
-              .academia-footer-blog-icon {
-                color: $academia-color;
-                font-size: 1rem;
+              .academia-icon {
                 margin-right: 5px;
+                font-size: 1rem;
               }
               span {
                 color: $academia-color;
                 font-size: 0.8rem;
                 margin-right: 12px;
               }
-              .academia-subtitle {
-                color: #999;
-                &:hover {
-                  color: $academia-color;
-                  cursor: pointer;
-                }
+              .academia-desc {
+                margin: 0;
+                margin-bottom: 20px;
+                cursor: pointer;
               }
             }
           }
@@ -155,14 +152,11 @@
           .academia-footer-contact {
             display: flex;
             margin-bottom: 16px;
-            .academia-footer-contact-icon {
-              color: $academia-color;
+            .academia-icon {
               margin-right: 10px;
               margin-top: 5px;
-              min-width: 15px;
             }
             .academia-desc {
-              color: #999;
               margin: 0;
             }
           }

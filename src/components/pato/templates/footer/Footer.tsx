@@ -16,15 +16,16 @@ import { SocialDataType } from "../../../../dataTypes/mainData.type";
 import Icon from "../../../main/modules/icon/Icon";
 import { GalleryDataType } from "../../../../dataTypes/patoData.type";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import Modal from "../../../main/templates/modal/Modal";
+import { useContext } from "react";
+import { ModalContext } from "../../../../contexts/ModalContext";
 type FooterPropsType = {
   socialData: SocialDataType[];
   galleryData: GalleryDataType[];
 };
 function Footer({ socialData, galleryData }: FooterPropsType) {
-  const [showModal, setShowModal] = useState(false);
+  const { setShowModal, setModalDetails  } = useContext(ModalContext);
   const navigate = useNavigate();
+	
   const inputs: IFormInputType[] = [
     {
       tag: "input",
@@ -44,7 +45,6 @@ function Footer({ socialData, galleryData }: FooterPropsType) {
       validators: [requiredStringValidator(), emailValidator()],
     },
   ];
-
   const buttons: ButtonType[] = [
     {
       type: "submit",
@@ -54,11 +54,17 @@ function Footer({ socialData, galleryData }: FooterPropsType) {
       fullWidth: true,
     },
   ];
-
   const submitHandler: (values: ValuesType) => void = (items) => {
-    console.log(items);
-    setShowModal(true);
+		console.log(items);
+		
+		setModalDetails({
+			desc:"Your email have been submitted successfully.",
+			icon:{ name: "MdCheck", variant: "success" },
+			 button:[{title:"OK", variant:"success", clickHandler:()=>setShowModal(false)}]
+		});
+		setShowModal(true);
   };
+
   return (
     <section className="pato-footer-wrapper">
       <div className="pato-footer-container">
@@ -139,19 +145,7 @@ function Footer({ socialData, galleryData }: FooterPropsType) {
           <p><>&#xa9;</> Copyright 2017 by Colorlib</p>
         </Aos>
       </div>
-      {showModal && (
-        <Modal
-          desc="Your email have been submitted successfully."
-          icon={{ name: "MdCheck", variant: "success" }}
-          button={[
-            {
-              title: "OK",
-              variant: "success",
-              clickHandler: () => setShowModal(false),
-            },
-          ]}
-        />
-      )}
+
     </section>
   );
 }

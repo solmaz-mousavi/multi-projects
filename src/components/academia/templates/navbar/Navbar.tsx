@@ -1,8 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { NavbarDataType } from "../../../../dataTypes/mainData.type";
+import { useContext } from "react";
+import { AuthContext } from "../../../../contexts/AuthContext";
 import "./navbar.scss";
 
 function Navbar({ data }: { data: NavbarDataType[] }) {
+  const { userInfo } = useContext(AuthContext);
   return (
     <section className="academia-navbar-wrapper academia-container">
       <nav className="academia-navbar-container">
@@ -20,6 +23,19 @@ function Navbar({ data }: { data: NavbarDataType[] }) {
               {item.title}
             </NavLink>
           ))}
+
+        {userInfo && (
+          <NavLink
+            to={"/academia/mycourse"}
+            className={(link) =>
+              link.isActive
+                ? "active academia-navbar-link"
+                : "academia-navbar-link"
+            }
+          >
+            My Courses
+          </NavLink>
+        )}
       </nav>
       <div className="academia-navbar-right">
         <p className="academia-toptitle">get certificate</p>

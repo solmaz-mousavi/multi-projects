@@ -6,17 +6,18 @@ import {
   AcademiaDataType,
   CourseDataType,
 } from "../../../../dataTypes/academiaData.type";
-import { useEffect, useState } from "react";
-import Modal from "../../../main/templates/modal/Modal";
-import Comment from "../../templates/comment/Comment";
+import { useContext, useEffect, useState } from "react";
+import Comment from "../../modules/comment/Comment";
 import AddScore from "../../templates/addScore/AddScore";
+import { AuthContext } from "../../../../contexts/AuthContext";
 
-function CourseDetails({purchasedPack=false}:{purchasedPack?:boolean}) {
+function CourseDetails() {
   const academiaData = useOutletContext<AcademiaDataType>();
-  const [data, setData] = useState<CourseDataType | undefined>(undefined);
   const courseID = useLocation().pathname.split("/").reverse()[0];
-  const [purchased, setPurchased] = useState(purchasedPack);
-  const [showModal, setShowModal] = useState(false);
+  const { userInfo } = useContext(AuthContext);
+  const [purchased, setPurchased] = useState(false);
+
+  const [data, setData] = useState<CourseDataType | undefined>(undefined);
   const [videoNum, setVideoNum] = useState(0);
 
   useEffect(() => {
@@ -24,17 +25,26 @@ function CourseDetails({purchasedPack=false}:{purchasedPack?:boolean}) {
       const allData = academiaData.courses;
       setData(allData.find((i) => i.id === courseID));
     }
-  }, [academiaData, courseID]);
+
+    if (userInfo) {
+      setPurchased(
+        userInfo?.courses.includes(courseID) ||
+          academiaData?.packages
+            .filter((i) => userInfo?.packages.includes(i.id))
+            .some((item) => item.courses.includes(courseID))
+      );
+    }
+
+  
+  }, [academiaData, courseID, userInfo]);
 
   return (
-    <section className="academia-course-details-wrapper">
+    <section className="academia-course-details-wrapper" >
       <PageHeader title={data?.title || ""} />
 
-      <div className="academia-course-details-container list">
+      <div className="academia-course-details-container">
         <div className="academia-container">
-          <div onClick={() => setShowModal(true)}>
-            {data && <CourseThumb {...data} purchased={purchased} />}
-          </div>
+          <div className="list">{data && <CourseThumb {...data} />}</div>
 
           <p className="academia-desc course-description">{data?.desc}</p>
 
@@ -64,7 +74,7 @@ function CourseDetails({purchasedPack=false}:{purchasedPack?:boolean}) {
                       videoNum === index ? "active" : ""
                     } ${purchased ? "purchased" : ""}`}
                     onClick={() => setVideoNum(index)}
-										key={item.id}
+                    key={item.id}
                   >
                     <div className="academia-lectures-list-title">
                       <p className="row">{index + 1}</p>
@@ -83,23 +93,6 @@ function CourseDetails({purchasedPack=false}:{purchasedPack?:boolean}) {
           )}
         </div>
       </div>
-
-      {showModal && (
-        <Modal
-          desc="You have successfully purchase the course. Now you can see the lectures"
-          icon={{ name: "MdCheck", variant: "success" }}
-          button={[
-            {
-              title: "OK",
-              variant: "success",
-              clickHandler: () => {
-                setShowModal(false);
-                setPurchased(true);
-              },
-            },
-          ]}
-        />
-      )}
     </section>
   );
 }

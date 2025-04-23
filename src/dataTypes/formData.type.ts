@@ -20,8 +20,8 @@ export type ErrorsType = {
 };
 
 export interface IFormInputType {
-  tag: "input" | "textarea" | "select" ;
-  type?: "text" | "email" | "number" | "password" | "date";
+  tag: "input" | "textarea" | "select";
+  type?: "text" | "email" | "number" | "password" | "date" | "checkbox" | "radio";
   placeholder?: any;
   className?: string;
 

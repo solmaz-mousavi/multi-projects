@@ -17,11 +17,13 @@ import AcademiaHome from "./components/academia/pages/home/Home";
 import AcademiaCourse from "./components/academia/pages/course/Course";
 import AcademiaCourseDetails from "./components/academia/pages/courseDetails/CourseDetails";
 import AcademiaAbout from "./components/academia/pages/about/About";
-import AcademiaTeam from "./components/academia/pages/team/OurTeam";
+import AcademiaTeam from "./components/academia/pages/team/Team";
 import AcademiaContact from "./components/academia/pages/contact/Contact";
-import AcademiaPricing from "./components/academia/pages/pricing/Pricing";
+import AcademiaPackage from "./components/academia/pages/package/Package";
 import AcademiaBlog from "./components/academia/pages/blog/Blog";
 import AcademiaBlogDetails from "./components/academia/pages/blogDetails/BlogDetails";
+import AcademiaLogin from "./components/academia/pages/login/Login";
+import AcademiaMyCourse from "./components/academia/pages/myCourse/MyCourse";
 
 import NotFound from "./components/main/templates/notFound/NotFound";
 function Router() {
@@ -48,10 +50,12 @@ function Router() {
         <Route path="course/:ID" element={<AcademiaCourseDetails />} />
         <Route path="about" element={<AcademiaAbout />} />
         <Route path="team" element={<AcademiaTeam />} />
-        <Route path="pricing" element={<AcademiaPricing />} />
+        <Route path="package" element={<AcademiaPackage />} />
         <Route path="blog" element={<AcademiaBlog />} />
         <Route path="blog/:ID" element={<AcademiaBlogDetails />} />
         <Route path="contact" element={<AcademiaContact />} />
+        <Route path="login" element={<AcademiaLogin />} />
+        <Route path="mycourse" element={<AcademiaMyCourse />} />
       </Route>
 
       <Route path="dashboard" element={<Dashboard />} />

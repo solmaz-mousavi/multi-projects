@@ -1,0 +1,12 @@
+.academia-package-content {
+  display: flex;
+  padding-top: 40px;
+
+  .academia-package-thumb-container {
+    min-height: 100%;
+    height: auto;
+  }
+  .list {
+    width: calc(100% - 410px);
+  }
+}

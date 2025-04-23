@@ -15,12 +15,11 @@
     .image-wrapper {
       border: 1px solid $academia-color;
     }
-    .academia-desc {
+    .academia-desc, .academia-title-sm {
       color: #fff;
     }
     .social-container .icon {
       opacity: 1;
-      visibility: visible;
     }
   }
 
@@ -34,30 +33,19 @@
       height: 100%;
     }
   }
-  .academia-subtitle {
+  .academia-title-sm {
     margin: 10px 0;
-    transition: $main-transition;
   }
   .academia-desc {
     padding: 0 20px;
-    text-wrap: wrap;
-    color: #999;
-    transition: $main-transition;
   }
   .social-container {
     @include flex-center-column;
     position: absolute;
-    bottom: 160px;
+    top: 30px;
     left: 10px;
     .icon {
-      width: 40px;
-      height: 40px;
-      padding: 10px;
-      background-color: $academia-color;
-      color: #fff;
-      border-radius: 50%;
       opacity: 0;
-      visibility: hidden;
       transition: $main-transition;
     }
   }

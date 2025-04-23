@@ -1,53 +1,28 @@
 @use "/src/styles/global.scss" as *;
 
 .academia-package-thumb-container {
+	flex-direction: column;
+	justify-content: flex-start;
   width: 400px;
-  height: 400px;
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 30px 20px;
-  box-shadow: 0px 5px 25px -2px rgba(0, 0, 0, 0.06);
+  height: 450px;
   text-align: center;
-  transition: $main-transition;
   position: relative;
-  &:hover {
-    background-color: #e6e6e6;
-    cursor: pointer;
+  .academia-avatar {
+    margin: 0 auto;
+		margin-bottom: 10px;
   }
-
-  img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-  }
-
-  .academia-subtitle {
+  .academia-title-sm {
 	margin-bottom: 20px;
   }
-  .academia-desc {
-		margin-bottom: 10px;
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 0.9rem;
-  }
-
   .academia-package-course-container {
+		width: 100%;
     display: flex;
-    justify-content: stretch;
     align-items: baseline;
+		gap: 5px;
+		margin-bottom: 10px;
     position: relative;
-    .row {
-      @include flex-center;
-      background-color: $academia-color;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      color: #fff;
-      font-size: 0.9rem;
-      margin-right: 5px;
-    }
     .academia-desc {
       line-height: 30px;
-      // width: max-content;
     }
 
     .price {
@@ -59,6 +34,7 @@
       top: 0;
       bottom: 0;
     }
+
   }
 
   .btn {
@@ -77,4 +53,15 @@
       color: yellow;
     }
   }
+	.academia-package-purchased{
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		left: 20px;
+		color: $academia-color;
+		background-color: #f8f8f8;
+		padding: 10px;
+		border-radius: 5px;
+		text-align: center;
+	}
 }

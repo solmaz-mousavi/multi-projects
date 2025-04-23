@@ -1,4 +1,4 @@
-import "./score.scss";
+
 import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 function Score({ score }: { score: number }) {

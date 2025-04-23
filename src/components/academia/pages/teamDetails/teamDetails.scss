@@ -1,0 +1,22 @@
+.academia-team-content {
+  display: flex;
+
+  padding: 40px 0;
+  gap: 20px;
+  height: 100%;
+  .academia-team-thumb-container {
+    min-height: 100%;
+    height: auto;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .list {
+    width: 100%;
+
+    .academia-course-thumb-container {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}

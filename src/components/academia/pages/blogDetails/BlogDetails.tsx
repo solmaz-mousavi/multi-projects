@@ -7,7 +7,7 @@ import {
 } from "../../../../dataTypes/academiaData.type";
 import { useEffect, useState } from "react";
 import BlogThumb from "../../modules/blogThumb/BlogThumb";
-import Comment from "../../templates/comment/Comment";
+import Comment from "../../modules/comment/Comment";
 
 function BlogDetails() {
   const academiaData = useOutletContext<AcademiaDataType>();

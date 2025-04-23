@@ -10,7 +10,6 @@ type TitleType = {
   [index in "id" | "title" | "image"]: string;
 };
 
-
 // --------------------about--------------------
 export interface IntroDataType extends BaseType, ImgIncludedType {}
 
@@ -26,8 +25,12 @@ export interface TeacherDataType extends PersonType, ImgIncludedType {
 }
 
 // --------------------student--------------------
-export interface StudentDataType extends PersonType {
+export interface StudentDataType extends PersonType, ImgIncludedType {
   courses: string[];
+	packages: string[];
+  user: string;
+  password: string;
+	token: string;
 }
 
 // --------------------category--------------------
@@ -66,13 +69,11 @@ export type BlogDataType = {
   comments: CommentDataType[];
 };
 
-
 // --------------------package--------------------
 export interface PackageDataType extends BaseType {
   courses: string[];
   price: number;
-};
-
+}
 
 // --------------------data--------------------
 export type AcademiaDataType = {

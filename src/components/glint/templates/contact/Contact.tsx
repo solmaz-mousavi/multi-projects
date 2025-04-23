@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { ButtonType } from "../../../../dataTypes/buttonData.type";
 import {
   IFormInputType,
@@ -13,13 +13,14 @@ import {
 import Aos from "../../../main/modules/aos/Aos";
 import Form from "../../../main/modules/form/Form";
 import "./contact.scss";
-import Modal from "../../../main/templates/modal/Modal";
 import Icon from "../../../main/modules/icon/Icon";
+import { ModalContext } from "../../../../contexts/ModalContext";
 
 function Contact({ data }: { data: SocialDataType[] }) {
-  const [showModal, setShowModal] = useState(false);
 
 	// ---- Identify the different parts of the form such as inputs, buttons and submit handler
+	const { setShowModal, setModalDetails  } = useContext(ModalContext);
+
   const inputs: IFormInputType[] = [
     {
       tag: "input",
@@ -108,7 +109,13 @@ function Contact({ data }: { data: SocialDataType[] }) {
   ];
   const submitHandler: (values: ValuesType) => void = (items) => {
     console.log(items);
-    setShowModal(true);
+    
+		setModalDetails({
+			desc:"We receive your message. Our team will contact you as soon as possible.",
+			icon:{ name: "MdCheck", variant: "success" },
+			 button:[{title:"OK", variant:"success", clickHandler:()=>setShowModal(false)}]
+		});
+		setShowModal(true);
   };
 
   return (
@@ -176,20 +183,6 @@ function Contact({ data }: { data: SocialDataType[] }) {
         </div>
       </Aos>
 
-			{/* ---- modal ---- */}
-      {showModal && (
-        <Modal
-          desc="We receive your message. Our team will contact you as soon as possible."
-          icon={{ name: "MdCheck", variant: "success" }}
-          button={[
-            {
-              title: "OK",
-              variant: "success",
-              clickHandler: () => setShowModal(false),
-            },
-          ]}
-        />
-      )}
     </section>
   );
 }

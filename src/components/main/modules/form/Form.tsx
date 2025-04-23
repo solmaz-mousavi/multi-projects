@@ -23,7 +23,7 @@ export default function Form({
   submitHandler,
   className,
 }: FormPropsType) {
-// ---- initial values of inputs
+  // ---- initial values of inputs
   const formInitialValues: ValuesType = {};
 
   inputs.forEach((input) => {
@@ -31,11 +31,9 @@ export default function Form({
     formInitialValues[name] = initialvalue;
   });
 
-	// ---- create form by formik library
+  // ---- create form by formik library
   const formik = useFormik({
-
     initialValues: formInitialValues,
-
     onSubmit: (values, { resetForm }) => {
       submitHandler(values);
       resetForm();

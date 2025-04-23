@@ -23,7 +23,7 @@ function Package({ data }: { data: PackageDataType[] }) {
               </Aos>
             ))}
         </div>
-				<SeeAll route="pricing"/>
+				<SeeAll route="package"/>
       </div>
     </section>
   );

@@ -11,10 +11,11 @@ import Icon from "../../../main/modules/icon/Icon";
 import Score from "../score/Score";
 import "./courseThumb.scss";
 import "animate.css";
+import { useContext } from "react";
+import { AuthContext } from "../../../../contexts/AuthContext";
+import Button from "../../../main/modules/button/Button";
+import { ModalContext } from "../../../../contexts/ModalContext";
 
-interface CourseThumbPropsType extends CourseDataType {
-	purchased?: boolean;
-}
 function CourseThumb({
   id,
   title,
@@ -24,9 +25,16 @@ function CourseThumb({
   price,
   discount,
   lectures,
-	purchased
-}: CourseThumbPropsType) {
+}: CourseDataType) {
   const academiaData = useOutletContext<AcademiaDataType>();
+  const { userInfo, setUserInfo } = useContext(AuthContext);
+  const { setShowModal, setModalDetails  } = useContext(ModalContext);
+  const purchased =
+    userInfo?.courses.includes(id) ||
+    academiaData?.packages
+      .filter((i) => userInfo?.packages.includes(i.id))
+      .some((item) => item.courses.includes(id));
+
   const navigate = useNavigate();
   const courseTeacher = getResultByID({
     ID: teacher,
@@ -34,15 +42,31 @@ function CourseThumb({
   });
   const duration = getRangeSumOfData({ data: lectures, range: "duration" });
 
+  const purchaseHandler = () => {
+    if (userInfo) {
+      const newUserInfo = userInfo;
+      newUserInfo.courses.push(id);
+      setUserInfo(newUserInfo);
+			setModalDetails({
+				desc:"Congratulations! You have purchased this course, Now you can enjoy it.",
+				icon:{ name: "MdCheck", variant: "success" },
+				 button:[{title:"OK", variant:"success", clickHandler:()=>setShowModal(false)}]
+			});
+      setShowModal(true);
+    } else {
+      navigate("/academia/login");
+    }
+  };
+
   return (
     <div
-      className={`academia-course-thumb-container animate__animated animate__fadeIn ${purchased ? "purchased" : ""}`}
-      onClick={() => navigate(`/academia/course/${id}`)}
+      className="academia-course-thumb-container academia-thumb animate__animated animate__fadeIn"
+      key={String(purchased)}
     >
       <div className="academia-course-thumb-top">
-        <Icon name={iconName} />
+        <Icon name={iconName} className="academia-avatar" />
         <div className="academia-course-thumb-details">
-          <h3 className="academia-title">{title}</h3>
+          <h3 className="academia-title-sm">{title}</h3>
           <div className="score-wrapper">
             <Score score={score} />
             <div>
@@ -66,20 +90,44 @@ function CourseThumb({
           </p>
         </div>
       </div>
-      <div className={`price-wrapper ${purchased ? "hidden" : ""}`}>
-        <p className={discount > 0 ? "deleted" : ""}>
-          {price === 0 ? "free" : `$ ${price}`}
-        </p>
-        {discount > 0 && (
-          <p className="new-price">
-            $ {(price * (1 - discount / 100)).toFixed(2)}
-          </p>
-        )}
-      </div>
-      <button className={`academia-course-thumb-btn ${purchased ? "hidden" : ""}`}>enroll now!</button>
+
+      {!purchased && (
+        <>
+          <div className="price-wrapper">
+            <p className={discount > 0 ? "deleted" : ""}>
+              {price === 0 ? "free" : `$ ${price}`}
+            </p>
+            {discount > 0 && (
+              <p className="new-price">
+                $ {(price * (1 - discount / 100)).toFixed(2)}
+              </p>
+            )}
+          </div>
+          <Button
+            text="enroll now!"
+            variant="academia-aqua"
+            border={false}
+            className="academia-course-thumb-btn"
+            clickHandler={purchaseHandler}
+          />
+        </>
+      )}
+
       {discount > 0 && !purchased && (
         <div className="academia-course-discount">{discount}%</div>
       )}
+
+      {purchased && (
+        <Button
+          text={purchased ? "You have purchased this course, Click to enjoy it!" : "see course details and lecture" }
+          variant="transparent"
+          border={false}
+					icon={{ name: "MdArrowRightAlt" }}
+          className="academia-course-details"
+          clickHandler={() => navigate(`/academia/course/${id}`)}
+        />
+      )}
+
     </div>
   );
 }

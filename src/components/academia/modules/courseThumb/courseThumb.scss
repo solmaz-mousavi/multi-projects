@@ -2,19 +2,12 @@
 
 .grid {
   .academia-course-thumb-container {
-    background-color: #fff;
     width: 380px;
     height: 450px;
-    padding: 50px 30px;
-    margin: 10px;
-    box-shadow: 0px 5px 25px -2px rgba(0, 0, 0, 0.06);
-    border-radius: 5px;
-    transition: $main-transition;
     position: relative;
-    &:hover {
-      background-color: #e6e6e6;
-      cursor: pointer;
-    }
+		&:hover {
+			background-color: #e6e6e6;
+		}
     .academia-course-thumb-top {
       @include flex-align-start;
       gap: 20px;
@@ -22,17 +15,12 @@
         background-color: $academia-color;
         color: #fff;
         border-radius: 50%;
-        width: 80px;
-        height: 80px;
         padding: 10px;
       }
       .academia-course-thumb-details {
         width: 250px;
-        .academia-title {
-          font-size: 1.7rem;
-          margin-bottom: 5px;
-          text-wrap: wrap;
-          color: rgba(0, 0, 0, 0.7);
+        .academia-title-sm {
+          margin-bottom: 10px;
         }
         .score-wrapper {
           @include flex-justify-start;
@@ -80,7 +68,7 @@
       color: $academia-color;
       font-size: 1.05rem;
       position: absolute;
-      bottom: 80px;
+      bottom: 110px;
       left: 30px;
 
       .deleted {
@@ -99,19 +87,13 @@
       }
     }
     .academia-course-thumb-btn {
-      @include flex-center;
-      width: 320px;
-      background-color: $academia-color;
-      border-radius: 5px;
-      padding: 10px;
-      font-weight: bold;
-      color: #fff;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
       position: absolute;
-      bottom: 30px;
+      bottom: 50px;
       left: 30px;
+			right: 30px;
+			*{
+				font-size: 1rem;
+			}
     }
     .academia-course-discount {
       @include flex-center;
@@ -126,24 +108,24 @@
       font-size: 0.8rem;
       font-weight: bold;
     }
+		.academia-course-details{
+			flex-direction: row-reverse;
+			position: absolute;
+			bottom: 10px;
+			right: 0;
+			color: $academia-color;
+		}
   }
 }
 
 .list {
   .academia-course-thumb-container {
-    background-color: #fff;
     width: 100%;
-    padding: 20px 30px;
-    box-shadow: 0px 5px 25px -2px rgba(0, 0, 0, 0.06);
-    border-radius: 5px;
-    transition: $main-transition;
     position: relative;
-    display: flex;
-
-    &:hover {
-      background-color: #e6e6e6;
-      cursor: pointer;
-    }
+    justify-content: flex-start;
+		&:hover {
+			background-color: #e6e6e6;
+		}
     .academia-course-thumb-top {
       @include flex-align-start;
       gap: 20px;
@@ -156,11 +138,8 @@
         padding: 10px;
       }
       .academia-course-thumb-details {
-        .academia-title {
-          font-size: 1.7rem;
+        .academia-title-sm {
           margin-bottom: 5px;
-          text-wrap: wrap;
-          color: rgba(0, 0, 0, 0.7);
         }
         .score-wrapper {
           @include flex-justify-start;
@@ -208,9 +187,8 @@
       color: $academia-color;
       font-size: 1.05rem;
       position: absolute;
-      bottom: 80px;
+      bottom: 110px;
       right: 30px;
-
       .deleted {
         color: #aaa;
         font-size: 0.95rem;
@@ -218,7 +196,7 @@
         &::after {
           content: "";
           width: 140%;
-          height: 2px;
+          height: 1px;
           background-color: #aaa;
           position: absolute;
           top: 50%;
@@ -227,19 +205,13 @@
       }
     }
     .academia-course-thumb-btn {
-      @include flex-center;
       width: 320px;
-      background-color: $academia-color;
-      border-radius: 5px;
-      padding: 10px;
-      font-weight: bold;
-      color: #fff;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
       position: absolute;
-      bottom: 30px;
+      bottom: 50px;
       right: 30px;
+			*{
+				font-size: 1rem;
+			}
     }
     .academia-course-discount {
       @include flex-center;
@@ -254,5 +226,12 @@
       font-size: 0.8rem;
       font-weight: bold;
     }
+		.academia-course-details{
+			flex-direction: row-reverse;
+			position: absolute;
+			bottom: 10px;
+			right: 0;
+			color: $academia-color;
+		}
   }
 }

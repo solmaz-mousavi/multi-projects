@@ -1,40 +1,30 @@
-import "./pricing.scss";
 import { useOutletContext } from "react-router-dom";
 import { AcademiaDataType } from "../../../../dataTypes/academiaData.type";
 import PageHeader from "../../modules/pageHeader/PageHeader";
-import Package from "../home/components/package/Package";
 import Aos from "../../../main/modules/aos/Aos";
 import SectionHeader from "../../modules/sectionHeader/SectionHeader";
-import PackageThumb from "../../modules/packageThumb/PackageThumb";
-import CourseThumb from "../../modules/courseThumb/CourseThumb";
+import "./team.scss";
+import TeamDetails from "../teamDetails/TeamDetails";
 
-function Pricing() {
+function Team() {
   const academiaData = useOutletContext<AcademiaDataType>();
   return (
     <>
-      <PageHeader title="Just Select A Package Below" />
+      <PageHeader title="Meet Our Professional Team" />
       <section className="academia-team-container">
         <div className="academia-container">
           <Aos aosStyle="fadeInUp" once={true}>
             <SectionHeader
-              toptitle="Become a professional by the best road maps"
-              title="Save up to 40% by purchasing a pack."
+              toptitle="Meet Our Professional Team"
+              title="Know more about each teacher and the courses."
             />
           </Aos>
 
-          {academiaData.packages &&
-            academiaData.packages.map((item) => (
+          {academiaData.teachers &&
+            academiaData.teachers.map((item) => (
               <div key={item.id}>
                 <Aos aosStyle="fadeInUp" once={true}>
-                  <div className="academia-package-content">
-                    <PackageThumb {...item} />
-                    <div className="list">
-                      {academiaData.courses &&
-                        academiaData.courses
-                          .filter((i) => item.courses.includes(i.id))
-                          .map((ind) => <CourseThumb {...ind} key={ind.id}/>)}
-                    </div>
-                  </div>
+                  <TeamDetails data={{ ...item }} />
                 </Aos>
                 <Aos aosStyle="fadeInUp" once={true}>
                   <p className="academia-desc academia-teacher-description">
@@ -49,4 +39,4 @@ function Pricing() {
   );
 }
 
-export default Pricing;
+export default Team;

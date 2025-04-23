@@ -3,12 +3,7 @@
 .academia-status-thumb {
 	@include flex-center;
 	gap: 20px;
-	.academia-status-img {
-		img {
-			width: 60px;
-			height: 60px;
-		}
-	}
+
 	.academia-status-details {
 		.academia-status-count {
 			color: #fff;
@@ -18,7 +13,6 @@
 		}
 		.academia-desc {
 			text-transform: uppercase;
-			color: rgba(255, 255, 255, 0.8);
 			font-weight: normal;
 			letter-spacing: 1px;
 		}

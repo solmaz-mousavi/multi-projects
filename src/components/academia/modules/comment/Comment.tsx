@@ -6,7 +6,7 @@ import {
   CommentDataType,
 } from "../../../../dataTypes/academiaData.type";
 import "./comment.scss";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import { getResultByID } from "../../../../utils/getDataByID";
 import { BsCalendar3 } from "react-icons/bs";
@@ -20,8 +20,8 @@ import { ButtonType } from "../../../../dataTypes/buttonData.type";
 import { requiredStringValidator } from "../../../../validators/rules";
 import Form from "../../../main/modules/form/Form";
 import { dateFormatter } from "../../../../utils/dateFormatter";
-import Modal from "../../../main/templates/modal/Modal";
 import "animate.css";
+import { ModalContext } from "../../../../contexts/ModalContext";
 
 function Comment({
   data,
@@ -34,7 +34,7 @@ function Comment({
   const [startIndex, setStartIndex] = useState(0);
   const perPage = 2;
 
-  const [showModal, setShowModal] = useState(false);
+  const { setShowModal, setModalDetails } = useContext(ModalContext);
   const inputs: IFormInputType[] = [
     {
       tag: "textarea",
@@ -59,11 +59,25 @@ function Comment({
       id: String(data.length),
       userID: "01",
       role: "student",
-      date: dateFormatter({date:String(new Date()), type:3}),
+      date: dateFormatter({ date: String(new Date()), type: 3 }),
       desc: String(items.message),
     };
-
     data.unshift(newComment);
+
+    setModalDetails({
+      desc: "Thank you for taking the time to share your experience with us.",
+      icon: { name: "MdCheck", variant: "success" },
+      button: [
+        {
+          title: "OK",
+          variant: "success",
+          clickHandler: () => {
+            setShowModal(false);
+            setStartIndex(0);
+          },
+        },
+      ],
+    });
     setShowModal(true);
   };
 
@@ -73,7 +87,12 @@ function Comment({
     <div className="academia-comment-wrapper">
       <div className="academia-comment-title">
         <h3>
-          all comments <span><>&#x28;</>{data.length || ""}<>&#x29;</></span>{" "}
+          all comments{" "}
+          <span>
+            <>&#x28;</>
+            {data.length || ""}
+            <>&#x29;</>
+          </span>{" "}
         </h3>
         <VscTriangleDown className="academia-icon icon" />
       </div>
@@ -108,7 +127,11 @@ function Comment({
                         <>&#xa0;</>-<>&#xa0;</>
                       </span>
                       <TbUsers className="academia-icon" />
-                      <p><>&#x28;</>{item.role}<>&#x29;</></p>
+                      <p>
+                        <>&#x28;</>
+                        {item.role}
+                        <>&#x29;</>
+                      </p>
                       <span>
                         <>&#xa0;</>-<>&#xa0;</>
                       </span>
@@ -150,22 +173,11 @@ function Comment({
         </>
       )}
 
-      {showModal && (
+      {/* {showModal && (
         <Modal
-          desc="Thank you for taking the time to share your experience with us."
-          icon={{ name: "MdCheck", variant: "success" }}
-          button={[
-            {
-              title: "OK",
-              variant: "success",
-              clickHandler: () => {
-                setShowModal(false);
-                setStartIndex(0);
-              },
-            },
-          ]}
+
         />
-      )}
+      )} */}
     </div>
   );
 }

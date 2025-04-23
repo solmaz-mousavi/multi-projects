@@ -1,0 +1,34 @@
+@use "/src/styles/global.scss" as *;
+
+.academia-contact-wrapper {
+  .academia-container {
+    @include flex-center;
+    padding: 50px 0;
+    .academia-thumb {
+      width: 400px;
+
+      .form-wrapper {
+        width: 100%;
+
+        .input-wrapper {
+          width: 100%;
+          margin-bottom: 20px;
+          input {
+            padding: 10px;
+            color: #555;
+          }
+          .checkbox {
+            width: 20px;
+            accent-color: #147970;
+          }
+          div:has(.checkbox) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+}

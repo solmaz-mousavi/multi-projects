@@ -15,10 +15,10 @@ function BlogThumb({
   const navigate = useNavigate();
   return (
     <div
-      className="academia-blog-thumb-container"
+      className="academia-blog-thumb-container academia-thumb"
       onClick={() => navigate(`/academia/blog/${id}`)}
     >
-      <div className="image-wrapper">
+      <div className="academia-blog-image-wrapper">
         <img src={image} alt={title} className="academia-blog-thumb-img" />
       </div>
 
@@ -34,7 +34,7 @@ function BlogThumb({
           <span>{comments.length} comments</span>
         </div>
 
-        <h3 className="academia-subtitle">{title}</h3>
+        <h3 className="academia-title-sm">{title}</h3>
         <p className="academia-desc">{desc}</p>
       </div>
     </div>

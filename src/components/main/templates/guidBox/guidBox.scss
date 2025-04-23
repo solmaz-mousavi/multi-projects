@@ -4,7 +4,7 @@
   position: relative;
   z-index: 20;
 
-	// ------------- guid box common styles -------------
+  // ------------- guid box common styles -------------
   .guidbox {
     @include fullscreen;
     position: fixed;
@@ -50,7 +50,7 @@
       }
     }
   }
-	// ------------- guid user - how to see other projects -------------
+  // ------------- guid user - how to see other projects -------------
   .guidbox-1 {
     border-left: 20px solid rgba(0, 0, 0, 0.7);
     border-right: calc(100vw - 190px) solid rgba(0, 0, 0, 0.7);
@@ -68,7 +68,7 @@
     }
   }
 
-	// ------------- guid user - how to see contact information -------------
+  // ------------- guid user - how to see contact information -------------
   .guidbox-2 {
     border-left: calc(100vw - 190px) solid rgba(0, 0, 0, 0.7);
     border-right: 20px solid rgba(0, 0, 0, 0.7);
@@ -89,5 +89,56 @@
   .hidden {
     opacity: 0;
     display: none;
+  }
+}
+
+// ---- responsive ----
+@media screen and (max-width: 764px) {
+  .main-guidbox-wrapper {
+    .guidbox {
+      .guidbox-arrow-top {
+        height: 50px;
+      }
+      .guidbox-arrow-bottom {
+        width: 0px;
+        height: 100px;
+      }
+      .guidbox-message {
+        top: 15px;
+      }
+      .guidbox-btn {
+        top: 20px;
+      }
+    }
+    .guidbox-1 {
+      .guidbox1-message {
+        left: 10px;
+      }
+      .guidbox1-btn {
+        left: 150px;
+      }
+    }
+
+    .guidbox-2 {
+      .guidbox2-arrow-bottom {
+        right: -80px;
+      }
+      .guidbox2-message {
+        right: 100px;
+      }
+      .guidbox2-btn {
+        right: -55px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .main-guidbox-wrapper {
+    .guidbox {
+      .guidbox-arrow-top {
+        height: 40px;
+      }
+    }
   }
 }

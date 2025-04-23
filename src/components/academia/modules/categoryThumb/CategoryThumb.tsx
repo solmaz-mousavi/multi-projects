@@ -15,12 +15,12 @@ function CategoryThumb({ id, title, image, onClick }: CategoryThumbPropsType) {
 
   return (
     <div
-      className="academia-category-thumb-container"
+      className="academia-category-thumb-container academia-thumb"
       onClick={() => onClick(title)}
     >
-      <img src={image} alt={title} className="academia-category-thumb-img" />
-      <h3 className="academia-category-thumb-title">{title}</h3>
-      <p className="academia-category-thumb-desc">{courseNum} courses</p>
+      <img src={image} alt={title} className="academia-avatar" />
+      <h3 className="academia-title-sm">{title}</h3>
+      <p className="academia-desc">{courseNum} courses</p>
     </div>
   );
 }
