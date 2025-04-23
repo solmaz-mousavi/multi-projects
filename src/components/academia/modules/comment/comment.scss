@@ -44,6 +44,12 @@
           height: 30px;
           color: $academia-color;
         }
+				img{
+					width: 30px;
+					height: 30px;
+					border-radius: 50%;
+					border: 1px solid $academia-color;
+				}
         .academia-comment-user-details {
           display: flex;
           align-items: center;

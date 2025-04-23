@@ -3,32 +3,23 @@
 .academia-course-details-wrapper {
   background-color: #f8f8f8;
 
-	
   .academia-course-details-container {
     padding: 40px 0;
-		.academia-container{
-.list{
-	.academia-course-thumb-container{
-		&:hover{
-			background-color: #fff;
-		}
-		.academia-course-details, .academia-course-purchased{
-			display: none;
-		}
-	}
-}
-
-
-
-
-
-		}
-
-    .academia-course-thumb-container.purchased {
-      background-color: #f8f8f8;
-      cursor: auto;
-      box-shadow: none;
-      border-bottom: 1px solid #ccc;
+    .academia-container {
+      .list {
+        .academia-course-thumb-container {
+          &:hover {
+            background-color: #fff;
+          }
+          .academia-course-details,
+          .academia-course-purchased,
+          .academia-course-thumb-btn,
+          .price-wrapper,
+          .academia-course-discount {
+            display: none;
+          }
+        }
+      }
     }
 
     .academia-desc.course-description {
@@ -106,7 +97,9 @@
 
         .academia-lectures-list.active.purchased {
           background-color: $academia-color;
-          color: #fff;
+          * {
+            color: #fff;
+          }
           .row {
             color: $academia-color;
           }

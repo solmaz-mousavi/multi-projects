@@ -7,7 +7,7 @@ import {
 } from "../../../../dataTypes/academiaData.type";
 import "./comment.scss";
 import { useContext, useEffect, useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 import { getResultByID } from "../../../../utils/getDataByID";
 import { BsCalendar3 } from "react-icons/bs";
 import { TbUsers } from "react-icons/tb";
@@ -22,6 +22,7 @@ import Form from "../../../main/modules/form/Form";
 import { dateFormatter } from "../../../../utils/dateFormatter";
 import "animate.css";
 import { ModalContext } from "../../../../contexts/ModalContext";
+import { AuthContext } from "../../../../contexts/AuthContext";
 
 function Comment({
   data,
@@ -31,6 +32,8 @@ function Comment({
   addComment: boolean;
 }) {
   const academiaData = useOutletContext<AcademiaDataType>();
+  const { userInfo } = useContext(AuthContext);
+	const navigate = useNavigate();
   const [startIndex, setStartIndex] = useState(0);
   const perPage = 2;
 
@@ -55,30 +58,34 @@ function Comment({
     },
   ];
   const submitHandler: (values: ValuesType) => void = (items) => {
-    const newComment: CommentDataType = {
-      id: String(data.length),
-      userID: "01",
-      role: "student",
-      date: dateFormatter({ date: String(new Date()), type: 3 }),
-      desc: String(items.message),
-    };
-    data.unshift(newComment);
+    if (userInfo) {
+      const newComment: CommentDataType = {
+        id: String(data.length),
+        userID: userInfo.id,
+        role: "student",
+        date: dateFormatter({ date: String(new Date()), type: 3 }),
+        desc: String(items.message),
+      };
+      data.unshift(newComment);
 
-    setModalDetails({
-      desc: "Thank you for taking the time to share your experience with us.",
-      icon: { name: "MdCheck", variant: "success" },
-      button: [
-        {
-          title: "OK",
-          variant: "success",
-          clickHandler: () => {
-            setShowModal(false);
-            setStartIndex(0);
+      setModalDetails({
+        desc: "Thank you for taking the time to share your experience with us.",
+        icon: { name: "MdCheck", variant: "success" },
+        button: [
+          {
+            title: "OK",
+            variant: "success",
+            clickHandler: () => {
+              setShowModal(false);
+              setStartIndex(0);
+            },
           },
-        },
-      ],
-    });
-    setShowModal(true);
+        ],
+      });
+      setShowModal(true);
+    } else {
+navigate("/academia/login")
+		}
   };
 
   useEffect(() => {}, [academiaData, data]);
@@ -109,20 +116,21 @@ function Comment({
                 user = getResultByID({
                   ID: item.userID,
                   data: academiaData.students,
-                }).name;
+                });
               } else {
                 user = getResultByID({
                   ID: item.userID,
                   data: academiaData.teachers,
-                }).name;
+                });
               }
 
               return (
                 <div className="academia-comment" key={item.id}>
                   <div className="academia-comment-user">
-                    <FaUserCircle className="academia-comment-user-icon" />
+										{user.image ? <img src={user.image} alt={user.name} /> : <FaUserCircle className="academia-comment-user-icon" />}
+                    
                     <div className="academia-comment-user-details">
-                      <p>{user}</p>
+                      <p>{user.name}</p>
                       <span>
                         <>&#xa0;</>-<>&#xa0;</>
                       </span>
@@ -172,12 +180,6 @@ function Comment({
           </div>
         </>
       )}
-
-      {/* {showModal && (
-        <Modal
-
-        />
-      )} */}
     </div>
   );
 }

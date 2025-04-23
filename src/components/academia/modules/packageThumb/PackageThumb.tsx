@@ -7,14 +7,40 @@ import {
 import { getResultByID } from "../../../../utils/getDataByID";
 import { useContext } from "react";
 import { AuthContext } from "../../../../contexts/AuthContext";
+import { ModalContext } from "../../../../contexts/ModalContext";
+import Button from "../../../main/modules/button/Button";
 
 function PackageThumb({ id, title, courses, price }: PackageDataType) {
   const academiaData = useOutletContext<AcademiaDataType>();
-  const { userInfo } = useContext(AuthContext);
+  const { userInfo, setUserInfo } = useContext(AuthContext);
+  const { setShowModal, setModalDetails } = useContext(ModalContext);
+  const navigate = useNavigate();
   const purchased = userInfo?.packages.includes(id);
 
+  const purchaseHandler = () => {
+    if (userInfo) {
+      const newUserInfo = userInfo;
+      newUserInfo.packages.push(id);
+      setUserInfo(newUserInfo);
+      setModalDetails({
+        desc: "Congratulations! You have purchased this course, Now you can enjoy it.",
+        icon: { name: "MdCheck", variant: "success" },
+        button: [
+          {
+            title: "OK",
+            variant: "success",
+            clickHandler: () => setShowModal(false),
+          },
+        ],
+      });
+      setShowModal(true);
+    } else {
+      navigate("/academia/login");
+    }
+  };
+
   return (
-    <div className="academia-package-thumb-container academia-thumb">
+    <div className="academia-package-thumb-container academia-thumb" key={String(purchased)}>
       <img
         src="/assets/images/academia/flaticons/aqua/milestone.png"
         alt="road map"
@@ -40,9 +66,13 @@ function PackageThumb({ id, title, courses, price }: PackageDataType) {
           You have purchased this package.
         </div>
       ) : (
-        <div className="btn">
-          Learn All Above For Just<span> ${price}</span>
-        </div>
+        <Button
+          text={`Learn All Above For Just $${price}`}
+          variant="academia-aqua"
+          border={false}
+          className="academia-package-btn"
+          clickHandler={purchaseHandler}
+        />
       )}
     </div>
   );

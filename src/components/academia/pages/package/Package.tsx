@@ -3,8 +3,6 @@ import { AcademiaDataType } from "../../../../dataTypes/academiaData.type";
 import PageHeader from "../../modules/pageHeader/PageHeader";
 import Aos from "../../../main/modules/aos/Aos";
 import SectionHeader from "../../modules/sectionHeader/SectionHeader";
-import PackageThumb from "../../modules/packageThumb/PackageThumb";
-import CourseThumb from "../../modules/courseThumb/CourseThumb";
 import "./package.scss";
 import PackageDetails from "../packageDetails/PackageDetails";
 

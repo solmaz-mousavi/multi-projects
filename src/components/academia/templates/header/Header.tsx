@@ -16,6 +16,7 @@ function Header({ data }: { data: SocialDataType[] }) {
     setUserInfo(null);
     setToken(null);
 		localStorage.removeItem("token");
+		navigate("/academia/")
   };
 	
   return (

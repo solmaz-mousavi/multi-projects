@@ -37,21 +37,15 @@
 
   }
 
-  .btn {
-    background-color: $academia-color;
-    border-radius: 5px;
-    padding: 10px 0;
-    color: #fff;
-    cursor: pointer;
+  .academia-package-btn {
     position: absolute;
     bottom: 20px;
     left: 20px;
     right: 20px;
-    span {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: yellow;
-    }
+		*{
+			font-size: 0.9rem;
+			color: yellow;
+		}
   }
 	.academia-package-purchased{
 		position: absolute;

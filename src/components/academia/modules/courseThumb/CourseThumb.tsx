@@ -57,6 +57,7 @@ function CourseThumb({
       navigate("/academia/login");
     }
   };
+	
 
   return (
     <div
@@ -117,7 +118,7 @@ function CourseThumb({
         <div className="academia-course-discount">{discount}%</div>
       )}
 
-      {purchased && (
+    
         <Button
           text={purchased ? "You have purchased this course, Click to enjoy it!" : "see course details and lecture" }
           variant="transparent"
@@ -126,7 +127,7 @@ function CourseThumb({
           className="academia-course-details"
           clickHandler={() => navigate(`/academia/course/${id}`)}
         />
-      )}
+
 
     </div>
   );

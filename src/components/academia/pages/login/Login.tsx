@@ -12,7 +12,6 @@ import PageHeader from "../../modules/pageHeader/PageHeader";
 import Form from "../../../main/modules/form/Form";
 import { AuthContext } from "../../../../contexts/AuthContext";
 import { ModalContext } from "../../../../contexts/ModalContext";
-import ReCAPTCHA from "react-google-recaptcha";
 
 function Login() {
 	const navigate = useNavigate();
@@ -21,7 +20,6 @@ function Login() {
 
 	const { setShowModal, setModalDetails  } = useContext(ModalContext);
 
-	const recaptchaRef = createRef<ReCAPTCHA>();
   const inputs: IFormInputType[] = [
     {
       tag: "input",
@@ -80,11 +78,7 @@ function Login() {
     },
   ];
   const submitHandler: (values: ValuesType) => void = (items) => {
-		console.log(items);
-		if(recaptchaRef.current){
 
-			recaptchaRef.current.execute();
-		}
     const isLoggedIn = academiaData.students.find(
       (i) => i.user === items.user && i.password === items.pass
     );
