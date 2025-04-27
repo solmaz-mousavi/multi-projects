@@ -29,7 +29,7 @@ function BlogThumb({
 
           <FaCalendarAlt className="academia-icon" />
           <span>{date}</span>
-
+<div className="divider"></div>
           <FaComment className="academia-icon" />
           <span>{comments.length} comments</span>
         </div>

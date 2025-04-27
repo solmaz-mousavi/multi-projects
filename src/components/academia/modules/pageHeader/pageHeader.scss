@@ -11,3 +11,23 @@
     font-size: 4rem;
   }
 }
+
+@media screen and (max-width:1200px) {
+	.academia-page-header {
+		height: 300px;
+		padding-top: 150px;
+		h1 {
+			font-size: 2rem;
+		}
+	}
+}
+
+@media screen and (max-width:500px) {
+	.academia-page-header {
+		height: 250px;
+		padding-top: 130px;
+		h1 {
+			font-size: 1.5rem;
+		}
+	}
+}

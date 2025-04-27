@@ -6,10 +6,10 @@
     padding: 0;
     width: 350px;
     height: 470px;
-		&:hover {
-			background-color: #e6e6e6;
-			cursor: pointer;
-		}
+    &:hover {
+      background-color: #e6e6e6;
+      cursor: pointer;
+    }
     .academia-blog-image-wrapper {
       @include flex-center;
       width: 100%;
@@ -36,6 +36,7 @@
       margin: 20px 30px;
     }
     .academia-desc {
+      width: 290px;
       height: 50px;
       overflow: hidden;
       margin: 30px;
@@ -50,10 +51,10 @@
     height: 250px;
     justify-content: flex-start;
     padding: 0;
-		&:hover {
-			background-color: #e6e6e6;
-			cursor: pointer;
-		}
+    &:hover {
+      background-color: #e6e6e6;
+      cursor: pointer;
+    }
     .academia-blog-image-wrapper {
       @include flex-center;
       width: 300px;
@@ -89,6 +90,44 @@
       overflow: visible;
       margin: 30px;
       margin-top: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .grid {
+    .academia-blog-thumb-container {
+      justify-content: flex-start;
+      width: 280px;
+      height: auto;
+
+      .academia-blog-image-wrapper {
+        align-items: flex-start;
+        height: auto;
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+
+      .details-wrapper {
+        width: 280px;
+        flex-wrap: wrap;
+        padding: 16px 10px;
+        .divider {
+          width: 100%;
+        }
+      }
+
+      .academia-title-sm {
+        width: 260px;
+        margin: 20px 10px;
+      }
+      .academia-desc {
+        width: 260px;
+        margin: 10px;
+        margin-bottom: 30px;
+      }
     }
   }
 }

@@ -24,11 +24,53 @@
     .academia-desc {
       line-height: 1.8;
       margin-bottom: 24px;
-			color: rgba(255, 255, 255, 0.8);
+      color: rgba(255, 255, 255, 0.8);
     }
     .academia-home-welcome-btn-container {
       .btn {
         margin-right: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .academia-home-welcome-wrapper {
+    background-position: right;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .academia-home-welcome-wrapper {
+    .academia-home-welcome-container {
+      & > * {
+        width: 100%;
+      }
+      .academia-toptitle {
+        text-shadow: 1px 1px #000;
+      }
+      .academia-main-title {
+        text-shadow: 1px 1px #000;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .academia-home-welcome-wrapper {
+    padding: 0 20px;
+    background-position: 70% 40px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../../../../../../public/assets/images/academia/home/bg_1.jpg");
+    .academia-home-welcome-container {
+      & > * {
+        width: 100%;
+      }
+      .academia-home-welcome-btn-container {
+        .btn {
+          margin: 5px;
+          width: 80%;
+        }
       }
     }
   }

@@ -23,7 +23,7 @@ function Course() {
   const [data, setData] = useState<CourseDataType[]>([]);
   const [category, setCategory] = useState<CategoryDataType | "all">("all");
   const [startIndex, setStartIndex] = useState(0);
-	const [view, setView] = useState<"grid"|"list">("list")
+	const [view, setView] = useState<"grid"|"list">("grid")
 
   const inputs: IFormInputType[] = [
     {

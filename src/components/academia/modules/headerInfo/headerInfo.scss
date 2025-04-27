@@ -1,0 +1,30 @@
+@use "/src/styles/global.scss" as *;
+
+.academia-header-item-container {
+  @include flex-center;
+  gap: 10px;
+
+  .header-icon {
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: lighter;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .academia-header-item-container {
+    justify-content: flex-start;
+
+    margin: 20px 0;
+
+    .header-icon {
+      font-size: 1.4rem;
+      color: #777;
+    }
+    .academia-header-item-details * {
+      font-size: 0.8rem;
+      color: #777;
+    }
+  }
+}

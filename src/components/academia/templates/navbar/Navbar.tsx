@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom";
-import { NavbarDataType } from "../../../../dataTypes/mainData.type";
+import { NavbarDataType, SocialDataType } from "../../../../dataTypes/mainData.type";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../../contexts/AuthContext";
 import "./navbar.scss";
 import { MdOutlineMenu } from "react-icons/md";
+import Social from "../../modules/social/Social";
+import HeaderInfo from "../../modules/headerInfo/HeaderInfo";
 
-function Navbar({ data }: { data: NavbarDataType[] }) {
+function Navbar({ navbarData, socialData }: { navbarData: NavbarDataType[] , socialData:SocialDataType[]}) {
 	const [showNavbar, setShowNavbar] = useState(false);
   const { userInfo } = useContext(AuthContext);
   return (
@@ -13,8 +15,8 @@ function Navbar({ data }: { data: NavbarDataType[] }) {
 			<MdOutlineMenu className="academia-dropdown" onClick={()=> setShowNavbar((prev)=>!prev)} />
       <nav className={`academia-navbar-container ${showNavbar ? "show" : ""}`}>
 
-        {data &&
-          data.map((item) => (
+        {navbarData &&
+          navbarData.map((item) => (
             <NavLink
               key={item.id}
               to={`/academia/${item.route}`}
@@ -42,6 +44,11 @@ function Navbar({ data }: { data: NavbarDataType[] }) {
             My Courses
           </NavLink>
         )}
+				<div className="header">
+					
+			<Social data={socialData} />
+			<HeaderInfo />
+				</div>
       </nav>
       <div className="academia-navbar-right">
         <p className="academia-toptitle">get certificate</p>

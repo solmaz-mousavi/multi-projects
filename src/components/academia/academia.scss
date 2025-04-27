@@ -98,6 +98,7 @@ font-size: 1.125rem;
 	border-radius: 50%;
 	width: 30px;
 	height: 30px;
+	min-width: 30px;
 	color: #fff;
 	font-size: 0.9rem;
 	margin-right: 5px;
@@ -107,7 +108,38 @@ font-size: 1.125rem;
 	.academia-container {
 		max-width: 90%;
 
+	}
+
+	.academia-desc {
+		line-height: 1.2;
+		font-size: 0.9rem;
+	}
 
 
+}
+
+@media screen and (max-width:768px) {
+	.academia-container {
+		.academia-thumb {
+			padding: 20px 15px;
+		}
+		.academia-avatar {
+			width: 40px;
+			height: 40px;
+		}
+	}
+}
+
+@media screen and (max-width:412px) {
+	.academia-container {
+		max-width: 95%;
+
+		.academia-toptitle {
+			font-size: 1rem;
+		}
+		
+		.academia-main-title {
+			font-size: 1.8rem;
+		}
 	}
 }

@@ -93,6 +93,7 @@ function Footer({
 
       <div className="academia-footer-content">
         <div className="academia-container">
+
           <div className="academia-footer-item">
             <div className="academia-footer-logo-container">
               <h2 className="academia-footer-logo">academia</h2>
@@ -122,6 +123,33 @@ function Footer({
             </div>
           </div>
 
+          <div className="academia-footer-item">
+            <h3 className="academia-title-sm">Have a Question?</h3>
+
+            <div className="academia-footer-contact-container">
+              <div className="academia-footer-contact">
+                <FaMap className="academia-icon" />
+                <p className="academia-desc">
+                  203 Fake St. Mountain View, San Francisco, California, USA
+                </p>
+              </div>
+
+              <div className="academia-footer-contact">
+                <FaPhoneAlt className="academia-icon" />
+                <a className="academia-desc" href="tel:+23923929210">
+                  +2 392 3929 210
+                </a>
+              </div>
+
+              <div className="academia-footer-contact">
+                <FaPaperPlane className="academia-icon" />
+                <a className="academia-desc" href="mailto:info@yourdomain.com">
+                  info@yourdomain.com
+                </a>
+              </div>
+            </div>
+          </div>
+					
           <div className="academia-footer-item">
             <h3 className="academia-title-sm">Quick Links</h3>
 
@@ -174,32 +202,8 @@ function Footer({
             </div>
           </div>
 
-          <div className="academia-footer-item">
-            <h3 className="academia-title-sm">Have a Question?</h3>
 
-            <div className="academia-footer-contact-container">
-              <div className="academia-footer-contact">
-                <FaMap className="academia-icon" />
-                <p className="academia-desc">
-                  203 Fake St. Mountain View, San Francisco, California, USA
-                </p>
-              </div>
 
-              <div className="academia-footer-contact">
-                <FaPhoneAlt className="academia-icon" />
-                <a className="academia-desc" href="tel:+23923929210">
-                  +2 392 3929 210
-                </a>
-              </div>
-
-              <div className="academia-footer-contact">
-                <FaPaperPlane className="academia-icon" />
-                <a className="academia-desc" href="mailto:info@yourdomain.com">
-                  info@yourdomain.com
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 

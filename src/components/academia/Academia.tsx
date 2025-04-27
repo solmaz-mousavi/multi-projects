@@ -39,7 +39,7 @@ function Academia() {
         <div id="academia">
           <>
             <Header data={academiaData.social} />
-            <Navbar data={academiaData.navbar} />
+            <Navbar navbarData={academiaData.navbar} socialData={academiaData.social} />
             <Outlet context={academiaData} />
             <Footer
               socialData={academiaData.social}

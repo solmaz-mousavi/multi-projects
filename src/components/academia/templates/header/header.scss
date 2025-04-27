@@ -19,12 +19,6 @@
       color: rgba(255, 255, 255, 0.8);
       font-size: 0.9rem;
     }
-    .header-icon {
-      color: #fff;
-      font-size: 2rem;
-      line-height: 1;
-      font-weight: lighter;
-    }
 
     .academia-header-userInfo-container {
       @include flex-center;
@@ -43,33 +37,11 @@
         letter-spacing: 1px;
       }
     }
-
-    .academia-header-item-container {
-      @include flex-center;
-      gap: 10px;
-    }
   }
 
   .academia-header-right {
     @include flex-center;
     gap: 20px;
-
-    .academia-header-social-container {
-      .header-social {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        margin-right: 4px;
-        background: rgba(255, 255, 255, 0.2);
-        color: $academia-color;
-        padding: 12px;
-        transition: $main-transition;
-        &:hover {
-          background-color: $academia-color;
-          color: #fff;
-        }
-      }
-    }
 
     .academia-header-logo-container {
       position: relative;
@@ -89,6 +61,82 @@
       p {
         font-size: 0.75rem;
         font-weight: 500;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .academia-header-wrapper {
+    height: 60px;
+    .academia-header-left {
+      //     gap: 5px;
+      // flex-direction: column;
+      // align-items: flex-start;
+      // justify-content: flex-start;
+      // text-align: left;
+      * {
+        // font-size: 0.8rem;
+      }
+      // .header-icon {
+      //   font-size: 1.4rem;
+      // }
+
+      .academia-header-userInfo-container {
+        justify-content: flex-start;
+        gap: 5px;
+        img {
+          width: 30px;
+          height: 30px;
+          margin-right: 0;
+        }
+        .name {
+          font-size: 0.9rem;
+          // font-weight: normal;
+          margin-right: 10px;
+        }
+      }
+
+      .academia-header-item-container {
+        // justify-content: flex-start;
+        display: none;
+      }
+
+      // .academia-header-item-container {
+      //   @include flex-center;
+      //   gap: 10px;
+      // }
+    }
+
+    .academia-header-right {
+      // flex-direction: column-reverse;
+      // gap: 10px;
+
+      .academia-header-logo-container {
+        // line-height: 1;
+        // text-align: center;
+        .header-logo {
+          font-weight: 800;
+          font-size: 1.2rem;
+        }
+        p {
+          font-size: 0.7rem;
+        }
+      }
+      .academia-social-container {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .academia-header-wrapper {
+    .academia-header-left {
+      .academia-header-userInfo-container {
+        .name {
+          display: none;
+        }
       }
     }
   }

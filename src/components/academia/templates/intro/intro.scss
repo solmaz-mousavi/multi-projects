@@ -25,3 +25,31 @@
     }
   }
 }
+
+@media screen and (max-width:992px) {
+	.academia-home-intro-container {
+		padding: 40px 20px;
+		.academia-container {
+			flex-direction: column-reverse;
+			.academia-home-intro-image {
+				width: 100%;
+				padding: 0 10px ;
+				img {
+					border-radius: 5px;
+					width: 100%;
+					height: auto;
+				}
+			}
+			.academia-home-intro-details {
+				width: 100%;
+				padding: 0;
+				.academia-toptitle {
+					text-align: center;
+				}
+				.academia-main-title {
+					text-align: center;
+				}
+			}
+		}
+	}
+}

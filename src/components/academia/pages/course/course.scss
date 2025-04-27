@@ -73,3 +73,20 @@
     }
   }
 }
+
+@media screen and (max-width: 576px) {
+  .academia-course-wrapper .academia-container {
+    .academia-filtering-wrapper {
+			justify-content: center;
+      padding: 20px 0;
+			.academia-view-container {
+				display: none;
+			}
+    }
+
+    .academia-course-categories-wrapper {
+      flex-direction: column;
+      gap: 0px;
+    }
+  }
+}
