@@ -23,6 +23,7 @@ import { dateFormatter } from "../../../../utils/dateFormatter";
 import "animate.css";
 import { ModalContext } from "../../../../contexts/ModalContext";
 import { AuthContext } from "../../../../contexts/AuthContext";
+import { MdDelete } from "react-icons/md";
 
 function Comment({
   data,
@@ -33,7 +34,7 @@ function Comment({
 }) {
   const academiaData = useOutletContext<AcademiaDataType>();
   const { userInfo } = useContext(AuthContext);
-	const navigate = useNavigate();
+  const navigate = useNavigate();
   const [startIndex, setStartIndex] = useState(0);
   const perPage = 2;
 
@@ -84,8 +85,8 @@ function Comment({
       });
       setShowModal(true);
     } else {
-navigate("/academia/login")
-		}
+      navigate("/academia/login");
+    }
   };
 
   useEffect(() => {}, [academiaData, data]);
@@ -127,8 +128,12 @@ navigate("/academia/login")
               return (
                 <div className="academia-comment" key={item.id}>
                   <div className="academia-comment-user">
-										{user.image ? <img src={user.image} alt={user.name} /> : <FaUserCircle className="academia-comment-user-icon" />}
-                    
+                    {user.image ? (
+                      <img src={user.image} alt={user.name} />
+                    ) : (
+                      <FaUserCircle className="academia-comment-user-icon" />
+                    )}
+
                     <div className="academia-comment-user-details">
                       <p>{user.name}</p>
                       <span>
