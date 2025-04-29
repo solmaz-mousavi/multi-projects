@@ -1,6 +1,16 @@
 @use "/src/styles/global.scss" as *;
 
 .academia-home-status-container {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0.5))
+    ),
+    url("../../../../../public/assets/images/academia/home/status.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../../../../public/assets/images/academia/home/status.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../../../../../public/assets/images/academia/home/status.jpg");
   background-position: center;
@@ -16,6 +26,7 @@
 @media screen and (max-width: 768px) {
   .academia-home-status-container .academia-container {
     gap: 30px;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 80px;
   }
@@ -29,7 +40,12 @@
 
 @media screen and (max-width: 412px) {
   .academia-home-status-container .academia-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     padding: 80px 20%;
   }

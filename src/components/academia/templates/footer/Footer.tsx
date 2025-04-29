@@ -38,7 +38,8 @@ function Footer({
 }) {
   const navigate = useNavigate();
 
-	const { setShowModal, setModalDetails  } = useContext(ModalContext);
+  // subscribe form info:
+  const { setShowModal, setModalDetails } = useContext(ModalContext);
   const inputs: IFormInputType[] = [
     {
       tag: "input",
@@ -65,16 +66,23 @@ function Footer({
   const submitHandler: (values: ValuesType) => void = (items) => {
     console.log(items);
 
-		setModalDetails({
-			desc:"Your email have been submitted successfully.",
-			icon:{ name: "MdCheck", variant: "success" },
-			 button:[{title:"OK", variant:"success", clickHandler:()=>setShowModal(false)}]
-		});
-		setShowModal(true);
+    setModalDetails({
+      desc: "Your email have been submitted successfully.",
+      icon: { name: "MdCheck", variant: "success" },
+      button: [
+        {
+          title: "OK",
+          variant: "success",
+          clickHandler: () => setShowModal(false),
+        },
+      ],
+    });
+    setShowModal(true);
   };
 
   return (
     <section className="academia-footer-container">
+      {/* subscribe form: */}
       <div className="academia-footer-top">
         <div className="academia-container">
           <div className="academia-footer-top-details">
@@ -93,7 +101,7 @@ function Footer({
 
       <div className="academia-footer-content">
         <div className="academia-container">
-
+          {/* logo and info */}
           <div className="academia-footer-item">
             <div className="academia-footer-logo-container">
               <h2 className="academia-footer-logo">academia</h2>
@@ -123,6 +131,7 @@ function Footer({
             </div>
           </div>
 
+          {/* address, phone, email */}
           <div className="academia-footer-item">
             <h3 className="academia-title-sm">Have a Question?</h3>
 
@@ -149,7 +158,8 @@ function Footer({
               </div>
             </div>
           </div>
-					
+
+          {/* quick links */}
           <div className="academia-footer-item">
             <h3 className="academia-title-sm">Quick Links</h3>
 
@@ -173,6 +183,7 @@ function Footer({
             </nav>
           </div>
 
+          {/* recent blogs */}
           <div className="academia-footer-item">
             <h3 className="academia-title-sm">Recent Posts</h3>
 
@@ -201,32 +212,16 @@ function Footer({
                 ))}
             </div>
           </div>
-
-
-
         </div>
       </div>
 
+      {/* copyright */}
       <div className="academia-footer-bottom">
         <p className="academia-desc">
           Copyright <>&#xa9;</> 2025 All rights reserved | This template is made
           with <>&#x2764;</> by Colorlib
         </p>
       </div>
-
-      {/* {showModal && (
-        <Modal
-          desc="."
-          icon={{ name: "MdCheck", variant: "success" }}
-          button={[
-            {
-              title: "OK",
-              variant: "success",
-              clickHandler: () => setShowModal(false),
-            },
-          ]}
-        />
-      )} */}
     </section>
   );
 }

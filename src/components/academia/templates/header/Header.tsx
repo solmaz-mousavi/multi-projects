@@ -1,5 +1,3 @@
-import { BsClock } from "react-icons/bs";
-import { BsTelephone } from "react-icons/bs";
 import { SocialDataType } from "../../../../dataTypes/mainData.type";
 import "./header.scss";
 import { MdLogin, MdLogout } from "react-icons/md";
@@ -16,13 +14,15 @@ function Header({ data }: { data: SocialDataType[] }) {
   const logout = () => {
     setUserInfo(null);
     setToken(null);
-		localStorage.removeItem("token");
-		navigate("/academia/")
+    localStorage.removeItem("token");
+    navigate("/academia/");
   };
-	
+
   return (
     <section className="academia-header-wrapper academia-container">
       <div className="academia-header-left">
+
+        {/* user info / login link */}
         <div className="academia-header-userInfo-container">
           {userInfo ? (
             <>
@@ -49,14 +49,16 @@ function Header({ data }: { data: SocialDataType[] }) {
           )}
         </div>
 
-<HeaderInfo />
+        {/* working hours and contact info */}
+        <HeaderInfo />
+      </div>
 
 
-
-
-			</div>
       <div className="academia-header-right header">
-				<Social data={data} />
+				{/* social: */}
+        <Social data={data} />
+				
+				{/* logo: */}
         <div className="academia-header-logo-container">
           <h2 className="header-logo">academia</h2>
           <p>Online Education & Learning</p>

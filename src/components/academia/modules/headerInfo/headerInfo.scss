@@ -14,10 +14,10 @@
 
 @media screen and (max-width: 1200px) {
   .academia-header-item-container {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
-
     margin: 20px 0;
-
     .header-icon {
       font-size: 1.4rem;
       color: #777;

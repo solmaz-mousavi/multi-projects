@@ -1,8 +1,11 @@
 @use "/src/styles/global.scss" as *;
 
 .see-all-btn {
-	text-align: center;
+  text-align: center;
   .btn {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
     color: $academia-color;
     text-transform: uppercase;

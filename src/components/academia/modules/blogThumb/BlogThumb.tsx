@@ -24,14 +24,20 @@ function BlogThumb({
 
       <div>
         <div className="details-wrapper">
-          <FaUser className="academia-icon" />
-          <span>{author}</span>
+          <div>
+            <FaUser className="academia-icon" />
+            <span>{author}</span>
+          </div>
 
-          <FaCalendarAlt className="academia-icon" />
-          <span>{date}</span>
-<div className="divider"></div>
-          <FaComment className="academia-icon" />
-          <span>{comments.length} comments</span>
+          <div>
+            <FaCalendarAlt className="academia-icon" />
+            <span>{date}</span>
+          </div>
+
+          <div>
+            <FaComment className="academia-icon" />
+            <span>{comments.length} comments</span>
+          </div>
         </div>
 
         <h3 className="academia-title-sm">{title}</h3>

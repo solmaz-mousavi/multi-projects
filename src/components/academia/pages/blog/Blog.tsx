@@ -19,10 +19,15 @@ import Pagination from "../../../main/modules/pagination/Pagination";
 
 function Blog() {
   const academiaData = useOutletContext<AcademiaDataType>();
-  const [data, setData] = useState<BlogDataType[]>(academiaData.blogs);
-  const [startIndex, setStartIndex] = useState(0);
-	const [view, setView] = useState<"grid"|"list">("grid")
 
+  // pagination state:
+  const [startIndex, setStartIndex] = useState(0);
+
+  // view selection:
+  const [view, setView] = useState<"grid" | "list">("grid");
+
+  // state and form for filtering:
+  const [data, setData] = useState<BlogDataType[]>(academiaData.blogs);
   const inputs: IFormInputType[] = [
     {
       tag: "input",
@@ -36,7 +41,6 @@ function Blog() {
       validators: [requiredStringValidator()],
     },
   ];
-
   const buttons: ButtonType[] = [
     {
       type: "submit",
@@ -46,7 +50,6 @@ function Blog() {
       border: false,
     },
   ];
-
   const submitHandler: (values: ValuesType) => void = (items) => {
     const allData = academiaData.blogs;
 
@@ -56,11 +59,14 @@ function Blog() {
       )
     );
   };
+
   return (
     <section className="academia-blog-wrapper">
       <PageHeader title="Journals" />
 
       <div className="academia-container">
+				
+        {/* search input for filtering and view selection buttons */}
         <div className="academia-filtering-wrapper">
           <div className="academia-search-container">
             <Form
@@ -71,11 +77,18 @@ function Blog() {
             <p onClick={() => setData(academiaData.blogs)}>View All</p>
           </div>
           <div className="academia-view-container">
-            <CiGrid2H className="academia-view-icon" onClick={()=> setView("list")} />
-            <CiGrid41 className="academia-view-icon" onClick={()=> setView("grid")} />
+            <CiGrid2H
+              className="academia-view-icon"
+              onClick={() => setView("list")}
+            />
+            <CiGrid41
+              className="academia-view-icon"
+              onClick={() => setView("grid")}
+            />
           </div>
         </div>
 
+        {/* blogs */}
         <div className={`academia-blog-container ${view}`}>
           {data && data.length === 0 && <p>Not found any data to show.</p>}
           {data &&
@@ -84,6 +97,7 @@ function Blog() {
               .map((item) => <BlogThumb {...item} key={item.id} />)}
         </div>
 
+        {/* pagination */}
         {data && (
           <div className="pato-gallery-pagination-wrapper">
             <Pagination
@@ -94,6 +108,7 @@ function Blog() {
             />
           </div>
         )}
+
       </div>
     </section>
   );

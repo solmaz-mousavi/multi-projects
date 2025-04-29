@@ -6,7 +6,8 @@
   .academia-container {
     .academia-home-category-content {
       @include flex-center;
-      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
       gap: 10px;
 			
     }

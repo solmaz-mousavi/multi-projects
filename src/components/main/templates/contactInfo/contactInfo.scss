@@ -1,5 +1,5 @@
-@use "/src/styles/global.scss" as *;
-
+// @use "/src/styles/global.scss" as *;
+@import "/src/styles/global.scss";
 .main-contactInfo-container {
   @include flex-justify-start;
   width: 100%;

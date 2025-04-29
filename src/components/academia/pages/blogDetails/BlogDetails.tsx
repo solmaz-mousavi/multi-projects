@@ -12,8 +12,9 @@ import Comment from "../../modules/comment/Comment";
 function BlogDetails() {
   const academiaData = useOutletContext<AcademiaDataType>();
   const [data, setData] = useState<BlogDataType | undefined>(undefined);
+	
+	// determine blog from url
   const blogID = useLocation().pathname.split("/").reverse()[0];
-
   useEffect(() => {
     if (academiaData?.blogs) {
       const allData = academiaData.blogs;
@@ -22,7 +23,7 @@ function BlogDetails() {
   }, [academiaData, blogID]);
 
   return (
-    <section className="academia-blog-details-wrapper list">
+    <section className="academia-blog-details-wrapper">
       <PageHeader title={data?.title || ""} />
 
       <div className="academia-blog-details-container">

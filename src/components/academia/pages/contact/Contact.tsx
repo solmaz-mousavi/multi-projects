@@ -20,9 +20,9 @@ import { ModalContext } from "../../../../contexts/ModalContext";
 
 function Contact() {
   const academiaData = useOutletContext<AcademiaDataType>();
-  
-	const { setShowModal, setModalDetails  } = useContext(ModalContext);
+  const { setShowModal, setModalDetails } = useContext(ModalContext);
 
+  // send message - form:
   const inputs: IFormInputType[] = [
     {
       tag: "input",
@@ -75,11 +75,17 @@ function Contact() {
   const submitHandler: (values: ValuesType) => void = (items) => {
     console.log(items);
 
-		setModalDetails({
-			desc:"We receive your message. Our team will contact you as soon as possible.",
-			icon:{ name: "MdCheck", variant: "success" },
-			 button:[{title:"OK", variant:"success", clickHandler:()=>setShowModal(false)}]
-		});
+    setModalDetails({
+      desc: "We receive your message. Our team will contact you as soon as possible.",
+      icon: { name: "MdCheck", variant: "success" },
+      button: [
+        {
+          title: "OK",
+          variant: "success",
+          clickHandler: () => setShowModal(false),
+        },
+      ],
+    });
     setShowModal(true);
   };
 
@@ -89,6 +95,7 @@ function Contact() {
 
       <div className="academia-container">
         <div className="academia-contact-container">
+          {/* location on map */}
           <div id="googleMap">
             <iframe
               width="100%"
@@ -100,8 +107,10 @@ function Contact() {
               <a href="https://www.gps.ie/collections/drones/">buy drones</a>
             </iframe>
           </div>
+
           <div className="academia-contact-right">
             <div className="academia-contact-details">
+              {/* address */}
               <div className="academia-contact-item">
                 <div>
                   <MdLocationOn className="academia-icon" />
@@ -112,6 +121,7 @@ function Contact() {
                 </address>
               </div>
 
+              {/* email */}
               <div className="academia-contact-item">
                 <div>
                   <MdEmail className="academia-icon" />
@@ -122,6 +132,7 @@ function Contact() {
                 </a>
               </div>
 
+              {/* phone */}
               <div className="academia-contact-item">
                 <div>
                   <MdCall className="academia-icon" />
@@ -134,6 +145,7 @@ function Contact() {
               </div>
             </div>
 
+            {/* send message - form */}
             <h3 className="academia-title-sm">
               We're open for any suggestion or just to have a chat.
             </h3>
@@ -143,6 +155,7 @@ function Contact() {
               submitHandler={submitHandler}
             />
 
+            {/* social */}
             <h3 className="academia-title-sm">Follow us here:</h3>
             <div className="academia-contact-social-container">
               {academiaData.social &&
@@ -161,10 +174,10 @@ function Contact() {
                   </a>
                 ))}
             </div>
+						
           </div>
         </div>
       </div>
-
     </section>
   );
 }

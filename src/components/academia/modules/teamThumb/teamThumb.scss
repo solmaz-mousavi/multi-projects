@@ -8,6 +8,8 @@
   background-color: #fff;
   text-align: center;
   position: relative;
+  -webkit-transition: $main-transition;
+  -o-transition: $main-transition;
   transition: $main-transition;
   &:hover {
     background-color: $academia-color;
@@ -46,6 +48,8 @@
     left: 10px;
     .icon {
       opacity: 0;
+      -webkit-transition: $main-transition;
+      -o-transition: $main-transition;
       transition: $main-transition;
     }
   }

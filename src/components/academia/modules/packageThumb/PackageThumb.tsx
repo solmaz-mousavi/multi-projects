@@ -13,10 +13,14 @@ import Button from "../../../main/modules/button/Button";
 function PackageThumb({ id, title, courses, price }: PackageDataType) {
   const academiaData = useOutletContext<AcademiaDataType>();
   const { userInfo, setUserInfo } = useContext(AuthContext);
-  const { setShowModal, setModalDetails } = useContext(ModalContext);
   const navigate = useNavigate();
+
+  const { setShowModal, setModalDetails } = useContext(ModalContext);
+
+  // determines if package purchased or not
   const purchased = userInfo?.packages.includes(id);
 
+  // purchase handler
   const purchaseHandler = () => {
     if (userInfo) {
       const newUserInfo = userInfo;
@@ -40,13 +44,20 @@ function PackageThumb({ id, title, courses, price }: PackageDataType) {
   };
 
   return (
-    <div className="academia-package-thumb-container academia-thumb" key={String(purchased)}>
-      <img
-        src="/assets/images/academia/flaticons/aqua/milestone.png"
-        alt="road map"
-        className="academia-avatar"
-      />
-      <h3 className="academia-title-sm">{title}</h3>
+    <div
+      className="academia-package-thumb-container academia-thumb"
+      key={String(purchased)}
+    >
+      <div className="academia-package-thumb-title">
+        <img
+          src="/assets/images/academia/flaticons/aqua/milestone.png"
+          alt="road map"
+          className="academia-avatar"
+        />
+        <h3 className="academia-title-sm">{title}</h3>
+      </div>
+
+      {/* show courses of package */}
       {courses &&
         courses.map((item, index) => (
           <div className="academia-package-course-container" key={index}>
@@ -61,6 +72,7 @@ function PackageThumb({ id, title, courses, price }: PackageDataType) {
           </div>
         ))}
 
+      {/* purchase button */}
       {purchased ? (
         <div className="academia-package-purchased">
           You have purchased this package.

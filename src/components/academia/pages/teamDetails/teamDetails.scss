@@ -1,6 +1,9 @@
-.academia-team-content {
-  display: flex;
+@use "/src/styles/global.scss" as *;
 
+.academia-team-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 40px 0;
   gap: 20px;
   height: 100%;
@@ -13,10 +16,52 @@
   }
   .list {
     width: 100%;
-
     .academia-course-thumb-container {
-      width: 100%;
       margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .academia-team-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: auto;
+    .academia-team-thumb-container {
+      width: 100%;
+      height: 200px;
+      padding: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      .image-wrapper {
+        width: auto;
+        height: 100%;
+        border-radius: 5px 0 0 5px;
+      }
+      .academia-team-thumb-details {
+        @include flex-center-column;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+      }
+      .academia-title-sm {
+        font-size: 2rem;
+      }
+    }
+    .list {
+      @include flex-center-column;
     }
   }
 }

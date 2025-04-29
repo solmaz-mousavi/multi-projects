@@ -1,5 +1,6 @@
 
 import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
+// show score of a product by stars:
 
 function Score({ score }: { score: number }) {
   const stars = [1, 2, 3, 4, 5];

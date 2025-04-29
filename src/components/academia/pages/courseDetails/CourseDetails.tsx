@@ -34,25 +34,24 @@ function CourseDetails() {
             .some((item) => item.courses.includes(courseID))
       );
     }
-
-  
   }, [academiaData, courseID, userInfo]);
 
   return (
-    <section className="academia-course-details-wrapper" >
+    <section className="academia-course-details-wrapper">
       <PageHeader title={data?.title || ""} />
 
       <div className="academia-course-details-container">
         <div className="academia-container">
+          {/* course info */}
           <div className="list">{data && <CourseThumb {...data} />}</div>
-
           <p className="academia-desc course-description">{data?.desc}</p>
 
           <div className="academia-lectures-wrapper">
+            {/* lecture video */}
             {purchased && data?.lectures && (
               <div className="academia-lectures-video-container">
                 <div className="academia-lectures-video-title">
-                  <p className="row">{videoNum + 1}</p>
+                  <p className="academia-row">{videoNum + 1}</p>
                   <p className="academia-subtitle">
                     {data.lectures[videoNum].title}
                   </p>
@@ -66,6 +65,7 @@ function CourseDetails() {
               </div>
             )}
 
+            {/* course lectures list */}
             <div className="academia-lectures-list-container">
               {data?.lectures &&
                 data.lectures.map((item, index) => (
@@ -77,7 +77,7 @@ function CourseDetails() {
                     key={item.id}
                   >
                     <div className="academia-lectures-list-title">
-                      <p className="row">{index + 1}</p>
+                      <p className="academia-row">{index + 1}</p>
                       <p className="academia-desc">{item.title}</p>
                     </div>
                     <p className="duration">{item.duration} minutes</p>
@@ -86,8 +86,10 @@ function CourseDetails() {
             </div>
           </div>
 
+          {/* add score */}
           {purchased && <AddScore />}
 
+          {/* comments */}
           {data?.comments && (
             <Comment data={data.comments} addComment={purchased} />
           )}

@@ -20,6 +20,7 @@
       font-size: 0.9rem;
     }
 
+    // user info:
     .academia-header-userInfo-container {
       @include flex-center;
       img {
@@ -43,6 +44,7 @@
     @include flex-center;
     gap: 20px;
 
+    // logo:
     .academia-header-logo-container {
       position: relative;
       line-height: 1.1;
@@ -52,6 +54,8 @@
         font-weight: 800;
         font-size: 1.875rem;
         position: relative;
+        -webkit-transition: $main-transition;
+        -o-transition: $main-transition;
         transition: $main-transition;
         &:hover {
           color: $academia-color;
@@ -70,19 +74,9 @@
   .academia-header-wrapper {
     height: 60px;
     .academia-header-left {
-      //     gap: 5px;
-      // flex-direction: column;
-      // align-items: flex-start;
-      // justify-content: flex-start;
-      // text-align: left;
-      * {
-        // font-size: 0.8rem;
-      }
-      // .header-icon {
-      //   font-size: 1.4rem;
-      // }
-
       .academia-header-userInfo-container {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
         gap: 5px;
         img {
@@ -92,29 +86,17 @@
         }
         .name {
           font-size: 0.9rem;
-          // font-weight: normal;
           margin-right: 10px;
         }
       }
 
       .academia-header-item-container {
-        // justify-content: flex-start;
         display: none;
       }
-
-      // .academia-header-item-container {
-      //   @include flex-center;
-      //   gap: 10px;
-      // }
     }
 
     .academia-header-right {
-      // flex-direction: column-reverse;
-      // gap: 10px;
-
       .academia-header-logo-container {
-        // line-height: 1;
-        // text-align: center;
         .header-logo {
           font-weight: 800;
           font-size: 1.2rem;

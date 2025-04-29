@@ -1,13 +1,20 @@
 @use "/src/styles/global.scss" as *;
 
 .academia-footer-container {
+  // subscribe form:
   .academia-footer-top {
     background-color: $academia-color;
     padding: 30px 0;
     color: #fff;
     .academia-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
       justify-content: space-evenly;
       h3 {
         font-size: 1.6rem;
@@ -18,8 +25,14 @@
         color: #fff;
       }
       .form-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
+        -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
         justify-content: stretch;
         padding: 0;
         border-radius: 0;
@@ -29,6 +42,18 @@
           color: #fff;
           padding-left: 0;
           width: 300px;
+          &::-webkit-input-placeholder {
+            color: #fff;
+          }
+          &::-moz-placeholder {
+            color: #fff;
+          }
+          &:-ms-input-placeholder {
+            color: #fff;
+          }
+          &::-ms-input-placeholder {
+            color: #fff;
+          }
           &::placeholder {
             color: #fff;
           }
@@ -43,14 +68,21 @@
     }
   }
 
-  // --------------------------------------------
+  // main info
   .academia-footer-content {
     background-color: #fff;
     padding: 30px 0;
     .academia-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
       align-items: flex-start;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       gap: 30px;
 
@@ -66,6 +98,8 @@
             font-weight: 800;
             font-size: 1.875rem;
             position: relative;
+            -webkit-transition: $main-transition;
+            -o-transition: $main-transition;
             transition: $main-transition;
             color: #000;
             cursor: pointer;
@@ -89,6 +123,8 @@
             border-radius: 50%;
             margin-right: 4px;
             padding: 12px;
+            -webkit-transition: $main-transition;
+            -o-transition: $main-transition;
             transition: $main-transition;
             background-color: $academia-color;
             color: #fff;
@@ -100,7 +136,12 @@
         }
 
         .academia-footer-navbar-container {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
           flex-direction: column;
           .academia-footer-navbar-link {
             font-size: 1rem;
@@ -117,6 +158,8 @@
 
         .academia-footer-blog-container {
           .academia-footer-blog {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             gap: 15px;
             .academia-footer-blog-image {
@@ -152,6 +195,8 @@
 
         .academia-footer-contact-container {
           .academia-footer-contact {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             margin-bottom: 16px;
             .academia-icon {
@@ -171,7 +216,7 @@
     }
   }
 
-  // -------------------------------------------
+  // copyright:
   .academia-footer-bottom {
     text-align: center;
     padding: 30px 0;
@@ -187,6 +232,9 @@
   .academia-footer-container {
     .academia-footer-top {
       .academia-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         * {
           text-align: center;

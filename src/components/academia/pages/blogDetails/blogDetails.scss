@@ -1,8 +1,35 @@
 @use "/src/styles/global.scss" as *;
 
 .academia-blog-details-wrapper {
+  h1 {
+    font-size: 2rem;
+  }
   .academia-blog-details-container {
     padding: 40px 0;
     background-color: #f8f8f8;
+    .academia-blog-thumb-container {
+      width: 100%;
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      margin: 0 auto;
+      height: auto;
+      .academia-blog-image-wrapper {
+        height: auto;
+      }
+      .academia-desc {
+        overflow: visible;
+        height: auto;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .academia-blog-details-wrapper {
+    h1 {
+      font-size: 1.3rem;
+    }
   }
 }

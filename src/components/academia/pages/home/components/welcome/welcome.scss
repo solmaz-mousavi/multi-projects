@@ -60,6 +60,16 @@
   .academia-home-welcome-wrapper {
     padding: 0 20px;
     background-position: 70% 40px;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(0, 0, 0, 0.3)),
+        to(rgba(0, 0, 0, 0.3))
+      ),
+      url("../../../../../../../public/assets/images/academia/home/bg_1.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../../../../../../public/assets/images/academia/home/bg_1.jpg");
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url("../../../../../../../public/assets/images/academia/home/bg_1.jpg");
     .academia-home-welcome-container {

@@ -6,7 +6,7 @@ import {
   CommentDataType,
 } from "../../../../dataTypes/academiaData.type";
 import "./comment.scss";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { getResultByID } from "../../../../utils/getDataByID";
 import { BsCalendar3 } from "react-icons/bs";
@@ -23,7 +23,6 @@ import { dateFormatter } from "../../../../utils/dateFormatter";
 import "animate.css";
 import { ModalContext } from "../../../../contexts/ModalContext";
 import { AuthContext } from "../../../../contexts/AuthContext";
-import { MdDelete } from "react-icons/md";
 
 function Comment({
   data,
@@ -32,12 +31,16 @@ function Comment({
   data: CommentDataType[];
   addComment: boolean;
 }) {
+  // datas:
   const academiaData = useOutletContext<AcademiaDataType>();
   const { userInfo } = useContext(AuthContext);
   const navigate = useNavigate();
+
+  // pagination states:
   const [startIndex, setStartIndex] = useState(0);
   const perPage = 2;
 
+  // add comment - form details:
   const { setShowModal, setModalDetails } = useContext(ModalContext);
   const inputs: IFormInputType[] = [
     {
@@ -89,8 +92,6 @@ function Comment({
     }
   };
 
-  useEffect(() => {}, [academiaData, data]);
-
   return (
     <div className="academia-comment-wrapper">
       <div className="academia-comment-title">
@@ -104,7 +105,11 @@ function Comment({
         </h3>
         <VscTriangleDown className="academia-icon icon" />
       </div>
-      {data && data.length === 0 && <div>No comments yet.</div>}
+
+      {/* show comments */}
+      {data && data.length === 0 && (
+        <div className="academia-desc">No comments yet.</div>
+      )}
       {data && data.length > 0 && (
         <>
           <div
@@ -136,20 +141,18 @@ function Comment({
 
                     <div className="academia-comment-user-details">
                       <p>{user.name}</p>
-                      <span>
-                        <>&#xa0;</>-<>&#xa0;</>
-                      </span>
-                      <TbUsers className="academia-icon" />
-                      <p>
-                        <>&#x28;</>
-                        {item.role}
-                        <>&#x29;</>
-                      </p>
-                      <span>
-                        <>&#xa0;</>-<>&#xa0;</>
-                      </span>
-                      <BsCalendar3 className="academia-icon" />
-                      <p>{item.date}</p>
+                      <div>
+                        <TbUsers className="academia-icon" />
+                        <span>
+                          <>&#x28;</>
+                          {item.role}
+                          <>&#x29;</>
+                        </span>
+                      </div>
+                      <div>
+                        <BsCalendar3 className="academia-icon" />
+                        <span>{item.date}</span>
+                      </div>
                     </div>
                   </div>
                   <p>{item.desc}</p>
@@ -169,6 +172,7 @@ function Comment({
         </>
       )}
 
+      {/* add comment form */}
       {addComment && (
         <>
           <div className="academia-comment-title">

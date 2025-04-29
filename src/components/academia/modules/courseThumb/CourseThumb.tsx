@@ -28,42 +28,55 @@ function CourseThumb({
 }: CourseDataType) {
   const academiaData = useOutletContext<AcademiaDataType>();
   const { userInfo, setUserInfo } = useContext(AuthContext);
-  const { setShowModal, setModalDetails  } = useContext(ModalContext);
+  const navigate = useNavigate();
+
+  const { setShowModal, setModalDetails } = useContext(ModalContext);
+
+  // determines if the course is purchased or not:
   const purchased =
     userInfo?.courses.includes(id) ||
     academiaData?.packages
       .filter((i) => userInfo?.packages.includes(i.id))
       .some((item) => item.courses.includes(id));
 
-  const navigate = useNavigate();
+  // determines course's teacher
   const courseTeacher = getResultByID({
     ID: teacher,
     data: academiaData.teachers,
   });
+
+  // determines course lectures's duration
   const duration = getRangeSumOfData({ data: lectures, range: "duration" });
 
+  // course purchasing handler
   const purchaseHandler = () => {
     if (userInfo) {
       const newUserInfo = userInfo;
       newUserInfo.courses.push(id);
       setUserInfo(newUserInfo);
-			setModalDetails({
-				desc:"Congratulations! You have purchased this course, Now you can enjoy it.",
-				icon:{ name: "MdCheck", variant: "success" },
-				 button:[{title:"OK", variant:"success", clickHandler:()=>setShowModal(false)}]
-			});
+      setModalDetails({
+        desc: "Congratulations! You have purchased this course, Now you can enjoy it.",
+        icon: { name: "MdCheck", variant: "success" },
+        button: [
+          {
+            title: "OK",
+            variant: "success",
+            clickHandler: () => setShowModal(false),
+          },
+        ],
+      });
       setShowModal(true);
     } else {
       navigate("/academia/login");
     }
   };
-	
 
   return (
     <div
       className="academia-course-thumb-container academia-thumb animate__animated animate__fadeIn"
       key={String(purchased)}
     >
+      {/* course info */}
       <div className="academia-course-thumb-top">
         <Icon name={iconName} className="academia-avatar" />
         <div className="academia-course-thumb-details">
@@ -92,6 +105,7 @@ function CourseThumb({
         </div>
       </div>
 
+      {/* the price and purchase button */}
       {!purchased && (
         <>
           <div className="price-wrapper">
@@ -114,21 +128,24 @@ function CourseThumb({
         </>
       )}
 
+      {/* show discount percent */}
       {discount > 0 && !purchased && (
         <div className="academia-course-discount">{discount}%</div>
       )}
 
-    
-        <Button
-          text={purchased ? "You have purchased this course, Click to enjoy it!" : "see course details and lecture" }
-          variant="transparent"
-          border={false}
-					icon={{ name: "MdArrowRightAlt" }}
-          className="academia-course-details"
-          clickHandler={() => navigate(`/academia/course/${id}`)}
-        />
-
-
+      {/* link to show course details page*/}
+      <Button
+        text={
+          purchased
+            ? "You have purchased this course, Click to enjoy it!"
+            : "see course details and lecture"
+        }
+        variant="transparent"
+        border={false}
+        icon={{ name: "MdArrowRightAlt" }}
+        className="academia-course-details"
+        clickHandler={() => navigate(`/academia/course/${id}`)}
+      />
     </div>
   );
 }

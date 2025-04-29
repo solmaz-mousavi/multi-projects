@@ -3,13 +3,19 @@
 .academia-container {
   max-width: 1300px;
   margin: 0 auto;
+  -webkit-transition: $main-transition;
+  -o-transition: $main-transition;
   transition: $main-transition;
+  -webkit-transition: max-height 1s ease-in;
+  -o-transition: max-height 1s ease-in;
   transition: max-height 1s ease-in;
 }
 .academia-desc {
   line-height: 1.4;
   font-size: 1rem;
   color: #999;
+	-webkit-transition: $main-transition;
+	-o-transition: $main-transition;
 	transition: $main-transition;
 	text-wrap: wrap;
 }
@@ -48,6 +54,8 @@
 	font-size: 1.2rem;
 	font-weight: bolder;
 	text-wrap: wrap;
+	-webkit-transition: $main-transition;
+	-o-transition: $main-transition;
 	transition: $main-transition;
 }
 
@@ -62,12 +70,16 @@
 .academia-avatar {
   width: 60px;
   height: 60px;
+	-webkit-transition: $main-transition;
+	-o-transition: $main-transition;
 	transition: $main-transition;
 }
 .academia-icon {
   color: $academia-color;
 font-size: 1.125rem;
   margin-right: 3px;
+	-webkit-transition: $main-transition;
+	-o-transition: $main-transition;
 	transition: $main-transition;
 }
 .academia-thumb {
@@ -76,7 +88,10 @@ font-size: 1.125rem;
   padding: 50px 30px;
   margin: 10px;
   border-radius: 5px;
-  box-shadow: 0px 5px 25px -2px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 5px 25px -2px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 5px 25px -2px rgba(0, 0, 0, 0.06);
+  -webkit-transition: $main-transition;
+  -o-transition: $main-transition;
   transition: $main-transition;
 }
 
@@ -86,6 +101,8 @@ font-size: 1.125rem;
 	border-radius: 50%;
 	margin-right: 4px;
 	padding: 12px;
+	-webkit-transition: $main-transition;
+	-o-transition: $main-transition;
 	transition: $main-transition;
 	background-color: $academia-color;
 	color: #fff;
@@ -107,18 +124,15 @@ font-size: 1.125rem;
 @media screen and (max-width:1400px) {
 	.academia-container {
 		max-width: 90%;
-
 	}
 
 	.academia-desc {
 		line-height: 1.2;
 		font-size: 0.9rem;
 	}
-
-
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1200px) {
 	.academia-container {
 		.academia-thumb {
 			padding: 20px 15px;

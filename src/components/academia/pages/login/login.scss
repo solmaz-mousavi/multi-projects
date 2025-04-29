@@ -22,8 +22,15 @@
             accent-color: #147970;
           }
           div:has(.checkbox) {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
             justify-content: flex-end;
             gap: 10px;
           }

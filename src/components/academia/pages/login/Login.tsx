@@ -1,7 +1,7 @@
 import { useNavigate, useOutletContext } from "react-router-dom";
 import "./login.scss";
 import { AcademiaDataType } from "../../../../dataTypes/academiaData.type";
-import { createRef, useContext } from "react";
+import { useContext } from "react";
 import {
   IFormInputType,
   ValuesType,
@@ -20,6 +20,7 @@ function Login() {
 
 	const { setShowModal, setModalDetails  } = useContext(ModalContext);
 
+	// login form info
   const inputs: IFormInputType[] = [
     {
       tag: "input",

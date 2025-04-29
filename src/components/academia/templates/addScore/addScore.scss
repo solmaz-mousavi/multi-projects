@@ -1,13 +1,21 @@
 @use "/src/styles/global.scss" as *;
 
 .academia-add-score-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 20px;
   padding: 20px 0;
   border-bottom: 1px solid #ccc;
   .academia-add-score {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 5px;
     color: $academia-color;
@@ -20,5 +28,14 @@
     .score {
       margin-left: 30px;
     }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .academia-add-score-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }

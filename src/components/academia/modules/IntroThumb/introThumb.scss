@@ -11,3 +11,19 @@
     }
   }
 }
+
+@media screen and (max-width: 412px) {
+  .academia-home-intro-thumb {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    .academia-avatar {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

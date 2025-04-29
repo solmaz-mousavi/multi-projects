@@ -23,3 +23,5 @@ function PackageDetails({ data }: { data: PackageDataType }) {
 }
 
 export default PackageDetails;
+
+
